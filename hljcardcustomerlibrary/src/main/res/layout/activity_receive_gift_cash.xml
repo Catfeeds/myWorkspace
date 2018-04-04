@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/image_gift_header_bg"
+        android:orientation="vertical">
+
+        <include layout="@layout/receive_cash_header" />
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:layout_marginBottom="10dp">
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_cash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:checked="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/sl_r6_tab_bg_2_white"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_tab_cash" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:text="礼金"
+                            android:textColor="@color/white80_primary"
+                            android:textSize="@dimen/medium_text_size1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_total_cash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:textColor="@color/white80_primary"
+                            android:textSize="@dimen/large_text_size"
+                            tools:text="¥288.00" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/cash_triangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/icon_tab_arrow_down" />
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+            <android.support.v4.widget.Space
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_gift"
+                android:layout_width="0dp"
+                android:layout_height="88dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/sl_r6_tab_bg_2_white"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="16dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_tab_gift" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:duplicateParentState="true"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:text="礼物"
+                            android:textColor="@color/white80_primary"
+                            android:textSize="@dimen/medium_text_size1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_total_gift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:duplicateParentState="true"
+                            android:textColor="@color/white80_primary"
+                            android:textSize="@dimen/large_text_size"
+                            tools:text="¥288.00" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/gift_triangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:scaleType="fitStart"
+                    android:src="@mipmap/icon_tab_arrow_down"
+                    android:visibility="invisible" />
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/poster_layout"
+            android:layout_marginBottom="-12dp" />
+
+        <LinearLayout
+            android:id="@+id/poster_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:background="@drawable/bg_gradient_15p_black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="10dp">
+
+                <com.makeramen.rounded.RoundedImageView
+                    android:id="@+id/iv_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    app:corner_radius="3dp"
+                    app:is_oval="false" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/xiaoxi_installment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_option_hint"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_installment_option"
+            android:textColor="@color/colorBlack2"
+            android:textSize="14sp" />
+
+        <me.suncloud.marrymemo.widget.FlowLayout
+            android:id="@+id/flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal"
+            app:horizontalSpacing="16dp"
+            app:verticalSpacing="16dp" />
+
+        <View style="@style/line_horizontal" />
+
+        <TextView
+            android:id="@+id/tv_installment_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_xiaoxi_installment_hint2"
+            android:textColor="@color/colorGray"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

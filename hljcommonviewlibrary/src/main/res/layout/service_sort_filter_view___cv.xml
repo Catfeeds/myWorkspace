@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/menu_bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/menu_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite">
+
+            <ListView
+                android:id="@+id/sort_menu_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:divider="@color/colorLine"
+                android:dividerHeight="0.5dp"
+                android:fadingEdge="none"
+                android:overScrollMode="never"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

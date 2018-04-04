@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    /*****************************本地module引入*******************************/
+    implementation project(':hljcommonlibrary')
+    /*****************************本地module引入*******************************/
+
+    /*****************************远程第三方库引入*******************************/
+    implementation 'com.nineoldandroids:library:2.4.0'
+    /*****************************远程第三方库引入*******************************/
+}

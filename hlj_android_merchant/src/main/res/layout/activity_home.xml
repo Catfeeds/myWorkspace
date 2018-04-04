@@ -1,0 +1,249 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hunliji.marrybiz.view.HomeActivity">
+
+    <FrameLayout
+        android:id="@+id/real_tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.hunliji.marrybiz.widget.CheckableRelativeGroup
+        android:id="@+id/check_group_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_main_menu"
+        android:orientation="horizontal">
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_work_space"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            app:isChecked2="true">
+
+            <ImageView
+                android:id="@+id/img_home"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_main_tab1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:duplicateParentState="true"
+                android:includeFontPadding="false"
+                android:text="@string/label_work_space"
+                android:textColor="@color/gray1_primary"
+                android:textSize="@dimen/small_text_size" />
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_marketing"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_marketing"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_main_tab2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_marketing"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:duplicateParentState="true"
+                android:includeFontPadding="false"
+                android:text="@string/label_marketing"
+                android:textColor="@color/gray1_primary"
+                android:textSize="@dimen/small_text_size" />
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_interaction"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/img_interaction_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_interaction"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/app_name"
+                    android:duplicateParentState="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_main_tab3" />
+
+                <TextView
+                    android:id="@+id/tv_interaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_interaction"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:duplicateParentState="true"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_interaction"
+                    android:textColor="@color/gray1_primary"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_interaction_tag"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignTop="@+id/img_interaction_layout"
+                android:layout_marginLeft="-4dp"
+                android:layout_toRightOf="@+id/img_interaction_layout"
+                android:background="@drawable/sp_oval_accent"
+                android:visibility="gone" />
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/center_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_msg"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/app_name"
+                    android:duplicateParentState="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_main_tab4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_msg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:duplicateParentState="true"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_message"
+                    android:textColor="@color/gray1_primary"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_unread_count"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/center_layout"
+                android:background="@drawable/sp_r8_accent"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:minWidth="15dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size"
+                android:visibility="gone" />
+
+
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_mine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true">
+
+
+            <LinearLayout
+                android:id="@+id/img_mine_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_mine"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="@string/app_name"
+                    android:duplicateParentState="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_main_tab5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:duplicateParentState="true"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_mine"
+                    android:textColor="@color/gray1_primary"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_unread_bind"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignTop="@+id/img_mine_layout"
+                android:layout_marginLeft="-4dp"
+                android:layout_toRightOf="@+id/img_mine_layout"
+                android:background="@drawable/sp_oval_accent"
+                android:visibility="gone" />
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+    </com.hunliji.marrybiz.widget.CheckableRelativeGroup>
+
+</RelativeLayout>

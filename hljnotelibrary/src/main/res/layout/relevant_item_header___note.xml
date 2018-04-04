@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/relevant_header_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <View
+        android:id="@+id/comment_tag_view"
+        android:layout_width="3dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/tv_relevant_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:text="@string/label_serve_merchant___note"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/medium_text_size1"
+        android:textStyle="bold" />
+
+</LinearLayout>

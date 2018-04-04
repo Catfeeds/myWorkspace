@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MerchantCommentListActivity">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:descendantFocusability="blocksDescendants"
+        android:scrollbars="none" />
+
+
+    <include
+        layout="@layout/progressbar_layout"
+        android:visibility="visible" />
+
+    <include layout="@layout/list_empty_view_with_button" />
+
+</RelativeLayout>

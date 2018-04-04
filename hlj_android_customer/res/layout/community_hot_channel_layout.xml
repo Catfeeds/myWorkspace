@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+        <!--今日热话题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:drawableLeft="@mipmap/icon_community_channel_32_32"
+                android:drawablePadding="6dp"
+                android:text="热门新娘圈"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+            <TextView
+                android:id="@+id/tv_my_community_channel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="4dp"
+                android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                android:paddingRight="16dp"
+                android:text="我的新娘圈"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:clipToPadding="false"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:scrollbars="none" />
+
+        <View style="@style/line_horizontal" />
+    </LinearLayout>
+
+</RelativeLayout>

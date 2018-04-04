@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_r6_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_alert_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="还不能回答哦"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/large_text_size2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:includeFontPadding="false"
+            android:text="【谁能回答】"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:id="@+id/tv_reply_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="4dp"
+            android:text="系统随机抽取1~60位已体验过服务的新人并发送回答邀请"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:includeFontPadding="false"
+            android:text="【如何回答】"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="4dp"
+            android:text="被邀请时会收到通知，请随时关注页面右上的消息提醒"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/line_layout___cm" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sl_r6_b_white_2_background2"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/label_confirm___cm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+
+</LinearLayout>

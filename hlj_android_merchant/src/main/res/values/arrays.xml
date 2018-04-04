@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <array name="rating">
+        <item>不好</item>
+        <item>一般</item>
+        <item>基本满意</item>
+        <item>很满意</item>
+        <item>超出预期</item>
+    </array>
+
+    <array name="merchant_level">
+        <item>普通</item>
+        <item>铜牌</item>
+        <item>银牌</item>
+        <item>金牌</item>
+        <item>钻石</item>
+    </array>
+
+    <array name="easy_chat_title">
+        <item>店铺主页</item>
+        <item>套餐详情页</item>
+        <item>案例详情页</item>
+    </array>
+
+</resources>

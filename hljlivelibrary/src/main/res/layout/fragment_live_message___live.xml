@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:paddingTop="15dp"
+        android:clipToPadding="false"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+    <include
+        layout="@layout/hlj_progressbar___cm" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/sp_r12_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="@string/label_title_update___up"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <View style="@style/line_horizontal" />
+
+        <TextView
+            android:id="@+id/tv_is_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_download_done___up"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="12"
+            android:minLines="6"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:scrollbars="vertical"
+            android:text="@string/fmt_new_version_info___up"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+            android:id="@+id/cb_ignore"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_switch_red_check_stroke" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/label_ignore___up"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/btn_update___up"
+            android:textColor="@color/colorLink"
+            android:textSize="@dimen/ex_medium_text_size" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/info_layout"
+        android:layout_alignTop="@+id/info_layout"
+        android:layout_marginRight="-8dp"
+        android:layout_marginTop="-8dp"
+        android:background="@drawable/sp_bg_close"
+        android:contentDescription="@string/app_name"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_cross_close_white_32_32" />
+
+</RelativeLayout>

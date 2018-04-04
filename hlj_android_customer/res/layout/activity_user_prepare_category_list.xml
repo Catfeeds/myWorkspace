@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="44dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorBlack2"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="6dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="现在你可以花10秒，选择还未着手的备婚项目，获取与你相关的推荐内容"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:scrollbars="none" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/sp_r3_stroke_primary_solid_trans"
+            android:text="选好了，获我的备婚内容"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:padding="20dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_cross_close_gray_32_32" />
+
+</RelativeLayout>

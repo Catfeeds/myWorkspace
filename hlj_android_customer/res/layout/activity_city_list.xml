@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="34dp"
+            android:background="@drawable/sp_r15_stroke_line_solid_white"
+            android:gravity="center"
+            android:hint="@string/city_search_hint"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack3"
+            android:textColorHint="@color/colorGray3"
+            android:textSize="@dimen/medium_text_size3" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search_empty"
+        android:layout_width="wrap_content"
+        android:text="@string/hint_city_search_empty"
+        android:textSize="@dimen/medium_text_size1"
+        android:textColor="@color/colorGray"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp">
+
+        <me.suncloud.marrymemo.widget.MyStickyListHeadersListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <FrameLayout
+            android:id="@+id/side_layout"
+            android:layout_width="22dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorBackground">
+
+            <me.suncloud.marrymemo.widget.NewSideBar
+                android:id="@+id/sideBar"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center_vertical" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/progressbar_layout"/>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/menu_bg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:id="@+id/menu_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="250dp"
+            android:background="@color/colorWhite">
+
+            <LinearLayout
+                android:id="@+id/list_menu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/left_menu_list"
+                    android:layout_width="0dp"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBackground2"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="none"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+                    android:visibility="gone" />
+
+                <ListView
+                    android:id="@+id/right_menu_list"
+                    android:layout_width="0dp"
+                    android:layout_height="400dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0dp"
+                    android:fadingEdge="none"
+                    android:overScrollMode="never"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

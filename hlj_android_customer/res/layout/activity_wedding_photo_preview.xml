@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="me.suncloud.marrymemo.view.community.WeddingPhotoPreviewActivity">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.ParallaxScrollableLayout
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/wedding_photo_thread_header" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:visibility="visible" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.ParallaxScrollableLayout>
+
+    <ImageView
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/bg_gradient_black" />
+
+    <LinearLayout
+        android:id="@+id/action_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:onClick="onBackPressed"
+                android:src="@mipmap/icon_back_white" />
+
+            <ImageView
+                android:id="@+id/btn_share"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btn_menu"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_share_white_44_44"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btn_menu"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_more_menu_white_10_40"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/action_holder_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageButton
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:onClick="onBackPressed"
+                android:src="@mipmap/icon_back_primary" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/title_activity_wedding_photo_preview"
+                android:textColor="@color/colorBarTitle"
+                android:textSize="@dimen/bar_title_size"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageButton
+                android:id="@+id/btn_share2"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/btn_menu2"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_share_primary_44_44"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btn_menu2"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_more_menu_primary_44_44"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorLine" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sl_color_primary_2_dark"
+        android:gravity="center"
+        android:text="@string/label_publish"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

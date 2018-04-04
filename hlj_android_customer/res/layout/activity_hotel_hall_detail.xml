@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <include layout="@layout/hotel_hall_detail_header" />
+
+                <FrameLayout
+                    android:id="@+id/shadow_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gradient_black">
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="0dp"
+                        android:layout_height="65dp" />
+
+                </FrameLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentInsetStart="0dp"
+                    app:elevation="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <include layout="@layout/hotel_hall_detail_bar" />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="10dp"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/button_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/call_layout"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_call_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_call_up3"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chat_layout"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="55dp"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_sms_primary_45_53" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_msg"
+                    android:textColor="?attr/hljColorPrimary"
+                    android:textSize="@dimen/small_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/collect_layout"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="110dp"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical"
+                android:paddingBottom="3dp">
+
+                <ImageView
+                    android:id="@+id/img_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_collect_primary_44_44_normal" />
+
+                <TextView
+                    android:id="@+id/tv_collect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_collect"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <Button
+            android:id="@+id/btn_merchant"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/button_layout"
+            android:background="@drawable/sl_color_primary_2_dark"
+            android:gravity="center"
+            android:text="@string/label_enter_shop2"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+    </RelativeLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/hljActionBarHeight" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

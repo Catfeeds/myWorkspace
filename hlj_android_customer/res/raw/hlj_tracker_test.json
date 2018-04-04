@@ -1,0 +1,136 @@
+{
+  "pages": [
+    {
+      "class": "me.suncloud.marrymemo.view.WorkActivity",
+      "name": {
+        "value": {
+          "default": "false",
+          "object_path": {
+            "key": "isSnapshot"
+          }
+        },
+        "map": {
+          "false": "套餐详情页"
+        }
+      },
+      "data": [
+        {
+          "key": "data_id",
+          "value": {
+            "object_path": {
+              "key": "id"
+            }
+          }
+        },
+        {
+          "key": "data_type",
+          "value": {
+            "default": "Package"
+          }
+        }
+      ]
+    }
+  ],
+  "views": {
+    "me.suncloud.marrymemo.view.CaseDetailActivity": [
+      {
+        "type": 3,
+        "id": "chat_bubble_layout",
+        "tag": "free_chat_bubble",
+        "data": [
+          {
+            "key": "data_id",
+            "value": {
+              "object_path": {
+                "key": "id"
+              }
+            }
+          },
+          {
+            "key": "data_type",
+            "value": {
+              "default": "Example"
+            }
+          }
+        ]
+      }
+    ],
+    "me.suncloud.marrymemo.adpter.home.HomeFeedsAdapter$WorkViewHolder": [
+      {
+        "type": 3,
+        "tag": "package_item",
+        "parent_tag": "feeds_list",
+        "data": [
+          {
+            "key": "data_id",
+            "value": {
+              "object_path": {
+                "field": "item",
+                "child": {
+                  "method": "getEntityObj",
+                  "child": {
+                    "method": "getId"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "key": "data_type",
+            "value": {
+              "default": "Package"
+            }
+          },
+          {
+            "key": "mid",
+            "value": {
+              "object_path": {
+                "field": "item",
+                "child": {
+                  "method": "getEntityObj",
+                  "child": {
+                    "method": "getMerchant",
+                    "child": {
+                      "method": "getId"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "key": "cpm_flag",
+            "value": {
+              "object_path": {
+                "field": "item",
+                "child": {
+                  "method": "getEntityObj",
+                  "child": {
+                    "method": "getCpm"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "key": "cpm_source",
+            "value": {
+              "default": "main_page_feeds"
+            }
+          },
+          {
+            "key": "dt_extend",
+            "value": {
+              "object_path": {
+                "field": "item",
+                "child": {
+                  "method": "getDtExtend"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:gravity="center_vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:duplicateParentState="true"
+        android:textColor="@color/black3_primary"
+        android:textSize="@dimen/medium_text_size3" />
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="10dp"
+        android:contentDescription="@string/app_name"
+        android:duplicateParentState="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/sl_ic_trans_2_tick_red" />
+
+</com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>

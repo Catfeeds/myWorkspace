@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">HljImageLibrary</string>
+
+
+    <string name="fmt_selected_count___img">已选择:  %s</string>
+    <string name="fmt_choose_done___img">完成选取(%d)</string>
+
+    <string name="label_all_photos___img">所有照片</string>
+    <string name="label_all_videos___img">视频</string>
+    <string name="label_photo_empty_permission___img">未获取权限不能读取图片</string>
+    <string name="label_photo_empty___img">未找到图片</string>
+    <string name="label_video_empty___img">未找到视频</string>
+
+    <string name="msg_choose_photo_limit_out___img">你选择的数量已经超过限制了</string>
+
+    <string name="btn_preview___img">预览</string>
+    <string name="btn_next___img">下一步(%s)</string>
+
+    <string name="html_fmt_video_trim_sec___img"><Data><![CDATA[<b><font color="#999999">已选取</font></b>]]></Data>%s<Data><![CDATA[<b><font color="#999999">秒，拖动进行编辑</font></b>]]></Data></string>
+
+    <string name="label_image_corp_hint___img">可通过手势缩放和旋转调整照片</string>
+</resources>

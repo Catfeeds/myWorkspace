@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="4dp"
+    android:layout_marginLeft="4dp">
+
+    <LinearLayout
+        android:id="@+id/merchant_cpm_item"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sp_r4_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="12dp"
+        android:paddingTop="14dp">
+
+        <com.makeramen.rounded.RoundedImageView
+            android:id="@+id/img_merchant_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerCrop"
+            app:border_color="@color/colorLine"
+            app:border_width="0.5dp"
+            app:corner_radius="24dp" />
+
+        <TextView
+            android:id="@+id/tv_merchant_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/star_rating_bar"
+            style="@style/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:numStars="5"
+            android:stepSize="0.1" />
+
+        <TextView
+            android:id="@+id/tv_merchant_gift"
+            android:layout_width="34dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/sp_r2_stroke_primary"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="到店礼"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_merchant_gift_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_small_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_itemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sl_color_white_2_background2">
+
+        <RelativeLayout
+            android:id="@+id/rl_wish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="20dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_wish_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/tv_wish_time"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold"
+                tools:text="祝福标题" />
+
+            <TextView
+                android:id="@+id/tv_wish_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2"
+                tools:text="祝福时间" />
+
+            <TextView
+                android:id="@+id/tv_wish_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wish_name"
+                android:layout_marginTop="14dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="6dp"
+                android:maxLines="3"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size1"
+                tools:text="祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容祝福内容" />
+
+            <RelativeLayout
+                android:id="@+id/rl_card_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_wish_content"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:id="@+id/tv_wish_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_card_come_from_partner___card"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/icon_card_reply___card" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_feast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_feast_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/layout_feast"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_feast_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_feast_name"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <LinearLayout
+                android:id="@+id/layout_feast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_feast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:minWidth="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_feast_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/ex_large_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_feast_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_feast_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_card_come_from_partner___card"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorLine" />
+
+
+
+
+
+</LinearLayout>

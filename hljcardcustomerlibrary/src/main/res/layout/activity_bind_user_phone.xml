@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_change_phone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="你的手机号"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:id="@+id/tv_phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorBlack2"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="绑定的手机号用于账号登录及安全验证"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/action_change_phone"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sp_r2_stroke_gray"
+            android:gravity="center"
+            android:text="更换手机号"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size2" />
+    </LinearLayout>
+
+    <include layout="@layout/hlj_progressbar___cm" />
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="90dp"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sp_oval_1_stroke_gray3"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_arrow_left_gray_28_28" />
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="1"
+        android:layout_marginLeft="10dp"
+        android:text="@string/hint_pager_load_more"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorGray2"
+        android:textSize="14sp"
+        android:includeFontPadding="false"/>
+
+</LinearLayout>

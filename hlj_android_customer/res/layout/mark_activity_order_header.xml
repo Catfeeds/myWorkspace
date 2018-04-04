@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/order_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/all_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/result_detail_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="综合"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <View
+                android:id="@+id/result_detail_all_line"
+                android:layout_width="0.5dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/colorLine2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hot_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/result_detail_hot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="热门"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <View
+                android:id="@+id/result_detail_hot_line"
+                android:layout_width="0.5dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/colorLine2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                android:id="@+id/result_detail_price_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:isChecked="true">
+
+                <TextView
+                    android:id="@+id/result_detail_price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="价格"
+                    android:textColor="@color/colorBlack2" />
+
+                <ImageView
+                    android:id="@+id/result_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:duplicateParentState="true"
+                    android:src="@mipmap/icon_order_gray_18_24" />
+
+            </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+
+            <View
+                android:id="@+id/result_detail_price_line"
+                android:layout_width="0.5dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/colorLine2"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/newest_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/result_detail_newest"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="最新"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <View
+                android:id="@+id/result_detail_newest_line"
+                android:layout_width="0.5dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:background="@color/colorLine2" />
+        </LinearLayout>
+        <!-- 评论数 -->
+        <TextView
+            android:id="@+id/result_detail_likecount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="喜欢数"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+</LinearLayout>

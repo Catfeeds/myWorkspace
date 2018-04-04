@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="可提现总余额"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/tv_total_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_layout___cm" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshVerticalRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/hlj_progressbar___cm" />
+
+    </RelativeLayout>
+</LinearLayout>

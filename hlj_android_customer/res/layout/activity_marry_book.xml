@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_tips"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fdf3e0"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="绑定另一半，记录同一份结婚账本～"
+            android:textColor="#ed8546"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/tv_get"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sp_r10_color_ff9b30"
+            android:gravity="center"
+            android:text="去绑定"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_small_text_size"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#fbe6be" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_tips"
+        android:background="@color/colorBackground">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshVerticalRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/hlj_progressbar___cm" />
+
+        <ImageButton
+            android:id="@+id/btn_scroll_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="70dp"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_back_to_top_primary"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

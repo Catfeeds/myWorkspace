@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorWhite">
+
+        <ImageButton
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="onBackPressed"
+            android:src="@mipmap/icon_back_primary" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/review"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="reviewStory"
+            android:src="@drawable/icon_comment_r_v2" />
+
+        <ImageButton
+            android:id="@+id/collect"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="collectStory"
+            android:src="@drawable/icon_praise_primary_40_40_3" />
+
+        <ImageButton
+            android:id="@+id/share"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="shareStory"
+            android:src="@drawable/icon_share_primary_44_44" />
+        <ImageButton
+            android:id="@+id/more"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="editStory"
+            android:visibility="gone"
+            android:src="@mipmap/icon_more_menu_primary_44_44" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignBottom="@+id/action_layout"
+        android:background="@color/colorLine" />
+
+    <ListView
+        android:id="@+id/story_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_layout"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <include layout="@layout/list_empty_view_with_button" />
+
+    <include
+        layout="@layout/progressbar_layout"
+        android:visibility="visible" />
+
+</RelativeLayout>

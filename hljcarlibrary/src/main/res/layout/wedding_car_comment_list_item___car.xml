@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/hljColorSegmentBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:paddingLeft="16dp"
+        android:background="@color/colorWhite"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                app:border_color="?attr/hljColorLine"
+                app:border_width="0.5dp"
+                app:corner_radius="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_nick"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:includeFontPadding="false"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:text="@string/app_name"
+                        android:textColor="?attr/hljColorContent1"
+                        android:textSize="@dimen/medium_text_size3"
+                        tools:ignore="Deprecated" />
+
+                    <ImageButton
+                        android:id="@+id/btn_menu"
+                        android:layout_width="36dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="6dp"
+                        android:background="@null"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_more_28_6"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/app_name"
+                        android:textColor="?attr/hljColorContentExt1"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="11dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="?attr/hljColorGrayLine" />
+
+                    <TextView
+                        android:id="@+id/tv_rating_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/app_name"
+                        android:textColor="?attr/hljColorPrimary"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <TextView
+                        android:id="@+id/tv_bought_des"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/app_name"
+                        android:textColor="?attr/hljColorPrimary"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_prefix_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="3"
+                android:textColor="?attr/hljColorContent1"
+                android:textSize="@dimen/medium_text_size1"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/suffix_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_suffix_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="?attr/hljColorContent1"
+                    android:textSize="@dimen/medium_text_size1"
+                    tools:ignore="Deprecated" />
+
+                <TextView
+                    android:id="@+id/tv_expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_label_expand___car"
+                    android:textColor="?attr/hljColorLink"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="2dp"
+                android:textColor="?attr/hljColorContent1"
+                android:textSize="@dimen/medium_text_size1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/label_collapse___car"
+                android:textColor="?attr/hljColorLink"
+                android:textSize="@dimen/medium_text_size1"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljGridView
+            android:id="@+id/images_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="13dp"
+            android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <View android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:id="@+id/divider_line"
+                android:background="@color/colorLine"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

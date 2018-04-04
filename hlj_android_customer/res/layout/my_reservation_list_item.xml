@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        >
+
+        <me.suncloud.marrymemo.widget.RecyclingImageView
+            android:id="@+id/cover"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:orientation="vertical"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                >
+
+                <TextView
+                    android:id="@+id/contact_merchant"
+                    android:layout_width="64dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/sp_r4_half_stroke_primary"
+                    android:gravity="center"
+                    android:text="@string/label_contact_merchant3"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/medium_text_size3"
+                    />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/contact_merchant"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/ex_medium_text_size"
+                    />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/reservation_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2"
+                />
+
+            <TextView
+                android:id="@+id/property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="gone"
+        >
+
+
+        <TextView
+            android:id="@+id/shop_gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sp_r2_stroke_primary"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/label_shop_gift"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size"/>
+
+        <TextView
+            android:id="@+id/shop_gift_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

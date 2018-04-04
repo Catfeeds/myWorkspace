@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.FlowLayout
+        android:id="@+id/flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:overScrollMode="never"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        app:horizontalSpacing="-4dp"
+        app:verticalSpacing="10dp"
+        />
+
+</RelativeLayout>

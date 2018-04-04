@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshVerticalRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never" />
+
+    <include layout="@layout/limit_calculation_timeout_layout___pay" />
+
+    <include layout="@layout/limit_calculation_fail_layout___pay" />
+
+    <include layout="@layout/limit_calculation_loading_layout___pay" />
+
+</RelativeLayout>

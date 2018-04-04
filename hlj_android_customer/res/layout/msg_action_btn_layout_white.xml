@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout android:id="@+id/msg_layout_w"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/img_msg_w"
+        style="@style/ActionImageItem"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_message_mail_white_46_46" />
+
+    <View
+        android:id="@+id/msg_notice_view_w"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/sp_oval_accent"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@+id/img_msg_w"
+        app:layout_constraintTop_toTopOf="@+id/img_msg_w" />
+
+    <TextView
+        android:id="@+id/tv_msg_count_w"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/sp_r8_accent"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minWidth="16dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/small_text_size"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@+id/img_msg_w"
+        app:layout_constraintTop_toTopOf="@+id/img_msg_w"
+        tools:visibility="visible" />
+
+</android.support.constraint.ConstraintLayout>

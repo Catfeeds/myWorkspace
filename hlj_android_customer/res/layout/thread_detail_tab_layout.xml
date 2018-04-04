@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup
+            android:id="@+id/check_group"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp">
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/sl_trans_2_tab_checked"
+                android:duplicateParentState="true"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                app:checked="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:duplicateParentState="true"
+                    android:text="@string/label_all"
+                    android:textColor="@color/black2_primary"
+                    android:textSize="14sp" />
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_owner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="22dp"
+                android:background="@drawable/sl_trans_2_tab_checked"
+                android:duplicateParentState="true"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:duplicateParentState="true"
+                    android:text="@string/label_owner"
+                    android:textColor="@color/black2_primary"
+                    android:textSize="14sp" />
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>
+
+        <LinearLayout
+            android:id="@+id/sort_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/icon_sort_black2" />
+
+            <TextView
+                android:id="@+id/tv_sort_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sort_default"
+                android:textColor="@color/colorBlack2"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_below="@+id/content_layout" />
+
+</RelativeLayout>

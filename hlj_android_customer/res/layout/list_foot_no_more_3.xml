@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/handin_error"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/sl_r4_stroke_line_white_2_background"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:gravity="center_vertical"
+            android:drawablePadding="3dp"
+            android:drawableLeft="@drawable/icon_warnning_mark_primary"
+            android:text="@string/label_handin_error"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1" />
+    </LinearLayout>
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

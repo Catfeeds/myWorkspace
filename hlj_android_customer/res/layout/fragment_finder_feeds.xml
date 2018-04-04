@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/hlj_common_fragment_ptr_staggered_recycler_view___cm" />
+
+    <TextView
+        android:id="@+id/tv_new_count"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/trans_color_p9"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size3"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/image_hint_note_refresh"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</RelativeLayout>

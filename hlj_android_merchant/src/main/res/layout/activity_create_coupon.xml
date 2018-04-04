@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <!--优惠券名称-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_title"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_enter_coupon_title"
+                            android:includeFontPadding="false"
+                            android:inputType="text"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line_layout___cm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <!--金额(元)-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_value"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_value"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_can_not_edit_after_submit2"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line_layout___cm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <!--使用条件-->
+                    <LinearLayout
+                        android:id="@+id/condition_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sl_color_white_2_background2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_condition"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:id="@+id/tv_condition"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:drawablePadding="6dp"
+                            android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_can_not_edit_after_submit"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line_layout___cm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <!--门槛金额-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_money_sill"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_money_sill"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_can_not_edit_after_submit2"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line_layout___cm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <!--开始领取时间-->
+                    <LinearLayout
+                        android:id="@+id/provide_start_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sl_color_white_2_background2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_provide_start"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:id="@+id/tv_provide_start"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:drawablePadding="6dp"
+                            android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_click_option"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line_layout___cm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <!--停止领取时间-->
+                    <LinearLayout
+                        android:id="@+id/provide_end_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sl_color_white_2_background2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_coupon_provide_end"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:id="@+id/tv_provide_end"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:drawablePadding="6dp"
+                            android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_click_option"
+                            android:lines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/colorBackground" />
+
+                    <!--开始生效时间-->
+                    <LinearLayout
+                        android:id="@+id/valid_start_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sl_color_white_2_background2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_valid_start"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:id="@+id/tv_valid_start"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:drawablePadding="6dp"
+                            android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_can_not_edit_after_submit"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line_layout___cm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <!--结束生效时间-->
+                    <LinearLayout
+                        android:id="@+id/valid_end_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sl_color_white_2_background2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_valid_end"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:id="@+id/tv_valid_end"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:drawablePadding="6dp"
+                            android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_can_not_edit_after_submit"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line_layout___cm"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <!--发行量-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_coupon_total_count"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_total_count"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:gravity="right|center_vertical"
+                            android:hint="@string/hint_enter_total_count"
+                            android:includeFontPadding="false"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:maxLines="1"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_warn"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="@string/hint_can_not_edit_total_count_after_submit"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/sl_r4_primary_2_dark_2"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/btn_submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

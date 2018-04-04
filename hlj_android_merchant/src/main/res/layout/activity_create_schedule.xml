@@ -1,0 +1,654 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorBackground" />
+
+            <!--日期-->
+            <LinearLayout
+                android:id="@+id/date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <LinearLayout
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_date"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="6dp"
+                    android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_select_date"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:minHeight="44dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/colorLine" />
+
+            <!--时间-->
+            <LinearLayout
+                android:id="@+id/time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:orientation="vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="44dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_star2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_time"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <com.hunliji.hljcommonlibrary.views.widgets.FlowLayout
+                        android:id="@+id/time_flow_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        app:horizontalSpacing="10dp"
+                        app:verticalSpacing="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_select_time"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <include layout="@layout/line_layout___cm" />
+
+            </LinearLayout>
+
+            <!--姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <LinearLayout
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_star3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_full_name"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_enter_full_name"
+                    android:maxLength="20"
+                    android:minHeight="44dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/colorLine" />
+
+            <!--电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <LinearLayout
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_star4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_phone"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_enter_phone"
+                    android:includeFontPadding="false"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:minHeight="44dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageButton
+                    android:id="@+id/btn_select_contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingRight="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_contact_primary_47_47" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/property_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorBackground" />
+
+                <!--类型-->
+                <LinearLayout
+                    android:id="@+id/type_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:minHeight="44dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/medium_text_size1"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/label_type"
+                                android:textColor="@color/colorBlack3"
+                                android:textSize="@dimen/medium_text_size1" />
+
+                        </LinearLayout>
+
+                        <com.hunliji.hljcommonlibrary.views.widgets.FlowLayout
+                            android:id="@+id/type_flow_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            app:horizontalSpacing="10dp"
+                            app:verticalSpacing="10dp" />
+
+                        <TextView
+                            android:id="@+id/tv_type"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size1"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line_layout___cm" />
+
+                </LinearLayout>
+
+                <!--地点-->
+                <LinearLayout
+                    android:id="@+id/address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="*"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/medium_text_size1"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/label_address2"
+                                android:textColor="@color/colorBlack3"
+                                android:textSize="@dimen/medium_text_size1" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/et_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@null"
+                            android:hint="@string/hint_enter_address"
+                            android:includeFontPadding="false"
+                            android:maxLength="30"
+                            android:minHeight="44dp"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray2"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include layout="@layout/line_layout___cm" />
+
+                </LinearLayout>
+
+                <!--价格-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/medium_text_size1"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_price7"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@null"
+                        android:hint="@string/hint_enter_price"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:minHeight="44dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/colorLine" />
+
+                <!--已付-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <LinearLayout
+                        android:layout_width="78dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="*"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/medium_text_size1"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_paid5"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/et_pay_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@null"
+                        android:hint="@string/hint_enter_paid"
+                        android:includeFontPadding="false"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:minHeight="44dp"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorBackground" />
+
+            <!--备注-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <LinearLayout
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="*"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size1"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_remark"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_message"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:hint="@string/hint_enter_remark"
+                    android:lineSpacingMultiplier="1.2"
+                    android:maxLength="500"
+                    android:minHeight="100dp"
+                    android:paddingBottom="12dp"
+                    android:paddingTop="12dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/colorBackground" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/line_layout___cm" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/sl_r15_half_stroke_primary_2_solid_light"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/label_delete___cm"
+                android:textColor="@color/stroke_primary_text_color"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/sl_r15_primary_2_dark"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/label_edit___share"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

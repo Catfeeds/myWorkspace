@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/icon_empty_shopping_cart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_cart_empty"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorGray2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:id="@+id/tv_go_look"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:layout_marginBottom="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sl_r3_primary_2_dark"
+            android:gravity="center"
+            android:text="去逛逛"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

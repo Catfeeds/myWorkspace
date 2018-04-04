@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/work_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/work_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <me.suncloud.marrymemo.widget.RecyclingImageView
+            android:id="@+id/work_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorImageBackground"
+            android:minHeight="150dp"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/trans_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/work_cover"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent_black6">
+
+            <TextView
+                android:id="@+id/tv_photos_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <TextView
+                android:id="@+id/tv_watch_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/icon_eye_white_22_16"
+                android:drawablePadding="4dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/work_cover"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/merchant_logo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                app:corner_radius="15dp" />
+
+            <TextView
+                android:id="@+id/merchant_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

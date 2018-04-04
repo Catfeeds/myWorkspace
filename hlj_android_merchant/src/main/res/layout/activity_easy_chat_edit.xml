@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@color/colorWhite">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="90dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/colorWhite"
+                android:gravity="top"
+                android:hint="@string/label_write_greet"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="3dp"
+                android:maxLength="100"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="14dp"
+                android:textColor="@color/colorBlack2"
+                android:textColorHint="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size1" />
+
+
+            <TextView
+                android:gravity="bottom"
+                android:id="@+id/tv_text_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingRight="16dp"
+                android:text="0/100"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="@string/hint_easy_chat_edit"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingBottom="50dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_save"
+        android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sl_color_primary_2_dark"
+        android:gravity="center"
+        android:text="@string/label_save"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <include layout="@layout/hlj_progressbar___cm"/>
+
+
+
+</RelativeLayout>

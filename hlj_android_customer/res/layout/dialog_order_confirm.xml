@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_r6_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="35dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="35dp">
+
+        <LinearLayout
+            android:id="@+id/serve_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_serve_time3"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_serve_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_serve_customer"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_serve_customer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_serve_phone"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/merchant_city_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_merchant_city"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/car_address_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_car_address2"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sl_r6_bl_white_2_background2"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/action_modify"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorLine" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sl_r6_br_white_2_background2"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/action_ok2"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Hlj Update Library</string>
+    <string name="label_title_update___up">新版更新</string>
+    <string name="label_download_done___up">最新版本已下载</string>
+    <string name="label_ignore___up">忽略该版本</string>
+
+    <string name="btn_update___up">立即更新</string>
+    <string name="btn_install___up">立即安装</string>
+
+    <string name="fmt_new_version_info___up">更新内容\n%s</string>
+
+    <string name="fmt_download_progress___up">正在下载:%1$d%%</string>
+    <string name="label_download_error___up">下载失败，点击重试</string>
+    <string name="label_download_complete___up">下载完成，点击安装</string>
+
+</resources>

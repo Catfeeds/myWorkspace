@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.hunliji.marrybiz.view.PreLoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_bg_login" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@drawable/image_login" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/sl_r4_white_2_background"
+                android:gravity="center"
+                android:onClick="onLogin"
+                android:text="@string/label_login"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="240dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sl_r4_stroke_white_2_white"
+                android:gravity="center"
+                android:onClick="onRegister"
+                android:text="@string/label_register2"
+                android:textColor="@color/white_primary"
+                android:textSize="@dimen/medium_text_size1" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9" />
+    </LinearLayout>
+
+    <include layout="@layout/progressbar_layout" />
+</RelativeLayout>

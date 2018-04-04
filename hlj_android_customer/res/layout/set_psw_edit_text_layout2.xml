@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_hint_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/et_password_2"
+            android:layout_marginTop="25dp"
+            android:text="@string/label_set_pay_password_again"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size1" />
+
+
+        <me.suncloud.marrymemo.widget.SafePasswordEditText
+            android:id="@+id/et_password_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_hint_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btn_finish"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@id/et_password_2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/sl_r18_primary_2_dark"
+            android:gravity="center"
+            android:enabled="false"
+            android:text="@string/label_finished"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_medium_text_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

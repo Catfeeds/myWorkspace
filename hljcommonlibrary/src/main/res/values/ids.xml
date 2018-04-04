@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="hlj_tracker_tag_id" type="id" />
+    <item name="hlj_last_track_time" type="id" />
+    <item name="hlj_tracker_parent_tag_id" type="id" />
+    <item name="hlj_fragment_root_view" type="id" />
+    <item name="hlj_tracker_view_page_name" type="id" />
+    <item name="hlj_tracker_view_page_data" type="id" />
+
+
+    <item name="decode" type="id" />
+    <item name="decode_failed" type="id" />
+    <item name="decode_succeeded" type="id" />
+    <item name="launch_product_query" type="id" />
+    <item name="quit" type="id" />
+    <item name="restart_preview" type="id" />
+    <item name="return_scan_result" type="id" />
+
+</resources>

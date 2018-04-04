@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_groom_name___card"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/et_groom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="请输入新郎的真实姓名"
+                        android:inputType="text"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="16dp"
+                        android:textColor="@color/black2_disable_gray"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <View
+                        android:id="@+id/groom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="@string/label_bride_name___card"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/et_bride"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="请输入新娘的真实姓名"
+                        android:inputType="text"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="16dp"
+                        android:textColor="@color/black2_disable_gray"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <View
+                        android:id="@+id/bride_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/card_type_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/tv_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:text="证件类型"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_card_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_type_label"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="选择证件类型"
+                android:paddingBottom="16dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="16dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <ImageView
+                android:id="@+id/img_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:src="@mipmap/icon_arrow_right_gray_16_30"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/card_images_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="26dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                style="@style/line_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/tv_label_groom"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:text="新郎结婚证"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageView
+                    android:id="@+id/img_groom_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorImageBackground"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/image_marry_card_example" />
+
+                <TextView
+                    android:id="@+id/tv_label_bride"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="center_vertical"
+                    android:text="新娘结婚证"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageView
+                    android:id="@+id/img_bride_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorImageBackground"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/image_marry_card_example" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_top_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/iv_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/tv_image_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#4D000000"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lineSpacingExtra="6dp"
+                    android:maxLines="2"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:shadowColor="#7F000000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="10"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/large_text_size"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="40dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/icon_wedding_write" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="4dp"
+                        android:paddingLeft="12dp"
+                        android:text="@string/label_improve_info_increase_exposure"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_merchant"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/sl_r2_gray_background2">
+
+                    <TextView
+                        android:id="@+id/tv_merchant_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:hint="@string/label_choose_merchant_for_you"
+                        android:paddingLeft="16dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@mipmap/icon_arrow_right_dark_gray_14_26" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/et_pay_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sp_r2_background2"
+                    android:gravity="center_vertical"
+                    android:hint="@string/label_enter_amount_money_spent"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:paddingLeft="16dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sp_r2_background2"
+                    android:gravity="center_vertical"
+                    android:hint="@string/label_enter_shooting_address"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingLeft="16dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <Button
+                    android:id="@+id/btn_finish"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sl_r3_primary_2_dark"
+                    android:gravity="center"
+                    android:text="@string/btn_done"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ex_medium_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

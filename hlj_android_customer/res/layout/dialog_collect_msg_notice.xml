@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_r12_white">
+
+    <LinearLayout
+        android:id="@+id/collect_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="32dp">
+
+        <ImageView
+            android:id="@+id/img_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_new_collect" />
+
+        <TextView
+            android:id="@+id/tv_notice_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:text="@string/hint_collect_complete"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:id="@+id/tv_notice_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="6dp"
+            android:maxLines="2"
+            android:paddingTop="10dp"
+            android:textColor="@color/colorGray3"
+            android:textSize="@dimen/medium_text_size2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/collect_msg_confirm_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/collect_msg_layout"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_layout" />
+
+        <Button
+            android:id="@+id/btn_notice_cancel"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/sl_r15_half_stroke_primary_2_solid_light"
+            android:gravity="center"
+            android:text="@string/action_cancel"
+            android:textColor="@color/stroke_primary_text_color"
+            android:textSize="@dimen/medium_text_size1"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btn_notice_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:text="@string/action_ok"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ex_medium_text_size" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/icon_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@+id/collect_msg_layout"
+        android:layout_alignTop="@+id/collect_msg_layout"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/app_name"
+        android:padding="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_cross_close_gray_40_40" />
+
+</RelativeLayout>

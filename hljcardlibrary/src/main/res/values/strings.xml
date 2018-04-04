@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">Hlj Card Library</string>
+
+    <string name="title_activity_card_list___card">电子请帖</string>
+    <string name="title_activity_card_setting___card">设置</string>
+    <string name="title_withdraw_setting___card">提现设置</string>
+    <string name="title_activity_card_info___card">请帖信息</string>
+    <string name="title_activity_card_tutorial___card">帮助</string>
+    <string name="title_activity_card_template___card">添加新页</string>
+    <string name="title_activity_card_reply___card">宾客回复</string>
+    <string name="title_activity_card_choose_template___card">选择模板</string>
+    <string name="title_activity_card_preview___card">预览</string>
+
+    <string name="btn_create_card___card">创建请帖</string>
+    <string name="btn_location_save___card">保存位置</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_share_py___card">分享到朋友圈</string>
+
+    <string name="label_old_version___card">前往旧版</string>
+    <string name="label_course___card">帮助</string>
+    <string name="label_guest___card">宾客</string>
+    <string name="label_gift_cash___card">礼物·礼金</string>
+    <string name="label_groom_name___card">新郎姓名</string>
+    <string name="label_bride_name___card">新娘姓名</string>
+    <string name="label_wedding_date___card">婚礼时间</string>
+    <string name="label_wedding_address___card">婚礼地址</string>
+    <string name="label_wish_count___card">宾客祝福(%d)</string>
+    <string name="label_feast_count___card">是否赴宴(%d)</string>
+    <string name="label_card_reply_delete___card">删除</string>
+    <string name="label_card_reply_not_delete___card">不删除</string>
+    <string name="label_card_reply_msg___card">是否确认删除?</string>
+    <string name="label_card_delete_success___card">删除成功</string>
+    <string name="label_join_member___card">加入会员</string>
+    <string name="label_share_solve_lock___card">分享即可全部解锁</string>
+    <string name="label_cash_title___card">给您送了一份%s</string>
+    <string name="label_gift_title___card">给您送了%s</string>
+    <string name="label_cash_total___card">总计收到</string>
+    <string name="label_action_balance___card">查看余额</string>
+    <string name="label_receive_cash_tip___card" formatted="false">礼金金额将全额转入您的婚礼纪账户余额中，您可前往<Data><![CDATA[<b><font color="#f83244">我的-钱包-余额</font></b>]]></Data>内提现或用于平台消费。</string>
+    <string name="label_balance_cash_empty_tip___card">还未收到小伙伴赠送的礼金？</string>
+    <string name="label_balance_gift_empty_tip___card">还未收到小伙伴赠送的礼物？</string>
+    <string name="label_balance_empty_action___card">快去发布请帖吧</string>
+    <string name="label_cash_list___card">礼金明细</string>
+    <string name="label_set_card_bind___card">设置提现账户</string>
+    <string name="label_cover___card">封面</string>
+    <string name="label_switch_cash_hint___card">1、您可以在<Data><![CDATA[<b><font color="#f83244">礼物·礼金</font></b>]]></Data>中查看收到的金额；</string>
+    <string name="label_switch_cash_hint2___card">2、本请帖的收到礼物和礼金金额将提现至实名认证的微信钱包中。</string>
+    <string name="label_switch_cash_hint3___card">2、本请帖的收到礼物和礼金金额将提现至实名认证的银行卡中。</string>
+    <string name="label_theme_start_making__card">开始制作</string>
+    <string name="label_select___card">筛选</string>
+    <string name="label_card_page_hide___card">隐藏</string>
+    <string name="label_card_page_show___card">显示</string>
+    <string name="label_card_page_cover___card">封面</string>
+    <string name="label_card_page_to_guest___card">致宾客页</string>
+    <string name="label_edit___card">编辑</string>
+    <string name="label_preview___card">预览</string>
+    <string name="label_page_sort___card">排序/删页</string>
+    <string name="label_create_page___card">加页</string>
+    <string name="label_setting___card">设置</string>
+    <string name="label_recommend___card">推荐</string>
+    <string name="label_member_privilege___card">会员</string>
+    <string name="label_bind_wx_tip___card">1、请点击与真实姓名相同的按钮进行微信授权，否则礼物礼金无法提现；\n2、本请帖的收到礼物和礼金将提现至实名认证通过的微信钱包中。</string>
+    <string name="label_card_come_from_partner___card">来自伴侣的请帖</string>
+    <string name="label_card_come_partner___card">来自另一半</string>
+
+    <string name="hint_theme_share___card">点击下方按钮，将“婚礼纪”分享至朋友圈，即可解锁全部模板哦~</string>
+    <string name="hint_feedback_content___card">请尽量详细描述反馈，我们会第一时间帮你解决~</string>
+    <string name="hint_feedback_contact___card">你的联系电话（选填）</string>
+    <string name="hint_groom_name___card">请输入新郎的姓名</string>
+    <string name="hint_bride_name___card">请输入新娘的姓名</string>
+    <string name="hint_wedding_date___card">请设置婚礼时间</string>
+    <string name="hint_wedding_address___card">请输入婚礼地址</string>
+    <string name="hint_no_such_template___card">抱歉，没有此类模板</string>
+
+    <string name="hint_recording_permission__card">无法进行录音，请开启录音权限</string>
+    <string name="hint_record1__card">点击录音</string>
+    <string name="hint_record2__card">点击暂停</string>
+    <string name="hint_record3__card">点击继续</string>
+    <string name="msg_err_recording__card">录音失败，请稍后再试</string>
+    <string name="msg_err_recording_too_short__card">录音时间太短</string>
+    <string name="label_music_time__card">%1$02d:%2$02d</string>
+    <string name="hint_recording_cancel__card">确定放弃录音？</string>
+    <string name="label_no_music__card">无音乐</string>
+    <string name="hint_story_back__card">你是否放弃本次修改</string>
+    <string name="label_recording__card">录音</string>
+    <string name="label_time_down__card">%1$02d:%2$02d/%3$02d:%4$02d</string>
+    <string name="label_change__card">更换</string>
+    <string name="label_upload_sound__card">上传音乐</string>
+    <string name="msg_upload_record_music__card">录音上传中…</string>
+    <string name="msg_upload_file_music__card">音乐上传中…</string>
+    <string name="msg_err_card_sound__card">修改请帖音乐失败，请稍后再试</string>
+    <string name="err_permission_music__card">未获取权限不能读取音乐</string>
+    <string name="hint_music_file_empty__card">未找到音乐文件</string>
+    <string name="hint_delete_card___card">您确定要删除该请帖吗？\n已发出的请帖会被同步删除</string>
+    <string name="hint_close_card___card">注意：关闭请帖后，\n已经发出的请帖将无法显示</string>
+    <string name="hint_card_reply_empty_text___card">暂未收到相关宾客回复</string>
+
+    <string name="msg_feedback_ok___card">我们已经收到你的反馈</string>
+
+    <string name="format_bind_info___card" formatted="false">%s(%s)</string>
+    <string name="format_bind_name___card" formatted="false">绑定“%s”的微信钱包</string>
+    <string name="format_card_time___card">yyyy年MM月dd日 HH时mm分</string>
+    <string name="format_groom_and_bride_name___card" formatted="false">%s&amp;%s</string>
+
+
+    <string name="hint_empty_wedding_card___card">制作你的专属请帖</string>
+    <string name="hint_join_member___card">会员专属请帖，成为婚礼纪会员后即可免费使用~</string>
+    <string name="label_withdraw_to___card">提现到</string>
+    <string name="label_other_certification___card">其他认证方式</string>
+    <string name="label_modify_name_back___card">返回修改姓名</string>
+    <string name="label_change_certification___card">更改微信钱包</string>
+
+    <string name="msg_card_video_just_one___card">1个请帖最多只支持选择1个视频模板哦</string>
+    <string name="label_bind_bank_tip___card">1、请绑定与请帖姓名相同的银行卡，否则礼物礼金无法提现； \n2、本请帖的收到礼物和礼金金额将提现至实名认证通过的银行卡中。</string>
+
+    <string name="msg_card_page_delete___card">确定要删除该页吗</string>
+    <string name="label_withdraw_wx_tip">微信钱包提现可实时到账</string>
+    <string name="label_go_withdraw_bank">银行卡认证方式</string>
+    <string name="label_withdraw_bank_tip">（银行卡提现需1至3个工作日）</string>
+    <string name="label_change_bank">更改为银行卡提现</string>
+    <string name="label_copy_success___card">复制成功</string>
+    <string name="label_cash_function___card">礼金</string>
+    <string name="label_gift_function___card">虚拟礼物</string>
+    <string name="label_barrage___card">弹幕</string>
+    <string name="label_copy_card___card">复制请帖</string>
+    <string name="label_arrange_seat__card">安排宾客座位，供来宾查座</string>
+    <string name="label_card_master___card">请帖大师</string>
+    <string name="hint_card_photos">请选择认证图片</string>
+
+</resources>

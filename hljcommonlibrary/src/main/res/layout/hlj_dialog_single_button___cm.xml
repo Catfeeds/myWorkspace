@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_r6_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:minHeight="128dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_alert_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/large_text_size"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_alert_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2" />
+
+    </LinearLayout>
+
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sl_r6_b_white_2_background2"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/label_confirm___cm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

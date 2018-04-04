@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/sl_color_trans_2_primary"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:duplicateParentState="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textColor="@color/black2_white"
+        android:textSize="@dimen/medium_text_size1" />
+
+</com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>

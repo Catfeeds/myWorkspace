@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="45dp">
+
+        <ImageButton
+            android:id="@+id/btn_back2"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_back_primary" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lines="1"
+            android:text="领备婚资料"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size"
+            android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/btn_share2"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/icon_share_primary_44_44" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/action_layout"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/hlj_common_fragment_ptr_recycler_view___cm"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

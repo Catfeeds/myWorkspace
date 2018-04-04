@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+        <LinearLayout
+            android:id="@+id/share_weixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sl_round10_green2_2_gray3"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_wechat_white_54_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/label_weixin2___cm"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:id="@+id/share_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sl_r10_orange2_2_gray3"
+                android:contentDescription="@string/app_name"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_message_email_white_54_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="邮件"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <include layout="@layout/line_layout___cm" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/label_cancel___cm"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+</LinearLayout>

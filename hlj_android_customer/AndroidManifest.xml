@@ -1,0 +1,1788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="me.suncloud.marrymemo"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="andorid.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <!-- 个推 -->
+    <permission
+        android:name="getui.permission.GetuiService.${applicationId}"
+        android:protectionLevel="normal" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".HLJCustomerApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_launcher"
+        android:label="${app_name}"
+        android:largeHeap="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:theme">
+
+        <!-- ************************************************************************************* -->
+        <!-- 个推SDK配置开始 -->
+        <!-- 配置的第三方参数属性 -->
+        <meta-data
+            android:name="PUSH_APPID"
+            android:value="${GETUI_APP_ID}" />
+        <meta-data
+            android:name="PUSH_APPSECRET"
+            android:value="${GETUI_APP_SECRET}" />
+        <meta-data
+            android:name="PUSH_APPKEY"
+            android:value="${GETUI_APP_KEY}" />
+        <!-- 高德地图API key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="cbd092af7286649a8e9062e69c7ee38a" />
+
+        <!-- 配置SDK核心服务 -->
+        <service
+            android:name="com.igexin.sdk.PushService"
+            android:exported="true"
+            android:label="NotificationCenter"
+            android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.service.message" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.igexin.sdk.PushReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="com.igexin.sdk.action.refreshls" />
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.NetworkReceiver">
+            <intent-filter>
+                <action android:name="android.NET.wifi.RSSI_CHANGED" />
+                <action android:name="android.Net.wifi.STATE_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.igexin.sdk.PushActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.igexin.sdk.GActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:process=":pushservice"
+            android:taskAffinity="com.igexin.sdk.PushActivityTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 个推download模块配置 -->
+        <service
+            android:name="com.igexin.download.DownloadService"
+            android:process=":pushservice" />
+
+        <receiver
+            android:name="com.igexin.download.DownloadReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.igexin.download.DownloadProvider"
+            android:authorities="downloads.${applicationId}"
+            android:exported="true"
+            android:process=":pushservice" />
+
+        <!-- 用户自定义服务继承自GTIntentService,作为SDK与APP桥梁服务,用来接收各种消息和命令回复 -->
+        <service android:name=".service.GetuiIntentService" />
+
+        <!-- 用户自定义服务名 -->
+        <service
+            android:name=".service.GetuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <!-- ************************************************************************************* -->
+
+
+        <!-- ************************************************************************************* -->
+        <!-- QQ登陆 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent100370679" />
+            </intent-filter>
+        </activity>
+        <!-- ************************************************************************************* -->
+
+
+        <!-- ************************************************************************************* -->
+        <!-- 微信回调接收 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信支付回调接收 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ************************************************************************************* -->
+
+
+        <!-- ************************************************************************************* -->
+        <!-- FileProvider -->
+        <!-- authorities同包名 使用通过getPackageName()获取 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 渠道标识 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="517ce08956240b1ff102f8c9" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="BAEB8777A7CF7E06DBF107746666027A" />
+        <meta-data
+            android:name="HLJ_CHANNEL"
+            android:value="${HLJ_CHANNEL_VALUE}" />
+
+        <!--&lt;!&ndash; ************************************************************************************* &ndash;&gt;-->
+        <!--&lt;!&ndash; google统计配置 &ndash;&gt;-->
+        <!--&lt;!&ndash; Enable background dispatching to improve delivery on non-Google Play devices &ndash;&gt;-->
+        <!--<receiver-->
+        <!--android:name="com.google.android.gms.analytics.AnalyticsReceiver"-->
+        <!--android:enabled="true">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--<service-->
+        <!--android:name="com.google.android.gms.analytics.AnalyticsService"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="false" />-->
+
+        <!--&lt;!&ndash; Enable Google Play Store Campaign reports &ndash;&gt;-->
+        <!--<receiver-->
+        <!--android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"-->
+        <!--android:enabled="true"-->
+        <!--android:exported="true">-->
+        <!--<intent-filter>-->
+        <!--<action android:name="com.android.vending.INSTALL_REFERRER" />-->
+        <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--<service-->
+        <!--android:name="com.google.android.gms.analytics.CampaignTrackingService"-->
+        <!--android:enabled="true" />-->
+        <!--&lt;!&ndash; ************************************************************************************* &ndash;&gt;-->
+        <!--&lt;!&ndash; ************************************************************************************* &ndash;&gt;-->
+
+
+        <!-- 程序启动页 -->
+        <activity
+            android:name=".view.SplashActivity"
+            android:label="${app_launch_name}"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:launchMode="singleTask"
+            android:persistent="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarThemeNotTranslucent"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing">
+            <intent-filter>
+                <data
+                    android:host="home"
+                    android:scheme="hunliji" />
+                <data
+                    android:host="poster_jumper"
+                    android:scheme="hunliji" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ItemReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.PhotoEditPageView"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.TakeVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.VideoViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.ThreadPicsPageViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.StoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.MyStoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.StoryPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.AccountEditActivity"
+            android:label="@string/title_activity_account_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".view.AboutActivity"
+            android:label="@string/title_activity_about_hunliji"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.AijiaWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.MusicListActivity"
+            android:label="@string/title_activity_muisc_choose"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.MyStoryListActivity"
+            android:label="@string/title_activity_my_story"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.NewStoryActivity"
+            android:label="@string/title_activity_new_story"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.TextEditActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:name=".view.ItemPageViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.SignListActivity"
+            android:label="@string/label_news_sign"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.WXWallActivity"
+            android:label="@string/label_weixin_wall"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.kefu.EMChatActivity"
+            android:label="@string/title_activity_chat"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.tools.WeddingCalendarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme.Dark" />
+        <activity
+            android:name=".view.WeddingRegisterActivity"
+            android:label="@string/title_activity_wedding_register"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.WeddingDayProgramsActivity"
+            android:label="@string/title_activity_wedding_day_plan"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.AddWeddingProgItemActivity"
+            android:label="@string/title_activity_add_wedding_plan"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.StoryListActivity"
+            android:label="@string/title_activity_story_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.MyWalletActivity"
+            android:label="@string/title_activity_my_wallet"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 我的优惠券界面 -->
+        <activity
+            android:name=".view.wallet.MyCouponListActivity"
+            android:label="@string/title_activity_my_coupon"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 我的红包 -->
+        <activity
+            android:name=".view.wallet.MyRedPacketListActivity"
+            android:label="@string/title_activity_my_red_packet"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 红包使用说明 -->
+        <activity
+            android:name=".view.wallet.MyRedPacketDescriptionActivity"
+            android:label="@string/title_activity_red_packet_description"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 优惠券使用说明 -->
+        <activity
+            android:name=".view.wallet.MyCouponDescriptionActivity"
+            android:label="@string/title_activity_coupon_description"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 领券中心 -->
+        <activity
+            android:name=".view.wallet.CertificateCenterListActivity"
+            android:label="@string/title_activity_ticket_center"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.LightUpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivityTheme" />
+        <activity
+            android:name=".view.OrderConfirmActivity"
+            android:label="@string/title_activity_work_order_confirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.OrderInfoEditActivity"
+            android:label="@string/title_activity_order_info_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.OrderPaymentActivity"
+            android:label="@string/title_activity_order_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.AfterPayActivity"
+            android:label="@string/title_activity_after_pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.MyOrderListActivity"
+            android:label="@string/title_activity_my_order_list"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.RefundApplyActivity"
+            android:label="@string/title_activity_refund_apply"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.OrderRefundDetailActivity"
+            android:label="@string/title_activity_order_refund_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CommentNewWorkActivity"
+            android:label="@string/title_activity_comment_work"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.RefundOrderListActivity"
+            android:label="@string/title_activity_refund_order_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.UMPayActivity"
+            android:label="@string/title_activity_umpay"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.PayOfflineOrderListActivity"
+            android:label="@string/title_activity_pay_offline_orders"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.OfflineOrderDetailActivity"
+            android:label="@string/title_activity_offline_order_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.PayOfflineActivity"
+            android:label="@string/title_activity_pay_offline"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.OfflineOrderPaymentActivity"
+            android:label="@string/title_activity_offline_order_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.AfterPayOfflineActivity"
+            android:label="@string/title_activity_after_pay_offline"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.AfterReservationActivity"
+            android:label="@string/title_activity_after_reservation"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CompleteProfileActivity"
+            android:label="@string/title_activity_complete_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivityTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".view.EditNickNameActivity"
+            android:label="@string/title_activity_edit_nick_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.EditRealNameActivity"
+            android:label="@string/title_activity_edit_real_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.EditIntroActivity"
+            android:label="@string/title_activity_edit_intro"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.SafeActivity"
+            android:label="@string/settings_safe"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.FeedbackActivity"
+            android:label="@string/settings_feedback"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.ProductOrderConfirmActivity"
+            android:label="@string/title_activity_product_order_confirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".view.ShoppingCartActivity"
+            android:label="@string/title_activity_shopping_cart"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.ShippingAddressListActivity"
+            android:label="@string/title_activity_shipping_address_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.product.ProductDetailImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.ProductMerchantActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.EditShippingAddressActivity"
+            android:label="@string/title_activity_edit_shipping_address"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.ProductOrderDetailActivity"
+            android:label="@string/title_activity_product_order_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.ProductCommentListActivity"
+            android:label="@string/title_activity_product_comment"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.AfterPayCustomSetmealOrderActivity"
+            android:label="@string/title_activity_after_pay_product_order"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.product.AfterPayProductOrderActivity"
+            android:label="@string/title_activity_after_pay_product_order"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.RefundProductOrderActivity"
+            android:label="@string/title_activity_refund_product_order"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.AfterConfirmReceiveActivity"
+            android:label="@string/title_activity_after_confirm_receive"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.ShippingStatusActivity"
+            android:label="@string/title_activity_shipping_status"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.NewCarOrderConfirmActivity"
+            android:label="@string/title_activity_new_car_order_confirm"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.ContactInfoActivity"
+            android:label="@string/title_activity_contact_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.CarOrderPaymentActivity"
+            android:label="@string/title_activity_car_order_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.CarOrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 婚车详情 -->
+        <activity
+            android:name=".view.CarCartActivity"
+            android:label="@string/title_activity_car_cart"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CarCommentListActivity"
+            android:label="@string/label_car_comment"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.StoryReviewListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.RefundCarOrderActivity"
+            android:label="@string/title_activity_refund_car_order"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.RefundCarOrderDetailActivity"
+            android:label="@string/title_activity_refund_car_order_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CityListActivity"
+            android:label="@string/title_city_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.CustomerPhotosActivity"
+            android:label="@string/title_activity_customer_photos"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CaseDetailActivity"
+            android:label="@string/title_activity_case_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.WeddingPreparedListActivity"
+            android:hardwareAccelerated="false"
+            android:label="备婚清单"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.EnterBankCardIDActivity"
+            android:label="@string/title_activity_enter_bank_card_id"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.LLPayIdentificationActivity"
+            android:label="@string/title_activity_llpay_identification"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CardMusicListActivity"
+            android:label="@string/title_activity_muisc_choose"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.SetPayPasswordActivity"
+            android:label="@string/title_activity_set_pay_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.SupportBankCardsListActivity"
+            android:label="@string/title_activity_support_bank_cards_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.VerificationPayPasswordActivity"
+            android:label="@string/title_activity_pay_by_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.SelectBindCardListActivity"
+            android:label="@string/title_activity_select_bind_card_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.FindPayPasswordActivity"
+            android:label="@string/title_activity_find_pay_password"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CustomSetmealOrderConfirmActivity"
+            android:label="@string/title_activity_custom_setmeal_order_confirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CustomSetmealOrderDetailActivity"
+            android:label="@string/title_activity_custom_setmeal_order_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CustomSetmealOrderPaymentActivity"
+            android:label="@string/title_activity_custom_setmeal_order_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.WorkActivity"
+            android:label="@string/label_work_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.CollectActivity"
+            android:label="@string/title_activity_collect"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.tools.MyPublishActivity"
+            android:label="@string/title_activity_my_publish"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.FollowActivity"
+            android:label="@string/title_activity_follow"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.FansActivity"
+            android:label="@string/title_activity_my_fan"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.wallet.GoldMarketWebViewActivity"
+            android:label="@string/settings_my_gold"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CreditActivity"
+            android:label="@string/settings_my_gold"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarThemeNotTranslucent" />
+        <activity
+            android:name=".view.kefu.AdvHelperActivity"
+            android:label="@string/title_activity_adv_helper"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CustomSetMealDetailActivity"
+            android:label="@string/label_custom_setmeal"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.comment.ServiceCommentListActivity"
+            android:label="@string/title_activity_comment_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.comment.ServiceCommentDetailActivity"
+            android:label="@string/title_activity_service_order_comment_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".view.CustomRefundOrderActivity"
+            android:label="@string/title_activity_custom_refund_order"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.ProductRefundApplyActivity"
+            android:label="@string/title_activity_product_refund_apply"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.RefundMessageActivity"
+            android:label="@string/label_refund_message"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".view.SelectRefundTypeActivity"
+            android:label="@string/title_activity_select_refund_type"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.ProductRefundDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.ExchangeCodeActivity"
+            android:label="@string/label_exchange_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.MarkDetailActivity"
+            android:label="@string/label_label_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.MoreMarkProductActivity"
+            android:label="@string/label_label_particularly_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.MoreMarkWorkAndCaseActivity"
+            android:label="@string/label_subject_wedding"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.MoreMarkThreadActivity"
+            android:label="@string/label_subject_thread"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.CommentMerchantActivity"
+            android:label="@string/label_comment_merchant"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.community.CommunityChannelActivity"
+            android:label="@string/title_community_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".view.community.SameCityThreadListActivity"
+            android:label="@string/title_activity_same_city_thread"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.community.SameCityNewestThreadListActivity"
+            android:label="@string/title_activity_nearby_thread"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.MyCommunityPostActivity"
+            android:label="@string/label_my_thread"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.community.ChannelListActivity"
+            android:label="@string/label_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.ThemeV2ListActivity"
+            android:label="@string/title_activity_new_templet"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CardV2EditActivity"
+            android:label="@string/title_activity_card_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarThemeNotTranslucent"
+            android:windowSoftInputMode="adjustNothing|stateAlwaysHidden" />
+        <activity
+            android:name=".view.CardV2InfoEditActivity"
+            android:label="@string/title_activity_card_new"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.PageV2ChoosePhotoActivity"
+            android:label="@string/btn_choose_photos"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarThemeNotTranslucent" />
+        <activity
+            android:name=".view.PageV2EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarThemeNotTranslucent"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.TemplateV2ListActivity"
+            android:label="@string/title_activity_template"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CardV2ListActivity"
+            android:label="@string/title_activity_new_cover"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.PageV2SortActivity"
+            android:label="@string/title_activity_page_sort"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.CardV2WebActivity"
+            android:label="@string/title_activity_card_view"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.ChangeExpressInfoActivity"
+            android:label="@string/title_activity_change_express_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.LocalPicsPageViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.budget.NewWeddingBudgetActivity"
+            android:label="@string/title_activity_wedding_cost"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".view.budget.NewWeddingBudgetFigureActivity"
+            android:label="@string/title_activity_wedding_cost"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.budget.NewWeddingBudgetCategoryActivity"
+            android:label="@string/title_activity_wedding_cost"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.SelectCommunityChannelActivity"
+            android:label="@string/title_activity_select_community_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 热帖排行榜 -->
+        <activity
+            android:name=".view.community.HotThreadRankListActivity"
+            android:label="@string/label_ranking_list___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.ReportThreadActivity"
+            android:label="@string/title_activity_report_thread"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.ChoosePhotoPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.work_case.MerchantWorkListActivity"
+            android:label="@string/title_activity_work"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.work_case.MerchantCaseListActivity"
+            android:label="@string/title_activity_case"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.TwitterPraisedListActivity"
+            android:label="@string/label_twitter_praised_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.UserProfileActivity"
+            android:label="@string/title_activity_user_profile"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.binding_partner.BindPartnerActivity"
+            android:label="@string/title_activity_bind_partner"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".view.binding_partner.AfterBindPartnerActivity"
+            android:label="@string/title_activity_after_bind_partner"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 邀请另一半主页 -->
+        <activity
+            android:name=".view.binding_partner.BindingPartnerActivity"
+            android:label="@string/title_activity_binding_partner"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.login.PhoneLoginActivity"
+            android:label="@string/label_account_login"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoHeightCustomTitleTheme" />
+        <activity
+            android:name=".view.login.WeddingDateSetActivity"
+            android:label="@string/label_set_wedding_date4"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.finder.SubPageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".view.finder.SubPageMarkListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.finder.SubPageCategoryMarkListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.finder.SubPageCommentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.finder.SubPageRankListActivity"
+            android:label="@string/label_sub_page_rank"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.finder.SelectedSubPageListActivity"
+            android:label="@string/label_special_sub_page"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.finder.UserPrepareCategoryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeHotCityActivity"
+            android:label="@string/label_journey_hot_city"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeGuideListActivity"
+            android:label="@string/label_all_strategy"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeMerchantListActivity"
+            android:label="@string/label_all_merchant"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeWorkListActivity"
+            android:label="@string/label_all_work"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeAmorousCityActivity"
+            android:label="@string/label_amorous"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeAmorousActivity"
+            android:label="@string/label_amorous"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeAmorousLevel2Activity"
+            android:label="@string/label_amorous"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.themephotography.ThemeLightLuxuryActivity"
+            android:label="@string/label_light_luxury"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.themephotography.TravelChannelActivity"
+            android:label="品牌专场"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <!-- 热门活动 -->
+        <activity
+            android:name=".view.event.EventListActivity"
+            android:label="@string/title_hot_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 活动详情 -->
+        <activity
+            android:name=".view.event.EventDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <!-- 活动报名 -->
+        <activity
+            android:name=".view.event.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivityTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 活动投诉 -->
+        <activity
+            android:name=".view.event.ReportEventActivity"
+            android:label="@string/title_activity_event_report"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 投诉结果 -->
+        <activity
+            android:name=".view.event.AfterReportEventActivity"
+            android:label="@string/title_activity_after_report"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 活动中奖名单 -->
+        <activity
+            android:name=".view.event.WinnerListActivity"
+            android:label="@string/title_activity_winner_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 报名参加活动之后 -->
+        <activity
+            android:name=".view.event.AfterSignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.notification.OrderNotificationActivity"
+            android:label="@string/label_news_order"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.notification.EventNotificationActivity"
+            android:label="@string/label_news_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.notification.CommunityNotificationActivity"
+            android:label="@string/label_news_community"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 话题点赞用户列表 -->
+        <activity
+            android:name=".view.ThreadPraisedUsersActivity"
+            android:label="@string/title_activity_thread_praised_users"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.experience.ExperienceShopActivity"
+            android:hardwareAccelerated="true"
+            android:label="@string/label_wedding_experience"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.experience.ExperienceShopEventListActivity"
+            android:label="@string/all_events"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.experience.ExperienceShopImageActivity"
+            android:label="@string/label_experience_image"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.experience.ExperienceShopReservationActivity"
+            android:label="@string/label_subscribe"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 精编话题列表 -->
+        <activity
+            android:name=".view.community.RichThreadListActivity"
+            android:label="@string/label_selected_topic"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.community.PrizeThreadListActivity"
+            android:label="@string/label_prize_thread"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 本地服务订单填写订单页面 -->
+        <activity
+            android:name=".view.orders.ServiceOrderConfirmActivity"
+            android:label="@string/title_activity_service_order_confirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 本地服务订单详情页面 -->
+        <activity
+            android:name=".view.orders.ServiceOrderDetailActivity"
+            android:label="@string/title_activity_service_order_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.kepler.HljKeplerActivity"
+            android:label="@string/label_kepler"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.topBrand.WeddingPhotoTopActivity"
+            android:label="@string/label_wedding_photo_top"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.topBrand.WeddingBrandActivity"
+            android:label="@string/label_wedding_brand"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.HotelCalendarActivity"
+            android:label="@string/label_schedule_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.HotelChannelActivity"
+            android:label="@string/label_hotel_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".view.AfterScheduleActivity"
+            android:label="@string/msg_reservation_succeed"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <!-- 婚品频道 -->
+        <!-- 婚品专题列表 -->
+        <activity
+            android:name=".view.product.ProductSubPageListActivity"
+            android:label="@string/label_wedding_ceremony"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <!-- 婚品专题标签列表 -->
+        <activity
+            android:name=".view.product.ProductSubPageMarkListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.experience.ExperienceShopReservationSucceedActivity"
+            android:label="@string/msg_reservation_succeed"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.GuessYouLikeListActivity"
+            android:label="@string/label_guess_like"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.BuyWorkActivity"
+            android:label="@string/label_buy_work"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.BuyWorkListActivity"
+            android:label="@string/label_buy_work"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.community.RecommendThreadActivity"
+            android:label="社区热帖"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 搜索结果页面 -->
+        <!-- 搜索分类选择和热词，历史 -->
+        <!-- 看案例 -->
+        <activity
+            android:name=".view.CaseListActivity"
+            android:label="@string/title_activity_case_list"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <!-- Mad网页 -->
+        <!-- 商家问答页 -->
+        <activity
+            android:name=".view.MerchantAnswersActivity"
+            android:label="@string/title_activity_merchant_answers"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 第三方账号绑定 -->
+        <activity
+            android:name=".view.ThirdBindAccountActivity"
+            android:label="@string/label_third_account_binding"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".view.experience.ExperienceShopImpressionActivity"
+            android:label="@string/title_activity_experience_shop_expression"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 统筹师详情 -->
+        <activity
+            android:name=".view.experience.PlannerDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.experience.ExperienceShopPhotoActivity"
+            android:label="@string/label_experience_image"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.SwitchCashGiftActivity"
+            android:label="@string/label_cash_gift"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.notification.FinancialNotificationActivity"
+            android:label="@string/label_news_financial"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.wallet.OpenMemberActivity"
+            android:label="@string/label_member_privileges_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.MemberAddressListActivity"
+            android:label="@string/label_shipping_address"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.WeddingCarEntryActivity"
+            android:label="填写用车信息"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.card.HelpAndFeedbackActivity"
+            android:label="@string/title_activity_help_and_feedback"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.ShoppingCategoryActivity"
+            android:label="@string/label_shopping_category"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.ShoppingCategoryDetailActivity"
+            android:label="@string/label_category_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.community.CreateWeddingPhotoActivity"
+            android:label="@string/title_activity_create_wedding_photo"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.community.WeddingPhotoPreviewActivity"
+            android:label="@string/title_activity_wedding_photo_preview"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.wedding_dress.ViewLargeImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.wedding_dress.WeddingReleaseSuccessActivity"
+            android:label="@string/title_activity_wedding_release_success"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.community.SelectMerchantListActivity"
+            android:label="@string/title_activity_select_merchant_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 话题详情，普通话题和婚纱照详情 -->
+        <activity
+            android:name=".view.community.CommunityThreadDetailActivity"
+            android:label="@string/title_activity_thread_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.community.WeddingImageChooserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.wedding_dress.WeddingPhotoCommentActivity"
+            android:theme="@style/DialogActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <!-- 订单信息确认 -->
+        <activity
+            android:name=".view.orders.OrderInfoConfirmActivity"
+            android:label="@string/title_activity_order_info_confirm"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 服务订单意向金后续支付页面 -->
+        <activity
+            android:name=".view.orders.ServiceOrderPaymentActivity"
+            android:label="@string/title_activity_service_order_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.orders.ServiceOrderPayRestActivity"
+            android:label="@string/title_activity_service_pay_rest_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:label="登陆"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".view.brigade.BrigadeWeekHotsActivity"
+            android:label="@string/title_activity_hot_this_week"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.merchant.WeddingPlanChannelActivity"
+            android:label="@string/title_activity_wedding_plan_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.merchant.WeddingDressPhotoChannelActivity"
+            android:label="@string/title_activity_wedding_dress_photo_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.merchant.WeddingMakeupChannelActivity"
+            android:label="@string/title_activity_wedding_makeup_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.merchant.WeddingCompereChannelActivity"
+            android:label="@string/title_activity_wedding_compere_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.merchant.WeddingShootingChannelActivity"
+            android:label="@string/title_activity_wedding_shooting_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.merchant.WeddingPhotoChannelActivity"
+            android:label="@string/title_activity_wedding_photo_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.merchant.WeddingDressChannelActivity"
+            android:label="@string/title_activity_wedding_dress_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.orders.XiaoXiInstallmentIntroActivity"
+            android:label="@string/title_activity_hlj_installment_intro"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 金融超市 -->
+        <activity
+            android:name=".view.brigade.BrigadeLimitBuyActivity"
+            android:label="@string/title_activity_brigade_limit_buy"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.merchant.MerchantDetailActivity"
+            android:label="@string/title_activity_merchant_fixed"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.merchant.HotelHallActivity"
+            android:label="@string/label_hall"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.merchant.HotelMenuActivity"
+            android:label="@string/label_menu"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 工具主页 -->
+        <activity
+            android:name=".view.ToolsHomeActivity"
+            android:label="@string/label_tools_home_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.product.MerchantGoodAddOnActivity"
+            android:label="@string/label_product_add_on"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.merchant.HotelHallDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.PreFindHotelActivity"
+            android:label="@string/label_hotel_channel"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.product.WeeklyProductsActivity"
+            android:label="@string/title_activity_weekly_products"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.marry.MarryBookActivity"
+            android:label="@string/title_activity_marry_book"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.marry.MarryTaskActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme.Dark"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.marry.MarryTaskEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".view.marry.MarryBookEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".view.InstalmentMerchantListActivity"
+            android:label="@string/title_activity_instalment_merchant_list"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.notification.MessageHomeActivity"
+            android:label="@string/title_activity_message_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
+        <activity
+            android:name=".view.notification.SystemNotificationActivity"
+            android:label="@string/title_activity_system_notification"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.chat.WSCustomerChatActivity"
+            android:label="@string/label_msg"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.chat.WSCustomerDialogChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogActivityTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.user.UserDynamicListActivity"
+            android:label="@string/title_activity_user_dynamic"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.tools.WeddingTableListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme.Dark"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".view.tools.EditWeddingTableActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".view.tools.WeddingTableQRCodeActivity"
+            android:label="@string/title_activity_wedding_table_qr_code"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.tools.ImportWeddingGuestsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.tools.PreviewWeddingTableActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.marry.ImportMoneyGiftActivity"
+            android:label="@string/title_activity_import_money_gift"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".view.lvpai.AroundLvPaiActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme.Dark" />
+        <!-- 儿童写真页 -->
+        <activity
+            android:name=".view.child.ChildPictorialListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <!-- 儿童写真二级页 -->
+        <activity
+            android:name=".view.child.PictorialSubPageListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.wallet.FinancialHomeActivity"
+            android:label="@string/title_activity_financial_home"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.ServiceMaintainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.newsearch.NewSearchResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".view.newsearch.NewSearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".view.work_case.WorkMediaImageActivity"
+            android:label="@string/title_activity_work_media_image"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.comment.CommentServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".view.comment.CommentProductOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".view.CommentCarActivity"
+            android:label="@string/title_activity_comment_work"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity android:name=".view.lvpai.NinetyNineLvPaiActivity" />
+        <activity
+            android:name=".view.ad.LaunchAdActivity"
+            android:label="@string/title_launch_ad"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.work_case.CasePhotoDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.product.ShopProductDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.product.ProductImageActivity"
+            android:label="@string/title_activity_work_media_image"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.finder.FinderCaseMediaPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme" />
+        <activity
+            android:name=".view.community.WeddingBibleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".view.community.SimilarWeddingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".view.community.CreateThreadActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.community.CreatePostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.community.ObtainWeddingMaterialsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.orders.HotelPeriodFillOrderActivity"
+            android:label="填写订单"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity
+            android:name=".view.orders.HotelPeriodOrderPhotoActivity"
+            android:label="填写订单"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".view.themephotography.OnePayAllInclusiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".view.orders.HotelOrderInfoEditActivity"
+            android:label="@string/title_activity_order_info_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <activity
+            android:name=".view.community.CommunityEventActivity"
+            android:label="新娘说活动页"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity
+            android:name=".view.community.QaHomeActivity"
+            android:label="问答"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".view.debug.ChangeHostActivity"
+            android:label="服务器切换"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity
+            android:name=".view.merchant.MerchantListActivity"
+            android:label="@string/label_find_merchant"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustNothing" />
+    </application>
+
+</manifest>

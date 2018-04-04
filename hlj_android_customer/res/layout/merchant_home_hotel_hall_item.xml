@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingBottom="14dp">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="126dp"
+        android:layout_height="74dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/colorImageBackground"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/iv_cover"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size"
+            tools:text="龙禧宴会大厅" />
+
+
+        <TextView
+            android:id="@+id/tv_table_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_area_label"
+            android:layout_marginBottom="4dp"
+            android:includeFontPadding="false"
+            android:text="@string/label_hotel_desks"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <TextView
+            android:id="@+id/tv_table_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_area"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_toLeftOf="@+id/btn_schedule"
+            android:layout_toRightOf="@+id/tv_table_label"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="@string/label_hotel_pillar_count"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2"
+            tools:text="40" />
+
+        <TextView
+            android:id="@+id/tv_area_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:includeFontPadding="false"
+            android:text="面积"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toLeftOf="@+id/btn_schedule"
+            android:layout_toRightOf="@+id/tv_area_label"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="@string/label_hotel_pillar_count"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2"
+            tools:text="800㎡" />
+
+        <Button
+            android:id="@+id/btn_schedule"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sl_r3_primary_2_dark"
+            android:text="@string/label_schedule"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorLine" />
+
+</RelativeLayout>

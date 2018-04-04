@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.suncloud.marrymemo.view.ReportThreadActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:text="请选择举报原因"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <me.suncloud.marrymemo.widget.CheckableLinearLayoutGroup
+            android:id="@+id/cb_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/cb_1"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:clickable="true"
+                android:orientation="vertical"
+                app:isChecked="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="垃圾广告"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_trans_2_tick_red" />
+                </LinearLayout>
+
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/colorLine" />
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/cb_2"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="侮辱诋毁"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_trans_2_tick_red" />
+                </LinearLayout>
+
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/colorLine" />
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/cb_3"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="淫秽色情"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_trans_2_tick_red" />
+                </LinearLayout>
+
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/colorLine" />
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/cb_4"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="盗版侵权"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_trans_2_tick_red" />
+                </LinearLayout>
+
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/colorLine" />
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/cb_5"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="不符合频道主题"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_trans_2_tick_red" />
+                </LinearLayout>
+
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:background="@color/colorLine" />
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/cb_6"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:layout_height="44dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:text="其他"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginRight="20dp"
+                        android:duplicateParentState="true"
+                        android:src="@drawable/sl_ic_trans_2_tick_red" />
+                </LinearLayout>
+
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+        </me.suncloud.marrymemo.widget.CheckableLinearLayoutGroup>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/sl_r18_primary_2_dark"
+            android:gravity="center"
+            android:text="确定举报"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+    </LinearLayout>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

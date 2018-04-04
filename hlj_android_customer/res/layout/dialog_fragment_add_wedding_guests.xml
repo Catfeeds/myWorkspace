@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+    <EditText
+        android:id="@+id/et_guest_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/sp_r3_stroke_line_solid_white"
+        android:gravity="top"
+        android:hint="通过姓名间的「空格」，一次添加多位新宾客"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="12dp"
+        android:minHeight="100dp"
+        android:padding="12dp"
+        android:textColor="@color/colorBlack2"
+        android:textColorHint="@color/colorGray2"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_guest_names"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="手动输入太麻烦？试试"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <LinearLayout
+            android:id="@+id/import_guests_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="通讯录导入"
+                android:textColor="@color/colorLink"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_arrow_right_gray_14_26"
+                android:tint="@color/colorLink" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/sl_r3_primary_2_dark"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/label_confirm"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

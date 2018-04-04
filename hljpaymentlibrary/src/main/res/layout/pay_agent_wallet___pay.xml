@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_horizontal"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@string/app_name"
+            android:duplicateParentState="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/sl_ic_wallet_2_wallet_disable" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:gravity="center_vertical"
+            android:text="@string/label_wallet_pay___pay"
+            android:textColor="@color/black2_disable_gray"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:id="@+id/tv_wallet_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:duplicateParentState="true"
+            android:gravity="right"
+            android:textColor="@color/black3_gray1"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <TextView
+            android:id="@+id/tv_wallet_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size3"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="13dp"
+            android:layout_marginLeft="8dp"
+            android:contentDescription="@string/app_name"
+            android:duplicateParentState="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/sl_ic_trans_2_tick_red" />
+
+    </LinearLayout>
+
+</com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>

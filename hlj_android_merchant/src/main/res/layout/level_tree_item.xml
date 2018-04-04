@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.marrybiz.widget.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/sl_level_yellow_2_gray3"
+    app:isChecked2="true"
+    app:uncheckable2="true">
+
+    <View
+        android:id="@+id/item_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/sl_color_yellow_2_gray3"
+        android:duplicateParentState="true" />
+    <TextView
+        android:id="@+id/level_name"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorWhite"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/medium_text_size3"
+        android:layout_height="wrap_content" />
+
+
+</com.hunliji.marrybiz.widget.CheckableRelativeLayout>

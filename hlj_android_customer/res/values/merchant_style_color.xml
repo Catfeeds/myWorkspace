@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="goldenPrimary">#e8b45e</color>
+    <color name="darkGoldenBackground">#2d2c2a</color>
+    <color name="darkGoldenSegmentBackground">#242321</color>
+    <color name="darkGoldenText">#d5c8b4</color>
+    <color name="darkGoldenLine">#3e3d3a</color>
+    <color name="darkGoldenDisable">#666057</color>
+
+
+    <color name="bluePrimary">#48b1ff</color>
+    <color name="pinkPrimary">#ff8ca4</color>
+    <color name="greenPrimary">#84bf61</color>
+    <color name="merchantColorAccent">#ff801a</color>
+</resources>

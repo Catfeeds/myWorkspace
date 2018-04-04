@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/hljActionBarHeight">
+
+    <RelativeLayout
+        android:id="@+id/rl_card_master_mine"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@drawable/sl_clickable_background"
+        android:minWidth="45dp">
+
+        <ImageView
+            android:id="@+id/iv_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_mine"
+            android:tint="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/iv_mine"
+            android:background="@drawable/sp_r8_white"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/ex_micro_text_size"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        style="?attr/hljTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/label_card_master___card" />
+
+</RelativeLayout>

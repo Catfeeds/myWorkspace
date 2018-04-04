@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+        <attr name="topRound" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams">
+        <attr name="layout_breakLine" format="boolean" />
+        <attr name="layout_horizontalSpacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckableLinearLayout2">
+        <attr name="isChecked" format="boolean" />
+        <attr name="uncheckable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CheckableRelativeLayout">
+        <attr name="isChecked2" format="boolean" />
+        <attr name="uncheckable2" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="PieChartView">
+        <attr name="pieBackgroundColor" format="reference|color" />
+        <attr name="pieColor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="ShSwitchView">
+        <attr name="tintColor" format="reference|color" />
+        <attr name="outerStrokeWidth" format="reference|dimension" />
+        <attr name="shadowSpace" format="reference|dimension" />
+    </declare-styleable>
+    <declare-styleable name="RecordAmplitudeView">
+        <attr name="bar_color" format="color" />
+        <attr name="bar_width" format="dimension" />
+        <attr name="bar_space" format="dimension" />
+        <attr name="bar_num" format="integer" />
+        <attr name="left" format="boolean" />
+        <attr name="start" format="float" />
+    </declare-styleable>
+    <declare-styleable name="DividerView">
+        <attr name="d_color" format="color" />
+        <attr name="dashLength" format="dimension" />
+        <attr name="dashGap" format="dimension" />
+        <attr name="dashThickness" format="dimension" />
+        <attr name="d_orientation" format="enum">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="HeartProgressBar">
+        <attr name="max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="src_empty" format="integer" />
+        <attr name="src_full" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="RatingView">
+        <attr name="offDrawable" format="reference" />
+        <attr name="onDrawable" format="reference" />
+        <attr name="itemMargin" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="isindicator" format="boolean" />
+        <attr name="isHalf" format="boolean" />
+        <attr name="halfDrawable" format="reference" />
+        <attr name="tintOff" format="color" />
+        <attr name="tintOn" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="my_text_view">
+        <attr name="contentText" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="hljpickerview">
+        <attr name="hljpickerview_gravity">
+            <enum name="center" value="17" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+        </attr>
+        <attr name="hljpickerview_textSize" format="dimension" />
+        <attr name="hljpickerview_textColorOut" format="color" />
+        <attr name="hljpickerview_textColorCenter" format="color" />
+        <attr name="hljpickerview_dividerColor" format="color" />
+        <attr name="hljpickerview_lineSpacingMultiplier" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="el_parallax" format="float" />
+        <!-- {@deprecated Use el_parallax instead.} -->
+        <attr name="el_translate_children" format="boolean" />
+        <attr name="layout_expandable" format="boolean" />
+        <attr name="android:orientation" />
+    </declare-styleable>
+
+</resources>

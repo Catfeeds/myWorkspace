@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hunliji.marrybiz.view.BusinessCollegeActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_layout"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:id="@+id/banner_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <com.slider.library.SliderLayout
+                            android:id="@+id/view_flow"
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            app:pager_animation="Default"
+                            app:pager_animation_span="1500" />
+
+                        <com.slider.library.Indicators.CirclePageExIndicator
+                            android:id="@+id/flow_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/view_flow"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="8dp"
+                            android:paddingLeft="6dp"
+                            android:paddingRight="6dp"
+                            app:circleOffset="4dp"
+                            app:circleWidth="10dp"
+                            app:circleradius="1dp"
+                            app:fillColor="@color/colorWhite"
+                            app:pageColor="#66ffffff"
+                            app:strokeWidth="0dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    app:contentInsetStart="0dp"
+                    app:elevation="0dp"
+                    app:layout_collapseMode="pin"
+                    app:paddingEnd="0dp"
+                    app:paddingStart="0dp">
+
+                    <FrameLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical"
+                        android:visibility="invisible">
+
+                        <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+                            android:id="@+id/tab_page_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="0.5dp"
+                            android:background="@color/colorWhite"
+                            android:orientation="horizontal"
+                            android:visibility="visible" />
+
+                        <View
+                            style="@style/line_horizontal"
+                            android:layout_gravity="bottom" />
+                    </FrameLayout>
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

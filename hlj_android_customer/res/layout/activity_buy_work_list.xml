@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorWhite">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_back_primary" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/colorBarTitle"
+                android:textSize="@dimen/bar_title_size" />
+
+            <RelativeLayout
+                android:id="@+id/msg_layout"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    android:id="@+id/btn_msg"
+                    style="@style/ActionImageItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_message_mail_primary_46_46" />
+
+                <View
+                    android:id="@+id/msg_notice"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/sp_oval_accent"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/msg_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/sp_r8_accent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="16dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/icon_search"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/msg_layout"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_search_primary_44_44" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorLine" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/action_layout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/tab_menu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/colorWhite">
+
+                    <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                        android:id="@+id/cb_property"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_property"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="3dp"
+                            android:drawableRight="@drawable/sl_ic_arrow_gray_down_2_red_up"
+                            android:duplicateParentState="true"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/black2_primary"
+                            android:textSize="@dimen/medium_text_size2" />
+
+                    </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/colorLine" />
+
+
+                    <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                        android:id="@+id/cb_sort"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_sort"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="3dp"
+                            android:drawableRight="@drawable/sl_ic_arrow_gray_down_2_red_up"
+                            android:duplicateParentState="true"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/black2_primary"
+                            android:textSize="@dimen/medium_text_size2" />
+
+                    </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/colorLine" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_filtrate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="5dp"
+                                android:drawableRight="@mipmap/icon_filter_gray"
+                                android:text="@string/label_filtrate"
+                                android:textColor="@color/colorBlack3"
+                                android:textSize="@dimen/medium_text_size2" />
+
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/cb_filtrate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:button="@null"
+                            android:gravity="center" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/line_horizontal" />
+
+                <GridView
+                    android:id="@+id/grid_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:visibility="gone" />
+
+                <include layout="@layout/hlj_common_fragment_ptr_recycler_view___cm" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/menu_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorWhite"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/list_menu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ListView
+                            android:id="@+id/left_menu_list"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:background="@color/colorBackground2"
+                            android:divider="@color/colorLine"
+                            android:dividerHeight="0.5dp"
+                            android:overScrollMode="never"
+                            android:scrollbars="none"
+                            android:visibility="gone" />
+
+                        <ListView
+                            android:id="@+id/right_menu_list"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="11"
+                            android:background="@color/colorWhite"
+                            android:divider="@color/colorLine"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <me.suncloud.marrymemo.widget.BuyWorkHintView
+        android:id="@+id/hint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</FrameLayout>

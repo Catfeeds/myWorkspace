@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/city_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="22dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/title_relative_city"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+
+            <me.suncloud.marrymemo.widget.FlowLayoutForTextView
+                android:id="@+id/relative_cities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/current_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/label_local_city"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:paddingBottom="10dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/local_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sp_r15_stroke_gray_solid_white"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_local_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/icon_refresh_gray_27_27" />
+
+                    <TextView
+                        android:id="@+id/local_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:maxLines="1"
+                        android:textColor="@color/black3_white"
+                        android:textSize="@dimen/medium_text_size1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/colorLine2" />
+
+                <include
+                    android:id="@+id/all_city"
+                    layout="@layout/city_item_view"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/access_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/title_access_city"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+
+            <me.suncloud.marrymemo.widget.FlowLayoutForTextView
+                android:id="@+id/access_cities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hot_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/label_hot_city2"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+
+            <me.suncloud.marrymemo.widget.FlowLayoutForTextView
+                android:id="@+id/hot_cities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                app:horizontalSpacing="5dp"
+                app:verticalSpacing="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

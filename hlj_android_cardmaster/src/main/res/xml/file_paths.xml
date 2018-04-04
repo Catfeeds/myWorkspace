@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <paths>
+        <!--<files-path name="" path="files" />-->
+        <cache-path
+            name="cache"
+            path="" />
+        <external-path
+            name="external"
+            path="" />
+        <external-files-path
+            name="externalFiles"
+            path="" />
+        <external-cache-path
+            name="externalCache"
+            path="" />
+        <external-path
+            name="crop"
+            path="hunliji/crop/" />
+        <root-path
+            name="root"
+            path="" />
+    </paths>
+</resources>

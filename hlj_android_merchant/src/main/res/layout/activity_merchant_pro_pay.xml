@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MerchantProPayActivity">
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/price_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:minHeight="44dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/label_merchant_pro_pay"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_actual_price2"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:text="@string/rmb"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <TextView
+                android:id="@+id/tv_actual_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size"
+                tools:text="8888" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/discount_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tv_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:background="@drawable/sp_r8_orange3"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="@string/label_time_discount"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_market_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/label_original_price2"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/price_layout"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:text="@string/label_bd_name"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <EditText
+            android:id="@+id/tv_bd_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="right|center_vertical"
+            android:inputType="none"
+            android:paddingRight="12dp"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bd_layout"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/label_pro_pay_hint"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/medium_text_size3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bd_layout"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/hint"
+        android:clickable="true"
+        android:onClick="onAgreement"
+        android:text="@string/label_pro_pay_agreement"
+        android:textColor="@color/colorLink"
+        android:textSize="@dimen/medium_text_size3" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sl_color_primary_2_dark"
+        android:onClick="onPay"
+        android:text="@string/btn_pro_pay"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size" />
+    </RelativeLayout>
+
+    <include layout="@layout/progressbar_layout"/>
+
+</RelativeLayout>

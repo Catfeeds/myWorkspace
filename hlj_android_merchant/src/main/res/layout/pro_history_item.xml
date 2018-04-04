@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_pro_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_merchant_pro_time"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/tv_pay_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/label_purchase_time"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line"
+        layout="@layout/line" />
+
+</RelativeLayout>

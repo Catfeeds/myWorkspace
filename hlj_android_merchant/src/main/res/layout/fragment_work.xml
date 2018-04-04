@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hunliji.marrybiz.widget.TBLayout
+        android:id="@+id/work_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <com.hunliji.marrybiz.widget.MyScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <include layout="@layout/work_detail_header" />
+
+        </com.hunliji.marrybiz.widget.MyScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/backtop_btn"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_gravity="right|bottom"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="16dp"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_back_to_top_primary" />
+        </FrameLayout>
+    </com.hunliji.marrybiz.widget.TBLayout>
+
+    <FrameLayout
+        android:id="@+id/info2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

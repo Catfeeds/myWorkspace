@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp">
+
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                style="@style/shop_cart_check_box_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12dp"
+                android:checked="false"
+                android:drawablePadding="8dp"
+                android:paddingLeft="8dp"
+                android:text="@string/label_select_all"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_real_pay"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <TextView
+                        android:id="@+id/tv_total_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_saved_money3"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <TextView
+                        android:id="@+id/tv_saved_money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_settle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/sl_r3_primary_2_dark"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:text="@string/btn_go_settle"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout">
+
+        <include layout="@layout/hlj_common_fragment_ptr_recycler_view___cm" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

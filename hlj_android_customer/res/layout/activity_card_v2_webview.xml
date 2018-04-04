@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".view.CardV2WebActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorWhite">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="onBackPressed"
+            android:src="@mipmap/icon_back_primary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_activity_card_view"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size"/>
+
+        <ImageButton
+            android:id="@+id/btn_share"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:onClick="onShare"
+            android:visibility="gone"
+            android:src="@drawable/icon_share_primary_44_44"/>
+        
+        <Button
+            android:id="@+id/btn_use"
+            android:layout_width="80dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/label_theme_use"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1"
+            android:onClick="onUse"
+            android:visibility="gone"
+            android:background="@drawable/sl_r15_primary_2_dark"
+            android:layout_height="24dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scrollbars="none"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/web_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/action_layout"
+        android:max="100"
+        android:visibility="gone"/>
+
+    <include
+        layout="@layout/progressbar_layout"/>
+
+</RelativeLayout>

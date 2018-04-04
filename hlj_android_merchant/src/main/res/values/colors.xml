@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#508cee</color>  <!-- 主色调，用于强调突出的文字、按钮等 -->
+    <color name="colorPrimaryDark">#3273dd</color> <!-- 主色调点击色 -->
+    <color name="colorPrimaryLight">#edf3fd</color> <!-- 主色调点击色 -->
+    <color name="colorAccent">#ff801a</color>  <!-- 强调色，辅助主色 -->
+
+
+    <color name="colorBlueGray2">#b3b9c7</color> <!-- 底栏字色，辅助图标色 -->
+
+    <color name="color_yellow">#ffcd3b</color>
+    <color name="color_green">#acdd43</color>
+
+    <color name="color_green6">#30c12a</color>
+    <color name="color_green7">#60cd63</color>
+
+    <color name="color_orange">#FF953D</color>
+    <color name="color_orange3">#ffa73c</color>
+    <color name="color_orange4">#ffa031</color>
+
+    <color name="gray8">#F5F5F5</color>
+
+
+    <!-- transparent colors -->
+    <color name="transparent_black">#88000000</color>
+    <color name="transparent_black2">#66000000</color>
+    <color name="transparent_black3">#7F000000</color>
+    <color name="transparent_write4">#CCffffff</color>
+    <color name="transparent_write">#f4ffffff</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="transparent_pink">#e5fe5ca7</color>
+    <color name="bg_merchant_home">#575e6b</color>
+
+    <color name="bg_comment_title">#eef4ff</color>
+
+
+</resources>

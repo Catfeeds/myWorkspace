@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/table_no_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fdf3e0"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_table_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="#ed8546"
+                android:textSize="@dimen/medium_text_size1"
+                tools:text="@string/app_name" />
+
+            <View
+                style="@style/line_horizontal"
+                android:layout_alignParentBottom="true"
+                android:background="#fbe6be" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fadingEdge="none"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.SideBar
+                android:id="@+id/side_bar"
+                android:layout_width="22dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <include layout="@layout/hlj_progressbar___cm" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

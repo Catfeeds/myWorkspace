@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:id="@+id/city_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/work_list"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_below="@+id/city_layout"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/tv_city_look"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/work_list"
+        android:background="@drawable/sp_r3_white_stroke_primary"
+        android:text="@string/btn_look"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size2" />
+
+</RelativeLayout>

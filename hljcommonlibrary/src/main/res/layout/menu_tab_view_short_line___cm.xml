@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.TabView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:minWidth="60dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/menu_tab_text_color"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="2.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/sl_color_trans_2_r2_primary" />
+
+
+</com.hunliji.hljcommonlibrary.views.widgets.TabView>

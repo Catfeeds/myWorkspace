@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+
+        <!--posters-->
+        <RelativeLayout
+            android:id="@+id/top_posters_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.slider.library.SliderLayout
+                android:id="@+id/slider_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                app:pager_animation="DepthPage"
+                app:pager_animation_span="1500" />
+
+            <com.slider.library.Indicators.CirclePageExIndicator
+                android:id="@+id/flow_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                app:circleradius="3dp"
+                app:fillColor="@color/colorWhite"
+                app:pageColor="@color/transparent_white2"
+                app:strokeWidth="0dp" />
+
+        </RelativeLayout>
+
+        <!--头像列表区读取最新发帖的4个用户的头像；-->
+        <LinearLayout
+            android:id="@+id/newest_thread_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/top_posters_layout"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/newest_thread_list_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:id="@+id/tv_newest_thread_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:drawablePadding="6dp"
+                android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                android:gravity="right"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

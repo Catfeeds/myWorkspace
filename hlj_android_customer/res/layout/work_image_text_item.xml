@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingBottom="8dp">
+
+    <RelativeLayout
+        android:id="@+id/items_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <me.suncloud.marrymemo.widget.RecyclingImageView
+            android:id="@+id/item_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/colorImageBackground"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:src="@mipmap/icon_play_trans_white_136_136"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/items_layout"
+        android:lineSpacingMultiplier="1.3"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:visibility="gone"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size1" />
+
+</RelativeLayout>

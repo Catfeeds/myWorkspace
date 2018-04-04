@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/menus_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:visibility="visible"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/add_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="22dp"
+        android:paddingTop="22dp">
+
+        <LinearLayout
+            android:id="@+id/add_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/sp_r3_half_stroke_line2_solid_trans"
+                android:padding="18dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_add_image___live" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_image___cm"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/add_video_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/add_image_layout"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="66dp"
+                android:background="@drawable/sp_r3_half_stroke_line2_solid_trans"
+                android:padding="18dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_add_video___live" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/label_video___cm"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/videos_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="22dp"
+        android:visibility="gone"
+        android:paddingTop="22dp">
+
+        <RelativeLayout
+            android:id="@+id/video_item_layout"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginLeft="24dp">
+
+            <ImageView
+                android:id="@+id/iv_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#66000000"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_play_triangle_white_28_38" />
+
+            <ImageButton
+                android:id="@+id/btn_video_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:padding="4dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_image_remove___live" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/video_item_layout"
+            android:layout_centerHorizontal="true"
+            android:text="1/1"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size3" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/images_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="22dp"
+        android:paddingTop="22dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/images_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_image_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/images_recycler"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size3" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

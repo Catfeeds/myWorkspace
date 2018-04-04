@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">hljcarlibrary</string>
+
+    <string name="label_user_comment3___car">用户评价 (%d)</string>
+    <string name="label_good_rate___car" formatted="false">好评率%s%%</string>
+    <string name="label_user_comment___car">用户评价</string>
+    <string name="label_no_comment2___car">暂无评价</string>
+    <string name="label_ask_question_count___car">问大家 (%s)</string>
+    <string name="label_ask_question___car">问大家</string>
+    <string name="hint_answer_content_empty___car">服务好不好，问问体验过的人</string>
+
+    <string name="title_activity_wedding_car_sub_page">婚车租赁</string>
+    <string name="label_car_chat">私信咨询</string>
+    <string name="label_wedding_motorcade">车队</string>
+    <string name="label_car_promises1">全城最低</string>
+    <string name="label_car_promises2">一价全包</string>
+    <string name="label_car_promises3">迟到赔付</string>
+    <string name="label_limit_time_end">后结束</string>
+    <string name="label_limit_time_space">:</string>
+    <string name="label_see_all___car">查看全部</string>
+    <string name="label_head_car">头车</string>
+    <string name="label_follow_car">跟车</string>
+    <string name="label_space___car">&#160;&#160;</string>
+    <string name="label_wedding_car_hot">精选车队</string>
+    <string name="label_wedding_car_self">个性自选</string>
+
+    <string name="label_inventory___car">库存%s件</string>
+    <string name="label_price5___car">¥ %s</string>
+    <string name="label_price8___car">¥ %1$s ~ ¥%2$s</string>
+    <string name="msg_product_choice_sku___car">请选择商品规格</string>
+    <string name="msg_product_count_out___car">超出库存范围</string>
+    <string name="msg_product_sold_out___car">抱歉，该商品已下架</string>
+    <string name="msg_product_sell_out___car">该商品太抢手了，已被抢光</string>
+    <string name="msg_product_add_completed___car">添加成功</string>
+    <string name="msg_confirm_caraddteam___car">因各地所售婚车不同,加入车队后,\n已加入车队的婚车将被清空</string>
+    <string name="label_join_team___car">加入车队</string>
+    <string name="label_wrong_action___car">我点错了</string>
+    <string name="label_quantity___car">数量:</string>
+    <string name="label_label_expand___car">展开</string>
+    <string name="label_collapse___car">收起</string>
+    <string name="label_car_call___car">电话</string>
+    <string name="label_hint_submit_empty___car">请选择需要查询的档期</string>
+    <string name="label_hint_submit_calendar___car">每次最多可选择四天查询</string>
+    <string name="label_submit_calendar___car">提交查询日期</string>
+    <string name="label_wedding_order_hint___car">"商家会尽快与您联系\n请保持手机畅通</string>
+    <string name="label_rating___car">%s星</string>
+    <string name="label_miao_sha_price___car">秒杀价 ¥</string>
+    <string name="label_market_price1___car">市场价：¥%s</string>
+    <string name="label_market_price2___car">平日价¥%s</string>
+    <string name="label_price3___car">¥%s</string>
+    <string name="label_price4___car">¥&#160;%s</string>
+</resources>

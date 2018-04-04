@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hunliji.posclient"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-feature android:name="android.hardware.camera.front" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".HLJPosClientApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/NoTitleBarTheme"
+        tools:replace="android:theme,android:allowBackup">
+
+        <activity
+            android:name=".views.activites.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".views.activites.ScanQRCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+
+        <activity
+            android:name=".views.activites.OrderDetailActivity"
+            android:label="@string/title_activity_input_amount"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme.Dark"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity android:name=".views.activites.ChangeHostActivity" />
+
+    </application>
+
+</manifest>

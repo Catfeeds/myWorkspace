@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/root_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.CompleteProfileActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/story_view"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/hint_complete_profile_tip"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/large_text_size2"
+                    android:textStyle="bold" />
+
+
+                <com.makeramen.rounded.RoundedImageView
+                    android:id="@+id/img_avatar"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_avatar_default_gray"
+                    app:corner_radius="45dp"
+                    app:is_oval="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:paddingLeft="24dp"
+                    android:paddingRight="24dp">
+
+                    <EditText
+                        android:id="@+id/et_nick"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/colorWhite"
+                        android:focusable="true"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/hint_fill_your_nick"
+                        android:maxLength="14"
+                        android:maxLines="1"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/ex_medium_text_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorLine" />
+
+                    <Button
+                        android:id="@+id/complete_profile_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/sl_r3_primary_2_dark"
+                        android:enabled="false"
+                        android:text="@string/btn_submit"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/ex_medium_text_size" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/cancel_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_cross_close_round_gray_68_68" />
+
+    </LinearLayout>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

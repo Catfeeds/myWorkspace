@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/industries_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="所属行业"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:id="@+id/tv_industries"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/label_please_select___cm"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/nature_of_work_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="工作性质"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:id="@+id/tv_nature_of_work"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/label_please_select___cm"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/bulk_property_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="主体性质"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:id="@+id/tv_bulk_property"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/label_please_select___cm"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/payment_src_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="还款来源"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:id="@+id/tv_payment_src"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/label_please_select___cm"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/others_loan_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="其他网贷借款情况"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:id="@+id/tv_others_loan"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/label_please_select___cm"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/debts_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="负债情况"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:id="@+id/tv_debts"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/label_please_select___cm"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/credit_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="近期6个月内征信情况"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <TextView
+                        android:id="@+id/tv_credit_info"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1.0"
+                        android:drawablePadding="6dp"
+                        android:drawableRight="@mipmap/icon_arrow_right_dark_gray_14_26"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/label_please_select___cm"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

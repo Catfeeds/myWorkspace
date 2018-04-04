@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    /*****************************本地module引入*******************************/
+    implementation project(':hljcommonlibrary')
+    implementation project(':hljhttplibrary')
+    implementation project(':hljimagelibrary')
+
+    implementation project(':SwipeBackLibrary')
+    /*****************************本地module引入*******************************/
+
+    /*****************************远程第三方库引入*******************************/
+    implementation "com.android.support:support-v4:$SUPPORT_V4_VERSION"
+
+    implementation 'com.alibaba:arouter-api:1.2.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.1.1@aar'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.koushikdutta.async:androidasync:2.1.9'
+
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.2.3'
+    implementation 'joda-time:joda-time:2.9.6'
+    /*****************************远程第三方库引入*******************************/
+
+    /*****************************annotationProcessor*******************************/
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    /*****************************annotationProcessor*******************************/
+
+}

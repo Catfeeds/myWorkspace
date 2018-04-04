@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.PrivilegeContentEditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+            <TextView
+                android:id="@+id/limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/title"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size" />
+            <TextView
+                android:id="@+id/hint"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                android:text="@string/hint_merchant_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_below="@+id/title"
+                android:layout_toRightOf="@+id/hint"
+                android:background="@drawable/sp_r4_stroke_gray"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:layout_marginTop="12dp"
+                android:singleLine="true"
+                android:textColorHint="@color/colorGray2"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <LinearLayout
+                android:id="@+id/example_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit"
+                android:layout_marginTop="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_example"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/example"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/sl_r4_primary_2_dark"
+            android:gravity="center"
+            android:text="@string/label_save"
+            android:onClick="onSave"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </LinearLayout>
+
+</ScrollView>

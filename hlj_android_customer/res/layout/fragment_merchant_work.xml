@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/sort_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/hljColorSegmentBackground"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/sort_default"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false"
+                android:gravity="center"
+                android:text="@string/label_comprehensive"
+                android:textColor="?attr/hljSortCheckColorList"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:background="?attr/hljColorLine2" />
+
+            <LinearLayout
+                android:id="@+id/sort_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:descendantFocusability="blocksDescendants"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatCheckedTextView
+                    android:id="@+id/tv_price_sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:text="@string/btn_prices"
+                    android:textColor="?attr/hljSortCheckColorList"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:orientation="vertical">
+
+                    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+                        android:id="@+id/cl_price_sort_up"
+                        android:layout_width="wrap_content"
+                        android:clickable="false"
+                        android:layout_height="wrap_content">
+
+                        <com.hunliji.hljcommonlibrary.views.widgets.tint.TintColorListImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:src="@mipmap/icon_arrow_up_primary_18_9"
+                            app:tintColorList="?attr/hljCheckIconColorList" />
+
+                    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+                    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+                        android:id="@+id/cl_price_sort_down"
+                        android:layout_width="wrap_content"
+                        android:clickable="false"
+                        android:layout_height="wrap_content">
+
+                        <com.hunliji.hljcommonlibrary.views.widgets.tint.TintColorListImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:src="@mipmap/icon_arrow_down_primary_18_9"
+                            app:tintColorList="?attr/hljCheckIconColorList" />
+                    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:background="?attr/hljColorLine2"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <CheckBox
+                android:id="@+id/sort_create"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/label_new_thread"
+                android:textColor="?attr/hljSortCheckColorList"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:background="?attr/hljColorLine2" />
+
+            <CheckBox
+                android:id="@+id/sort_like"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/label_like_count3"
+                android:textColor="?attr/hljSortCheckColorList"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal"
+            android:background="?attr/hljColorLine" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/hlj_common_fragment_ptr_recycler_view_trans___cm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sort_layout" />
+
+</RelativeLayout>

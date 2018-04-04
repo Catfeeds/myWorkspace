@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="me.suncloud.marrymemo.view.ProductRefundApplyActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_layout"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_refund_reason_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_refund_reason"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/medium_text_size2" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/select_reason_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tv_refund_reason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_select_refund_reason"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_refund_reason2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_refund_money"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/medium_text_size2" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/rmb" />
+
+                <EditText
+                    android:id="@+id/et_refund_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_enter_amount"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_refund_amount_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:text="@string/hint_refund_amount2"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:id="@+id/tv_refund_explain_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_refund_desc"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+
+                <EditText
+                    android:id="@+id/et_refund_explain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="top"
+                    android:hint="@string/hint_enter_refund_explain2"
+                    android:maxLines="10"
+                    android:minHeight="120dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/tv_text_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:text="200"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_upload_proofs"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/hint_upload_proofs"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/icon_cross_add_white_gray"
+                        android:scaleType="centerCrop" />
+
+                    <ImageButton
+                        android:id="@+id/btn_delete_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:contentDescription="@string/app_name"
+                        android:padding="4dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cross_delete_round_black_white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/icon_cross_add_white_gray"
+                        android:scaleType="centerCrop"
+                        android:visibility="invisible" />
+
+                    <ImageButton
+                        android:id="@+id/btn_delete_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:contentDescription="@string/app_name"
+                        android:padding="4dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cross_delete_round_black_white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/icon_cross_add_white_gray"
+                        android:scaleType="centerCrop"
+                        android:visibility="invisible" />
+
+                    <ImageButton
+                        android:id="@+id/btn_delete_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:contentDescription="@string/app_name"
+                        android:padding="4dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cross_delete_round_black_white"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="24dp"
+                android:background="@drawable/sl_r18_primary_2_dark"
+                android:gravity="center"
+                android:text="@string/label_submit_apply"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/large_text_size" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

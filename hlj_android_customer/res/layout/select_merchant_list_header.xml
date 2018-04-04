@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/top_line_layout"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <TextView
+            android:id="@+id/tv_merchant_item_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingBottom="2dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:text="@string/label_merchant_item_count"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size1"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

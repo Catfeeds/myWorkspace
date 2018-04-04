@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="me.suncloud.marrymemo.view.ContactInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="4"
+                android:text="@string/label_name2"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <EditText
+                android:id="@+id/et_contact_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint_no_name"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/colorLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_contact_phone2"
+                android:ems="4"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <EditText
+                android:id="@+id/et_contact_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint_phone_number"
+                android:inputType="text"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/colorLine" />
+
+        <LinearLayout
+            android:id="@+id/car_use_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sl_color_white_2_background2"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_car_use_time2"
+                android:ems="4"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <TextView
+                android:id="@+id/tv_car_use_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_car_use_time"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="12dp"
+            android:background="@color/colorLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_car_use_addr2"
+                android:ems="4"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <EditText
+                android:id="@+id/et_car_use_addr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_car_use_addr"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:lines="2"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_layout" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

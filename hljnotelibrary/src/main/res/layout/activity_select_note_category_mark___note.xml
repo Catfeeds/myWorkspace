@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="12dp"
+                android:text="添加动态标签能获得更多曝光量呢"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:text="动态标签（选填）"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2"
+                android:textStyle="bold" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.FlowLayout
+                android:id="@+id/flow_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="18dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                app:horizontalSpacing="10dp"
+                app:verticalSpacing="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/msg_hint"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_above="@android:id/tabhost"
+        android:background="@color/trans_color_p9"
+        android:clickable="true"
+        android:drawableRight="@drawable/icon_arrow_right_white_14_26"
+        android:gravity="center_vertical"
+        android:onClick="onNewMsg"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/hint_unread_msg"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size2"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/main_notice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/msg_hint">
+
+        <ImageView
+            android:id="@+id/main_notice_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_bg_main_notice" />
+
+        <ImageView
+            android:id="@+id/main_notice_close"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="0dp"
+                android:layout_height="0dip">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/tab5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+            </FrameLayout>
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/sp_white_top_line"
+                android:divider="@android:color/transparent"
+                android:orientation="horizontal" />
+        </RelativeLayout>
+
+    </TabHost>
+
+    <me.suncloud.marrymemo.widget.BindPartnerHintView
+        android:id="@+id/hint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <me.suncloud.marrymemo.widget.QuestionAnswerHintView
+        android:id="@+id/question_answer_hint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_send_post_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/image_hint_create_thread_question"
+        android:visibility="invisible" />
+
+</RelativeLayout>

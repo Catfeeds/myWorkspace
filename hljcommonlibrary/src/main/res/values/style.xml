@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?><!--婚礼纪所有APP的最基本的样式定义-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppBarTheme" parent="Theme.AppCompat.Light">
+        <!--actionBar样式配置-->
+
+        <item name="android:actionBarSize">45dp</item>
+        <item name="actionBarSize">45dp</item>
+        <item name="hljTitleStyle">@style/HljTitleStyle.Light</item>
+        <item name="hljSubTitleStyle">@style/HljSubTitleStyle.Light</item>
+        <item name="hljActionButtonItemStyle">@style/ActionButtonItem.Light</item>
+        <item name="hljActionImageItemStyle">@style/ActionImageItem.Light</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="hljMiuiDarkStatusBar">true</item>
+
+
+        <item name="hljActionBarColor">@color/colorWhite</item>
+        <item name="hljStatusBarColor">@color/colorWhite</item>
+        <item name="hljActionBarDividerColor">@color/colorLine</item>
+        <item name="hljActionBarHeight">45dp</item>
+
+        <!--==================================-->
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppBarTheme">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorHint">@color/colorGray2</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="PullToRefreshStyle">@style/AppPullToRefreshStyle</item>
+        <item name="android:textCursorDrawable">@null</item>
+
+        <item name="android:buttonStyle">@style/borderlessButtonStyle</item>
+
+        <!--颜色默认样式配置-->
+        <item name="hljColorBackground">@color/colorBackground</item>
+
+        <item name="hljColorPrimary">@color/colorPrimary</item>
+        <item name="hljColorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="hljColorAccent">@color/colorAccent</item>
+
+        <item name="hljColorBarTitle">@color/colorBlack</item>
+        <item name="hljColorBarBackground">@color/colorWhite</item>
+        <item name="hljTransparentBarIconColor">@color/colorWhite</item>
+
+        <item name="hljColorSegmentTitle">@color/colorBlack</item>
+        <item name="hljColorSegmentBackground">@color/colorWhite</item>
+        <item name="hljColorSegmentInnerBackground">@color/colorBackground2</item>
+
+        <item name="hljColorLine">@color/colorLine</item>
+        <item name="hljColorLine2">@color/colorLine2</item>
+        <item name="hljColorGrayLine">@color/colorGray3</item>
+
+        <item name="hljColorTitle1">@color/colorBlack2</item>
+        <item name="hljColorContent1">@color/colorBlack2</item>
+        <item name="hljColorContent2">@color/colorBlack3</item>
+        <item name="hljColorContent3">@color/colorGray</item>
+        <item name="hljColorContentExt1">@color/colorBlack3</item>
+        <item name="hljColorContentExt2">@color/colorGray</item>
+        <item name="hljColorContentExt3">@color/colorGray2</item>
+        <item name="hljColorLink">@color/colorLink</item>
+
+        <item name="hljColorBottomButton">@color/colorWhite</item>
+
+        <item name="hljTabTextColor">@color/black2_primary</item>
+        <item name="hljTimeDownBackgroundColor">@color/colorBlack3</item>
+        <item name="hljMerchantCallColor">@color/colorBlack3</item>
+        <item name="hljMerchantCollectColor">@color/colorBlack2</item>
+        <item name="hljCommentEmptyColor">?hljColorPrimary</item>
+        <item name="hljMerchantFeedDayColor">@color/colorBlack2</item>
+        <item name="hljMerchantFeedMonthColor">@color/colorGray</item>
+        <item name="hljFeedPraiseColorList">@color/gray1_primary</item>
+        <item name="hljCommentPraiseColorList">@color/black3_primary</item>
+        <item name="hljSortCheckColorList">@color/black3_primary</item>
+        <item name="hljCheckIconColorList">@color/gray1_primary_checked_icon_color</item>
+        <item name="hljCommentHeaderSortCheckedColorList">@color/black2_white</item>
+        <item name="hljCommentNameColor">@color/colorBlack2</item>
+
+        <item name="hljIconMerchantCouponLeft">@mipmap/image_bg_coupon_receive_left_red</item>
+        <item name="hljIconMerchantCouponRight">@mipmap/image_bg_coupon_receive_right_red</item>
+        <item name="hljIconMerchantCoupon">@drawable/image_bg_coupon_receive_red</item>
+        <item name="hljIconMerchantCouponTag">@drawable/image_bg_coupon_receive_tag_red</item>
+        <item name="hljIconMerchantCollected">@mipmap/icon_has_attention</item>
+        <item name="hljIconMerchantNotCollected">@mipmap/icon_add_attention</item>
+        <item name="hljIconChatBubbleArrowRight">@mipmap/icon_arrow_right_white_24_24</item>
+        <item name="hljIconChatBubbleArrowDown">@mipmap/icon_arrow_down_black_24_12</item>
+
+        <item name="hljBgMerchantCommentEmpty">@drawable/sp_r3_trans_stroke_primary</item>
+        <item name="hljBgEventDisable">@drawable/sp_r2_gray3</item>
+        <item name="hljBgEventTimeDown">@drawable/sp_r2_black3</item>
+        <item name="hljBgCommentHeaderSortChecked">@drawable/sl_r2_background2_2_primary</item>
+        <item name="hljBgChatBubble">@drawable/bg_black_rectangle_r4</item>
+
+        <item name="hljDrawableR13HalfStrokeLine2">@drawable/sp_r13_half_stroke_line2_solid_trans
+        </item>
+        <item name="hljDrawableTrans2Primary">@drawable/sl_color_trans_2_primary</item>
+        <item name="hljDrawablePrimary2Dark">@drawable/sl_color_primary_2_dark</item>
+        <item name="hljDrawableR2StrokePrimary">@drawable/sp_r2_stroke_primary</item>
+        <item name="hljDrawableR2StrokeAccent">@drawable/sp_r2_stroke_primary</item>
+        <item name="hljDrawableCoupon2Dark">@drawable/sl_color_primary_2_dark</item>
+
+        <item name="hljMarkBackground">@drawable/sl_r2_color_fff3f5_2_primary</item>
+        <item name="hljBadMarkBackground">@drawable/sl_r2_background2_2_primary</item>
+        <item name="hljMarkTextColor">@color/black2_white</item>
+        <item name="hljDadMarkTextColor">@color/black2_white</item>
+        <!--==================================-->
+        <!--<item name="android:windowAnimationStyle">@style/Animation.Activity.Style</item>-->
+    </style>
+
+    <style name="borderlessButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:textColorHint">@color/colorGray2</item>
+
+
+        <!--actionBar样式配置-->
+
+        <item name="hljTitleStyle">@style/HljTitleStyle.Light</item>
+        <item name="hljSubTitleStyle">@style/HljSubTitleStyle.Light</item>
+        <item name="hljActionButtonItemStyle">@style/ActionButtonItem.Light</item>
+        <item name="hljActionImageItemStyle">@style/ActionImageItem.Light</item>
+
+
+        <item name="hljActionBarColor">@color/colorWhite</item>
+        <item name="hljStatusBarColor">@color/colorWhite</item>
+        <item name="hljActionBarDividerColor">@color/colorLine</item>
+        <item name="hljActionBarHeight">45dp</item>
+
+        <!--==================================-->
+
+        <!--颜色默认样式配置-->
+        <item name="hljColorBackground">@color/colorBackground</item>
+
+        <item name="hljColorPrimary">@color/colorPrimary</item>
+        <item name="hljColorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="hljColorAccent">@color/colorAccent</item>
+
+        <item name="hljColorBarTitle">@color/colorBlack</item>
+        <item name="hljColorBarBackground">@color/colorWhite</item>
+        <item name="hljTransparentBarIconColor">@color/colorWhite</item>
+
+        <item name="hljColorSegmentTitle">@color/colorBlack</item>
+        <item name="hljColorSegmentBackground">@color/colorWhite</item>
+        <item name="hljColorSegmentInnerBackground">@color/colorBackground2</item>
+
+        <item name="hljColorLine">@color/colorLine</item>
+        <item name="hljColorLine2">@color/colorLine2</item>
+        <item name="hljColorGrayLine">@color/colorGray3</item>
+
+        <item name="hljColorTitle1">@color/colorBlack2</item>
+        <item name="hljColorContent1">@color/colorBlack2</item>
+        <item name="hljColorContent2">@color/colorBlack3</item>
+        <item name="hljColorContent3">@color/colorGray</item>
+        <item name="hljColorContentExt1">@color/colorBlack3</item>
+        <item name="hljColorContentExt2">@color/colorGray</item>
+        <item name="hljColorContentExt3">@color/colorGray2</item>
+        <item name="hljColorLink">@color/colorLink</item>
+
+        <item name="hljColorBottomButton">@color/colorWhite</item>
+
+        <item name="hljCouponColor">@color/colorPrimary</item>
+        <item name="hljTabTextColor">@color/black2_primary</item>
+        <item name="hljTimeDownBackgroundColor">@color/colorBlack3</item>
+        <item name="hljMerchantCallColor">@color/colorBlack3</item>
+        <item name="hljMerchantCollectColor">@color/colorBlack2</item>
+        <item name="hljCommentEmptyColor">?hljColorPrimary</item>
+        <item name="hljMerchantFeedDayColor">@color/colorBlack2</item>
+        <item name="hljMerchantFeedMonthColor">@color/colorGray</item>
+        <item name="hljFeedPraiseColorList">@color/gray1_primary</item>
+        <item name="hljCommentPraiseColorList">@color/black3_primary</item>
+        <item name="hljSortCheckColorList">@color/black3_primary</item>
+        <item name="hljCheckIconColorList">@color/gray1_primary_checked_icon_color</item>
+        <item name="hljCommentHeaderSortCheckedColorList">@color/black2_white</item>
+        <item name="hljCommentNameColor">@color/colorBlack2</item>
+
+        <item name="hljIconMerchantCouponLeft">@mipmap/image_bg_coupon_receive_left_red</item>
+        <item name="hljIconMerchantCouponRight">@mipmap/image_bg_coupon_receive_right_red</item>
+        <item name="hljIconMerchantCollected">@mipmap/icon_has_attention</item>
+        <item name="hljIconMerchantNotCollected">@mipmap/icon_add_attention</item>
+        <item name="hljIconChatBubbleArrowRight">@mipmap/icon_arrow_right_white_24_24</item>
+        <item name="hljIconChatBubbleArrowDown">@mipmap/icon_arrow_down_black_24_12</item>
+
+        <item name="hljBgMerchantCommentEmpty">@drawable/sp_r3_trans_stroke_primary</item>
+        <item name="hljBgEventDisable">@drawable/sp_r2_gray3</item>
+        <item name="hljBgEventTimeDown">@drawable/sp_r2_black3</item>
+        <item name="hljBgCommentHeaderSortChecked">@drawable/sl_r2_background2_2_primary</item>
+        <item name="hljBgChatBubble">@drawable/bg_black_rectangle_r4</item>
+
+        <item name="hljDrawableR13HalfStrokeLine2">@drawable/sp_r13_half_stroke_line2_solid_trans
+        </item>
+        <item name="hljDrawableTrans2Primary">@drawable/sl_color_trans_2_primary</item>
+        <item name="hljDrawablePrimary2Dark">@drawable/sl_color_primary_2_dark</item>
+        <item name="hljDrawableR2StrokePrimary">@drawable/sp_r2_stroke_primary</item>
+        <item name="hljDrawableR2StrokeAccent">@drawable/sp_r2_stroke_primary</item>
+
+
+        <item name="hljMarkBackground">@drawable/sl_r2_color_fff3f5_2_primary</item>
+        <item name="hljBadMarkBackground">@drawable/sl_r2_background2_2_primary</item>
+        <item name="hljMarkTextColor">@color/black2_white</item>
+        <item name="hljDadMarkTextColor">@color/black2_white</item>
+        <!--==================================-->
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppPullToRefreshStyle" />
+
+    <style name="TitleBarBackground">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="CustomTitleTheme" parent="AppTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleSize">45dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/TitleBarBackground</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CustomTitleTheme.Dark" parent="CustomTitleTheme">
+        <!--actionBar样式配置-->
+
+        <item name="hljTitleStyle">@style/HljTitleStyle.Dark</item>
+        <item name="hljSubTitleStyle">@style/HljSubTitleStyle.Dark</item>
+        <item name="hljActionButtonItemStyle">@style/ActionButtonItem.Dark</item>
+        <item name="hljActionImageItemStyle">@style/ActionImageItem.Dark</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="hljMiuiDarkStatusBar">false</item>
+
+        <item name="hljHomeIndicatorColor">@color/colorWhite</item>
+        <item name="hljActionBarColor">@color/colorPrimary</item>
+        <item name="hljStatusBarColor">@color/colorPrimary</item>
+        <item name="hljActionBarDividerColor">@android:color/transparent</item>
+
+        <!--==================================-->
+    </style>
+
+    <style name="NoTitleBarTheme" parent="AppTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="NoTitleBarThemeBackgroundTranslucent" parent="NoTitleBarTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="NoTitleBarThemeNotTranslucent" parent="NoTitleBarTheme">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="DialogActivityTheme" parent="@android:style/Theme.Translucent">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+
+        <!--actionBar样式配置-->
+
+        <item name="hljTitleStyle">@style/HljTitleStyle.Light</item>
+        <item name="hljSubTitleStyle">@style/HljSubTitleStyle.Light</item>
+        <item name="hljActionButtonItemStyle">@style/ActionButtonItem.Light</item>
+        <item name="hljActionImageItemStyle">@style/ActionImageItem.Light</item>
+
+
+        <item name="hljActionBarColor">@color/colorWhite</item>
+        <item name="hljStatusBarColor">@color/colorWhite</item>
+        <item name="hljActionBarDividerColor">@color/colorLine</item>
+        <item name="hljActionBarHeight">45dp</item>
+
+        <!--==================================-->
+
+        <!--颜色默认样式配置-->
+        <item name="hljColorBackground">@color/colorBackground</item>
+
+        <item name="hljColorPrimary">@color/colorPrimary</item>
+        <item name="hljColorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="hljColorAccent">@color/colorAccent</item>
+
+        <item name="hljColorBarTitle">@color/colorBlack</item>
+        <item name="hljColorBarBackground">@color/colorWhite</item>
+        <item name="hljTransparentBarIconColor">@color/colorWhite</item>
+
+        <item name="hljColorSegmentTitle">@color/colorBlack</item>
+        <item name="hljColorSegmentBackground">@color/colorWhite</item>
+        <item name="hljColorSegmentInnerBackground">@color/colorBackground2</item>
+
+        <item name="hljColorLine">@color/colorLine</item>
+        <item name="hljColorLine2">@color/colorLine2</item>
+        <item name="hljColorGrayLine">@color/colorGray3</item>
+
+        <item name="hljColorTitle1">@color/colorBlack2</item>
+        <item name="hljColorContent1">@color/colorBlack2</item>
+        <item name="hljColorContent2">@color/colorBlack3</item>
+        <item name="hljColorContent3">@color/colorGray</item>
+        <item name="hljColorContentExt1">@color/colorBlack3</item>
+        <item name="hljColorContentExt2">@color/colorGray</item>
+        <item name="hljColorContentExt3">@color/colorGray2</item>
+        <item name="hljColorLink">@color/colorLink</item>
+
+        <item name="hljColorBottomButton">@color/colorWhite</item>
+
+        <item name="hljTabTextColor">@color/black2_primary</item>
+        <item name="hljTimeDownBackgroundColor">@color/colorBlack3</item>
+        <item name="hljMerchantCallColor">@color/colorBlack3</item>
+        <item name="hljMerchantCollectColor">@color/colorBlack2</item>
+        <item name="hljCommentEmptyColor">?hljColorPrimary</item>
+        <item name="hljMerchantFeedDayColor">@color/colorBlack2</item>
+        <item name="hljMerchantFeedMonthColor">@color/colorGray</item>
+        <item name="hljFeedPraiseColorList">@color/gray1_primary</item>
+        <item name="hljCommentPraiseColorList">@color/black3_primary</item>
+        <item name="hljSortCheckColorList">@color/black3_primary</item>
+        <item name="hljCheckIconColorList">@color/gray1_primary_checked_icon_color</item>
+        <item name="hljCommentHeaderSortCheckedColorList">@color/black2_white</item>
+        <item name="hljCommentNameColor">@color/colorBlack2</item>
+
+        <item name="hljIconMerchantCouponLeft">@mipmap/image_bg_coupon_receive_left_red</item>
+        <item name="hljIconMerchantCouponRight">@mipmap/image_bg_coupon_receive_right_red</item>
+        <item name="hljIconMerchantCollected">@mipmap/icon_has_attention</item>
+        <item name="hljIconMerchantNotCollected">@mipmap/icon_add_attention</item>
+        <item name="hljIconChatBubbleArrowRight">@mipmap/icon_arrow_right_white_24_24</item>
+        <item name="hljIconChatBubbleArrowDown">@mipmap/icon_arrow_down_black_24_12</item>
+
+        <item name="hljBgMerchantCommentEmpty">@drawable/sp_r3_trans_stroke_primary</item>
+        <item name="hljBgEventDisable">@drawable/sp_r2_gray3</item>
+        <item name="hljBgEventTimeDown">@drawable/sp_r2_black3</item>
+        <item name="hljBgCommentHeaderSortChecked">@drawable/sl_r2_background2_2_primary</item>
+        <item name="hljBgChatBubble">@drawable/bg_black_rectangle_r4</item>
+
+        <item name="hljDrawableR13HalfStrokeLine2">@drawable/sp_r13_half_stroke_line2_solid_trans
+        </item>
+        <item name="hljDrawableTrans2Primary">@drawable/sl_color_trans_2_primary</item>
+        <item name="hljDrawablePrimary2Dark">@drawable/sl_color_primary_2_dark</item>
+        <item name="hljDrawableR2StrokePrimary">@drawable/sp_r2_stroke_primary</item>
+        <item name="hljDrawableR2StrokeAccent">@drawable/sp_r2_stroke_primary</item>
+
+
+        <item name="hljMarkBackground">@drawable/sl_r2_color_fff3f5_2_primary</item>
+        <item name="hljBadMarkBackground">@drawable/sl_r2_background2_2_primary</item>
+        <item name="hljMarkTextColor">@color/black2_white</item>
+        <item name="hljDadMarkTextColor">@color/black2_white</item>
+        <!--==================================-->
+        <!-- <item name="android:windowContentOverlay">@null</item> -->
+    </style>
+
+    <style name="BubbleDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BubbleDialogFragment" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="dialog_anim_rise_style" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="@android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="dialog_anim_top_style" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_top_in</item>
+        <item name="@android:windowExitAnimation">@anim/slide_top_out</item>
+    </style>
+
+    <!--通用横线-->
+    <style name="line_horizontal">
+        <item name="android:background">@color/colorLine</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
+
+    <!--通用竖线-->
+    <style name="line_vertical">
+        <item name="android:background">@color/colorLine</item>
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!--五星评价-->
+    <style name="ratingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_rating_bar</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">15dp</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+    <!--五星评价2-->
+    <style name="ratingBar2" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_rating_bar_2</item>
+        <item name="android:minHeight">15dp</item>
+        <item name="android:maxHeight">15dp</item>
+        <item name="android:isIndicator">true</item>
+    </style>
+
+    <!--<style name="HljAnimation.Activity" parent="@android:style/Animation.Translucent">-->
+    <!--<item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>-->
+    <!--<item name="android:activityOpenExitAnimation">@anim/activity_anim_default</item>-->
+    <!--<item name="android:activityCloseEnterAnimation">@anim/slide_out_right</item>-->
+    <!--<item name="android:activityCloseExitAnimation">@anim/activity_anim_default</item>-->
+    <!--</style>-->
+</resources>

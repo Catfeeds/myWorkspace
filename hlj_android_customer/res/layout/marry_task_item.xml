@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/rl_check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="6dp">
+
+        <ImageView
+            android:id="@+id/iv_box"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sl_ic_check_round_gray_2_gray_selected_32_32"
+            android:button="@null"
+            android:checked="false" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/ll_expire"
+        android:layout_toRightOf="@+id/rl_check"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingRight="16dp"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/ex_medium_text_size2"
+        tools:text="item" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_expire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:maxWidth="112dp"
+        android:orientation="horizontal"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_expire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="100dp"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2"
+            tools:text="2018-10-20" />
+
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:src="@mipmap/icon_arrow_blue_white_14_26"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/icon_marry_task_mine"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:background="@color/colorLine" />
+
+</RelativeLayout>

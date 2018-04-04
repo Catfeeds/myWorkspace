@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <include layout="@layout/line_layout" />
+
+    <RelativeLayout
+        android:id="@+id/name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_star_round_yellow_26_26" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_list"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/name_layout"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

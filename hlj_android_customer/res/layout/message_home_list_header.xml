@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+    <RelativeLayout
+        android:id="@+id/flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:visibility="visible">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"/>
+
+        <com.slider.library.Indicators.CirclePageExIndicator
+            android:id="@+id/flow_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/view_pager"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            app:circleHeight="4dp"
+            app:circleOffset="4dp"
+            app:circleWidth="4dp"
+            app:circleradius="2dp"
+            app:fillColor="@color/colorPrimary"
+            app:pageColor="@color/colorGray3"
+            app:strokeWidth="0dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flow_layout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_msg_adviser" />
+
+        <TextView
+            android:id="@+id/tv_unread_count"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignRight="@+id/img_logo"
+            android:layout_marginRight="-8dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/sp_r10_accent"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minWidth="20dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/img_logo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="结婚顾问"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/sp_r2_stroke_primary_solid_white"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:text="官方"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_draft_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[草稿]"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/medium_text_size1"
+                    android:visibility="gone" />
+
+                <me.suncloud.marrymemo.widget.CustomTextView
+                    android:id="@+id/tv_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:text="五年资深从业，免费为您解答"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

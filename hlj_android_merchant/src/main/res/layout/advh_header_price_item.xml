@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tv_advh_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_advh_count"
+        android:textColor="@color/colorBlack2"
+        android:includeFontPadding="false"
+        android:textSize="@dimen/medium_text_size2" />
+
+    <TextView
+        android:id="@+id/tv_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:includeFontPadding="false"
+        android:background="@drawable/sp_r4_orange3"
+        android:text="@string/label_discount"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone"
+        android:textSize="@dimen/small_text_size" />
+
+
+    <TextView
+        android:id="@+id/tv_total_count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/label_advh_total_count"
+        android:textColor="@color/colorGray"
+        android:visibility="invisible"
+        android:textSize="@dimen/medium_text_size3" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_price2"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size2" />
+</LinearLayout>

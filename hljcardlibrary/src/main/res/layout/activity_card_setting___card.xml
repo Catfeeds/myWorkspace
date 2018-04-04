@@ -1,0 +1,266 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorBackground">
+
+    <ScrollView
+        android:id="@+id/setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/information_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="基本信息"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="修改"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/icon_arrow_right_gray_14_26" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/card_music_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="请帖音乐"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/icon_new_tag_yellow_50_27" />
+
+                <TextView
+                    android:id="@+id/tv_card_music"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/icon_arrow_right_gray_14_26" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/withdraw_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/barrage_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="@string/label_barrage___card"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <CheckBox
+                        android:id="@+id/cb_barrage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/sl_switch_4cd964"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/gift_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="@string/label_gift_function___card"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <CheckBox
+                        android:id="@+id/cb_gift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/sl_switch_4cd964"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/cash_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="@string/label_cash_function___card"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <CheckBox
+                        android:id="@+id/cb_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/sl_switch_4cd964"
+                        android:button="@null"
+                        android:checked="false" />
+                </LinearLayout>
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_marginLeft="16dp"/>
+
+                <LinearLayout
+                    android:id="@+id/withdraw_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:text="提现到"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:id="@+id/img_bind_logo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_wx_63_63___card"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_withdraw_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="right"
+                        android:text="@string/label_set_card_bind___card"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="16dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/icon_arrow_right_gray_14_26" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_copy_card"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="@string/label_copy_card___card"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+            <Button
+                android:id="@+id/btn_delete_card"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="删除请帖"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ex_medium_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/hlj_progressbar___cm" />
+</RelativeLayout>

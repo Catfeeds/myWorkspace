@@ -1,0 +1,118 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode HLJ_PAYMENT_LIBRARY_VER_CODE
+        versionName HLJ_PAYMENT_LIBRARY_VERSION
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+
+        }
+    }
+    productFlavors {
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    /*****************************本地module引入*******************************/
+    implementation project(':hljcommonlibrary')
+    implementation project(':hljcommonviewlibrary')
+    implementation project(':hljhttplibrary')
+    implementation project(':hljimagelibrary')
+    implementation project(':hljsharelibrary')
+    implementation project(':hljweblibrary')
+
+    implementation project(':RoundedImageViewlibrary')
+    implementation project(':PullToRefreshlibrary')
+    implementation project(':wheelpickerlibrary')
+    /*****************************本地module引入*******************************/
+
+    /*****************************本地jar包引入*******************************/
+    api files('libs/alipaysdk.jar')
+    api files('libs/alipaysecsdk.jar')
+    api files('libs/alipayutdid.jar')
+    api files('libs/cmbJava.jar')
+    api files('libs/cmbkeyboard.jar')
+    api files('libs/securepay_auth_2.4.4.jar')
+    api files('libs/UPPayAssistEx.jar')
+    api files('libs/UPPayPluginExPro.jar')
+    /*****************************本地jar包引入*******************************/
+
+    /*****************************远程第三方库引入*******************************/
+    implementation "com.android.support:appcompat-v7:$APP_COMPAT_V7_VERSION"
+    implementation "com.android.support:recyclerview-v7:$RECYCLERVIEW_V7_VERSION"
+
+    implementation 'com.alibaba:arouter-api:1.2.1'
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.1.1@aar'
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.1.3'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.4.0'
+
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.2.3'
+    implementation 'joda-time:joda-time:2.9.6'
+    /*****************************远程第三方库引入*******************************/
+
+    /*****************************annotationProcessor*******************************/
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.1.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    /*****************************annotationProcessor*******************************/
+}
+
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId LIBRARY_PACKAGE_NAME
+            version = android.defaultConfig.versionName
+            artifactId project.getProject().getName()
+
+            // Tell maven to prepare the generated "* .aar" file for publishing
+            artifact("$buildDir/outputs/aar/${project.getProject().getName()}-release.aar")
+        }
+    }
+}
+
+artifactory {
+    contextUrl = "$ARTIFACTORY_HOST/artifactory"
+    publish {
+        repository {
+            // The Artifactory repository key to publish to
+            repoKey = 'libs-release-local'
+
+            username = "admin"
+            password = "iwerther"
+        }
+        defaults {
+            // Tell the Artifactory Plugin which artifacts should be published to Artifactory.
+            publications('aar')
+            publishArtifacts = true
+
+            // Properties to be attached to the published artifacts.
+            properties = ['qa.level': 'basic', 'dev.team': 'core']
+            // Publish generated POM files to Artifactory (true by default)
+            publishPom = true
+        }
+    }
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <!--私信提示-->
+
+        <LinearLayout
+            android:id="@+id/msg_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/icon_msg_card_bg"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/riv_auth_avatar"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:scaleType="centerCrop"
+                app:corner_radius="14dp" />
+
+            <TextView
+                android:id="@+id/tv_msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorWhite"
+                android:drawablePadding="4dp"
+                android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!--8个tab-->
+        <com.hunliji.hljcommonlibrary.views.widgets.FlowLayout
+            android:id="@+id/flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorWhite"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:visibility="gone"
+            app:verticalSpacing="12dp" />
+
+        <LinearLayout
+            android:id="@+id/poster_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_poster"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_empty_image"
+                app:corner_radius="3dp" />
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_poster2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_empty_image"
+                app:corner_radius="3dp" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_marginTop="14dp" />
+
+        <!--最近常逛-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/channel_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="10dp"
+            android:clipToPadding="false"
+            android:paddingLeft="12dp"
+            android:paddingRight="4dp"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorBackground2" />
+
+    </LinearLayout>
+</RelativeLayout>

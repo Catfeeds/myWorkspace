@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="me.suncloud.marrymemo.view.PayOfflineActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/transparent_white">
+
+        <ImageButton
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="onBackPressed"
+            android:src="@mipmap/icon_back_primary"/>
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/title_activity_pay_offline"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size"/>
+
+        <TextView
+            android:id="@+id/cancel"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/label_cancel_order"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/line_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tv_pay_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_order_price2"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="@string/rmb"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/tv_real_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/xx_huge_text_size"/>
+
+            <Button
+                android:id="@+id/btn_order_action"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:onClick="onPay"
+                android:background="@drawable/sl_r15_primary_2_dark"
+                android:gravity="center"
+                android:minWidth="96dp"
+                android:text="@string/label_pay2"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/action_layout"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:orientation="vertical">
+
+                <include layout="@layout/line_layout"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_service_price"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <EditText
+                        android:id="@+id/et_total_price"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:hint="@string/hint_offline_price"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/line_layout"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/red_packet_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:visibility="gone"
+                android:onClick="showRedPackets"
+                android:orientation="vertical">
+
+                <include layout="@layout/line_layout"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hlj_red_envelop"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_saved_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size2"/>
+
+                        <TextView
+                            android:id="@+id/tv_hint_no_red_packet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_no_red_packet"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size3"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:src="@mipmap/icon_arrow_right_gray_14_26"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/line_layout"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/progressbar_layout"/>
+
+</RelativeLayout>

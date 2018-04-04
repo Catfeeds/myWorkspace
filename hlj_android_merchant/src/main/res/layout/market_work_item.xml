@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/line_layout" />
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="99dp"
+        android:layout_height="62dp"
+        android:layout_margin="12dp"
+        android:background="@color/colorImageBackground" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="12dp"
+        android:layout_toLeftOf="@+id/btn_delete"
+        android:layout_toRightOf="@+id/iv_cover"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:text="@string/label_price5"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="4dp"
+        android:background="@android:color/transparent"
+        android:padding="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_delete_gray_44_44" />
+
+</RelativeLayout>

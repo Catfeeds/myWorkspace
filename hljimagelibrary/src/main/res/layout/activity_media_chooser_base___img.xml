@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/action_layout"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingBottom="4dp"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/notice_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff3de"
+        android:visibility="gone"
+        android:layout_below="@+id/action_layout"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:id="@+id/tv_notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@+id/btn_close"
+            android:textColor="#fd7e33"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <ImageButton
+            android:id="@+id/btn_notice_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:src="@mipmap/icon_close_yellow_26_26" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffe5b9" />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorLine" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_below="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <include layout="@layout/hlj_empty_view___cm" />
+
+</RelativeLayout>

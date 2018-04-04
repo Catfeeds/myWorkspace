@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.PullToRefreshScrollableLayout
+            android:id="@+id/scrollable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <include layout="@layout/same_city_thread_list_header" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/colorWhite" />
+
+            <View style="@style/line_horizontal" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0" />
+
+        </com.hunliji.hljcommonlibrary.views.widgets.PullToRefreshScrollableLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/hlj_progressbar___cm" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View style="@style/line_horizontal" />
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/sp_r18_primary"
+            android:gravity="center"
+            android:text="@string/title_activity_edit_thread"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_medium_text_size2" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_create_thread_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49.5dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/image_hint_create_thread"
+        android:visibility="gone" />
+
+</RelativeLayout>

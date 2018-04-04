@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Hlj Live Library</string>
+
+    <string name="label_social_live_join_count_tip___live">人围观</string>
+    <string name="label_social_live_in___live">正在直播</string>
+    <string name="label_live_in___live">直播中</string>
+    <string name="label_social_live_in_time___live">结束时间：</string>
+    <string name="label_social_live_not___live">即将开始</string>
+    <string name="label_live_not___live">预告</string>
+    <string name="label_social_live_not_time___live">开始时间：</string>
+    <string name="label_social_live_end___live">回顾直播</string>
+    <string name="label_live_end___live">回顾</string>
+    <string name="label_live___live">直播</string>
+    <string name="label_chat___live">聊天室</string>
+    <string name="label_watch_count___live">%d围观</string>
+    <string name="label_stick___live">置顶</string>
+    <string name="label_reply_delete___live">该评论已删除</string>
+    <string name="label_reply___live">回复</string>
+    <string name="label_live_detail_in___live">正在直播</string>
+    <string name="label_live_detail_not___live">即将开始</string>
+    <string name="label_live_detail_end___live">已结束</string>
+    <string name="label_rmb___live">¥</string>
+    <string name="label_collect_count___live">收藏 %s</string>
+    <string name="label_up_count___live">%s</string>
+    <string name="label_work_rec___live">人气推荐</string>
+    <string name="label_work_top___live">本季热卖</string>
+    <string name="label_role1___live">主持人</string>
+    <string name="label_role2___live">嘉宾</string>
+    <string name="label_live_message_empty___live">直播还没有开始</string>
+    <string name="label_live_message_empty2___live">去聊天室看看大家都在聊啥</string>
+    <string name="label_chat_message_empty___live">还没有用户发言</string>
+    <string name="label_chat_message_empty2___live">快来抢占发言吧~~</string>
+    <string name="label_live_review___live">本期精华</string>
+    <string name="label_live_review_action___live">立即回顾</string>
+
+    <string name="hint_content_edit___live">我来说两句</string>
+    <string name="hint_send_message_err___live">消息发送失败</string>
+    <string name="label_watch___live">观看</string>
+    <string name="label_order___live">订购</string>
+    <string name="label_must_watch___live">必看</string>
+    <string name="label_money">￥%s</string>
+    <string name="label_money_sill">满%s可用</string>
+    <string name="title_activity_live_channel">直播</string>
+    <string name="label_live_detail_in2___live">直播中</string>
+    <string name="label_live_detail_not2___live">预热中</string>
+
+</resources>

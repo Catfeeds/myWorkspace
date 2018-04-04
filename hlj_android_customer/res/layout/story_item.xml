@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground2">
+
+    <LinearLayout
+        android:id="@+id/image_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp">
+
+            <me.suncloud.marrymemo.widget.RecyclingImageView
+                android:id="@+id/story_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f5f0eb"
+                android:minHeight="150dp"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/paly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_play_trans_white_136_136"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingTop="18dp"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:paddingTop="9dp"
+            android:textColor="#7eaef7"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <RelativeLayout
+            android:id="@+id/menu_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/collect_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <TextView
+                android:id="@+id/review_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11dp"
+                android:layout_toRightOf="@+id/collect_count"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <ImageView
+                android:id="@+id/review"
+                android:layout_width="48dp"
+                android:layout_height="52dp"
+                android:layout_toLeftOf="@+id/collect"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="14dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="18dp"
+                android:src="@mipmap/icon_comment_gray_34_32" />
+
+            <ImageView
+                android:id="@+id/collect"
+                android:layout_width="48dp"
+                android:layout_height="52dp"
+                android:layout_toLeftOf="@+id/share"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="14dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="18dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_praise_gray_40_40" />
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="42dp"
+                android:layout_height="52dp"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:paddingBottom="14dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="8dp"
+                android:paddingTop="18dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_share_gray_40_40" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_item_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size1"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/colorLine" />
+
+</RelativeLayout>

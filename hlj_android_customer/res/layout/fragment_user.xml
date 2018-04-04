@@ -1,0 +1,949 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_header_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/image_bg_user_header" />
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hunliji.hljquestionanswer.widgets.CustScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/shade_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="160dp"
+                    android:background="@color/colorBackground" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:orientation="vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp">
+
+                    <RelativeLayout
+                        android:id="@+id/user_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/image_bg_un_opened_member"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/wedding_date_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="48dp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_wedding_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="6dp"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/colorBlack2"
+                                android:textSize="@dimen/ex_huge_text_size"
+                                android:textStyle="bold"
+                                tools:text="@string/app_name" />
+
+                            <TextView
+                                android:id="@+id/tv_edit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:contentDescription="@string/app_name"
+                                android:drawableLeft="@mipmap/icon_edit_gray_26_26"
+                                android:drawablePadding="4dp"
+                                android:gravity="center_vertical"
+                                android:padding="4dp"
+                                android:text="@string/label_edit"
+                                android:textColor="@color/colorGray2"
+                                android:textSize="@dimen/medium_text_size3"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_nick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/wedding_date_layout"
+                            android:layout_centerHorizontal="true"
+                            android:ellipsize="end"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="40dp"
+                            android:paddingTop="4dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1"
+                            tools:text="@string/app_name" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/tv_nick"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/collect_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_collect_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack3"
+                                    android:textSize="@dimen/large_text_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:includeFontPadding="false"
+                                    android:text="收藏"
+                                    android:textColor="@color/colorBlack2"
+                                    android:textSize="@dimen/medium_text_size3" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/shopping_cart_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_shopping_cart_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack3"
+                                    android:textSize="@dimen/large_text_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:includeFontPadding="false"
+                                    android:text="购物车"
+                                    android:textColor="@color/colorBlack2"
+                                    android:textSize="@dimen/medium_text_size3" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/order_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_order_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack3"
+                                    android:textSize="@dimen/large_text_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:includeFontPadding="false"
+                                    android:text="订单/预约"
+                                    android:textColor="@color/colorBlack2"
+                                    android:textSize="@dimen/medium_text_size3" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/publish_layout"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_publish_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="0"
+                                    android:textColor="@color/colorBlack3"
+                                    android:textSize="@dimen/large_text_size" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:includeFontPadding="false"
+                                    android:text="发布"
+                                    android:textColor="@color/colorBlack2"
+                                    android:textSize="@dimen/medium_text_size3" />
+
+                            </LinearLayout>
+
+                            <View
+                                style="@style/line_vertical"
+                                android:layout_marginBottom="12dp"
+                                android:layout_marginTop="12dp" />
+
+                            <LinearLayout
+                                android:id="@+id/wallet_layout"
+                                android:layout_width="72dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:lineSpacingExtra="2dp"
+                                    android:text="我的\n钱包"
+                                    android:textColor="@color/colorBlack2"
+                                    android:textSize="@dimen/ex_medium_text_size2"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/member_view"
+                            android:layout_width="62dp"
+                            android:layout_height="52dp"
+                            android:layout_alignParentRight="true" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/image_bg_user_card_view"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/wedding_task_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="12dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="结婚任务"
+                                    android:textColor="@color/colorBlack2"
+                                    android:textSize="@dimen/large_text_size2"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:scaleType="centerInside"
+                                    android:src="@mipmap/icon_arrow_right_gray_14_26"
+                                    android:tint="@color/colorBlack2" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_wedding_task_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="已完成：0/0"
+                                android:textColor="@color/colorGray"
+                                android:textSize="@dimen/medium_text_size3" />
+
+                            <ImageButton
+                                android:id="@+id/btn_record_wedding_task"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:background="@null"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/icon_wedding_task_204_78" />
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/line_vertical"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp" />
+
+                        <LinearLayout
+                            android:id="@+id/wedding_account_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="4dp"
+                            android:paddingTop="12dp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="结婚记账"
+                                    android:textColor="@color/colorBlack2"
+                                    android:textSize="@dimen/large_text_size2"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="3dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:scaleType="centerInside"
+                                    android:src="@mipmap/icon_arrow_right_gray_14_26"
+                                    android:tint="@color/colorBlack2" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tv_wedding_account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="已支出：¥0.00"
+                                android:textColor="@color/colorGray"
+                                android:textSize="@dimen/medium_text_size3" />
+
+                            <ImageButton
+                                android:id="@+id/btn_record_wedding_account"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="6dp"
+                                android:background="@null"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/icon_wedding_account_204_78" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/image_bg_user_card_view">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <FrameLayout
+                                    android:id="@+id/card_layout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginBottom="14dp"
+                                        android:layout_marginTop="12dp"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="10dp"
+                                            android:drawableTop="@mipmap/icon_card_72_72"
+                                            android:gravity="center"
+                                            android:includeFontPadding="false"
+                                            android:text="电子请柬"
+                                            android:textColor="@color/colorBlack2"
+                                            android:textSize="@dimen/ex_medium_text_size"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="6dp"
+                                            android:includeFontPadding="false"
+                                            android:text="精美请柬，收取礼金"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="@dimen/ex_small_text_size" />
+
+                                    </LinearLayout>
+
+                                    <View
+                                        android:id="@+id/card_notice_view"
+                                        android:layout_width="8dp"
+                                        android:layout_height="8dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginLeft="12dp"
+                                        android:layout_marginTop="9dp"
+                                        android:background="@drawable/sp_oval_accent"
+                                        android:visibility="gone"
+                                        tools:visibility="visible" />
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/wedding_table_layout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="14dp"
+                                    android:paddingTop="12dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="10dp"
+                                        android:drawableTop="@mipmap/icon_wedding_table_72_72"
+                                        android:includeFontPadding="false"
+                                        android:text="我的宾客"
+                                        android:textColor="@color/colorBlack2"
+                                        android:textSize="@dimen/ex_medium_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:includeFontPadding="false"
+                                        android:text="安排宾客，快速查座"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="@dimen/ex_small_text_size" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                style="@style/line_horizontal"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <FrameLayout
+                                    android:id="@+id/wedding_calendar_layout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:paddingBottom="14dp"
+                                        android:paddingTop="14dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="10dp"
+                                            android:drawableTop="@mipmap/icon_wedding_calendar_72_72"
+                                            android:includeFontPadding="false"
+                                            android:text="结婚吉日"
+                                            android:textColor="@color/colorBlack2"
+                                            android:textSize="@dimen/ex_medium_text_size"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="6dp"
+                                            android:includeFontPadding="false"
+                                            android:text="用大数据，选好日子"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="@dimen/ex_small_text_size" />
+
+                                    </LinearLayout>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginLeft="24dp"
+                                        android:layout_marginTop="11dp"
+                                        android:contentDescription="@string/app_name"
+                                        android:scaleType="centerInside"
+                                        android:src="@mipmap/icon_wedding_calendar_hot_tag" />
+
+                                </FrameLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/wedding_loan_layout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="14dp"
+                                    android:paddingTop="14dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="10dp"
+                                        android:drawableTop="@mipmap/icon_wedding_loan_72_72"
+                                        android:includeFontPadding="false"
+                                        android:text="新婚贷"
+                                        android:textColor="@color/colorBlack2"
+                                        android:textSize="@dimen/ex_medium_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:includeFontPadding="false"
+                                        android:text="你结婚，我买单"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="@dimen/ex_small_text_size" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                style="@style/line_horizontal"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="12dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <LinearLayout
+                                    android:id="@+id/wedding_wall_layout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="12dp"
+                                    android:paddingTop="14dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="10dp"
+                                        android:drawableTop="@mipmap/icon_wedding_wall_72_72"
+                                        android:includeFontPadding="false"
+                                        android:text="婚礼墙"
+                                        android:textColor="@color/colorBlack2"
+                                        android:textSize="@dimen/ex_medium_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:includeFontPadding="false"
+                                        android:text="嗨翻婚礼现场"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="@dimen/ex_small_text_size" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/wedding_budget_layout"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="12dp"
+                                    android:paddingTop="14dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:drawablePadding="10dp"
+                                        android:drawableTop="@mipmap/icon_wedding_budget_72_72"
+                                        android:includeFontPadding="false"
+                                        android:text="结婚预算"
+                                        android:textColor="@color/colorBlack2"
+                                        android:textSize="@dimen/ex_medium_text_size"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:includeFontPadding="false"
+                                        android:text="大数据为你合理分配"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="@dimen/ex_small_text_size" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            style="@style/line_vertical"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginTop="12dp" />
+
+                    </FrameLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/float_btn_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="160dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_bind_partner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/image_bg_bind_partner"
+                        android:visibility="invisible" />
+
+                    <FrameLayout
+                        android:id="@+id/user_dynamic_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/image_bg_user_dynamic"
+                        android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/tv_unread_count"
+                            android:layout_width="44dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:text="0"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/medium_text_size3" />
+
+                        <ImageView
+                            android:id="@+id/img_user_dynamic_tag"
+                            android:layout_width="44dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right|center"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/icon_user_dynamic_tag"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </com.hunliji.hljquestionanswer.widgets.CustScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="商家入驻"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ex_medium_text_size2" />
+
+                <Button
+                    android:id="@+id/btn_merchant_recruit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="商家入驻"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/ex_medium_text_size2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/share_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/msg_layout">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:src="@drawable/icon_share_white_44_44" />
+
+                <ImageButton
+                    android:id="@+id/btn_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:src="@drawable/icon_share_primary_44_44" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/msg_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/more_layout">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:src="@drawable/icon_message_mail_white_46_46" />
+
+                <ImageButton
+                    android:id="@+id/btn_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:src="@drawable/icon_message_mail_white_46_46"
+                    android:tint="@color/colorPrimary" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/msg_layout">
+
+                <View
+                    android:id="@+id/msg_notice_view"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/sp_oval_accent"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_msg_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/sp_r8_accent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="16dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/more_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:src="@mipmap/icon_more_menu_primary_44_44"
+                    android:tint="@color/colorWhite" />
+
+                <ImageButton
+                    android:id="@+id/btn_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="16dp"
+                    android:src="@mipmap/icon_more_menu_primary_44_44" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/divider_view"
+                style="@style/line_horizontal"
+                android:layout_alignParentBottom="true"
+                android:alpha="0" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/avatar_holder_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:clipChildren="false">
+
+        <RelativeLayout
+            android:id="@+id/avatar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_partner_avatar"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="70dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_cross_avatar_gray"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
+                app:border_color="@color/colorWhite"
+                app:border_width="1dp"
+                app:corner_radius="28dp" />
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                android:transformPivotX="0dp"
+                android:transformPivotY="0dp"
+                app:border_color="@color/colorWhite"
+                app:border_width="1dp"
+                app:corner_radius="42dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

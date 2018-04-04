@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="260dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_bg_wedding_date_dialog"
+                app:corner_radius="3dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_chose_wedding_date"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/ex_medium_text_size" />
+
+                <DatePicker
+                    android:id="@+id/date_picker"
+                    android:layout_width="240dp"
+                    android:layout_height="156dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="6dp"
+                    android:calendarViewShown="false"
+                    android:spinnersShown="true"
+                    app:theme="@android:style/Theme.Holo.Light" />
+
+                <Button
+                    android:id="@+id/btn_count_down"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/sl_r15_primary_2_dark"
+                    android:enabled="true"
+                    android:text="@string/action_ok"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ex_medium_text_size2" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_cross_close_round_gray_68_68" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/content_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:text="@string/label_register_phone"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <com.hunliji.marrybiz.widget.ClearableEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_enter_phone_number2"
+                        android:inputType="numberSigned"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack3"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size1" />
+                </LinearLayout>
+
+                <include layout="@layout/line" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/txt_register_hint"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <include layout="@layout/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:text="@string/label_sms_code"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <com.hunliji.marrybiz.widget.ClearableEditText
+                        android:id="@+id/et_valid_code"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:hint="@string/hint_enter_valid_code"
+                        android:inputType="number"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <Button
+                        android:id="@+id/btn_resend_valid_code"
+                        android:layout_width="74dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/sl_r4_stroke_primary_2_stroke_gray2"
+                        android:gravity="center"
+                        android:text="@string/label_get_valid_code"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:text="@string/label_create_password"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <com.hunliji.marrybiz.widget.ClearableEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/colorWhite"
+                        android:hint="@string/hint_enter_password2"
+                        android:inputType="textPassword"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size1" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="16dp"
+                        android:text="@string/label_confirm_password"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <com.hunliji.marrybiz.widget.ClearableEditText
+                        android:id="@+id/et_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/colorWhite"
+                        android:hint="@string/hint_confirm_password"
+                        android:inputType="textPassword"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/agreement_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_agreement"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:background="@drawable/sl_ic_check_mark2"
+                        android:button="@null"
+                        android:clickable="false"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:background="@android:color/transparent"
+                        android:text="@string/label_have_read"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <TextView
+                        android:id="@+id/tv_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:text="@string/label_agreement2"
+                        android:textColor="@color/colorLink"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/sl_r4_primary_2_dark"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/label_finish"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

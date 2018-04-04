@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/start_padding"
+        android:layout_width="12dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView
+        android:id="@+id/card_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="5dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="6dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardShadowEndColor="#00000000"
+        app:cardShadowStartColor="#08000000"
+        app:contentPadding="0dp">
+
+        <RelativeLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sp_r4_stroke_eee_solid_white"
+            android:minHeight="100dp">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                app:border_color="@color/colorLine"
+                app:border_width="0.5dp"
+                app:corner_radius="24dp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_merchant_property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/ex_small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_qa_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_merchant_property"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:maxLines="1"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/ex_small_text_size" />
+
+            <Button
+                android:id="@+id/btn_contact_merchant"
+                android:layout_width="72dp"
+                android:layout_height="24dp"
+                android:layout_below="@+id/tv_qa_count"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/sl_r12_stroke_primary_2_solid_light"
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="向他提问"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView>
+
+    <View
+        android:id="@+id/end_padding"
+        android:layout_width="12dp"
+        android:layout_height="1dp"
+        android:visibility="gone" />
+
+</LinearLayout>

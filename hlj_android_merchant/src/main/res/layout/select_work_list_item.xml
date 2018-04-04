@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.marrybiz.widget.CheckableLinearLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="100dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorImageBackground"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/custom"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_custom"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/installment"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_installment_tag_81_81"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/checkbox"
+            android:layout_width="17dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="12dp"
+            android:duplicateParentState="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/sl_ic_work_check" />
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toLeftOf="@id/checkbox"
+            android:layout_toRightOf="@+id/cover"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/actual_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/cover"
+            android:layout_toRightOf="@id/cover"
+            android:background="@color/colorLine" />
+    </RelativeLayout>
+
+
+</com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+

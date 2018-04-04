@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/hljColorSegmentBackground"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/ll_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorLine" />
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:paddingRight="16dp"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3"
+            tools:text="元芳的问题" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/hljColorSegmentBackground"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_question___qa" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="2"
+                    android:textColor="?attr/hljColorTitle1"
+                    android:textSize="@dimen/ex_medium_text_size2"
+                    android:textStyle="bold"
+                    tools:text="发到空间顺丰快递费看见你时刻记得十分地方都是你发救死扶伤的烦恼的空间放暑假地方你看就是发生悲剧的发生" />
+
+                <TextView
+                    android:id="@+id/tv_total_answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:textColor="?attr/hljColorContentExt2"
+                    tools:text="2个回答" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_answer_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_answer_green___qa" />
+
+            <TextView
+                android:id="@+id/tv_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="2"
+                android:textColor="?attr/hljColorContent1"
+                android:textSize="@dimen/ex_medium_text_size2"
+                tools:text="发到空间顺丰快递费看见你时刻记得淡定淡定淡定十分地方都是你发救死扶伤的烦恼的空间放暑假地方你看就是发生悲剧的发生" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3"
+                tools:text="2018-10-10" />
+
+            <TextView
+                android:id="@+id/tv_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorLink"
+                android:textSize="@dimen/medium_text_size3"
+                tools:text="查看全部三个问题" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

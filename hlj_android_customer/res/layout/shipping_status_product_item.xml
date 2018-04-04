@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <Space
+        android:id="@+id/layout_product_divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <LinearLayout
+        android:id="@+id/layout_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_product_divider"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/layout_product_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1">
+
+            <include layout="@layout/common_product_list_item___cv" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_product_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1">
+
+            <include layout="@layout/common_product_list_item___cv" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_wedding_dress"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_wedding_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_height="184dp">
+
+        <ImageView
+            android:id="@+id/iv_wedding_dress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_wedding_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#4D000000"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:paddingBottom="12dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:shadowColor="#7F000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="10"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/large_text_size"
+            android:textStyle="bold"
+            tools:text="高颜值好生离开的飞机来说菜麻烦茉莉东方时空后来佛" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_gradient_black_wedding">
+
+            <TextView
+                android:id="@+id/tv_wedding_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingBottom="10dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="12dp"
+                android:paddingTop="12dp"
+                android:layout_toLeftOf="@+id/tv_wedding_image_count"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3"
+                tools:text="山亚 · ￥4300" />
+
+            <TextView
+                android:id="@+id/tv_wedding_image_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:paddingBottom="10dp"
+                android:paddingRight="12dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3"
+                tools:text="300张图" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

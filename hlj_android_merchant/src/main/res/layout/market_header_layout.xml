@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="16dp"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:paddingLeft="13dp"
+            android:text="@string/label_business_essential"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/ex_medium_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.makeramen.rounded.RoundedImageView
+            android:id="@+id/iv_flag_ship"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/icon_market_flag_ship"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            app:corner_radius="3dp" />
+
+        <com.makeramen.rounded.RoundedImageView
+            android:id="@+id/iv_bond_plan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:src="@mipmap/icon_market_bond_plan"
+            android:scaleType="centerCrop"
+            app:corner_radius="3dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/market_yunke_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.makeramen.rounded.RoundedImageView
+            android:id="@+id/iv_market_yunke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_market_yunke"
+            android:gravity="center_vertical"
+            android:scaleType="centerCrop"
+            app:corner_radius="3dp" />
+
+    </LinearLayout>
+</LinearLayout>

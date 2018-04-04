@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--首页专业版标识背景-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners
+        android:bottomLeftRadius="10dp"
+        android:topLeftRadius="10dp" />
+
+    <solid android:color="#a08761" />
+</shape>

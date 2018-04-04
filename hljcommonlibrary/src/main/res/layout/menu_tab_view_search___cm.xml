@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.TabView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/divider"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="@color/menu_tab_text_color"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/line_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" />
+
+</com.hunliji.hljcommonlibrary.views.widgets.TabView>

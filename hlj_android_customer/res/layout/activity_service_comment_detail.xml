@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/hlj_common_fragment_ptr_recycler_view___cm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorBackground2"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:id="@+id/comment_layout"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/sp_round15_white_stroke_line2"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_reply_something___note"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColorHint="@color/colorGray3"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/btn_add_emoji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_face_gray" />
+
+            </LinearLayout>
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+                android:id="@+id/check_praised"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:checked="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_praise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/sl_ic_praise_black_primary_38_38" />
+
+                    <TextView
+                        android:id="@+id/tv_praise_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="有用"
+                        android:textColor="@color/black2_primary"
+                        android:textSize="@dimen/small_text_size" />
+
+                </LinearLayout>
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

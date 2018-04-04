@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/content_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup
+            android:id="@+id/check_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/image_bg_dialog_arrow_up_bubble"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+            <!--综合 最新-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_default"
+                android:layout_width="64dp"
+                android:layout_height="38dp"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:checked="true">
+
+                <TextView
+                    android:id="@+id/tv_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="@string/label_default___cm"
+                    android:textColor="@color/black2_primary"
+                    android:textSize="14sp" />
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+
+            <!--最热　最新-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_new"
+                android:layout_width="64dp"
+                android:layout_height="38dp"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_width="64dp" />
+
+                <TextView
+                    android:id="@+id/tv_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="@string/label_newest___cm"
+                    android:textColor="@color/black2_primary"
+                    android:textSize="14sp" />
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+
+            <!--价格最高-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_price_high"
+                android:layout_width="64dp"
+                android:layout_height="38dp"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:visibility="visible"
+                android:visibility="gone">
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_width="64dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="@string/label_price_high___cm"
+                    android:textColor="@color/black2_primary"
+                    android:textSize="14sp" />
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+
+            <!--价格最低-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_price_low"
+                android:layout_width="64dp"
+                android:layout_height="38dp"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                tools:visibility="visible"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    style="@style/line_horizontal"
+                    android:layout_width="64dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="@string/label_price_low___cm"
+                    android:textColor="@color/black2_primary"
+                    android:textSize="14sp" />
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <array name="status">
+        <item>待生效</item>
+        <item>保障中</item>
+        <item>已终止</item>
+    </array>
+
+</resources>

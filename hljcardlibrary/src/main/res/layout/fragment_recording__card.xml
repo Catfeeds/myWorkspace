@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:padding="14dp"
+            android:text="取消"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <LinearLayout
+            android:id="@+id/time_down_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:visibility="invisible">
+
+            <com.hunliji.hljcommonlibrary.views.widgets.RecordAmplitudeView
+                android:id="@+id/left"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                app:bar_color="@color/colorPrimary"
+                app:bar_num="10"
+                app:bar_space="2dp"
+                app:bar_width="2dp"
+                app:left="true"
+                app:start="0.4" />
+
+            <TextView
+                android:id="@+id/time_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.RecordAmplitudeView
+                android:id="@+id/right"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                app:bar_color="@color/colorPrimary"
+                app:bar_num="10"
+                app:bar_space="2dp"
+                app:bar_width="2dp"
+                app:start="0.4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_down_layout"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sl_icon_sound_play__card"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/btn_record"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/sl_icon_sound_record__card" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/btn_done"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sl_icon_sound_done__card"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/action_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="@string/hint_record1__card"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <include layout="@layout/hlj_progressbar___cm" />
+    </RelativeLayout>
+</RelativeLayout>

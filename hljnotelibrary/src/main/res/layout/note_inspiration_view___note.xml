@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+    <FrameLayout
+        android:id="@+id/note_spots_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/note_spot_empty_view"
+        android:layout_width="124dp"
+        android:layout_height="44dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/sp_r22_color_66000000"
+        android:gravity="center"
+        android:text="@string/label_click_add_mark___note"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size"
+        android:visibility="gone" />
+
+</RelativeLayout>

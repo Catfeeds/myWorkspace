@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Hlj Push Library</string>
+
+    <string name="btn_goto___push">去看看</string>
+
+
+    <string name="html_fmt_live_hint_count1___push" formatted="false"><Data><![CDATA[<font color="%s">%d</font>人正在参加限时抢购]]></Data></string>
+    <string name="html_fmt_live_hint_count2___push" formatted="false"><Data><![CDATA[<font color="%s">%d</font>正在观看直播]]></Data></string>
+
+</resources>

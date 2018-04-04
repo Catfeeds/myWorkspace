@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_header"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/rl_package_info"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_cover"
+            android:layout_width="99dp"
+            android:layout_height="62dp"
+            android:layout_centerVertical="true"
+            android:background="@color/colorImageBackground"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/img_cover"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingRight="12dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold"
+                tools:text="爱茉莉婚纱套餐" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size3"
+                tools:text="@string/label_price4" />
+
+            <TextView
+                android:id="@+id/tv_serve_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone"
+                tools:text="@string/label_serve_time2" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="16dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_user_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/icon_chat_bubble_primary_30_28"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1"
+                tools:text="张益达" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3"
+            tools:text="2017-03-05" />
+
+    </LinearLayout>
+
+   <RelativeLayout
+       android:background="@color/colorWhite"
+       android:layout_width="match_parent"
+       android:layout_height="0.5dp">
+
+    <View
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+   </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="8dp"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1"
+            tools:text="大红覅是看见的迪欧放技能书美国蓝科技发你手机电脑福利卡年费" />
+
+        <!--九宫格图片-->
+        <com.hunliji.hljcommonlibrary.views.widgets.HljGridView
+            android:id="@+id/hgv_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <com.hunliji.marrybiz.widget.RatingView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            app:isindicator="true"
+            app:itemHeight="16dp"
+            app:itemMargin="3dp"
+            app:offDrawable="@drawable/icon_rating_off_27_27"
+            app:onDrawable="@drawable/icon_rating_on_27_27" />
+
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/small_text_size"
+            android:textStyle="bold"
+            tools:text="很满意" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/tv_watch_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3"
+                    tools:text="浏览456" />
+
+                <TextView
+                    android:id="@+id/tv_like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3"
+                    tools:text="有用33" />
+
+                <TextView
+                    android:id="@+id/tv_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3"
+                    tools:text="评价456" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/iv_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="28dp"
+            android:src="@mipmap/icon_dropdown_up_color_background"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_all_comment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size1"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:text="全部评论(2)" />
+
+    <include layout="@layout/line_layout"
+        android:visibility="gone"/>
+
+</LinearLayout>

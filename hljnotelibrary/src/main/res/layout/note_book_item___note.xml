@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljGridView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_note_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/large_text_size2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_note_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="6dp"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/tv_note_collect_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:layout_gravity="center_vertical"
+                android:text="0收藏"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottom_line_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorBackground"
+            android:visibility="gone"/>
+    </LinearLayout>
+</RelativeLayout>

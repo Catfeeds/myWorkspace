@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hunliji.cardmaster"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="andorid.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".HLJCardMasterApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/icon_launcher"
+        android:label="${app_name}"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label,android:theme,android:allowBackup">
+
+        <!-- ************************************************************************************* -->
+        <!-- FileProvider -->
+        <!-- authorities同包名 使用通过getPackageName()获取 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 高德地图API key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="572d37efb9e62a7092023fa56f780469" />
+
+        <!-- ************************************************************************************* -->
+
+        <meta-data
+            android:name="HLJ_CHANNEL"
+            android:value="hunliji" />
+
+        <!-- ************************************************************************************* -->
+        <!-- 微信回调接收 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信支付回调接收 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- ************************************************************************************* -->
+
+
+        <!-- ************************************************************************************* -->
+        <!-- 个推SDK配置开始 -->
+        <service android:name=".service.GetuiIntentService" />
+
+        <!-- 用户自定义服务名 -->
+        <service
+            android:name=".service.GetuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <!-- ************************************************************************************* -->
+
+
+        <!-- ************************************************************************************* -->
+        <!-- QQ登陆 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106079023" />
+            </intent-filter>
+        </activity>
+        <!-- ************************************************************************************* -->
+
+
+        <!-- 程序启动页 -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".activities.login.LoginActivity"
+            android:label="登陆"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/title_activity_card_list___card"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/HomePageTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <activity
+            android:name=".activities.UserActivity"
+            android:label="我的"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+
+        <activity
+            android:name=".activities.MyWalletActivity"
+            android:label="我的钱包"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".activities.SettingActivity"
+            android:label="设置"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".activities.CardMasterEMChatActivity"
+            android:label="聊天"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <activity
+            android:name=".activities.OpenMemberActivity"
+            android:label="@string/label_member_privileges_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".activities.AboutUsActivity"
+            android:label="关于我们"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.FeedBackActivity"
+            android:label="意见反馈"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.ThirdBindAccountActivity"
+            android:label="第三方账号绑定"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.AccountEditActivity"
+            android:label="个人信息"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.EditNickNameActivity"
+            android:label="填写昵称"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.debug.ChangeHostActivity"
+            android:label="服务器切换"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+    </application>
+
+</manifest>

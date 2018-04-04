@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">婚礼纪易支付</string>
+
+    <string name="title_activity_input_amount">输入支付金额</string>
+
+    <string name="label_trade_no">No.%s</string>
+
+    <string name="msg_exit_app">再按一次可以退出婚礼纪易支付</string>
+
+</resources>

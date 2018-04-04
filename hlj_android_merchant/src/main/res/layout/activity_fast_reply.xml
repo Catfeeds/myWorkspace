@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshVerticalRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="10dp"
+        android:divider="@null"
+        android:layout_above="@+id/btn_confirm"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/colorWhite"
+        android:text="确认发送"
+        android:textSize="@dimen/medium_text_size1"
+        android:background="@drawable/sl_color_primary_2_dark"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

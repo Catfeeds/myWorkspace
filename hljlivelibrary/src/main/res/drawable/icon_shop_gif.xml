@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:drawable="@drawable/icon_shop_gif_1_04"
+        android:duration="200" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_2_02"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_3_02"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_4_01"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_5_01"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_6_01"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_7_02"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_8_02"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_9_02"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_10_02"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_11_02"
+        android:duration="100" />
+    <item
+        android:drawable="@drawable/icon_shop_gif_12_030"
+        android:duration="1500" />
+</animation-list>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.hunliji.hljcommonlibrary.behavior.AppBarLayoutOverScrollViewBehavior">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite">
+
+                <LinearLayout
+                    android:id="@+id/ll_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_one_pay_all_inclusive_bg_top" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_one_pay_all_inclusive_bg_bot" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="45dp"
+                    android:orientation="vertical">
+                    <!--686:276-->
+                    <RelativeLayout
+                        android:id="@+id/layout_top_poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+
+                        <com.slider.library.SliderLayout
+                            android:id="@+id/scroll_view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <com.slider.library.Indicators.CirclePageIndicator
+                            android:id="@+id/pager_indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:background="@android:color/transparent"
+                            android:padding="10dp"
+                            app:circleOffset="4dp"
+                            app:circleWidth="10dp"
+                            app:circleradius="1dp"
+                            app:fillColor="@color/colorWhite"
+                            app:pageColor="#66ffffff"
+                            app:strokeWidth="0dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_bot_poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <ImageView
+                            android:id="@+id/img_poster_left"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            tools:visibility="visible"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="invisible" />
+
+                        <View
+                            android:id="@+id/bot_poster_line"
+                            android:layout_width="0.5dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@color/colorLine"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/img_poster_right"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            tools:visibility="visible"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/header_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/colorBackground"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                app:contentInsetStart="0dp"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/action_holder_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_back"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:contentDescription="@string/app_name"
+                                android:src="@mipmap/icon_back_white" />
+
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:includeFontPadding="false"
+                                android:text="一价全包"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/large_text_size2" />
+
+                            <ImageButton
+                                android:id="@+id/btn_msg"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/icon_message_mail_white_46_46" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/action_holder_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_back2"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/app_name"
+                                android:src="@mipmap/icon_back_primary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:includeFontPadding="false"
+                                android:text="一价全包"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/large_text_size2" />
+
+                            <ImageButton
+                                android:id="@+id/btn_msg2"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/icon_message_mail_primary_46_46" />
+
+
+                            <View
+                                android:id="@+id/line_action2"
+                                style="@style/line_horizontal"
+                                android:layout_alignParentBottom="true" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/msg_notice_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <View
+                            android:id="@+id/msg_notice"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/sp_oval_accent"
+                            tools:visibility="visible"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/msg_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/sp_r8_accent"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="16dp"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/small_text_size"
+                            tools:visibility="visible"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingLeft="12dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="12dp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</android.support.design.widget.CoordinatorLayout>

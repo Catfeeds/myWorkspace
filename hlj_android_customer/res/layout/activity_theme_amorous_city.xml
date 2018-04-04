@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshVerticalRecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <include layout="@layout/progressbar_layout" />
+
+    <LinearLayout
+        android:id="@+id/action_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/action_layout_w"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageButton
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:onClick="onBackPressed"
+                android:src="@mipmap/icon_back_white" />
+
+            <RelativeLayout
+                android:id="@+id/msg_layout_w"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    style="@style/ActionImageItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="onMessage"
+                    android:src="@drawable/icon_message_mail_white_46_46" />
+
+                <View
+                    android:id="@+id/msg_notice_w"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/sp_oval_accent"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/msg_count_w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/sp_r8_accent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="16dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/action_holder_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:alpha="0"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/action_layout_r"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageButton
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:onClick="onBackPressed"
+                android:src="@mipmap/icon_back_primary" />
+
+            <TextView
+                android:id="@+id/title_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:lines="1"
+                android:textColor="@color/colorBarTitle"
+                android:textSize="@dimen/bar_title_size" />
+
+            <RelativeLayout
+                android:id="@+id/msg_layout_r"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <ImageButton
+                    style="@style/ActionImageItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="onMessage"
+                    android:src="@drawable/icon_message_mail_primary_46_46" />
+
+                <View
+                    android:id="@+id/msg_notice_r"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/sp_oval_accent"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/msg_count_r"
+                    android:layout_width="wrap_content"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/sp_r8_accent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="16dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

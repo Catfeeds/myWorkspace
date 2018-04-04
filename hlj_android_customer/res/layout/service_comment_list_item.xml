@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/hljColorSegmentBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/top_line_layout"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:background="?attr/hljColorLine"
+            android:visibility="gone" />
+
+        <include layout="@layout/service_comment_brief_info_list_item" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="18dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:id="@+id/work_layout"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="13dp"
+                android:background="?attr/hljColorSegmentInnerBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_work_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:layout_weight="1.0"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="?attr/hljColorContentExt1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/icon_arrow_right_dark_gray_14_26"
+                    android:tint="?attr/hljColorContentExt3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+                    android:id="@+id/check_praised"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:background="?attr/hljDrawableR13HalfStrokeLine2"
+                    android:gravity="center"
+                    android:minWidth="65dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <com.hunliji.hljcommonlibrary.views.widgets.tint.TintColorListImageView
+                        android:id="@+id/img_praise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/sl_ic_praise_black_primary_40_40"
+                        app:tintColorList="?attr/hljCommentPraiseColorList" />
+
+                    <TextView
+                        android:id="@+id/tv_praise_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:duplicateParentState="true"
+                        android:includeFontPadding="false"
+                        android:textColor="?attr/hljCommentPraiseColorList"
+                        android:textSize="@dimen/medium_text_size2" />
+
+                </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/go_comment_layout"
+                    android:layout_width="65dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="6dp"
+                    android:background="?attr/hljDrawableR13HalfStrokeLine2"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_comment_black_40_40"
+                        android:tint="?attr/hljColorContentExt1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_comment___cm"
+                        android:textColor="?attr/hljColorContentExt1"
+                        android:textSize="@dimen/medium_text_size2" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/praise_nicks_comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="?attr/hljColorSegmentInnerBackground"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/praise_nicks_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="8dp"
+                            android:contentDescription="@string/app_name"
+                            android:scaleType="centerInside"
+                            android:src="@mipmap/icon_praise_black_40_40"
+                            android:tint="?attr/hljColorContentExt1" />
+
+                        <TextView
+                            android:id="@+id/tv_praised_nicks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="3dp"
+                            android:textColor="?attr/hljColorContentExt1"
+                            android:textSize="@dimen/medium_text_size2" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/praise_line_layout"
+                        style="@style/line_horizontal"
+                        android:background="?attr/hljColorLine" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/comment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/comment_list_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/comment_count_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_comment_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1.0"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:text="@string/app_name"
+                            android:textColor="?hljColorContentExt1"
+                            android:textSize="@dimen/medium_text_size1"
+                            tools:ignore="Deprecated" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:src="@mipmap/icon_arrow_right_dark_gray_14_26"
+                            android:tint="?hljColorContentExt1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

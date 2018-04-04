@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_expenditures"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/sl_r3_left_primary_2_white"
+                android:button="@null"
+                android:gravity="center"
+                android:text="消费支出"
+                android:textColor="@color/primary_white"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <RadioButton
+                android:id="@+id/rb_gift_income"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/sl_r3_right_primary_2_white"
+                android:button="@null"
+                android:gravity="center"
+                android:text="礼金收入"
+                android:textColor="@color/primary_white"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_layout" />
+
+</RelativeLayout>

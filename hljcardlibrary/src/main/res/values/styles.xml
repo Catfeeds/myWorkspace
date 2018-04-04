@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="bubble_dialog_fragment__card" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="dialog_anim_rise_style___card" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_up___card</item>
+        <item name="@android:windowExitAnimation">@anim/slide_out_down___card</item>
+    </style>
+
+</resources>

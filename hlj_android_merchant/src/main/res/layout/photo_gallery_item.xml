@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorImageBackground"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+    <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+        android:id="@+id/selected_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sl_trans_2_trans_black"
+        android:gravity="bottom|right">
+
+        <ImageView
+            android:id="@+id/select_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/app_name"
+            android:duplicateParentState="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sl_ic_gallery_selected" />
+
+    </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+
+    <LinearLayout
+        android:id="@+id/take_photo_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_camera_white_78_68" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/action_camera_photo"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/small_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

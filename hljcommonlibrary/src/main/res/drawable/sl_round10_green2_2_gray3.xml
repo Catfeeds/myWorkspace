@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--微信分享样式1背景-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/sp_round10_green" android:state_checked="false" android:state_enabled="true" android:state_pressed="false" />
+    <item android:drawable="@drawable/sp_round10_gray3" android:state_checked="true" />
+    <item android:drawable="@drawable/sp_round10_gray3" android:state_pressed="true" />
+    <item android:drawable="@drawable/sp_round10_gray3" android:state_enabled="false" />
+</selector>

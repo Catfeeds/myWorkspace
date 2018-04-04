@@ -1,0 +1,70 @@
+[
+  {
+    "id": "2",
+    "name": "\u5a5a\u793c\u7b56\u5212",
+    "children": [
+      {
+        "id": 4,
+        "name": "\u7701\u5fc3\u4f18\u9009",
+        "desc": "\u975e\u5b9a\u5236\u5957\u9910\u7c7b"
+      },
+      {
+        "id": 5,
+        "name": "\u9ad8\u7aef\u5b9a\u5236",
+        "desc": "\u4e2a\u6027\u5316\u5b9a\u5236\u5957\u9910"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "\u5a5a\u7eb1\u6444\u5f71",
+    "children": [
+      {
+        "id": 1,
+        "name": "\u5f71\u697c"
+      },
+      {
+        "id": 2,
+        "name": "\u5de5\u4f5c\u5ba4"
+      },
+      {
+        "id": 3,
+        "name": "\u72ec\u7acb\u6444\u5f71\u5e08"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "\u5a5a\u7eb1\u793c\u670d",
+    "children": [
+      {
+        "id": 6,
+        "name": "\u5973\u58eb\u5a5a\u7eb1"
+      },
+      {
+        "id": 7,
+        "name": "\u7537\u58eb\u793c\u670d"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "\u5a5a\u793c\u6444\u5f71",
+    "children": ""
+  },
+  {
+    "id": "8",
+    "name": "\u5a5a\u793c\u6444\u50cf",
+    "children": ""
+  },
+  {
+    "id": "9",
+    "name": "\u5a5a\u793c\u8ddf\u5986",
+    "children": null
+  },
+  {
+    "id": "11",
+    "name": "\u5a5a\u793c\u53f8\u4eea",
+    "children": null
+  }
+]

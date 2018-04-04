@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CarCartActivity">
+
+    <include layout="@layout/list_empty_view_with_button" />
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite">
+
+        <include layout="@layout/line_layout" />
+
+
+        <CheckBox
+            android:id="@+id/cb_select_all"
+            style="@style/shop_cart_check_box_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:layout_marginRight="12dp"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:paddingLeft="10dp"
+            android:drawablePadding="8dp"
+            android:text="@string/label_select_all"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cb_select_all"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_total_price4"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/medium_text_size2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_saved_money3"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <TextView
+                    android:id="@+id/tv_saved_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_settle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="onConfirm"
+            android:background="@drawable/sl_r15_primary_2_dark"
+            android:gravity="center"
+            android:minWidth="96dp"
+            android:text="@string/label_booking"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size2" />
+
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:descendantFocusability="blocksDescendants"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <include layout="@layout/progressbar_layout" />
+</RelativeLayout>

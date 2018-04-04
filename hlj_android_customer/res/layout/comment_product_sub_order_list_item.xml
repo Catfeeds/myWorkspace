@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    android:id="@+id/img_cover"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@color/colorImageBackground"
+                    android:contentDescription="@string/app_name" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="2"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/ex_medium_text_size"
+                        tools:text="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/tv_sku"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2"
+                        tools:text="@string/app_name" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="综合评价"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/ex_medium_text_size2" />
+
+                <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup
+                    android:id="@+id/cb_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="28dp">
+
+                    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                        android:id="@+id/cb_positive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/sl_ic_positive_rating_40_40" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:duplicateParentState="true"
+                            android:text="好评"
+                            android:textColor="@color/gray2_primary" />
+
+                    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+                    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                        android:id="@+id/cb_neutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="28dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/sl_ic_neutral_rating_40_40" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:duplicateParentState="true"
+                            android:text="中评"
+                            android:textColor="@color/gray2_primary" />
+
+                    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+                    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                        android:id="@+id/cb_negative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="28dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:src="@drawable/sl_ic_negative_rating_40_40" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:duplicateParentState="true"
+                            android:text="差评"
+                            android:textColor="@color/gray2_primary" />
+
+                    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+                </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal"
+                android:layout_marginLeft="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="快告诉新娘们服务有多棒吧！大家都等着你的评价呢~"
+                android:lineSpacingMultiplier="1.3"
+                android:minHeight="115dp"
+                android:padding="16dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2" />
+
+            <TextView
+                android:id="@+id/tv_count_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingRight="16dp"
+                android:text="至少5个字"
+                android:textColor="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="11dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+            <ImageView
+                android:id="@+id/img_add_photos_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@mipmap/image_bg_add_comment_photos_hint"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

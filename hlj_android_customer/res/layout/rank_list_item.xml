@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <TextView
+        android:id="@+id/label"
+        android:text="默认排序"
+        android:gravity="center"
+        android:padding="6dp"
+        android:layout_margin="6dp"
+        android:textSize="@dimen/medium_text_size1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:textColor="@color/primary_white"
+        android:background="@drawable/sl_color_white_2_red"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

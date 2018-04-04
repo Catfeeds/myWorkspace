@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:text="转入金额"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_rmb___cm"
+                android:textColor="@color/colorBlack2"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/tv_card_roll_in_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_agreement"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:checked="true"
+                android:background="@drawable/sl_ic_check_round_gray_2_primary_32_32"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/label_fund_service_agreement"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_auto_into"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:checked="true"
+                android:background="@drawable/sl_ic_check_round_gray_2_primary_32_32"
+                android:button="@null" />
+
+            <TextView
+                android:id="@+id/tv_auto_into"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/label_auto_into_tip"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/action_roll_in_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/sl_color_primary_2_dark"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/large_text_size2"
+            android:text="确认转入"/>
+    </LinearLayout>
+
+</LinearLayout>

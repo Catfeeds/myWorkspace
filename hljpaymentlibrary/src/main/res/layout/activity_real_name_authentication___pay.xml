@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:text="为了您的账户安全，请完成实名认证"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="姓名"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <EditText
+                    android:id="@+id/et_real_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/hint_enter_real_name___pay"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line_horizontal"
+                android:layout_marginLeft="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="身份证号"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <EditText
+                    android:id="@+id/et_id_card_no"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1.0"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/hint_enter_id_card_no___pay"
+                    android:inputType="text"
+                    android:maxLength="18"
+                    android:paddingRight="16dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+            android:id="@+id/agreement_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="12dp"
+            app:checked="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:src="@drawable/sl_ic_check_round_gray_2_primary_32_32" />
+
+            <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:includeFontPadding="false"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:text="我已同意并阅读《信息授权服务协议》《用户注册协议》"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/sl_r3_primary_2_dark"
+            android:text="@string/label_submit___cm"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="本网络借贷撮合服务由杭州义牛网络技术有限公司提供"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/medium_text_size3" />
+
+</RelativeLayout>

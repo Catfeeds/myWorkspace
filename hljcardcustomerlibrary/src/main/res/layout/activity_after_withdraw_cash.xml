@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_withdraw_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_check_round_green_202_202" />
+
+        <TextView
+            android:id="@+id/tv_withdraw_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="@string/label_withdraw_cash_success"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/large_text_size" />
+
+        <TextView
+            android:id="@+id/tv_withdraw_cash_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/label_withdraw_cash_success_tip"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <TextView
+            android:id="@+id/action_contact"
+            android:layout_width="180dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/sp_r2_stroke_primary"
+            android:clickable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/label_contact_us___cm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/action_back"
+            android:layout_width="180dp"
+            android:layout_height="36dp"
+            android:background="@drawable/sp_r2_half_stroke_line_solid_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/label_back___cm"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

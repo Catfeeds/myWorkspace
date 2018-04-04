@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_alert_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/hint_pre_certification"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/medium_text_size3" />
+
+
+    <LinearLayout
+        android:id="@+id/personal_certification_view"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/sp_r4_solid_white_shadow_dddddd"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="76dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_personal_certification" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="个人认证"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/icon_arrow_right_gray_16_30" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/company_certification_view"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/sp_r4_solid_white_shadow_dddddd"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="76dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_company_certification" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="企业认证"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/icon_arrow_right_gray_16_30" />
+
+    </LinearLayout>
+
+</LinearLayout>

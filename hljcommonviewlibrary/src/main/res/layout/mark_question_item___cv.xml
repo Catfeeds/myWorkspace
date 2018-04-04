@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/question_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingBottom="16dp">
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_horizontal"
+        android:layout_marginLeft="48dp" />
+
+
+    <TextView
+        android:id="@+id/tv_watch_count"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/medium_text_size2"
+        android:textStyle="bold"
+        tools:text="998" />
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_watch_count"
+        android:layout_marginTop="2dp"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:text="@string/label_watch_count___cv"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/ex_small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/tv_watch_count"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/colorBlack2"
+        android:textSize="17sp"
+        tools:text="睡前聊会天！输给旧爱和输给新欢，您比较容易接受哪个" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tv_watch_count"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/answerers_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_answerers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3"
+            tools:text="@string/label_watch_count___cv" />
+    </LinearLayout>
+
+</RelativeLayout>

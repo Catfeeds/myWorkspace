@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/recommend_work_view"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/tv_seat"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/work_item_view"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="120dp"
+                android:layout_height="75dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:background="@color/colorImageBackground" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@+id/btn_delete"
+                android:layout_toRightOf="@+id/iv_cover"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:lineSpacingExtra="6dp"
+                    android:lineSpacingMultiplier="0.8"
+                    android:maxLines="2"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/ex_medium_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:text="@string/label_price5"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btn_delete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_delete_gray_44_44" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/tv_add_work"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/sl_r15_primary_2_dark"
+            android:gravity="center"
+            android:text="@string/label_add_work"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine" />
+    </RelativeLayout>
+
+</RelativeLayout>

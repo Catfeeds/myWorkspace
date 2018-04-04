@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/icon_recorder_round_primary_180_180_selected__card" android:state_pressed="true" />
+    <item android:drawable="@mipmap/icon_recorder_round_primary_180_180_normal__card" />
+
+</selector>

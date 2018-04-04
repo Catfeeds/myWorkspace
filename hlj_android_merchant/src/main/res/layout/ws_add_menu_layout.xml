@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/add_more_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground2"
+    android:orientation="vertical"
+    android:paddingBottom="13dp"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    android:paddingTop="13dp">
+
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="4"
+        app:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/send_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/sp_r4_stroke_bluegray2"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_chat_menu_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_image"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/send_work"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/sp_r4_stroke_bluegray2"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_chat_menu_work" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_work"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/send_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/sp_r4_stroke_bluegray2"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_chat_menu_work" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_product"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/send_opu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/sp_r4_stroke_bluegray2"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_chat_menu_case" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/label_opu"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/send_fast_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/sp_r4_stroke_bluegray2"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_chat_menu_fast_reply" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="@string/title_activity_fast_reply"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/send_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="9dp"
+            android:paddingTop="9dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:background="@drawable/sp_r4_stroke_bluegray2"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_chat_menu_address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="门店位置"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </LinearLayout>
+    </android.support.v7.widget.GridLayout>
+</LinearLayout>

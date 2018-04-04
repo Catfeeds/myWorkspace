@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hlj Map Library</string>
+    <string name="btn_location_save___card">保存位置</string>
+    <string name="title_activity_navigate_map">地图信息</string>
+    <string name="title_activity_map___map">位置信息</string>
+    <string name="label_nav">导航</string>
+    <string name="label_no_map">你的手机未安装地图软件，无法进行导航</string>
+</resources>

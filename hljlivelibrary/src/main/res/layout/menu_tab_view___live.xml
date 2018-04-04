@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.TabView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="21dp"
+        android:background="@drawable/sl_trans_2_tab_checked"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:singleLine="true"
+        android:textColor="@color/menu_tab_text_color"
+        android:textSize="@dimen/medium_text_size2" />
+
+    <View
+        android:id="@+id/icon"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginLeft="-25dp"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@+id/title"
+        android:background="@drawable/sp_oval_accent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/news_count"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginLeft="-25dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/title"
+        android:background="@drawable/sp_r8_accent"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minWidth="16dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/small_text_size"
+        android:visibility="gone" />
+
+</com.hunliji.hljcommonlibrary.views.widgets.TabView>

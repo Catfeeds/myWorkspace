@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--环形选择服务菜单item先保留-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/sp_r5_primary" android:state_checked="true" />
+    <item android:drawable="@drawable/sp_r5_primary" android:state_pressed="true" />
+    <item android:drawable="@drawable/sp_r5_color_f4f4f3"/>
+</selector>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/action_layout_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:lines="1"
+                android:text="@string/label_interaction"
+                android:textColor="@color/colorBarTitle"
+                android:textSize="@dimen/bar_title_size"
+                tools:ignore="RelativeOverlap" />
+
+            <Button
+                android:id="@+id/btn_camera"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="发动态"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorLine" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_layout_holder"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/head_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/my_feed_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_feed_bl" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title_activity_my_twitter"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorLine" />
+
+                <LinearLayout
+                    android:id="@+id/my_qa_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_qa_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_my_qa"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorLine" />
+
+                <LinearLayout
+                    android:id="@+id/my_live_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_live_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_my_live"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorLine" />
+
+                <RelativeLayout
+                    android:id="@+id/business_school_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_biz_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_school" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/img_biz_school"
+                        android:layout_alignRight="@+id/img_biz_school"
+                        android:layout_below="@+id/img_biz_school"
+                        android:gravity="center"
+                        android:text="@string/label_business_school"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <ImageView
+                        android:id="@+id/img_new_biz_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/img_biz_school"
+                        android:layout_alignTop="@+id/img_biz_school"
+                        android:layout_marginRight="-6dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@mipmap/icon_new_tag_60_28"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
+
+                <com.slider.library.SliderLayout
+                    android:id="@+id/posters_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    app:pager_animation="DepthPage"
+                    app:pager_animation_span="1500" />
+
+                <com.slider.library.Indicators.CirclePageExIndicator
+                    android:id="@+id/flow_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="12dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    app:circleOffset="4dp"
+                    app:circleWidth="10dp"
+                    app:circleradius="1dp"
+                    app:fillColor="@color/colorWhite"
+                    app:pageColor="#66ffffff"
+                    app:strokeWidth="0dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.hunliji.marrybiz.widget.TabPageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/head_view"
+            android:background="@color/colorWhite" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/indicator"
+            android:background="@color/colorLine" />
+
+        <FrameLayout
+            android:id="@+id/fragment_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+    </com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout>
+</RelativeLayout>

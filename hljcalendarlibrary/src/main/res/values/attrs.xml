@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HLJCalendarView">
+        <attr name="date_text_size" format="dimension" />
+        <attr name="date_text_color" format="color" />
+        <attr name="background_color" format="color" />
+        <attr name="date_lunar_text_size" format="dimension" />
+        <attr name="date_lunar_text_color" format="color" />
+        <attr name="dot_color" format="color" />
+        <attr name="selected_background_color" format="color" />
+        <attr name="title_background_color" format="color" />
+        <attr name="dot_size" format="dimension" />
+        <attr name="date_lunar_text_margin_top" format="dimension" />
+        <attr name="selected_background_line_size" format="dimension" />
+        <attr name="dot_margin_top" format="dimension" />
+        <attr name="shadow_flag_color" format="color" />
+        <attr name="pressed_color" format="color" />
+        <attr name="board_margin" format="dimension" />
+        <attr name="calendar_padding_left" format="dimension" />
+        <attr name="calendar_padding_right" format="dimension" />
+        <attr name="calendar_padding_top" format="dimension" />
+        <attr name="calendar_padding_bottom" format="dimension" />
+        <attr name="is_expandable_height" format="boolean" />
+        <attr name="auspicious_badge_color" format="color" />
+        <attr name="vacation_badge_color" format="color"/>
+        <attr name="collect_badge_src" format="integer" />
+        <attr name="auspicious_badge_size" format="dimension" />
+        <attr name="collect_badge_size" format="dimension" />
+        <attr name="vacation_badge_size" format="dimension"/>
+        <attr name="selected_style" format="boolean"/>
+    </declare-styleable>
+</resources>

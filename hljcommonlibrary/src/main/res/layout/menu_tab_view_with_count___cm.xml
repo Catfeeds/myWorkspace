@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.TabView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/menu_tab_text_color"
+            android:textSize="@dimen/medium_text_size1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@id/title"
+            android:layout_marginBottom="6dp"
+            android:layout_toRightOf="@id/title"
+            android:background="@drawable/sp_r6_primary"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/micro_text_size" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="2.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/sl_color_trans_2_r2_primary" />
+
+</com.hunliji.hljcommonlibrary.views.widgets.TabView>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshVerticalRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_layout___cm" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="50dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/sp_r3_background2"
+                android:gravity="center_vertical"
+                android:hint="购买或体验过服务的用户才能回答哦~"
+                android:includeFontPadding="false"
+                android:inputType="none"
+                android:lineSpacingExtra="3dp"
+                android:maxLength="500"
+                android:minHeight="30dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorBlack2"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2">
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/tv_reply"
+                android:layout_width="62dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/sl_r3_primary_2_dark"
+                android:gravity="center"
+                android:text="回答"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@id/action_line" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

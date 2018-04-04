@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorImageBackground"
+        android:scaleType="centerCrop"
+        tools:layout_height="200dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_cover"
+        android:background="@color/colorWhite"
+        android:padding="16dp">
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btn_schedule"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size"
+            android:textStyle="bold"
+            tools:text="龙禧宴会大厅" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/btn_schedule"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_table_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/label_hotel_desks"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <TextView
+                android:id="@+id/tv_table_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="@string/label_hotel_pillar_count"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2"
+                tools:text="40" />
+
+            <TextView
+                android:id="@+id/tv_area_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:includeFontPadding="false"
+                android:text="面积"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="@string/label_hotel_pillar_count"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2"
+                tools:text="800㎡" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_schedule"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/sl_r3_primary_2_dark"
+            android:text="@string/label_schedule"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

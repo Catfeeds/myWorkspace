@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.PageV2EditActivity">
+
+    <FrameLayout
+        android:id="@+id/page_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/edit_layout"
+        android:visibility="invisible">
+
+        <FrameLayout
+            android:id="@+id/page_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/image_bg_wedding_card_page_view"
+            android:paddingBottom="6dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="4dp">
+
+            <FrameLayout
+                android:id="@+id/images_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite" />
+
+            <ImageView
+                android:id="@+id/iv_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <FrameLayout
+                android:id="@+id/strokes_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <me.suncloud.marrymemo.widget.TextViewContainerView
+                android:id="@+id/texts_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <CheckBox
+                android:id="@+id/btn_hide"
+                android:layout_width="34dp"
+                android:layout_height="18dp"
+                android:background="@drawable/sl_text_show_hide"
+                android:button="@null"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:id="@+id/btn_drag"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:padding="9dp"
+                android:src="@drawable/icon_scale_drag_primary"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/iv_drag"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:alpha="0.8"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:visibility="gone" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:onClick="onBackPressed"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_back_round_black" />
+
+
+    <ImageButton
+        android:id="@+id/ok_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:onClick="onOkPressed"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_save_trans_black" />
+
+    <RelativeLayout
+        android:id="@+id/edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <include layout="@layout/line_layout" />
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBackground2"
+            android:minHeight="50dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_text_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/sp_round15_white_stroke_gray3"
+                android:gravity="center_vertical"
+                android:inputType="none"
+                android:maxLines="3"
+                android:minHeight="30dp"
+                android:minLines="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <ImageButton
+                android:id="@+id/btn_menu"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:onClick="onShowMenu"
+                android:src="@drawable/icon_text_menu_primary" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_layout"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include layout="@layout/line_layout" />
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutGroup
+                android:id="@+id/menus"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                    android:id="@+id/cb_fonts"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    app:isChecked="true">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:duplicateParentState="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sl_ic_font" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/label_text"
+                        android:textColor="@color/gray2_primary"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorLine" />
+
+                <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                    android:id="@+id/cb_colors"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:duplicateParentState="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sl_ic_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/btn_colors"
+                        android:textColor="@color/gray2_primary"
+                        android:textSize="@dimen/medium_text_size1" />
+                </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutGroup>
+
+            <include layout="@layout/line_layout" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/menu_page"
+                android:layout_width="match_parent"
+                android:layout_height="212dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

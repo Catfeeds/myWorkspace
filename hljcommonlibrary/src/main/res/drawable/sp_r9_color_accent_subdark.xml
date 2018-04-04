@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- name="colorAccentSubDark"  #eca01c 强调色2，辅助主色-->
+    <solid android:color="#eca01c" />
+    <corners android:radius="9dp" />
+</shape>

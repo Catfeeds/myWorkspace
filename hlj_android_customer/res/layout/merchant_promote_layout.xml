@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/promote_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/sp_promote_bg"
+        android:includeFontPadding="false"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="@string/label_promote"
+        android:textColor="@color/colorGray2"
+        android:textSize="@dimen/small_text_size" />
+
+</FrameLayout>

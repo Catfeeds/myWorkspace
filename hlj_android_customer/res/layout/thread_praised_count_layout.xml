@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_location_gray_29_34"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_update_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/praised_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_praise_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="赞"
+            android:textColor="@color/colorBlack3"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar1"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                android:visibility="gone"
+                app:corner_radius="14dp" />
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar2"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="6dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                android:visibility="gone"
+                app:corner_radius="14dp" />
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar3"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="6dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                android:visibility="gone"
+                app:corner_radius="14dp" />
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar4"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="6dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                android:visibility="gone"
+                app:corner_radius="14dp" />
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/img_avatar5"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="6dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                android:visibility="gone"
+                app:corner_radius="14dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/check_praised"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sl_r12_stroke__gray_2_primary"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:isChecked="false">
+
+                <ImageView
+                    android:id="@+id/img_thumb_up"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/sl_ic_thumbup3" />
+
+                <TextView
+                    android:id="@+id/tv_praise_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:duplicateParentState="true"
+                    android:text="245"
+                    android:textColor="@color/gray1_primary"
+                    android:textSize="12sp" />
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/check_praised"
+                android:layout_centerHorizontal="true"
+                android:text="+1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

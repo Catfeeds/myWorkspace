@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hunliji.hljdebuglibrary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".views.HttpLogActivity"
+            android:label="@string/title_http_log_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity android:name=".views.JsonViewerActivity"></activity>
+        <activity
+            android:name=".views.TrackerLogsActivity"
+            android:label="统计日志"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.PageLabelCheckActivity"
+            android:label="页面名检测"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+    </application>
+
+</manifest>

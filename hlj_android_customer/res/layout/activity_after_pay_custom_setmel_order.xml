@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="me.suncloud.marrymemo.view.AfterPayCustomSetmealOrderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_layout"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingBottom="32dp">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_check_round_green_48_48" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="@string/label_pay_success"
+                    android:textColor="@color/colorSuccess"
+                    android:textSize="@dimen/ex_large_text_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_get_free_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="@string/label_share_to_free"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/large_text_size"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_after_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/image_after_pay_rest" />
+
+            <Button
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/sl_r18_primary_2_dark"
+                android:gravity="center"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                android:text="@string/label_get_free_order"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size2"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/progressbar_layout" />
+</RelativeLayout>

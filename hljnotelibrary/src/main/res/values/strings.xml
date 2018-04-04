@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">hljnotelibrary</string>
+
+    <string name="title_activity_note_detail___note">笔记详情</string>
+    <string name="title_activity_note_book___note">笔记本</string>
+    <string name="title_activity_report___note">举报</string>
+    <string name="title_activity_select_mark___note">选择标签</string>
+
+    <string name="label_wedding_photos___note">婚纱照</string>
+    <string name="label_wedding_plan___note">婚礼筹备</string>
+    <string name="label_products_plan___note">婚品筹备</string>
+    <string name="label_create_poster___note">生成海报</string>
+    <string name="label_my_note___note">我的笔记</string>
+    <string name="label_afflatus_count___note">灵感(%s)</string>
+    <string name="label_serve_merchant___note">服务商家</string>
+    <string name="label_relevant_product___note">相关商品</string>
+    <string name="label_merchant_empty___note">该商家尚未入驻婚礼纪</string>
+
+    <string name="fmt_relevant_note___note" formatted="false">她的%s</string>
+    <string name="label_create___note">发布</string>
+    <string name="label_add_note_spot_hint___note">添加标签，获得更多曝光~</string>
+    <string name="label_select_merchant_or_product___note">选择服务商家或婚品</string>
+    <string name="label_input_merchant_or_product___note">请输入商家名称或者婚品名称</string>
+    <string name="label_input_keyword___note">请输入关键词</string>
+    <string name="label_add_mark___note">添加标签</string>
+    <string name="label_input_price___note">输入价格</string>
+    <string name="label_confirm___note">确定</string>
+    <string name="label_note_mark___note">标签详情</string>
+    <string name="label_done___note">完成</string>
+    <string name="label_note_title_hint___note">拟个标题，脱颖而出</string>
+    <string name="label_note_content_hint___note">和我们说说你的备婚经历吧~</string>
+    <string name="label_add_text_hint___note">请先填写正文</string>
+    <string name="label_product_ordered___note">婚品订单</string>
+    <string name="label_consumed_merchant___note">你预约或消费的商家</string>
+    <string name="label_merchant_count___note">服务商家%s</string>
+    <string name="label_shop_product_count___note">婚品%s</string>
+    <string name="label_note_edit___note">笔记编辑</string>
+    <string name="label_unrecorded_merchant_hint___note">没有找到为你服务的商家?</string>
+    <string name="label_unrecorded_product_hint___note">没有找到婚品?</string>
+    <string name="label_custom_merchant_name___note">自定义商家名称：%s</string>
+    <string name="label_custom_product_name___note">自定义婚品名称：%s</string>
+    <string name="label_custom_mark___note">自定义标签</string>
+    <string name="label_custom_merchant_name">自定义商家名称：%s</string>
+    <string name="label_please_add_text_hint___note">请先填写正文</string>
+    <string name="fmt_wedding_date___note" formatted="false">婚期 %s</string>
+    <string name="fmt_note_count___note" formatted="false">%d笔记</string>
+    <string name="fmt_photo_count___note" formatted="false">·%d图</string>
+    <string name="fmt_collect_count___note" formatted="false">·%d收藏</string>
+    <string name="fmt_look_all_notes___note" formatted="false">查看全部%s篇%s</string>
+    <string name="label_note_img_count___note" formatted="false">%1$s笔记 · %2$s图</string>
+    <string name="label_note_comment_count___note" formatted="false">查看全部%d条评论</string>
+    <string name="label_save_note_draft_title___note">你的笔记还未完成</string>
+    <string name="label_save_note_draft_msg___note">保存至本地后\n你可在下次进入后继续完善</string>
+    <string name="label_exit___note">直接退出</string>
+    <string name="label_save_to_local___note">保存至本地</string>
+    <string name="fmt_hint_comment_header___note" formatted="false">快向楼主咨询%s吧～</string>
+    <string name="hint_post_comment___note">添加评论</string>
+    <string name="hint_comment_something___note">评论点什么吧</string>
+    <string name="hint_reply_something___note">回复点什么吧</string>
+    <string name="btn_send_comment___note">发送</string>
+    <string name="msg_merchant_feed_comment___note">评论字数不能超过%s字</string>
+    <string name="msg_post_text_empty___note">你发送的内容不能为空</string>
+    <string name="msg_success_to_comment___note">评论成功</string>
+    <string name="fmt_address_and_note_count___note" formatted="false">%1$s·%2$d笔记</string>
+    <string name="label_note_count___note">%s笔记</string>
+    <string name="label_fans_count___note">%s关注</string>
+    <string name="label_note_count1___note">笔记%s</string>
+    <string name="label_merchant_note_count___note">动态%s</string>
+    <string name="label_note_work1___note">套餐%s</string>
+    <string name="label_note_product1___note">婚品%s</string>
+    <string name="label_prompt___note">提示</string>
+    <string name="msg_confirm_delete_tag___note">确定要删除这个标签吗?</string>
+    <string name="msg_confirm_delete_video___note">确定删除视频？</string>
+    <string name="msg_confirm_exit_edit___note">确定退出此次编辑？</string>
+    <string name="msg_create_succeed___note">发布成功~~</string>
+    <string name="msg_refresh_recommend_new_notes_count___note">已为你推荐%d条笔记，请向下浏览互动</string>
+    <string name="msg_refresh_new_notes___note">已载入最新笔记，请向下浏览互动</string>
+    <string name="msg_refresh_recommend_notes_empty_tip___note">暂时没有更多推荐，请向下浏览互动</string>
+    <string name="label_mark___note">标签</string>
+    <string name="label_add___note">请添加</string>
+    <string name="label_okay___note">好的</string>
+    <string name="label_complete___note">完成</string>
+    <string name="label_mark_category_name___note">来自%s</string>
+    <string name="title_activity_comment_list___note">评论列表</string>
+    <string name="label_click_add_mark___note">点击添加标签</string>
+
+    <string name="label_note_edu_title1___note">受欢迎的动态</string>
+    <string name="label_note_edu_title2___note">动态发布规则</string>
+    <string name="label_note_edu_title3___note">违规删除</string>
+    <string name="label_note_edu_content1___note">1. 记录真实\"工作场景\"和\"生活经历\"</string>
+    <string name="label_note_edu_content2___note">2. 分享专业婚礼人的观点和经验</string>
+    <string name="label_note_edu_content3___note">3. 那些感动和有趣的瞬间</string>
+    <string name="label_note_edu2_content1___note">基础版</string>
+    <string name="label_note_edu2_content2___note">专业版及旗舰版</string>
+    <string name="label_note_edu2_content3___note">专业版及旗舰版</string>
+    <string name="label_note_edu2_content4___note" formatted="false">每<Data><![CDATA[<font color="#ff801a">1天</font>]]></Data>最多可发<Data><![CDATA[<font color="#ff801a">1条</font>]]></Data>动态</string>
+    <string name="label_note_edu2_content5___note" formatted="false">每<Data><![CDATA[<font color="#ff801a">1天</font>]]></Data>最多可发<Data><![CDATA[<font color="#ff801a">1条</font>]]></Data>动态</string>
+    <string name="label_note_edu2_content6___note" formatted="false">每<Data><![CDATA[<font color="#ff801a">1天</font>]]></Data>最多可发<Data><![CDATA[<font color="#ff801a">2条</font>]]></Data>动态</string>
+    <string name="label_note_edu2_content7___note">(银牌及以下)</string>
+    <string name="label_note_edu2_content8___note">(金牌及以上)</string>
+    <string name="label_note_edu3_content1___note">1. 图片不能是压缩变形的，建议上传高清图片</string>
+    <string name="label_note_edu3_content2___note">2. 动态中不能出现其他网站标识水印</string>
+    <string name="label_note_edu3_content3___note">3. 动态中不可出现任何联系方式（电话、微信、网址、\n二维码等）</string>
+    <string name="label_note_edu3_content4___note">4. 动态中不可存在违法信息（政治敏感、内容侵权等）</string>
+    <string name="label_note_edu3_content5___note">5. 动态中不可有色情低俗等信息</string>
+    <string name="label_note_edu3_content6___note">6. 动态中不可出现其他平台（如微信、支付宝）的转账、支付等交易截图</string>
+    <string name="label_note_edu3_content7___note">7. 其他不符合平台规则的行为</string>
+    <string name="label_note_edu3_content8___note">ps. 规则会不断的优化，具体以婚礼纪平台为准</string>
+    <string name="label_relevant_note_tip___note">看了又看</string>
+    <string name="fmt_common_count___note" formatted="false">%s·%d</string>
+    <string name="label_from_note___note">来自笔记</string>
+
+    <string name="label_my_feed___note">我的动态</string>
+    <string name="label_my_merchant_feed_empty___note">您还没有发布过动态哦~</string>
+    <string name="label_note_comment_empty___note">还没有人评论，快来抢沙发吧~~</string>
+    <string name="hint_note_comment_tip___note">恭喜！你的笔记已收录到商家评价中</string>
+    <string name="label_photo___note">照片</string>
+    <string name="label_video___note">视频</string>
+    <string name="label_cancel___note">取消</string>
+    <string name="hint_delete_note___note">确定要删除吗?</string>
+    <string name="label_note_update_image_limit_hint___note">已升级为全新的笔记，请选择 9 张图上传</string>
+
+    <string name="hint_enter_photos___note">请上传图片</string>
+    <string name="hint_enter_title___note">请输入标题</string>
+    <string name="hint_enter_content___note">请输入内容</string>
+
+</resources>

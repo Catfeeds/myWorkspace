@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+    <TextView
+        android:id="@+id/tv_hint_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_password_1"
+        android:layout_marginTop="25dp"
+        android:text="@string/label_input_password___pay"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/medium_text_size1" />
+
+
+    <com.hunliji.hljcommonlibrary.views.widgets.SafePasswordEditText
+        android:id="@+id/et_password_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_hint_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

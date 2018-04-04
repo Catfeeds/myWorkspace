@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout">
+
+        <com.hunliji.hljimagelibrary.views.widgets.TouchMatrixImageView
+            android:id="@+id/iv_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="matrix" />
+
+        <View
+            android:id="@+id/crop_area_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/sp_stroke_white"
+            android:padding="1dp" />
+
+        <View
+            android:id="@+id/shade_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/crop_area_view"
+            android:alpha="0.65"
+            android:background="@color/colorBlack" />
+
+        <View
+            android:id="@+id/shade_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/crop_area_view"
+            android:alpha="0.65"
+            android:background="@color/colorBlack" />
+
+        <View
+            android:id="@+id/shade_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/shade_bottom"
+            android:layout_below="@+id/shade_top"
+            android:layout_toLeftOf="@+id/crop_area_view"
+            android:alpha="0.65"
+            android:background="@color/colorBlack" />
+
+        <View
+            android:id="@+id/shade_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/shade_bottom"
+            android:layout_below="@+id/shade_top"
+            android:layout_toRightOf="@+id/crop_area_view"
+            android:alpha="0.65"
+            android:background="@color/colorBlack" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_above="@+id/bottom_layout"
+        android:gravity="center_horizontal|bottom"
+        android:text="@string/label_image_corp_hint___img"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/label_cancel___cm"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_change_image"
+            android:layout_width="90dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/sp_r18_stroke_white"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="相机胶卷"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/label_done___cm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

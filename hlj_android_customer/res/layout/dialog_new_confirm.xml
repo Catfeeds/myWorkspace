@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_r6_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_new_location" />
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"
+                android:maxLines="2"
+                android:text="@string/hint_change_location"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="6dp"
+                android:maxLines="2"
+                android:paddingTop="14dp"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_list_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:lineSpacingExtra="6dp"
+                android:paddingBottom="14dp"
+                android:text="开启消息通知，你可以:"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/tv_list_content_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/sp_oval_line" />
+
+                <TextView
+                    android:id="@+id/tv_list_content_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="6dp"
+                    android:text="及时查收订单冬天及物流信息"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_list_content_middle_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/sp_oval_line" />
+
+                <TextView
+                    android:id="@+id/tv_list_content_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="6dp"
+                    android:text="及时查收订单冬天及物流信息"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tv_list_content_bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/sp_oval_line" />
+
+                <TextView
+                    android:id="@+id/tv_list_content_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingLeft="6dp"
+                    android:text="及时查收订单冬天及物流信息"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <Button
+        android:id="@+id/btn_single_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sl_r6_b_white_2_background2"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/action_cancel"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/multi_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sl_r6_bl_white_2_background2"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/action_cancel"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorLine" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/sl_r6_br_white_2_background2"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/label_confirm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+
+    </LinearLayout>
+</LinearLayout>

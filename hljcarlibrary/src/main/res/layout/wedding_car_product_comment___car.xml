@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--评价-->
+    <LinearLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_comment_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_comment_count"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_user_comment3___car"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_comment_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_good_rate___car"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2"
+                         />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/comment_marks_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/comment_brief_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="6dp"
+                    android:text="查看全部评价"
+                    android:textColor="@color/colorCarGold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_empty_comment"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                tools:visibility="visible"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_user_comment___car"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_no_comment2___car"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+</LinearLayout>

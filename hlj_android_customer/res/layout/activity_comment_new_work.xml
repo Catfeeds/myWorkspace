@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.CommentNewWorkActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/activity_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/color_yellow3"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/activity_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/color_orange2"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/orange_line" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rating_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/label_total_points"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <LinearLayout
+                    android:id="@+id/rating_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp">
+
+                    <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:uncheckable="true">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sl_ic_rating_star_hollow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/label_rating1"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size3"
+                            android:visibility="gone" />
+
+                    </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+
+                    <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:uncheckable="true">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sl_ic_rating_star_hollow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/label_rating2"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size3"
+                            android:visibility="gone" />
+
+                    </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+
+                    <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:uncheckable="true">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sl_ic_rating_star_hollow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/label_rating3"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size3"
+                            android:visibility="gone" />
+
+                    </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+
+                    <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:uncheckable="true">
+
+                        <ImageView
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sl_ic_rating_star_hollow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/label_rating4"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size3"
+                            android:visibility="gone" />
+
+                    </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+
+                    <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:uncheckable="true">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:contentDescription="@string/app_name"
+                            android:duplicateParentState="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sl_ic_rating_star_hollow" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/label_rating5"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="@dimen/medium_text_size3"
+                            android:visibility="gone" />
+
+                    </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="top"
+                android:hint="@string/hint_work_comment2"
+                android:maxLength="2000"
+                android:minLines="10"
+                android:paddingBottom="12dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/colorBlack2"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLine" />
+
+
+            <GridView
+                android:id="@+id/pics_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:paddingLeft="8dp"
+                android:paddingRight="12dp"
+                android:scrollbars="none" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine" />
+
+            <TextView
+                android:id="@+id/tv_comment_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="6dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="7"
+                    android:background="@drawable/sl_r3_primary_2_dark"
+                    android:gravity="center"
+                    android:onClick="onComment"
+                    android:text="@string/btn_send_comment2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size1" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/progressbar_layout" />
+</RelativeLayout>

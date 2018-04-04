@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/hotel_calendar_title_layout"/>
+
+    <GridView
+        android:id="@+id/week_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="7"
+        android:background="@color/colorBackground2"
+        android:stretchMode="columnWidth" />
+
+    <com.hunliji.hunlijicalendar.WrapContentHeightHotelViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="300dp" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_merchant_ultimate_item"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="16dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/marketing_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/img_merchant_ultimate_item"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_marketing_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size2"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_marketing_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_layout"
+        style="@style/line_horizontal"
+        android:layout_alignLeft="@+id/marketing_text_layout" />
+</RelativeLayout>

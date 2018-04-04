@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/chat_avatar_margin">
+
+    <include layout="@layout/chat_message_time_text___chat" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/time">
+
+        <include layout="@layout/chat_user_avatar_right___chat" />
+
+        <RelativeLayout
+            android:id="@+id/chat_merchant_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="88dp"
+            android:layout_marginRight="@dimen/chat_avatar_message_margin"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@id/avatar"
+            android:background="@drawable/sl_bg_bubble_right_white"
+            android:minHeight="40dp"
+            android:minWidth="40dp">
+
+            <include layout="@layout/em_chat_merchant_item___kefu" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/chat_merchant_item"
+            android:layout_alignTop="@+id/chat_merchant_item"
+            android:layout_marginBottom="28dp"
+            android:layout_marginRight="-78dp"
+            android:layout_toLeftOf="@+id/chat_merchant_item">
+
+            <ImageView
+                android:id="@+id/err"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_send_err___cm"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:indeterminate="false"
+                android:indeterminateDrawable="@drawable/sp_rotate_progressbar_gray_27_27"
+                android:indeterminateDuration="800"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

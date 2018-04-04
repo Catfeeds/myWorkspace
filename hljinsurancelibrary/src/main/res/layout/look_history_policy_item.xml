@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_history_policy"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/sp_r3_white_stroke_line2"
+        android:gravity="center"
+        android:text="@string/label_look_history_policy"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <include layout="@layout/hlj_foot_no_more___cm" />
+
+</LinearLayout>

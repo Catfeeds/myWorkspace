@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    tools:context=".view.kefu.AdvHelperActivity">
+
+    <RelativeLayout
+        android:id="@+id/merchant_layout"
+        android:layout_width="match_parent"
+        android:layout_height="94dp"
+        android:background="@drawable/image_adv_merchant"
+        android:visibility="gone">
+
+        <com.makeramen.rounded.RoundedImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_avatar_primary"
+            app:corner_radius="27.5dp" />
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/img_avatar"
+            android:layout_alignRight="@+id/img_avatar"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_medal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ex_medium_text_size"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:alpha="0.2"
+                    android:background="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_server_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lines="1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <FrameLayout
+                android:id="@+id/history_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-6dp"
+                android:layout_marginTop="-6dp"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/tv_merchant_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/sp_r12_stroke_white"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/label_help_merchant_count"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/merchant_layout"
+        android:layout_above="@+id/edit_bar_layout"
+        android:scrollbars="none" />
+
+    <ImageButton
+        android:id="@+id/btn_call"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/merchant_layout"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="-20dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_call_round"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/edit_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@color/colorBackground2">
+
+        <include layout="@layout/widget_speak_edit_layout___cm" />
+
+    </FrameLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.SpeakRecordView
+        android:id="@+id/record_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <include layout="@layout/hlj_progressbar___cm" />
+</RelativeLayout>

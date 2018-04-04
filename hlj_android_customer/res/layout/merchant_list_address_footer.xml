@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/no_more_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_no_more_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:text="@string/label_city_no_more"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_change_city"
+                android:layout_width="70dp"
+                android:layout_height="28dp"
+                android:background="@drawable/sp_r3_white_stroke_line2"
+                android:gravity="center"
+                android:text="@string/label_change_city"
+                android:textColor="@color/colorLink"
+                android:textSize="@dimen/medium_text_size2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/xlistview_footer_progressbar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:indeterminateDrawable="@drawable/sp_rotate_progressbar_gray_24_24"
+                android:indeterminateDuration="800" />
+
+            <TextView
+                android:id="@+id/xlistview_footer_hint_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/label_loading___cm"
+                android:textColor="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size2" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

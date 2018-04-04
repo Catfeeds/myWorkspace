@@ -1,0 +1,55 @@
+<manifest package="com.hunliji.hljinsurancelibrary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".views.activities.AfterPayInsuranceProductActivity"
+            android:label="@string/title_activity_after_pay___ins"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.CreateHlbPolicyActivity"
+            android:label="@string/title_activity_create_insurance"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".views.activities.PolicyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.MyPolicyListActivity"
+            android:label="@string/title_activity_my_policy"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.HistoryPolicyListActivity"
+            android:label="@string/title_activity_history_policy"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <!-- 填写婚礼宝保单 -->
+        <activity
+            android:name=".views.activities.CreateMYBActivity"
+            android:label="@string/title_activity_create_insurance"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 婚礼保详情（投保成功） -->
+        <activity
+            android:name=".views.activities.MYBDetailActivity"
+            android:label="@string/title_activity_policy_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <!-- 婚礼宝（投保失败） -->
+        <activity
+            android:name=".views.activities.MYBFailureActivity"
+            android:label="@string/title_activity_after_insurance"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+    </application>
+</manifest>

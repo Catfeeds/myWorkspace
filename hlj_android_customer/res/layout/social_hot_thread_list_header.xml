@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/head_tip_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:paddingRight="16dp"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/red_left_2"
+            android:layout_width="3dp"
+            android:layout_height="14dp"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/red_left_2"
+            android:text="@string/label_day_hot_thread2"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>

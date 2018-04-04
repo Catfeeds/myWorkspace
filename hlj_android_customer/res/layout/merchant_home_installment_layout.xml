@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_xiaoxi_installment_44_44___pay"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="小犀分期"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:includeFontPadding="false"
+                android:text="支持分期付款，6期/12期"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_installment_pay"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:background="@drawable/sl_r3_primary_2_dark"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="分期付款"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

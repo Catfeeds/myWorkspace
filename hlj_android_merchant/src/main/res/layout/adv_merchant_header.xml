@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_primary"
+        android:orientation="vertical"
+        android:paddingBottom="14dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/label_my_adv"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="4dp"
+                android:drawableRight="@drawable/icon_arrow_right_white_14_26"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:text="@string/label_adv_buy_history"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/btn_buy"
+                android:layout_toRightOf="@+id/count"
+                android:text="@string/hint_adv_count_too_little"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_buy"
+                android:layout_width="wrap_content"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sl_r4_stroke_white_2_white"
+                android:text="@string/title_activity_buy_advh"
+                android:textColor="@color/white_primary"
+                android:textSize="@dimen/medium_text_size3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/advh_buy_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info_layout"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/label_advh_price"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <LinearLayout
+            android:id="@+id/advh_buy_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="12dp" />
+
+        <include layout="@layout/line_layout" />
+
+        <Button
+            android:id="@+id/btn_buy2"
+            android:layout_width="74dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/sl_r12_stroke_primary_2_solid_light"
+            android:text="@string/title_activity_buy_advh2"
+            android:textColor="@color/stroke_primary_text_color"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <include layout="@layout/line_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/count_layout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@+id/advh_buy_list_layout"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:visibility="invisible"
+        android:paddingRight="12dp"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/helperCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <TextView
+            android:id="@+id/helperViewCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <Button
+            android:id="@+id/filtrate"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sl_r4_half_stroke_primary_2_solid_light"
+            android:gravity="center"
+            android:text="@string/btn_filtrate"
+            android:textColor="@color/stroke_primary_text_color"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.MarkFlowLayout
+            android:id="@+id/mark_flow"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:listSelector="@android:color/transparent"
+            android:paddingBottom="14dp"
+            android:paddingTop="14dp"
+            app:horizontalSpacing="8dp"
+            app:verticalSpacing="8dp" />
+
+    <View
+        android:layout_below="@+id/mark_flow"
+        android:background="@color/colorLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

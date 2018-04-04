@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <include layout="@layout/list_empty_view" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshVerticalRecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_layout"
+        android:scrollbars="none" />
+
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorWhite">
+
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:src="@mipmap/icon_back_primary" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/label_subject_wedding"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size" />
+
+        <Button
+            android:id="@+id/btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sl_color_trans_2_background2"
+            android:contentDescription="@string/app_name"
+            android:gravity="center"
+            android:minWidth="45dp"
+            android:text="@string/label_follow"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/progressbar_layout" />
+
+    <ImageButton
+        android:id="@+id/backtop_btn"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_back_to_top_primary"
+        android:visibility="gone" />
+</RelativeLayout>

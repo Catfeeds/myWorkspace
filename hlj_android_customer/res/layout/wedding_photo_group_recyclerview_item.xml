@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <me.suncloud.marrymemo.widget.community.WeddingGroupPhotosView
+        android:id="@+id/photos_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photos_view"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:lineSpacingMultiplier="1.3"
+        android:textColor="@color/colorBlack2"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_praise_hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/label_wedding_photo_praise"
+            android:textColor="@color/colorGray"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                android:id="@+id/check_praised"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                app:isChecked="false">
+
+                <ImageView
+                    android:id="@+id/img_thumb_up"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/sl_ic_thumbup3" />
+
+                <TextView
+                    android:id="@+id/tv_praise_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:duplicateParentState="true"
+                    android:text="0"
+                    android:textColor="@color/black2_primary"
+                    android:textSize="12sp" />
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="+1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

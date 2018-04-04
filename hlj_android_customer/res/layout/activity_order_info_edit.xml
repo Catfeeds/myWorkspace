@@ -1,0 +1,216 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.suncloud.marrymemo.view.OrderInfoEditActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <include layout="@layout/line_layout"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_name"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:hint="@string/hint_name"
+                        android:inputType="textPersonName"
+                        android:lines="1"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/line_layout"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <include layout="@layout/line_layout"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_phone2"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:hint="@string/hint_contact_phone"
+                        android:inputType="phone"
+                        android:lines="1"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/line_layout"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/serve_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorWhite"
+                android:visibility="gone"
+                android:clickable="true"
+                android:onClick="showDatetimePicker"
+                android:orientation="vertical">
+
+                <include layout="@layout/line_layout"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sl_color_white_2_background2"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="showDatetimePicker"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_serve_time2"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:lines="1"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:src="@mipmap/icon_arrow_right_gray_14_26"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/line_layout"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:background="@color/colorBackground2"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/hint_serve_time"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/car_addr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <include layout="@layout/line_layout"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_car_address"
+                        android:textColor="@color/colorBlack3"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <EditText
+                        android:id="@+id/et_addr"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:gravity="right"
+                        android:hint="@string/hint_car_address"
+                        android:inputType="textPhonetic"
+                        android:lines="1"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/line_layout"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

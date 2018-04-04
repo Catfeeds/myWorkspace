@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/balance_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/balance_view"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_balance_list"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <include layout="@layout/line_layout___cm" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:scrollbars="none"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+    <LinearLayout
+        android:id="@+id/balance_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_balance_total"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_total"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="28sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_buy_better"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:drawablePadding="6dp"
+                android:drawableRight="@mipmap/icon_arrow_right_primary_14_24"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="@string/label_buy_better"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size1"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_balance_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/sp_r4_stroke_line_solid_white"
+            android:lineSpacingExtra="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:text="@string/label_balance_tip2"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size3" />
+
+    </LinearLayout>
+
+</RelativeLayout>

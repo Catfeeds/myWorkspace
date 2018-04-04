@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.suncloud.marrymemo.widget.CheckableLinearLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:layout_height="44dp">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:textColor="@color/black2_primary"
+        android:textSize="@dimen/medium_text_size3" />
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerInside"
+        android:duplicateParentState="true"
+        android:src="@drawable/sl_ic_trans_2_tick_red"
+        android:contentDescription="@string/app_name" />
+
+</me.suncloud.marrymemo.widget.CheckableLinearLayout2>

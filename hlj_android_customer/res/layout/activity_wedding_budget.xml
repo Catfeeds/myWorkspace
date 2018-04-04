@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageView
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:onClick="onBackPressed"
+                android:src="@mipmap/icon_back_white" />
+
+            <ImageButton
+                android:id="@+id/btn_share_w"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:onClick="onShare"
+                android:src="@drawable/icon_share_white_44_44" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_layout">
+
+        <include layout="@layout/hlj_common_fragment_ptr_recycler_view___cm" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_layout"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp"
+        android:paddingLeft="16dp"
+        android:visibility="invisible"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_budget_category_header"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size2" />
+
+    </LinearLayout>
+</RelativeLayout>

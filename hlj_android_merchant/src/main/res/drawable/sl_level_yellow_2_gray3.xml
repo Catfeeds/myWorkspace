@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--等级图标背景-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/sp_oval_level_yellow" android:state_checked="true" />
+    <item android:drawable="@drawable/sp_oval_level_gray3"/>
+
+</selector>

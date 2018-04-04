@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.TabView android:id="@+id/tab_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:duplicateParentState="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sl_one_pay_all_inclusive"
+            android:duplicateParentState="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:duplicateParentState="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_one_pay_all_inclusive_color"
+                android:textSize="@dimen/ex_medium_text_size2"
+                android:layout_marginTop="11dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_title_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title_hint"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/tab_one_pay_all_inclusive_color"
+                android:textSize="@dimen/small_text_size" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.hunliji.hljcommonlibrary.views.widgets.TabView>
+

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorWhite">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_back_car_gold" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:lines="1"
+            android:text="特价秒杀"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_layout">
+
+        <LinearLayout
+            android:id="@+id/layout_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_limit_hour"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/sp_r2_primary"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/label_limit_time_space"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <TextView
+                android:id="@+id/tv_limit_minute"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/sp_r2_primary"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/label_limit_time_space"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <TextView
+                android:id="@+id/tv_limit_second"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/sp_r2_primary"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/label_limit_time_end"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_time">
+
+            <include layout="@layout/hlj_common_fragment_ptr_recycler_view___cm" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

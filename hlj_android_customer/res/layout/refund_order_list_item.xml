@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_merchant_gray_36_32" />
+
+        <TextView
+            android:id="@+id/tv_merchant_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <TextView
+            android:id="@+id/tv_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size2" />
+
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:id="@+id/img_cover_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <me.suncloud.marrymemo.widget.RecyclingImageView
+                android:id="@+id/img_cover"
+                android:layout_width="160dp"
+                android:layout_height="90dp"
+                android:background="@color/colorImageBackground"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/img_installment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_installment_tag"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@mipmap/icon_custom_tag_yellow_90_90"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_intent_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_intent_money_tag"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/img_cover_layout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="@string/label_order_price4"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <TextView
+                android:id="@+id/tv_refund_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="@string/label_refund_price"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine" />
+
+</LinearLayout>

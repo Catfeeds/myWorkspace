@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Hlj Card Customer Library</string>
+    <!--余额提现-->
+    <string name="label_withdraw_cash_account">到账微信：</string>
+    <string name="label_modify_account_bind">修改绑定</string>
+    <string name="label_withdraw_cash_count">提现金额:</string>
+    <string name="label_withdraw_cash_title">提现</string>
+    <string name="label_balance_count2" formatted="false">余额 ¥%s</string>
+    <string name="label_withdraw_cash_fee_tip" formatted="false"><Data><![CDATA[<font color="#666666">扣除微信支付手续费%s元，</font>]]></Data>实际到账%s元</string>
+    <string name="label_withdraw_cash_count_tip">24小时内到账</string>
+    <string name="label_withdraw_cash_count_all">全部提现</string>
+    <string name="label_withdraw_cash_confirm">确认提现</string>
+    <string name="label_withdraw_cash_help">提现说明</string>
+    <string name="label_withdraw_cash_tip" formatted="false">1. 单笔提现金额不低于%s元，提现需扣除%s%%的微信支付服务费，点击查看相关说明。\n2. 单日提现限额为%s元，单笔提现金额不低于%s元。\n3. 提现成功后，金额将在24小时内转入您的微信钱包，请注意查收。</string>
+    <string name="label_withdraw_cash_tip2" formatted="false">1. 单笔提现金额不低于%s元，提现需扣除%s%%的微信支付服务费，点击查看相关说明。\n2. 单日提现限额为%s元，单笔提现金额不低于%s元。\n3. 提现成功后，金额将在3个工作日内转入您的银行卡，请注意查收。</string>
+    <string name="label_withdraw_cash_failed_title">提现失败</string>
+    <string name="label_withdraw_cash_failed">提现申请提交失败</string>
+    <string name="label_withdraw_cash_failed_tip">%s请重试或联系客服解决（工作日：9:00~23:00 非工作日：9:00~21:00）</string>
+    <string name="label_withdraw_cash_success_title">提现成功</string>
+    <string name="label_withdraw_cash_success">提现申请提交成功</string>
+    <string name="label_withdraw_cash_un_open">您暂未开启礼金功能，无法进行提现</string>
+    <string name="label_withdraw_cash_un_open2">您可在请帖中开启此功能</string>
+    <string name="label_withdraw_gift_success_tip">提现金额将在当日24点前转入您的微信钱包中请注意查收！</string>
+    <string name="label_withdraw_cash_success_tip">提现金额将在3个工作日内转入您的银行卡中请注意查收！</string>
+    <string name="label_withdraw_cash_check_user">为保障您的财务安全，我们将对您的注册手机进行安全验证。</string>
+    <string name="label_withdraw_cash_check_tip">为保障您的财务安全24小时内只能进行一次提现</string>
+    <string name="label_withdraw_cash_check_tip2">您当前的余额小于2元，不可提现!</string>
+    <string name="label_withdraw_cash_update_countdown" formatted="false">我知道了（%d）</string>
+    <string name="label_withdraw_cash_go_open">立即前往</string>
+
+
+    <!--收到的礼物-->
+    <string name="label_gift_title">给您送了一份%s</string>
+    <string name="label_balance_total">总计（元）</string>
+    <string name="label_cash_total">您总计收到礼金（元）</string>
+    <string name="label_gift_total">您总计收到礼物（元）</string>
+    <string name="label_action_balance">查看余额</string>
+    <string name="label_receive_cash_tip" formatted="false">礼金金额将全额转入您的账户余额中，您可前往<Data><![CDATA[<b><font color="#f83244">我的-钱包-余额</font></b>]]></Data>内提现至本人实名认证的银行卡中或用于平台消费。</string>
+    <string name="label_receive_gift_tip" formatted="false">礼物金额将转入您的账户余额，您可前往<Data><![CDATA[<b><font color="#f83244">我的-钱包-余额</font></b>]]></Data>内进行提现或用于平台消费。</string>
+    <string name="label_balance_empty_tip">还未收到小伙伴赠送的礼物?</string>
+    <string name="label_balance_cash_empty_tip">还未收到小伙伴赠送的礼金?</string>
+    <string name="label_balance_empty_action">快去发布请帖吧</string>
+    <string name="label_balance_help">帮助说明</string>
+    <string name="label_balance">余额</string>
+    <string name="label_gift_list">礼物明细</string>
+    <string name="label_cash_list">礼金明细</string>
+    <string name="label_gift_tab">礼物</string>
+    <string name="label_cash_tab">礼金</string>
+    <string name="label_withdraw_gift_tab">礼物提现</string>
+    <string name="label_withdraw_cash_tab">礼金提现</string>
+    <string name="label_balance_list">余额明细（元）</string>
+    <string name="label_balance_tip2" formatted="false">您可将余额提现或用于平台消费。\n单笔提现金额不低于%s元，提现需扣除%s%%的微信支付服务费，点击查看相关说明。</string>
+    <string name="label_withdraw_cash">提现</string>
+    <string name="label_buy_better">买点好的</string>
+    <string name="title_activity_fund_bind_bank">绑定银行卡</string>
+    <string name="label_fund_detail">理财明细</string>
+    <string name="label_fund_setting">理财设置</string>
+    <string name="title_activity_my_bank">我的银行卡</string>
+    <string name="format_card_cash_amount">请帖礼金￥%s，转入理财</string>
+    <string name="format_card_cash_amount2">礼金 ￥%s</string>
+    <string name="format_card_cash_amount3">请帖礼金￥%s，去提现</string>
+    <string name="label_fund_service_agreement">同意礼金理财服务协议</string>
+    <string name="title_activity_after_roll_in">已转入</string>
+    <string name="title_activity_after_roll_out">已转出</string>
+    <string name="title_activity_card_roll_in">礼金转入理财</string>
+    <string name="label_roll_in">转入</string>
+    <string name="label_roll_out_fund_tip" formatted="false">1、转出金额24小时内到账\n2、单笔转出金额不低于%s元，单日转出限额为%s万元</string>
+    <string name="format_deposit_rate_amount">已扣除微信支付服务费%s元</string>
+    <string name="label_no_card_cash_amount">请帖礼金￥0，查看明细</string>
+    <string name="format_fund_rate" formatted="false">预期年化 (%s%%+%s%%)</string>
+    <string name="label_roll_in_fund">转入理财</string>
+    <string name="label_fund_roll_out">理财转出</string>
+    <string name="label_save_cash_note">保存礼金本</string>
+    <string name="label_roll_out_fund">转出</string>
+    <string name="format_total_fund">可转出：¥%s</string>
+    <string name="label_auto_into_tip">后续收到的礼金自动转入理财</string>
+
+    <string name="title_activity_account_security">账号安全</string>
+    <string name="title_activity_bind_card_phone">绑定手机号</string>
+    <string name="title_activity_change_bind_phone">更换手机号</string>
+    <string name="hint_real_name">请填写你的真实姓名</string>
+    <string name="msg_name_overlong">请将姓名保持在%s各字以内</string>
+    <string name="title_activity_edit_real_name">填写真实姓名</string>
+    <string name="msg_new_phone_login_in">你的手机号已更改为：%s，请使用新的手机号重新登录</string>
+
+</resources>

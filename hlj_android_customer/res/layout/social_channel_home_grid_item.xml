@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:id="@+id/grid_view"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="9dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/icon_community_card_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <View
+                android:id="@+id/view_fix"
+                android:layout_width="10dp"
+                android:layout_height="18dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_below="@id/view_fix"
+                android:id="@+id/tv_name"
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_increase_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="6dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#ff801a"
+                android:textSize="@dimen/ex_small_text_size"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.makeramen.rounded.RoundedImageView
+        android:id="@+id/img_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        app:corner_radius="18dp" />
+
+</RelativeLayout>

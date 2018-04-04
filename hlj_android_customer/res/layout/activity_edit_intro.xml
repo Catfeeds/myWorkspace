@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.suncloud.marrymemo.view.EditIntroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <include layout="@layout/line_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <EditText
+                android:id="@+id/et_intro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorBlack2"
+                android:minLines="5"
+                android:gravity="top"
+                android:maxLines="10"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_text_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="14"
+                android:layout_gravity="bottom"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <include layout="@layout/line_layout" />
+
+    </LinearLayout>
+
+</RelativeLayout>

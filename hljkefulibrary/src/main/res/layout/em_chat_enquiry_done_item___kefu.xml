@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorGray2"
+        android:textSize="@dimen/small_text_size"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_marginLeft="@dimen/chat_middle_item_margin"
+        android:layout_marginRight="@dimen/chat_middle_item_margin"
+        android:background="@drawable/image_bg_chat_bubble_middle_white"
+        android:clickable="false">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/label_enquiry_done___kefu"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size3" />
+    </FrameLayout>
+
+</RelativeLayout>

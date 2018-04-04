@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DTPicker">
+        <!--wheel view item resource-->
+        <attr name="item_height" format="dimension" />
+        <!--visible count-->
+        <attr name="visible_items" format="integer"/>
+    </declare-styleable>
+</resources>

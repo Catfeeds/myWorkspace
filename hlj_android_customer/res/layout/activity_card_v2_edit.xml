@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.CardV2EditActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="45dp"
+        android:layout_marginTop="45dp"
+        android:overScrollMode="never"/>
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorWhite">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_back_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_activity_card_edit"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size" />
+
+        <Button
+            android:id="@+id/btn_feedback"
+            style="@style/ActionButtonItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="16dp"
+            android:text="@string/settings_feedback"
+            tools:ignore="RelativeOverlap" />
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:background="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/cash_gift_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/gift_icon"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_sycee_primary_36_27" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:includeFontPadding="false"
+                    android:text="收礼金"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-3dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toRightOf="@+id/gift_icon"
+                    android:src="@drawable/icon_hot_tag_accent_sub_56_31" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sort_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_sort_primary_36_30" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_sort"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/send_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/sp_oval_primary"
+                    android:gravity="center"
+                    android:text="@string/btn_send"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/music_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_wedding_card_music_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_music"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/preview_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_eye_primary_40_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:includeFontPadding="false"
+                    android:text="@string/btn_preview_text"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/new_music_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="right"
+        android:visibility="gone"
+        android:weightSum="5">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:scaleType="centerInside"
+            android:src="@drawable/image_hint_new_music" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/hint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_drag"
+            android:layout_width="100dp"
+            android:layout_height="72dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="-50dp"
+            android:alpha="0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_wedding_card_drag_primary" />
+
+    </FrameLayout>
+
+    <include layout="@layout/progressbar_layout" />
+</RelativeLayout>

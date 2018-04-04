@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+        android:id="@+id/layout_no_music"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/colorWhite"
+            android:duplicateParentState="true">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="13dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/sl_ic_trans_2_tick_red" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36dp"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/label_no_music__card"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+
+        </RelativeLayout>
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_record"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/music_list_item_new__card" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/music_list_item_new__card" />
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+</LinearLayout>

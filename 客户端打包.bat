@@ -1,0 +1,1 @@
+gradlew clean hlj_android_customer:clean hlj_android_merchant:clean hlj_android_customer:assembleCiRelease

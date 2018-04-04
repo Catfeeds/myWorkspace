@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="@string/label_hotel_promise"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/ex_medium_text_size" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:scrollbars="none"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        android:layout_height="220dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/free_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/free_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="1dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/icon_free_tag_36_36" />
+
+                <TextView
+                    android:id="@+id/tv_free_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/free_icon"
+                    android:textColor="@color/colorBlack3"
+                    android:text="@string/label_hotel_free_title"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/tv_free"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_free_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/free_icon"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/platform_gift_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/platform_gift_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="1dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/icon_gift_tag" />
+
+                <TextView
+                    android:id="@+id/tv_platform_gift_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/platform_gift_icon"
+                    android:text="@string/label_platform_gift_title"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/tv_platform_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_platform_gift_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/platform_gift_icon"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size"
+        android:text="@string/label_close"
+        android:background="@drawable/sl_color_primary_2_dark"
+        android:layout_height="44dp" />
+
+</LinearLayout>

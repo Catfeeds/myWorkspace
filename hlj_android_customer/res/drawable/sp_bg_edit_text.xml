@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--故事评论输入框背景-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorWhite" />
+        </shape>
+    </item>
+    <item
+        android:bottom="-1dp"
+        android:left="-1dp"
+        android:right="-1dp">
+        <shape>
+            <solid android:color="@android:color/transparent" />
+
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/colorPrimary"
+                android:dashGap="0px"
+                android:dashWidth="10px" />
+        </shape>
+    </item>
+
+</layer-list>

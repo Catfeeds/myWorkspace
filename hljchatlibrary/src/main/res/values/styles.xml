@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ChatTimeText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textColor">@color/colorGray2</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="ChatUserAvatar">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@mipmap/icon_avatar_primary</item>
+        <item name="border_color">@color/colorLine</item>
+        <item name="border_width">0.5dp</item>
+        <item name="corner_radius">40dp</item>
+    </style>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.hunliji.hljquestionanswer"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".activities.QuestionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".activities.AnswerDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.AnswerCommentListActivity"
+            android:label="@string/label_comment___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activities.MyQuestionAnswerActivity"
+            android:label="@string/title_activity_my_qa___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.ReportActivity"
+            android:label="@string/label_report___cm"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activities.QAMarkDetailActivity"
+            android:label="@string/title_activity_mask___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.MyMerchantQaActivity"
+            android:label="@string/title_activity_my_qa___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.CreateAnswerActivity"
+            android:label="@string/title_activity_create_answer___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.CreateQuestionTitleActivity"
+            android:label="@string/title_activity_create_question___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.CreateQuestionContentActivity"
+            android:label="@string/title_activity_create_question___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activities.WeekQaActivity"
+            android:label="@string/label_week_qa___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.LastQuestionListActivity"
+            android:label="@string/label_last_question___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".activities.AskQuestionListActivity"
+            android:label="@string/label_activity_ask_question___qa"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".activities.QAAnswerEditActivity"
+            android:label="@string/title_activity_qaanswer_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="adjustResize" />
+    </application>
+
+</manifest>

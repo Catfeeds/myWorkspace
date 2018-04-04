@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/chat_avatar_margin">
+
+
+    <include layout="@layout/chat_message_time_text___chat" />
+
+
+    <include layout="@layout/chat_user_avatar_left___chat" />
+
+    <LinearLayout
+        android:id="@+id/enquiry_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/chat_avatar_message_margin"
+        android:layout_below="@id/time"
+        android:layout_marginRight="60dp"
+        android:layout_toRightOf="@id/avatar"
+        android:background="@drawable/image_bg_chat_bubble_left_white"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/hint_enquiry___kefu"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <RadioGroup
+            android:id="@+id/rating_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <RadioButton
+                android:id="@+id/rating5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/sl_ic_enquiry_un_selected_2_selected"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/label_enquiry_rating5___kefu"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine" />
+
+
+            <RadioButton
+                android:id="@+id/rating4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/sl_ic_enquiry_un_selected_2_selected"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/label_enquiry_rating4___kefu"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine" />
+
+            <RadioButton
+                android:id="@+id/rating3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/sl_ic_enquiry_un_selected_2_selected"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/label_enquiry_rating3___kefu"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine" />
+
+            <RadioButton
+                android:id="@+id/rating2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/sl_ic_enquiry_un_selected_2_selected"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/label_enquiry_rating2___kefu"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine" />
+
+            <RadioButton
+                android:id="@+id/rating1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/sl_ic_enquiry_un_selected_2_selected"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/label_enquiry_rating1___kefu"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/sl_r4_stroke_gray_2_solid_light"
+                android:gravity="center"
+                android:text="@string/label_cancel___cm"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="80dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/sl_r4_primary_2_dark"
+                android:gravity="center"
+                android:text="@string/label_confirm___cm"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

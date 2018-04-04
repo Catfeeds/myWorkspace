@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/car_lesson_layout"
+    android:layout_width="105dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginRight="7dp"
+    android:layout_marginLeft="7dp">
+
+    <com.makeramen.rounded.RoundedImageView
+        android:id="@+id/img_car_lesson"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:scaleType="centerCrop"
+        app:corner_radius="3dp" />
+
+    <TextView
+        android:id="@+id/tv_car_lesson_type"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="12dp"
+        android:gravity="right|center_vertical"
+        android:lines="1"
+        android:ellipsize="end"
+        android:background="@drawable/sp_top_right_r3_bg_gradient_black"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_small_text_size" />
+
+    <TextView
+        android:id="@+id/tv_car_lesson_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_car_lesson"
+        android:layout_marginTop="12dp"
+        android:lines="2"
+        android:ellipsize="end"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <TextView
+        android:id="@+id/tv_view_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_car_lesson_intro"
+        android:layout_marginTop="6dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/ex_small_text_size" />
+
+</RelativeLayout>

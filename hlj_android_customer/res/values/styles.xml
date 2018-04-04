@@ -1,0 +1,64 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="NoHeightCustomTitleTheme" parent="CustomTitleTheme">
+        <item name="android:windowTitleSize">0dp</item>
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+    <style name="bubble_dialog_fragment" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="CaseDialogFragment" parent="@android:style/Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@style/dialog_anim_up_in_style</item>
+    </style>
+
+    <style name="CustomTabItem" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/ex_medium_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:textColor">@color/menu_tab_text_color</item>
+    </style>
+
+    <style name="dialog_anim_right_in_style" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="@android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="popup_window_anim_style" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/fade_scale_in</item>
+        <item name="@android:windowExitAnimation">@anim/fade_scale_out</item>
+    </style>
+
+    <style name="dialog_anim_up_in_style" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/slide_in_up_to_top</item>
+        <item name="@android:windowExitAnimation">@anim/slide_out_down_to_bottom</item>
+    </style>
+
+    <style name="downloadProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/bg_progressbar_templet</item>
+    </style>
+
+    <style name="task_check_box_theme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/sl_ic_switch_red_check_stroke</item>
+    </style>
+
+    <style name="shop_cart_check_box_theme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/sl_ic_check_shop_cart</item>
+    </style>
+</resources>

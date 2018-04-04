@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.suncloud.marrymemo.view.AfterConfirmReceiveActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_check_round_green_48_48" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="@string/label_order_done"
+                    android:textColor="@color/colorSuccess"
+                    android:textSize="@dimen/ex_large_text_size" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_get_packet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:text="@string/label_product_order_done"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/large_text_size" />
+
+            <ImageView
+                android:id="@+id/img_after_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/image_after_pay_rest" />
+
+            <Button
+                android:id="@+id/btn_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/sl_r18_primary_2_dark"
+                android:gravity="center"
+                android:paddingLeft="48dp"
+                android:paddingRight="48dp"
+                android:text="@string/label_goto_comment"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

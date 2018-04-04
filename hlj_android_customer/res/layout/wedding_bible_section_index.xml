@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/sp_stroke_line_bottom_solid_white"
+        android:paddingRight="16dp">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="16dp"
+            android:text="同城讨论"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size2"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</RelativeLayout>

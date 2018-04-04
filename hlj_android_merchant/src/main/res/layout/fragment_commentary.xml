@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:textColor="@color/colorWhite"
+                    android:padding="0dp"
+                    android:text="近100条评价综合评分"
+                    android:textSize="@dimen/ex_medium_text_size2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:padding="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="10dp"
+                    android:text="4.8"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="48sp" />
+
+                <TextView
+                    android:id="@+id/tv_praise_percent"
+                    android:padding="0dp"
+                    android:textSize="@dimen/medium_text_size2"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="10dp"
+                    android:text="商家好评率98.6%"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:paddingLeft="0.5dp"
+            android:paddingTop="0.5dp"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:orientation="vertical"
+            android:background="@color/colorLine"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="@string/label_description"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+     </LinearLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true" />
+
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+
+</RelativeLayout>

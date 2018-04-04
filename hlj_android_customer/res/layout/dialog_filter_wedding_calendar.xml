@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup android:id="@+id/cg_group"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/image_bg_dialog_arrow_up_bubble"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_all"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:checked="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="全部吉日"
+            android:textColor="@color/black2_primary"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_width="64dp" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_marriage"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="嫁娶吉日"
+            android:textColor="@color/black2_primary"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_width="64dp" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_engagement"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="订婚吉日"
+            android:textColor="@color/black2_primary"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_width="64dp" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_betrothal_gift"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="彩礼吉日"
+            android:textColor="@color/black2_primary"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_width="64dp" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_uxorilocal_marriage"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="纳婿吉日"
+            android:textColor="@color/black2_primary"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+</com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>

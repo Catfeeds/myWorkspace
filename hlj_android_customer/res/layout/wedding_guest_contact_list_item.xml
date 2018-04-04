@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/top_line_layout"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp" />
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+            android:id="@+id/check_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="32dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:src="@drawable/sl_ic_check_round_gray_2_primary_32_32" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorBlack2" />
+
+            <TextView
+                android:id="@+id/tv_table_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1"
+                android:visibility="gone" />
+
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

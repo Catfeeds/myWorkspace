@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/merchant_cpm_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="你可能感兴趣"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/sp_promote_bg"
+                android:gravity="center"
+                android:text="推广"
+                android:textColor="@color/colorGray2"
+                android:textSize="@dimen/small_text_size"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cpm_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+</RelativeLayout>

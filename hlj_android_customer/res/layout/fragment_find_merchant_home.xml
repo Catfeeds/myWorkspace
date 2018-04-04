@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_search_primary_44_44" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <RelativeLayout
+                    android:id="@+id/msg_layout"
+                    android:layout_width="53dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="39dp"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="6dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_message_mail_primary_46_46" />
+
+                    <View
+                        android:id="@+id/msg_notice"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/sp_oval_accent"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/msg_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/sp_r8_accent"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:minWidth="16dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/small_text_size"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_create_note"
+                    style="@style/ActionButtonItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_camera_solid_primary_50_40" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_holder_layout">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <View
+            android:id="@+id/view_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/bg_gradient_black3" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="me.suncloud.marrymemo.view.chat.WSCustomerChatActivity">
+
+    <FrameLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/hljActionBarHeight"
+        android:background="@color/colorWhite">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            style="?attr/hljActionImageItemStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/icon_back_primary" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="?attr/hljTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/right_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:minWidth="16dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btn_merchant"
+                style="?attr/hljActionImageItemStyle"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/icon_merchant_primary_44_44"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btn_call"
+                style="?attr/hljActionImageItemStyle"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/icon_call_primary_2_44_44"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_layout" />
+</RelativeLayout>

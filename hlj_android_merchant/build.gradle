@@ -1,0 +1,245 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.hunliji.tracker'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('MarryMemo.keystore')
+            keyAlias 'marrymemo'
+            keyPassword 'suncloud'
+            storePassword 'suncloud'
+            v2SigningEnabled false
+        }
+        release {
+            storeFile file('MarryMemo.keystore')
+            keyAlias 'marrymemo'
+            keyPassword 'suncloud'
+            storePassword 'suncloud'
+            v2SigningEnabled false
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+    flavorDimensions "versionCode"
+    defaultConfig {
+        applicationId "com.hunliji.marrybiz"
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        multiDexEnabled = true
+        versionCode 320
+        versionName "3.2.1.1"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+        manifestPlaceholders = [
+                app_name        : "@string/app_name",
+                GETUI_APP_ID    : "TZjsPplBPJA97Sf9vRUWm8",
+                GETUI_APP_KEY   : "0FvzYt23Yz8zLzryQvO7p",
+                GETUI_APP_SECRET: "WLh7FVXy5q8F57MStzb0X9"
+        ]
+
+        // ARouter支持
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        buildConfigField "boolean", "APP_DEBUG", "true"
+        buildConfigField "int", "FEATURE_PORT", "80"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['jniLibs']
+        }
+        instrumentTest.setRoot('tests')
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    productFlavors {
+        getuitest {
+            manifestPlaceholders = [
+                    GETUI_APP_ID    : "qPM8qRb5sf5DjwLucy3qn6",
+                    GETUI_APP_KEY   : "VfBEK7aIdE6gg5dwtAP3f8",
+                    GETUI_APP_SECRET: "vesRA7s1Q28WCD7TBS36V"
+            ]
+        }
+        ci {} // ci_build自动构建特别定义的flavor，没有其他用途
+        portal {
+            buildConfigField "boolean", "APP_DEBUG", "false"
+        }
+        featureA {
+            applicationId 'com.hunliji.marrybizA'
+            buildConfigField "int", "FEATURE_PORT", "8084"
+            resValue "string", "app_feature_name", "婚礼纪商家版A"
+            manifestPlaceholders =
+                    [
+                            app_name: "@string/app_feature_name"
+                    ]
+        }
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = "hljbiz-${variant.productFlavors[0].name}-${defaultConfig.versionName}-${variant.buildType.name}.apk"
+                        .toLowerCase()
+            }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven { url "https://jitpack.io" }
+    jcenter()
+    maven {
+        // 个推地址
+        url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
+    }
+}
+
+dependencies {
+    /*****************************本地module引入*******************************/
+    implementation project(':hljchatlibrary')
+    implementation project(':hljcommonlibrary')
+    implementation project(':hljcommonviewlibrary')
+    implementation project(':hljimagelibrary')
+    implementation project(':hljdebuglibrary')
+    implementation project(':hljemojilibrary')
+    implementation project(':hljhttplibrary')
+    implementation project(':hljkefulibrary')
+    implementation project(':hljlivelibrary')
+    implementation project(':hljnotelibrary')
+    implementation project(':hljpaymentlibrary')
+    implementation project(':hljquestionanswer')
+    implementation project(':hljsharelibrary')
+    implementation project(':hljtrackerlibrary')
+    implementation project(':hljupdatelibrary')
+    implementation project(':hljweblibrary')
+
+    implementation project(':hljcalendarlibrary')
+    implementation project(':hljmaplibrary')
+    implementation project(':hljvideolibrary')
+    implementation project(':PhotoViewlibrary')
+    implementation project(':PullToRefreshlibrary')
+    implementation project(':RoundedImageViewlibrary')
+    implementation project(':SliderLibrary')
+    implementation project(':SwipeBackLibrary')
+    implementation project(':wheel-lib')
+    implementation project(':wheelpickerlibrary')
+    /*****************************本地module引入*******************************/
+
+    /*****************************本地jar包引入*******************************/
+    implementation files('libs/commons-io-2.4.jar')
+    implementation files('libs/commons-lang3-3.1.jar')
+    implementation files('libs/disklrucache-1.3.1.jar')
+    implementation files('libs/EventBus-2.4.0.jar')
+    implementation files('libs/httpmime-4.2.4.jar')
+    implementation files('libs/libGoogleAnalyticsServices.jar')
+    implementation files('libs/TalkingData_Analytics_Android_SDK.jar')
+    implementation files('libs/umeng-analytics-v5.2.4.jar')
+    /*****************************本地jar包引入*******************************/
+
+    /*****************************远程第三方库引入*******************************/
+    // Android兼容支持库
+    implementation "com.android.support:design:$DESIGHT_VERSION"
+    implementation "com.android.support:support-v4:$SUPPORT_V4_VERSION"
+    implementation "com.android.support:cardview-v7:$CARDVIEW_V7_VERSION"
+    implementation "com.android.support:appcompat-v7:$APP_COMPAT_V7_VERSION"
+    implementation "com.android.support:gridlayout-v7:$GRID_LAYOUT_V7_VERSION"
+    implementation "com.android.support:recyclerview-v7:$RECYCLERVIEW_V7_VERSION"
+
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:multidex:1.0.2'
+
+    implementation 'com.alibaba:arouter-api:1.2.1'
+    implementation 'com.getui:sdk:2.10.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.1.1@aar'
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.1.3'
+    implementation 'com.github.ksoichiro:android-observablescrollview:1.6.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+    implementation('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar') {
+        transitive = true
+    }
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.koushikdutta.async:androidasync:2.1.9'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.4.0'
+
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.2.3'
+    implementation 'joda-time:joda-time:2.9.6'
+    implementation 'me.grantland:autofittextview:0.2.+'
+    implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    /*****************************远程第三方库引入*******************************/
+
+    /*****************************annotationProcessor*******************************/
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.1.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    /*****************************annotationProcessor*******************************/
+}
+
+//点击事件收集
+import org.objectweb.asm.Opcodes
+
+trackerConfig {
+
+    showLog = true
+    watchTime = true
+    modifyClasses = ['suncloud', 'hunliji', 'butterknife.internal']
+    modifyInterfaceMethods = [
+            'android/view/View$OnClickListener': [
+                    ['method'            : 'onClick',
+                     'paramsDesc'        : '(Landroid/view/View;)V',
+                     'modifyClass'       : 'com/hunliji/hljcommonlibrary/view_tracker/HljViewTracker',
+                     'modifyMethod'      : 'fireViewClickEvent',
+                     'modifyParamsDesc'  : '(Landroid/view/View;)V',
+                     'modifyParamOpcodes': [
+                             ['opcode'     : Opcodes.ALOAD,
+                              'opcodeIndex': 1
+                             ]
+                     ]]
+            ]
+    ]
+}

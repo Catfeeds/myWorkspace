@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image_bg_wedding_card_cover_v2">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_card_title"
+        android:gravity="center_horizontal|bottom"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:shadowColor="#26000000"
+        android:shadowRadius="1"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size2"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/iv_new_theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/image_hint_new_templet"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right"
+        android:padding="12dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_delete_round_black_white" />
+</FrameLayout>

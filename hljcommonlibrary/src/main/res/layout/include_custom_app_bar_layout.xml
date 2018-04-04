@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/root_shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D9000000" />
+
+    <RelativeLayout
+        android:id="@+id/root_drag_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:openDrawer="end">
+
+            <RelativeLayout
+                android:id="@+id/drawer_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/hljStatusBarColor">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/root_appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/hljActionBarColor"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical"
+                    android:theme="@style/AppTheme.AppBarOverlay"
+                    app:elevation="0dp">
+
+                    <android.support.v7.widget.Toolbar
+                        android:id="@+id/root_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/hljActionBarHeight"
+                        app:elevation="0dp"
+                        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                        <TextView
+                            android:id="@+id/root_item"
+                            style="?attr/hljActionButtonItemStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:id="@+id/root_img_btn"
+                            style="?attr/hljActionImageItemStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:id="@+id/root_img_btn_2"
+                            style="?attr/hljActionImageItemStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:visibility="gone" />
+
+                        <FrameLayout
+                            android:id="@+id/root_custom_item_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/root_tv_toolbar_title"
+                                style="?attr/hljTitleStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="标题" />
+
+                            <TextView
+                                android:id="@+id/root_tv_toolbar_sub_title"
+                                style="?attr/hljSubTitleStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.Toolbar>
+
+                    <View
+                        android:id="@+id/root_divider"
+                        style="@style/line_horizontal"
+                        android:background="?attr/hljActionBarDividerColor" />
+
+                </android.support.design.widget.AppBarLayout>
+
+                <LinearLayout
+                    android:id="@+id/root_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/root_appbar"
+                    android:background="@color/colorBackground"
+                    android:orientation="vertical" />
+            </RelativeLayout>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@color/colorWhite"
+                app:headerLayout="@layout/nav_header_main"
+                app:menu="@menu/menu_drawer" />
+
+        </android.support.v4.widget.DrawerLayout>
+
+    </RelativeLayout>
+
+</merge>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="24dp"
+    android:text="@string/label_card_music"
+    android:textColor="@color/colorGray2"
+    android:textSize="@dimen/medium_text_size3" />

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.suncloud.marrymemo.widget.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="36dp"
+        android:background="@color/colorLine" />
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="13dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13dp"
+        android:contentDescription="@string/app_name"
+        android:duplicateParentState="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/sl_ic_trans_2_tick_red" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="36dp"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/colorBlack3"
+        android:layout_toLeftOf="@id/info_layout"
+        android:textSize="@dimen/medium_text_size3" />
+
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:gravity="right"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/small_text_size" />
+    </LinearLayout>
+
+</me.suncloud.marrymemo.widget.CheckableRelativeLayout>

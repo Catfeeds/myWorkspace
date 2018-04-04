@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/video_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/seek_layout"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorBlack">
+
+        <com.hunliji.hljvideolibrary.scalablevideo.ScalableVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:scalableType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_play_trans_white_136_136"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/video_layout"
+        android:layout_alignTop="@+id/video_layout"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/mask_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:background="#59000000" />
+
+        <View
+            android:id="@+id/mask_left"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/mask_top"
+            android:background="#59000000" />
+
+        <View
+            android:id="@+id/mask_right"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/mask_top"
+            android:background="#59000000" />
+
+        <View
+            android:id="@+id/mask_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/mask_right"
+            android:layout_toRightOf="@+id/mask_left"
+            android:background="#59000000" />
+
+        <View
+            android:id="@+id/line_top"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/mask_top"
+            android:layout_toLeftOf="@+id/mask_right"
+            android:layout_toRightOf="@id/mask_left"
+            android:background="@color/colorWhite" />
+
+        <View
+            android:id="@+id/line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_above="@+id/mask_bottom"
+            android:layout_toLeftOf="@+id/mask_right"
+            android:layout_toRightOf="@id/mask_left"
+            android:background="@color/colorWhite" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/line_bottom"
+            android:layout_below="@+id/mask_top"
+            android:layout_toLeftOf="@+id/mask_right"
+            android:background="@color/colorWhite" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/line_bottom"
+            android:layout_below="@+id/mask_top"
+            android:layout_toRightOf="@+id/mask_left"
+            android:background="@color/colorWhite" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/seek_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:scrollbars="none" />
+
+        <View
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:background="#59000000" />
+
+        <View
+            android:layout_width="26dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#59000000" />
+
+        <com.hunliji.hljvideolibrary.view.HljRangeSeekBarView
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/recycler_view"
+            android:layout_alignTop="@+id/recycler_view"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

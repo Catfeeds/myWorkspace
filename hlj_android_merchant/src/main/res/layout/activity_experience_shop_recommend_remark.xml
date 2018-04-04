@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="none">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_confirm2"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_remark"
+                android:layout_width="match_parent"
+                android:layout_height="226dp"
+                android:background="@color/colorWhite"
+                android:gravity="top"
+                android:lineSpacingMultiplier="1.4"
+                android:maxLength="500"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/colorBlack2"
+                android:textColorHint="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@id/edit_remark"
+                android:background="@color/colorWhite"
+                android:gravity="right|center_vertical"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorBlack2" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_below="@id/tv_count"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sp_r3_primary"
+                android:gravity="center"
+                android:text="提交"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_confirm2"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/sp_r3_primary"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="提交"
+        tools:visibility="visible"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/colorWhite" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+</RelativeLayout>

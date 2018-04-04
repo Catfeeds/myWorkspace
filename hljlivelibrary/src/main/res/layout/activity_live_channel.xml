@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hunliji.hljlivelibrary.activities.LiveChannelActivity">
+
+    <LinearLayout
+        android:id="@+id/action_layout_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/live_channel_action_layout" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/action_layout_holder" />
+
+    <include layout="@layout/hlj_empty_view___cm" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+    <RelativeLayout
+        android:id="@+id/chat_room_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/chat_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+</RelativeLayout>

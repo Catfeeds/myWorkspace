@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/merchant_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/merchant_logo"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                app:border_color="@color/colorImageBackground"
+                app:corner_radius="23dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="12dp"
+                android:layout_toRightOf="@+id/merchant_logo">
+
+                <LinearLayout
+                    android:id="@+id/merchant_name_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/merchant_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/ex_medium_text_size" />
+
+                    <ImageView
+                        android:id="@+id/bond_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_bond_128_36"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/collect_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/merchant_name_layout"
+                    android:background="@drawable/sl_r4_primary_2_dark"
+                    android:text="@string/btn_thread_collect"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <Button
+                    android:id="@+id/contact_btn"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@+id/merchant_name_layout"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/collect_btn"
+                    android:background="@drawable/sl_r4_accent_sub_2_dark"
+                    android:text="@string/label_msg"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/merchant_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/coupon_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorWhite"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "215082769219",
+    "firebase_url": "https://hunliji.firebaseio.com",
+    "project_id": "hunliji",
+    "storage_bucket": "hunliji.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215082769219:android:8db6acfc3b682039",
+        "android_client_info": {
+          "package_name": "me.suncloud.marrymemoD"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215082769219-q9s6ulrvv88psglf16oc760bjlmctg2q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.suncloud.marrymemoD",
+            "certificate_hash": "3d8e535571ce20009d8dd4859b2abc4d9e2ff8b5"
+          }
+        },
+        {
+          "client_id": "215082769219-b1iq1vn0u7mt6qr1paqmfk5mq39foeen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3PmwZJp0-8BEzLaEDiZn0jSuAU9_WfAw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215082769219-b1iq1vn0u7mt6qr1paqmfk5mq39foeen.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "215082769219-k5esp7n36n8dcv0um5grok90hl721pvl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.suncloud.wedding",
+                "app_store_id": "594402673"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

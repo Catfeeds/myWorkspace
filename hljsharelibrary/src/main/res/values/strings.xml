@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">HljShareLibrary</string>
+    <string name="title_activity_wxentry___share">微信分享</string>
+    <string name="hint_what_to_say___share">想说点什么呢？</string>
+    <string name="unfind_mail___share">未检测到邮件客户端。</string>
+    <string name="unfind_weixin___share">未检测到微信客户端。</string>
+    <string name="unfind_pengyou___share">微信版本不支持朋友圈发送。</string>
+    <string name="unfind_msg___share">该设备不支持短信。</string>
+    <string name="unfind_qq___share">请先安装QQ客户端</string>
+    <string name="unfind_qzone___share">QQ客户端版本过低，不支持空间分享</string>
+    <string name="label_share_more___share">更多分享</string>
+    <string name="title_activity_share___share">分享</string>
+    <string name="msg_error___share">出错了，请稍后再试</string>
+    <string name="msg_from_weibo___share">(来自@婚礼纪，结婚必备)</string>
+    <string name="msg_from_weibo_single___share">(来自@婚礼纪 谱写婚礼故事)</string>
+    <string name="msg_from_txwb___share">(来自@marry_memo，结婚必备)</string>
+
+
+    <string name="label_pengyou___share">朋友圈</string>
+    <string name="label_weixin___share">微信好友</string>
+    <string name="label_weibo___share">新浪微博</string>
+    <string name="label_qq___share">QQ</string>
+    <string name="label_qq_zone___share">QQ空间</string>
+    <string name="label_qq_weibo___share">腾讯微博</string>
+    <string name="label_share_to___share">分享到</string>
+    <string name="label_weixin2___share">微信</string>
+    <string name="label_weibo2___share">微博</string>
+    <string name="label_collect___share">收藏</string>
+    <string name="label_edit___share">编辑</string>
+    <string name="label_report___share">举报</string>
+    <string name="label_page___share">翻页</string>
+    <string name="label_note_poster___share">生成海报</string>
+    <string name="label_qr_code___share">查座二维码</string>
+    <string name="label_sms___share">短信</string>
+
+
+</resources>

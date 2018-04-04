@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/msg_refresh_social"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/trans_color_p9"
+        android:clickable="true"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size3"
+        android:visibility="gone" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+    <ImageButton
+        android:id="@+id/btn_back_top"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="70dp"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_back_to_top_primary"
+        android:visibility="gone"/>
+
+</RelativeLayout>

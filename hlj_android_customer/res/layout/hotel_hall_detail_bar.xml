@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/action_holder_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/hljActionBarHeight">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_back_white" />
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_back_primary" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:alpha="0"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size" />
+
+        <FrameLayout
+            android:id="@+id/message_item_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/share_btn_layout">
+
+            <ImageButton
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/icon_message_mail_white_46_46" />
+
+            <ImageButton
+                android:id="@+id/btn_message"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:src="@drawable/icon_message_mail_primary_46_46" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/share_btn_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_share_white_44_44" />
+
+            <ImageButton
+                android:id="@+id/btn_share"
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:alpha="0"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/icon_share_primary_44_44" />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/message_item_layout">
+
+            <View
+                android:id="@+id/msg_notice_view"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/sp_oval_accent"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/sp_r8_accent"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:minWidth="16dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider_view"
+            style="@style/line_horizontal"
+            android:layout_alignParentBottom="true"
+            android:alpha="0" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

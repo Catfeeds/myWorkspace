@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">hljdebuglibrary</string>
+    <string name="title_http_log_activity">网络日志</string>
+    <string name="label_tmp">{\"ID\":null,\"name\":\"Doe\",\"first-name\":\"John\",\"age\":25,\"hobbies\":[\"reading\",\"cinema\",{\"sports\":[\"volley-ball\",\"badminton\"]}],\"address\":{}}</string>
+</resources>

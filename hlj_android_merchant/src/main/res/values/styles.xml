@@ -1,0 +1,16 @@
+<resources>
+    <!-- 扫描二维码的界面 style -->
+    <style name="CaptureTheme" parent="NoTitleBarTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="yellowRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/bg_ratingbar_progress</item>
+        <item name="android:indeterminateDrawable">@drawable/bg_ratingbar_progress</item>
+        <item name="android:minHeight">16dip</item>
+        <item name="android:maxHeight">16dip</item>
+    </style>
+
+</resources>

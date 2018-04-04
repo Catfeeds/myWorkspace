@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                style="@style/ActionImageItem"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_back_primary" />
+
+            <TextView
+                android:id="@+id/tv_close_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-10dp"
+                android:gravity="center"
+                android:paddingRight="8dp"
+                android:visibility="gone"
+                android:text="@string/label_close___pay"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size" />
+
+        <ImageButton
+            android:id="@+id/btn_share"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_share_primary_44_44"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tv_ok_text"
+            android:minWidth="45dp"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sl_color_trans_2_background2"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone"/>
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</merge>

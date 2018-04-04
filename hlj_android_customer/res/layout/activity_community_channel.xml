@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.community.CommunityChannelActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/community_add_view">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout
+            android:id="@+id/scrollable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <include layout="@layout/community_channel_header" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/colorWhite"
+                android:overScrollMode="never" />
+
+            <View style="@style/line_horizontal" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.0" />
+
+        </com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout>
+
+        <LinearLayout
+            android:id="@+id/shadow_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:alpha="1"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <ImageView
+                    style="@style/ActionImageItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/icon_back_white" />
+
+                <TextView
+                    android:id="@+id/tv_community_channel_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/bar_title_size" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:alpha="0"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <ImageButton
+                    android:id="@+id/iv_community_channel_back"
+                    style="@style/ActionImageItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="onBackPressed"
+                    android:src="@mipmap/icon_back_primary" />
+
+                <TextView
+                    android:id="@+id/tv_community_channel_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorBarTitle"
+                    android:textSize="@dimen/bar_title_size" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <include layout="@layout/hlj_progressbar___cm" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/community_add_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View style="@style/line_horizontal" />
+
+        <TextView
+            android:id="@+id/tv_add_view"
+            android:layout_width="140dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/sp_r18_primary"
+            android:gravity="center"
+            android:text="@string/title_activity_edit_thread"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_medium_text_size2" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_create_thread_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49.5dp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/image_hint_create_thread"
+        android:visibility="gone" />
+
+</RelativeLayout>

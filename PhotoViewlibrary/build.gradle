@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.artifactory'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode PHOTO_VIEW_LIBRARY_VER_CODE
+        versionName PHOTO_VIEW_LIBRARY_VERSION
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    /*****************************远程第三方库引入*******************************/
+    implementation "com.android.support:support-v4:$SUPPORT_V4_VERSION"
+    /*****************************远程第三方库引入*******************************/
+}
+
+publishing {
+    publications {
+        aar(MavenPublication) {
+            groupId LIBRARY_PACKAGE_NAME
+            version = android.defaultConfig.versionName
+            artifactId project.getProject().getName()
+
+            // Tell maven to prepare the generated "* .aar" file for publishing
+            artifact("$buildDir/outputs/aar/${project.getProject().getName()}-release.aar")
+        }
+    }
+}
+
+artifactory {
+    contextUrl = "$ARTIFACTORY_HOST/artifactory"
+    publish {
+        repository {
+            // The Artifactory repository key to publish to
+            repoKey = 'libs-release-local'
+
+            username = "admin"
+            password = "iwerther"
+        }
+        defaults {
+            // Tell the Artifactory Plugin which artifacts should be published to Artifactory.
+            publications('aar')
+            publishArtifacts = true
+
+            // Properties to be attached to the published artifacts.
+            properties = ['qa.level': 'basic', 'dev.team': 'core']
+            // Publish generated POM files to Artifactory (true by default)
+            publishPom = true
+        }
+    }
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text="婚礼纪专享优惠"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/exclusive_offer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/exclusive_offer_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="1dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_discount_tag" />
+
+            <TextView
+                android:id="@+id/tv_exclusive_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/exclusive_offer_icon"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/tv_exclusive_offer_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_exclusive_offer"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/exclusive_offer_icon"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_marginLeft="16dp"
+        android:background="?attr/hljColorLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="手机号："
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@null"
+            android:hint="@string/label_phone_hint"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:textColor="@color/colorBlack2"
+            android:textColorHint="@color/colorGray2"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/hljDrawablePrimary2Dark"
+        android:gravity="center"
+        android:text="订阅该酒店最新优惠信息"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+</LinearLayout>

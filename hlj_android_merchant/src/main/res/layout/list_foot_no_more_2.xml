@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingBottom="15dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/no_more_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/no_more"
+        android:visibility="gone"
+        android:textColor="@color/colorGray2"
+        android:textSize="@dimen/medium_text_size2" />
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_more_hint"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:padding="10dp">
+
+        <ProgressBar
+            android:id="@+id/xlistview_footer_progressbar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:indeterminateDrawable="@drawable/sp_rotate_progressbar_gray_24_24"
+            android:indeterminateDuration="800" />
+
+        <TextView
+            android:id="@+id/xlistview_footer_hint_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/xlistview_header_hint_loading"
+            android:textColor="@color/colorGray2"
+            android:textSize="@dimen/medium_text_size2" />
+    </LinearLayout>
+
+</RelativeLayout>

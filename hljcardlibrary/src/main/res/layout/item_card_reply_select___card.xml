@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/theme_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_r2_transparent">
+
+    <com.makeramen.rounded.RoundedImageView
+        android:id="@+id/iv_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:corner_radius="2dp"
+        app:is_oval="false" />
+
+    <ImageView
+        android:id="@+id/iv_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_card_selected___card"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_partner"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="#99000000"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/label_card_come_partner___card"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/small_text_size"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <View
+        android:id="@+id/view_selected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/sl_r2_transparent_primary__card" />
+
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp">
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    style="@style/ActionImageItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/icon_search_primary_44_44" />
+
+                <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                    android:id="@+id/left_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_toLeftOf="@+id/center_tab">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:duplicateParentState="true">
+
+                        <TextView
+                            android:id="@+id/tv_left_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:textColor="@color/menu_tab_text_color"
+                            android:textSize="@dimen/ex_medium_text_size"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/sl_color_trans_2_r2_primary"
+                            android:duplicateParentState="true" />
+                    </RelativeLayout>
+                </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+                <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                    android:id="@+id/center_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:duplicateParentState="true">
+
+                        <TextView
+                            android:id="@+id/tv_center_tab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:singleLine="true"
+                            android:textColor="@color/menu_tab_text_color"
+                            android:textSize="@dimen/ex_medium_text_size"
+                            android:textStyle="bold"
+                            tools:text="@string/app_name" />
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/sl_color_trans_2_r2_primary"
+                            android:duplicateParentState="true" />
+                    </RelativeLayout>
+                </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+                <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                    android:id="@+id/right_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/center_tab"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:duplicateParentState="true">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:duplicateParentState="true">
+
+                            <TextView
+                                android:id="@+id/tv_right_tab"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:duplicateParentState="true"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:textColor="@color/menu_tab_text_color"
+                                android:textSize="@dimen/ex_medium_text_size"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/news_icon_right"
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_alignTop="@+id/tv_right_tab"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/tv_right_tab"
+                                android:background="@drawable/sp_oval_accent"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="20dp"
+                            android:layout_height="2.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/sl_color_trans_2_r2_primary"
+                            android:duplicateParentState="true" />
+                    </RelativeLayout>
+                </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+                <TextView
+                    android:id="@+id/btn_create"
+                    android:layout_width="50dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/sl_r3_primary_2_dark"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="发布"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/action_layout"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:id="@+id/gradient_view"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/bg_gradient_black3"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

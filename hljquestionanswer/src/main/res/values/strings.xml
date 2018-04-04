@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">hljquestionanswer</string>
+    <!--问答-->
+    <string name="action_add_answer___qa">添加回答</string>
+    <string name="action_add_answer_draft___qa">添加回答(草稿)</string>
+
+    <string name="btn_post___qa">发布</string>
+    <string name="btn_post_thread">发话题</string>
+
+    <string name="hint_question_title___qa">请写下你的问题</string>
+    <string name="hint_question_content___qa">问题相关的描述信息 (可不填)</string>
+    <string name="hint_answer_content___qa">请依据你的真实经历或专业知识回答。好的回答可以帮助到其他用户，并为你带来金币奖励。</string>
+    <string name="hint_answer_merchant_content___qa">请依据你的真实经历或专业知识回答问题，好的回答可以为你的店铺带来更多曝光。</string>
+
+    <string name="title_activity_create_question___qa">提问</string>
+    <string name="title_activity_select_mark___qa">选择标签</string>
+    <string name="title_activity_my_qa___qa">我的问答</string>
+    <string name="title_activity_mask___qa">问答</string>
+    <string name="title_activity_create_answer___qa">回答</string>
+    <string name="title_question___qa">问题</string>
+
+    <string name="label_tag___qa">相关标签</string>
+    <string name="label_required___qa">（必选）</string>
+    <string name="label_hint_select_mark___qa">添加一个准确的标签，会让问题更快被解答</string>
+    <string name="label_answer_auth_tip___qa">著作权归作者所有</string>
+    <string name="label_answer_auth_time___qa">更新于%s</string>
+    <string name="hint_comment_hidden___qa">该评论已被删除</string>
+    <string name="hint_sure_to_delete___qa">确定要删除吗?</string>
+
+    <string name="label_reply_hint___qa">回复点什么吧</string>
+    <string name="label_comment___qa">评论</string>
+    <string name="label_delete___qa">删除</string>
+    <string name="label_question___qa">提问</string>
+    <string name="label_answer___qa">回答</string>
+    <string name="label_collect___qa">收藏</string>
+    <string name="label_my_question_empty___qa">目前还没有问题~</string>
+    <string name="label_my_question_empty_hint___qa">备婚过程中遇到难题了，请记得提问哟</string>
+    <string name="label_my_answer_empty___qa">快去回答问题吧~</string>
+    <string name="label_my_answer_empty_hint___qa">在帮助别人的时候，还可以赚金币哟</string>
+    <string name="label_my_follow_answer_empty___qa">还没有收藏回答</string>
+    <string name="label_my_follow_answer_empty_hint___qa">看到有帮助的回答，记得收藏哦~</string>
+    <string name="label_my_follow_question_empty___qa">您还没有关注过问题哦~</string>
+    <string name="label_answer_list_empty_my___qa">还没有回答，有了新回答后会立即通知你~~~</string>
+    <string name="label_answer_list_empty___qa">还没有回答，快去帮帮TA吧~</string>
+    <string name="label_all_question___qa">全部问题</string>
+    <string name="label_hot_answer___qa">优质回答</string>
+    <string name="label_all_question_count___qa">全部问题 %d</string>
+    <string name="label_hot_answer_count___qa">优质回答 %d</string>
+    <string name="label_watch_count___qa">阅读</string>
+    <string name="label_answered___qa">已回答</string>
+    <string name="label_no_answer___qa">暂时没有人回答</string>
+    <string name="label_no_description___qa">未填写个人简介</string>
+    <string name="label_question_auth___qa">题主</string>
+    <string name="label_hot___qa">精选问答</string>
+    <string name="label_local___qa">本地热门</string>
+    <string name="label_all___qa">最新问题</string>
+    <string name="label_expansion___qa">展开</string>
+    <string name="label_pack_up___qa">收起</string>
+    <string name="label_all_answer___qa">阅读全部</string>
+    <string name="label_answer_all_count_tip___qa">全部回答 %d</string>
+    <string name="label_answer_count_tip___qa">其他回答 %d</string>
+    <string name="label_answer_top_count_tip___qa">优质回答 %d</string>
+    <string name="label_answer_detail_count_tip___qa">%d个回答</string>
+    <string name="label_question_detail___qa">问题详情</string>
+    <string name="label_answer_detail___qa">回答详情</string>
+    <string name="label_answer_comment_count___qa">评论（%d）</string>
+    <string name="label_answer_up_count___qa">点赞（%d）</string>
+    <string name="label_answer_up_count_praised___qa">已点赞（%d）</string>
+    <string name="label_mark_question_title___qa" formatted="false"><Data><![CDATA[ <font color="#666666">有关“</font> ]]></Data>%s<Data><![CDATA[ <font color="#666666">”的问答</font> ]]></Data></string>
+    <string name="label_question_auth_name___qa" formatted="false">%s · %s · %d阅读</string>
+    <string name="label_recommend_question___qa">推荐问题</string>
+    <string name="label_new_question___qa">最新问题</string>
+    <string name="label_follow___qa">关注</string>
+    <string name="label_modify___qa">编辑</string>
+    <string name="label_report___qa">举报</string>
+    <string name="label_draft___qa">草稿</string>
+    <string name="label_my_follow___qa">我的关注</string>
+    <string name="label_my_answer___qa">我的回答</string>
+    <string name="label_my_collect___qa">我的收藏</string>
+    <string name="label_see_answer___qa">查看回答</string>
+    <string name="label_ranking_list___qa">排行榜</string>
+    <string name="label_image_uploading___qa">图片上传中%s</string>
+    <string name="label_mark_hot___qa">热门标签</string>
+    <string name="label_qa_recommend___qa">为你推荐</string>
+    <string name="label_hot_question___qa">编辑精选</string>
+    <string name="label_switch___qa">换一换</string>
+    <string name="label_week_qa___qa">本周最受欢迎</string>
+    <string name="label_last_question___qa">最新发布</string>
+    <string name="label_qa_headline___qa">问答头条</string>
+
+    <string name="msg_answer_comment_empty___qa">快来评论这个回答吧~</string>
+    <string name="msg_answer_praise_self___qa">你不能给自己点赞哦~</string>
+    <string name="msg_answer_oppose_self___qa">你不能反对自己哦~</string>
+    <string name="msg_answer_praised___qa">你已经赞同过</string>
+    <string name="msg_answer_opposed___qa">你已经反对过</string>
+    <string name="msg_question_hidden___qa">该问题已被删除</string>
+    <string name="msg_answer_hidden___qa">该回答已被删除</string>
+    <string name="msg_question_un_modify___qa">该问题已被限制编辑</string>
+    <string name="msg_answer_un_modify___qa">该回答已被限制编辑</string>
+    <string name="msg_answer_comment___qa">评论字数不能超过140字</string>
+    <string name="msg_post_text_empty___qa">你发送的内容不能为空</string>
+    <string name="msg_success_to_comment___qa">评论成功</string>
+    <string name="label_share___qa">分享</string>
+    <string name="label_answer_comment_title___qa">评论 (%d)</string>
+    <string name="label_comment_count_bottom___qa">评论·%d</string>
+
+    <string name="btn_send___qa">发送</string>
+    <string name="btn_cancel___qa">取消</string>
+    <string name="btn_delete_reply___qa">删除评论</string>
+    <string name="btn_add_answer___qa">添加回答</string>
+
+    <string name="msg_post_question_mark_empty___qa">请选择一个标签</string>
+    <string name="msg_question_create_back___qa">是否放弃提问</string>
+    <string name="msg_question_is_exist___qa">该问题已存在</string>
+    <string name="msg_edit_back___qa">是否放弃编辑？</string>
+    <string name="msg_question_title_empty___qa">问题标题不能为空</string>
+    <string name="msg_question_title_limit___qa">问题标题应为7到50字</string>
+    <string name="msg_question_title_mark___qa">请给问题标题添加一个“?”</string>
+    <string name="msg_answer_content_empty___qa">回答内容不能为空</string>
+    <string name="msg_post_image_uploading___qa">有图片正在上传，请在上传完成后发布</string>
+
+    <string name="fmt_answer_count___qa">%s回答</string>
+    <string name="fmt_watch_count___qa">%s阅读</string>
+    <string name="fmt_join_count___qa">%s参与</string>
+    <string name="fmt_watch_count2___qa">阅读 %s</string>
+    <string name="msg_text_limit___qa">最多可输入%s字文字</string>
+    <string name="msg_image_limit___qa">最多可输入%s张图片</string>
+    <string name="fmt_answer_count2___qa">%d个回答</string>
+
+    <string name="html_fmt_question_title_limit___qa" formatted="false">您还可以输入<Data><![CDATA[<font color="#ff705e">%d</font>]]></Data>字</string>
+    <string name="label_other_answer_empty___qa">TA还没有回答问题</string>
+
+    <string name="hint_rec_qa_empty___qa">暂无问题</string>
+    <string name="hint_not_complete_real_name_certification___qa">您尚未完成店铺审核或实名认证\n暂时无法使用此功能</string>
+    <string name="hint_post_image_failed_err___qa">有图片上传失败，请重新上传或删除失败图片后再发布</string>
+
+    <string name="hint_not_complete_real_name_certification">您尚未完成店铺审核或实名认证\n暂时无法使用此功能</string>
+    <string name="hint_merchant_pro__qa">无法使用此功能\n请升级至店铺旗舰版</string>
+    <string name="label_learn_about_detail___qa">了解详情</string>
+    <string name="label_close">关闭</string>
+    <string name="label_qa_detail___qa">问答详情</string>
+    <string name="label_activity_ask_question___qa">问大家</string>
+    <string name="hint_answer_content_empty___qa">服务好不好，问问体验过的人</string>
+    <string name="hint_no_relevant_answer___qa">还没有相关回答</string>
+    <string name="hint_objective_answer_may_directly_bring_advice___qa">客观的回答可能直接带来咨询哦~</string>
+    <string name="hint_buy_or_experience_the_service_users_can_answer___qa">购买或体验过服务的用户才能回答哦~</string>
+    <string name="label_complain___qa">申诉</string>
+    <string name="msg_to_experience_the_service_of_people_ask___qa">已向体验过服务的人提问~</string>
+    <string name="msg_thanks_for_your_answer___qa">感谢你的回答~</string>
+    <string name="label_author_question___qa">%s的问题</string>
+    <string name="label_look_all_answer___qa">查看全部%d个回答</string>
+    <string name="label_total_count_answer___qa">共%d条回答</string>
+    <string name="label_complaining___qa">申诉中</string>
+    <string name="title_activity_qaanswer_edit">回答</string>
+
+</resources>

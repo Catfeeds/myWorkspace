@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <View style="@style/line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人气活动"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/medium_text_size1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="ACTIVITIES"
+            android:textColor="@color/colorAccentSub"
+            android:textSize="@dimen/medium_text_size1"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="14dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/small_shop_event_item" />
+
+        <include layout="@layout/small_shop_event_item" />
+
+        <include layout="@layout/small_shop_event_item" />
+
+    </LinearLayout>
+
+</LinearLayout>

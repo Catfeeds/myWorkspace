@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问答详情</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="">
+
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,  user-scalable=0,,minimal-ui" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="email=no" name="format-detection" />
+    <link rel="stylesheet" href="http://www.hunliji.com/p/wedding/Public/wap/static/css/wrap_common.css">
+    <link rel="stylesheet" href="http://www.hunliji.com/p/wedding/Public/wap/static/css/fineTopic.css">
+    <script>
+        //80
+        !function(){function a(){if(document.documentElement.clientWidth<800){document.documentElement.style.fontSize=document.documentElement.clientWidth/5+"px"}else{document.documentElement.style.fontSize="160px"}}var b=null;window.addEventListener("resize",function(){clearTimeout(b),b=setTimeout(a,300)},!1),a()}(window);
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <div class="edit">
+        <div class="edit-content">
+            <p>回答内容</p>
+        </div>
+    </div>
+</div>
+<script src="http://qnc.hunliji.com/zepto.min.js"></script>
+<script src="http://www.hunliji.com/p/wedding/Tpl/default/script/sendCommand.js"></script>
+<script src="http://www.hunliji.com/p/wedding/Public/wap/static/js/topic.js"></script>
+<script>
+ for(var i=0,length=$('img').length;i<length;i++){
+        var imgSrc=$('img')[i].src
+        if(imgSrc.indexOf('?')>-1){
+   $('img')[i].src=imgSrc+'/format/jpg'
+        }
+    }
+</script>
+</body>
+</html>

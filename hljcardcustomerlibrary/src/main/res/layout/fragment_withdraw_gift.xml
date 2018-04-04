@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/sp_r4_stroke_line_solid_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_withdraw_cash_count"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="@string/label_rmb___cm"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="27sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_withdraw_cash_count"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="33sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_balance_count_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="@string/label_withdraw_cash_count_all"
+                            android:textColor="@color/colorLink"
+                            android:textSize="@dimen/medium_text_size1" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_layout___cm" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/product_list_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="vertical" />
+
+                        <TextView
+                            android:id="@+id/tv_balance_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size3" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/action_withdraw_cash_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/sl_r4_primary_2_dark"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="@string/label_withdraw_cash_confirm"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_withdraw_cash_tip_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0.5dp"
+                android:background="@drawable/sp_r4_b_background2"
+                android:gravity="left"
+                android:lineSpacingMultiplier="1.4"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp"
+                android:text="@string/label_withdraw_cash_tip"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

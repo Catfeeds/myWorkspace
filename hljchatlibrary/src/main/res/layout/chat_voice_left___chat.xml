@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/chat_avatar_margin">
+
+    <include layout="@layout/chat_message_time_text___chat" />
+
+    <include layout="@layout/chat_user_avatar_left___chat" />
+
+    <LinearLayout
+        android:id="@+id/voice_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/chat_avatar_message_margin"
+        android:layout_below="@id/time"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/avatar"
+        android:background="@drawable/sl_bg_bubble_left_white"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/medium_text_size1">
+
+        <ImageView
+            android:id="@+id/img_voice"
+            android:layout_width="15dp"
+            android:layout_height="22dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_voice_left_03___cm" />
+
+        <TextView
+            android:id="@+id/tv_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

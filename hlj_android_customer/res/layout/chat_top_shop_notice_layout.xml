@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorWhite"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="8dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="店铺公告"
+        android:textColor="@color/colorBlack2"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_label"
+        android:layout_marginTop="8dp"
+        android:paddingBottom="8dp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/colorBlack3"
+        tools:text="本店十一期间发货啊是空降可视对讲发快乐十分可暗示法三等分。本店十一期间发货啊是空降可视对讲发快乐十分可暗示法三等分本店十一期间发货啊是空降可视对讲发快乐十分可暗示法三等分本店十一期间发货啊是空降可视对讲发快乐十分可暗示法三等分,本店十一期间发货啊是空降可视对是空降可"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <TextView
+        android:id="@+id/tv_expand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginTop="-4dp"
+        android:padding="8dp"
+        android:text="@string/label_all_info"
+        android:visibility="gone"
+        android:textColor="@color/colorLink"
+        android:textSize="@dimen/medium_text_size1" />
+
+</RelativeLayout>

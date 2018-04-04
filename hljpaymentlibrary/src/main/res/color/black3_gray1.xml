@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--支付方式不可用显示灰色，不需要选中颜色状态-->
+
+    <item android:color="@color/colorGray" android:state_enabled="false" />
+    <item android:color="@color/colorBlack3" />
+
+</selector>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_date_text_size">15sp</dimen>
+    <dimen name="default_lunar_date_text_size">14sp</dimen>
+    <dimen name="default_dot_size">3dp</dimen>
+    <dimen name="default_selected_line_size">1dp</dimen>
+    <dimen name="default_dot_margin_top">1dp</dimen>
+    <dimen name="default_lunar_date_text_margin_top">1dp</dimen>
+    <dimen name="default_vacation_badge_size">6dp</dimen>
+    <dimen name="default_offset_height">30dp</dimen>
+</resources>

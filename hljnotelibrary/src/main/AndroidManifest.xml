@@ -1,0 +1,123 @@
+<manifest package="com.hunliji.hljnotelibrary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".views.activities.NoteDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".views.activities.NotebookActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".views.activities.NoteCreateWeddingPosterActivity"
+            android:label="@string/label_create_poster___note"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+
+        <activity
+            android:name=".views.activities.MyNoteListActivity"
+            android:label="@string/label_my_note___note"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".views.activities.NoteMarkDetailActivity"
+            android:label="@string/label_note_mark___note"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+
+        <activity
+            android:name=".views.activities.NotebookEditActivity"
+            android:label="@string/label_note_edit___note"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".views.activities.NoteImageChooserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+
+        <activity
+            android:name=".views.activities.CreatePhotoNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarThemeNotTranslucent"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".views.activities.CreateVideoNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".views.activities.SelectNoteSpotEntityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".views.activities.SelectNoteSimpleCategoryMarkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".views.activities.PostNoteCommentActivity"
+            android:theme="@style/DialogActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".views.activities.PostServiceCommentActivity"
+            android:theme="@style/DialogActivityTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+
+        <activity
+            android:name=".views.activities.SelectNoteCategoryMarkActivity"
+            android:label="@string/title_activity_select_mark___note"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".views.activities.NoteEduActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+
+        <activity
+            android:name=".views.activities.NoteCommentListActivity"
+            android:label="@string/title_activity_comment_list___note"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.ReportActivity"
+            android:label="@string/title_activity_report___note"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <!--商家端 我的动态-->
+        <activity
+            android:name=".views.activities.MerchantNoteListActivity"
+            android:label="@string/label_my_feed___note"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".views.activities.MerchantNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+
+    </application>
+
+</manifest>

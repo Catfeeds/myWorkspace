@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup android:id="@+id/cg_group"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/image_bg_dialog_arrow_down_bubble"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_wedding_photos"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:text="@string/label_wedding_photos___note"
+            android:textColor="@color/black2_primary"
+            android:textSize="14sp" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_width="64dp" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_wedding_plan"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:text="@string/label_wedding_plan___note"
+            android:textColor="@color/black2_primary"
+            android:textSize="14sp" />
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_width="64dp" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+        android:id="@+id/cb_products_plan"
+        android:layout_width="64dp"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:duplicateParentState="true"
+            android:gravity="center"
+            android:text="@string/label_products_plan___note"
+            android:textColor="@color/black2_primary"
+            android:textSize="14sp" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+</com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>

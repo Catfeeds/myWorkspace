@@ -1,0 +1,245 @@
+<manifest package="com.hunliji.hljpaymentlibrary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ************************************************************************************* -->
+    <!-- 银联支付权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <!-- ************************************************************************************* -->
+
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+
+        <!-- ************************************************************************************* -->
+        <!-- 支付宝支付界面 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- ************************************************************************************* -->
+
+
+        <!-- ************************************************************************************* -->
+        <uses-library
+            android:name="org.simalliance.openmobileapi"
+            android:required="false" />
+
+        <!-- 银联支付界面 -->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ************************************************************************************* -->
+
+
+        <!-- ************************************************************************************* -->
+        <!-- 连连支付界面和服务 -->
+        <activity
+            android:name="com.yintong.secure.activity.BaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <service
+            android:name="com.yintong.secure.service.PayService"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.activities.JDPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.HljPaymentActivity"
+            android:label="@string/title_activity_order_payment___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".views.activities.VerificationPasswordActivity"
+            android:label="@string/title_activity_order_payment___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.BindCardListActivity"
+            android:label="@string/title_activity_find_password___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.FindPasswordActivity"
+            android:label="@string/title_activity_find_password___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.SetPasswordActivity"
+            android:label="@string/title_activity_set_password___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".views.activities.AddBankCardActivity"
+            android:label="@string/title_activity_order_payment___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.SupportCardListActivity"
+            android:label="@string/title_activity_support_card_list___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.LLPayIdentificationActivity"
+            android:label="@string/title_activity_llpay_identification___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.CmbPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.BasicAuthItemListActivity"
+            android:label="@string/title_activity_activate_xiaoxi_installment___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.LimitAuthItemListActivity"
+            android:label="@string/title_activity_increase_limit___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.RealNameAuthenticationActivity"
+            android:label="@string/title_activity_real_name_authentication___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.AddXiaoxiInstallmentBankCardActivity"
+            android:label="@string/title_activity_add_bank_card___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.AddBasicUserInfoActivity"
+            android:label="@string/title_activity_basic_user_info___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.AddExtUserInfoActivity"
+            android:label="@string/title_activity_ext_info___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.AddEmergencyContactActivity"
+            android:label="@string/title_activity_basic_user_info___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.BasicAuthenticationResultActivity"
+            android:label="@string/title_activity_activate_xiaoxi_installment___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.MyInstallmentActivity"
+            android:label="@string/title_activity_my_installment___pay"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.MyBillListActivity"
+            android:label="@string/title_activity_my_bill___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.RepaymentScheduleListActivity"
+            android:label="@string/title_activity_repayment_schedule___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.RepaymentScheduleExtInfoActivity"
+            android:label="@string/title_activity_ext_info___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.XiaoxiInstallmentAgreementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.XiaoxiInstallmentWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.XiaoxiInstallmentBankCardSettingActivity"
+            android:label="@string/title_activity_bank_card_setting___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.InstallmentPaymentActivity"
+            android:label="@string/title_activity_installment_payment"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.DebtListActivity"
+            android:label="@string/title_activity_debt___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.DebtTransferRecordListActivity"
+            android:label="@string/title_activity_debt_transfer_record___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <activity
+            android:name=".views.activities.xiaoxi_installment.DebtInfoActivity"
+            android:label="@string/title_activity_debt_info___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.xiaoxi_installment.InvestorListActivity"
+            android:label="@string/title_activity_investor_list___pay"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+
+        <!--招行支付-->
+        <service
+            android:name="cmb.pb.cmbsafe.CmbService"
+            android:exported="false"></service>
+
+        <activity
+            android:name="cmb.pb.ui.PBKeyboardActivity"
+            android:theme="@style/CmbDialogStyleBottom"></activity>
+    </application>
+</manifest>

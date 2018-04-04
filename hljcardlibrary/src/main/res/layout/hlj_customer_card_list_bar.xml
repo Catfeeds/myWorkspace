@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/hljActionBarHeight">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/ActionImageItem.Dark"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@mipmap/icon_back_white" />
+
+
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        style="?attr/hljTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/title_activity_card_list___card" />
+
+    <TextView
+        android:id="@+id/btn_item"
+        style="?attr/hljActionButtonItemStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:visibility="gone" />
+
+</RelativeLayout>

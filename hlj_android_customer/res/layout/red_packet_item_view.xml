@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView android:id="@+id/ctv_amount"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:drawableRight="@drawable/sl_ic_sp_check"
+    android:gravity="center_vertical"
+    android:paddingRight="16dp"
+    android:textColor="@color/black2_primary"
+    android:textSize="@dimen/medium_text_size1" />

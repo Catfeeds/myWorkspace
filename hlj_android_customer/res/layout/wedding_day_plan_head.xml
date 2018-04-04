@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+    <RelativeLayout
+        android:id="@+id/tip_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fdfaf1">
+
+            <TextView
+                android:id="@+id/tip_title"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tip_title"
+                android:textSize="@dimen/medium_text_size2"
+                android:textColor="@color/colorBlack2"/>
+
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/tip_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_tip_content"/>
+
+            <ImageButton
+                android:padding="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_cross_close_primary_32_32"
+                android:background="@android:color/transparent"
+                android:onClick="onCloseTip"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_below="@id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            android:background="@drawable/bg_tips_edge"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_group_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white2"
+        android:onClick="addWeddingProgram"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <include layout="@layout/line_layout"/>
+
+        <TextView
+            android:id="@+id/add_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_add_program"
+            android:padding="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:drawableLeft="@drawable/icon_cross_add_round_primary_white_48_48"
+            android:gravity="center"
+            android:drawablePadding="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorLine"
+            android:layout_below="@id/add_tv"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/add_group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="16dp"
+        android:visibility="gone">
+
+        <include layout="@layout/line_layout"/>
+
+        <RelativeLayout
+            android:background="@color/color_white2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white2"
+                android:hint="@string/hint_add_wedding_day_plan"
+                android:textColorHint="@color/colorGray3"
+                android:layout_centerInParent="true"
+                android:gravity="left|center_vertical"
+                android:padding="16dp"
+                android:textSize="@dimen/large_text_size"/>
+
+
+            <ImageView
+                android:id="@+id/confirm_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                android:src="@drawable/icon_check_round_green"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/line_layout"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp">
+
+                    <Button
+                        android:id="@+id/btn_config_official"
+                        android:layout_width="60dp"
+                        android:layout_height="36dp"
+                        android:background="@drawable/sl_r3_primary_2_dark"
+                        android:padding="0dp"
+                        android:text="正式"
+                        android:textColor="@color/colorWhite" />
+                    <Button
+                        android:id="@+id/btn_config_test"
+                        android:layout_width="60dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/sl_r3_primary_2_dark"
+                        android:padding="0dp"
+                        android:text="测试"
+                        android:textColor="@color/colorWhite" />
+                    <Button
+                        android:id="@+id/btn_config_www7"
+                        android:layout_width="60dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="@drawable/sl_r3_primary_2_dark"
+                        android:padding="0dp"
+                        android:text="www7"
+                        android:textColor="@color/colorWhite" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:text="主服务器地址"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/tv_http_host"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/sp_r2_stroke_primary"
+                    android:gravity="center_vertical"
+                    android:hint="服务器地址"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text=":" />
+
+                <EditText
+                    android:id="@+id/tv_http_port"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sp_r2_stroke_primary"
+                    android:ems="4"
+                    android:gravity="center_vertical"
+                    android:hint="端口号"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size3" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rl_header"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:visibility="invisible"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/ll_marry_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gradient_primary_fe582e"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:includeFontPadding="false"
+            android:text="@string/label_marry_task"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_huge_text_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1"
+            tools:text="已完成5/30" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/sp_r5_white_4p">
+
+            <View
+                android:id="@+id/progress_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/sp_r5_white" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:includeFontPadding="false"
+            android:textColor="#CCFFFFFF"
+            android:textSize="@dimen/medium_text_size1"
+            tools:text="婚礼越来越近了，继续加油哦~" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tips"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/ll_marry_task"
+        android:background="#fdf3e0"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#ed8546"
+            android:textSize="@dimen/medium_text_size1"
+            tools:text="绑定另一半，记录同一份结婚账本～" />
+
+        <TextView
+            android:id="@+id/tv_get"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/sp_r10_color_ff9b30"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_small_text_size"
+            android:textStyle="bold"
+            tools:text="去绑定" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#fbe6be" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

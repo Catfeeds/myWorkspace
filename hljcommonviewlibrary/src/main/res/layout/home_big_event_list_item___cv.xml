@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <Space
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:id="@+id/event_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <com.makeramen.rounded.RoundedImageView
+            android:id="@+id/img_cover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/sp_r3_image_background"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:corner_radius="3dp" />
+
+        <TextView
+            android:id="@+id/tv_watch_count"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignBottom="@id/img_cover"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/sp_r12_right_stroke_line2_solid_e6ffffff"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="12dp"
+            android:text="1234感兴趣"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_small_text_size" />
+
+    </RelativeLayout>
+</LinearLayout>

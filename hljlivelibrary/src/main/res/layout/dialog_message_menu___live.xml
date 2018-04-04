@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/action_reply"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/label_reply___live"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/action_copy"
+        android:layout_width="match_parent"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:layout_height="wrap_content">
+
+        <View style="@style/line_horizontal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text="@string/label_copy___chat"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/ex_medium_text_size" />
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <Button
+        android:id="@+id/action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/label_cancel___cm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:background="@drawable/sp_r15_stroke_gray_solid_white"
+    android:elevation="0dp"
+    android:gravity="center"
+    android:lines="1"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:stateListAnimator="@null"
+    android:textColor="@color/colorBlack3"
+    android:textSize="@dimen/medium_text_size1" />

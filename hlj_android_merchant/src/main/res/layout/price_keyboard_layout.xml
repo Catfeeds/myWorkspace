@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/price_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/line_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/old_price_label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="原总价"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/colorBlack2"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_old_price_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingLeft="8dp"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/huge_text_size" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLine" />
+
+            <TextView
+                android:id="@+id/new_price_label_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="修改为"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/colorAccent"
+                android:textSize="22sp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_new_price_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textColor="@color/colorAccent"
+                    android:textCursorDrawable="@drawable/sp_cursor_primary"
+                    android:textSize="@dimen/huge_text_size" />
+
+                <Button
+                    android:id="@+id/btn_new_price_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/price_layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/line_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/old_price_label_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="原定金"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/colorBlack2"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/tv_old_price_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:paddingLeft="8dp"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/huge_text_size" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLine" />
+
+            <TextView
+                android:id="@+id/new_price_label_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:text="修改为"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/colorAccent"
+                android:textSize="22sp" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_new_price_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:textColor="@color/colorAccent"
+                    android:textCursorDrawable="@drawable/sp_cursor_primary"
+                    android:textSize="@dimen/huge_text_size" />
+
+                <Button
+                    android:id="@+id/btn_new_price_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:columnCount="4">
+
+        <Button
+            android:id="@+id/btn_key_1"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="1"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_key_2"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="2"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_key_3"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="3"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+
+        <ImageButton
+            android:id="@+id/btn_key_back_space"
+            android:background="@drawable/sl_color_white_2_background2"
+            android:src="@drawable/icon_keyboard_delete_gray"
+            app:layout_columnWeight="1"
+            app:layout_rowSpan="2"
+            app:layout_rowWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_4"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="4"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_5"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="5"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_6"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="6"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_7"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="7"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_8"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="8"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_9"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="9"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_confirm"
+            android:background="@drawable/sl_color_primary_2_dark"
+            android:text="@string/label_select_time"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1"
+            app:layout_rowSpan="2"
+            app:layout_rowWeight="1" />
+
+
+        <Button
+            android:id="@+id/btn_key_dot"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="."
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <Button
+            android:id="@+id/btn_key_0"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:text="0"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/huge_text_size"
+            android:textStyle="bold"
+            app:layout_columnWeight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_key_hide"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_sl_r_b_stroke_line_2_line"
+            android:src="@drawable/icon_hide_keyboard"
+            app:layout_columnWeight="1" />
+    </android.support.v7.widget.GridLayout>
+
+</LinearLayout>

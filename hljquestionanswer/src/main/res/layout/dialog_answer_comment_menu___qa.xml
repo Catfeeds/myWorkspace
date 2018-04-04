@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/line_layout___cm" />
+
+    <Button
+        android:id="@+id/action_delete_reply"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/btn_delete_reply___qa"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <include layout="@layout/line_layout___cm" />
+
+    <Button
+        android:id="@+id/action_report_reply"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/label_report___cm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/report_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/btn_cancel___qa"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/ex_medium_text_size" />
+</LinearLayout>

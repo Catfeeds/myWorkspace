@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <me.suncloud.marrymemo.widget.MerchantMenuFilterView
+            android:id="@+id/menu_filter_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout
+            android:id="@+id/scrollable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+    </LinearLayout>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

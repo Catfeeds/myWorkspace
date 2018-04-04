@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">请帖大师</string>
+
+    <string name="btn_login">登录</string>
+    <string name="btn_create">制作</string>
+    <string name="html_label_card_master_terms">登录即表示你同意《<u>请帖大师用户协议</u>》</string>
+
+
+    <string name="label_hx_msg_type1">发来一张图片</string>
+    <string name="label_hx_msg_type3">发来一条语音</string>
+    <string name="label_hx_msg_ticker">%1$s: %2$s</string>
+    <string name="label_hx_msg_content">你收到一条新消息</string>
+
+
+    <string name="hint_new_number_error">你输入的手机号格式不正确</string>
+    <string name="hint_voice_certify">验证码将通过语音呼入，请稍等</string>
+    <string name="hint_send_code_error">验证码发送失败，请稍后重试</string>
+
+    <string name="msg_login_error">登录失败</string>
+
+    <string name="label_login_hint">输入手机号快速加入</string>
+    <string name="label_phone_hint">请输入手机号码</string>
+    <string name="label_certify_hint">请输入验证码</string>
+    <string name="label_reload">重新获取</string>
+    <string name="label_voice_certify_unreceive">没收到?</string>
+    <string name="label_other_login">其他登录方式</string>
+    <string name="label_third_login_bind">绑定手机号</string>
+    <string name="label_third_login_bind_privilege_hint">绑定手机号，获得4大专项特权</string>
+    <string name="label_third_login_bind_privilege_1">解锁全部电子请帖</string>
+    <string name="label_third_login_bind_privilege_2">优先使用新款模板</string>
+    <string name="label_third_login_bind_privilege_3">优先参与特惠活动</string>
+    <string name="label_third_login_bind_privilege_4">全面保障账户安全</string>
+    <string name="label_quit">再按一次可以退出请帖大师</string>
+
+    <string name="label_balance_count">%s元</string>
+    <string name="action_ok">确定</string>
+    <string name="action_cancel">取消</string>
+    <string name="logout_hint">你确定退出当前账号？</string>
+    <string name="label_member_privileges_title">会员尊享</string>
+    <string name="label_member_open_now">加入会员Plus俱乐部</string>
+    <string name="label_member_open_tip" formatted="false">¥ %s终身有效 原价</string>
+    <string name="label_member_no_address">您还未选择礼包的收货地址</string>
+    <string name="label_member_wallet_tip">会员尊享红包已经在您的钱包中</string>
+    <string name="label_member_edit_address">点击设置</string>
+    <string name="label_member_go_wallet">前往查看</string>
+    <string name="label_version_title">%s版本更新说明</string>
+    <string name="btn_update">立即更新</string>
+    <string name="label_agreement1">用户使用协议</string>
+    <string name="label_about_and">及</string>
+    <string name="label_secret_policy">隐私政策</string>
+    <string name="label_copyright">Copyright©2013&#8211;2018 hunliji.com\nAll  Rights Reserved</string>
+    <string name="label_contact_us">联系客服</string>
+    <string name="hint_feedback_contact">你的联系电话（选填）</string>
+    <string name="hint_feedback_content">请尽量详细描述反馈，我们会第一时间帮你解决~</string>
+    <string name="label_unbind">解除</string>
+    <string name="label_unbind1">解绑</string>
+    <string name="label_bind_success">绑定成功</string>
+    <string name="label_unbind_success">解绑成功</string>
+    <string name="label_third_bind_hint">绑定后，您可以与更多朋友分享足迹和体验。同时您在下次登出后可以直接使用社交账号登录，无需再次验证手机短信</string>
+    <string name="label_bind">绑定</string>
+    <string name="label_weixin">微信</string>
+    <string name="label_weibo4">微博</string>
+    <string name="label_qq">QQ</string>
+    <string name="label_third_unbind_hint2">我要解绑</string>
+    <string name="label_third_unbind_hint3">解绑确认</string>
+    <string name="label_third_unbind_hint1">您确定要解除%s账号的关联么，解绑之后可再次绑定哦~</string>
+    <string name="label_wrong_action">我点错了</string>
+    <string name="label_avatar">头像</string>
+    <string name="label_nick_name">昵称</string>
+    <string name="action_album">相册</string>
+    <string name="action_camera_photo">拍照</string>
+    <string name="action_camera_video">摄像</string>
+    <string name="permission_r_for_read_external_storage">允许读取文件权限后才能进行下一步操作</string>
+    <string name="permission_r_for_camera">允许相关权限才能正常使用拍照功能</string>
+    <string name="permission_r_for_call_up">允许电话权限才能正常使用电话功能</string>
+    <string name="permission_r_for_read_contact">允许读取电话录权限后才能进行下一步操作</string>
+    <string name="permission_r_for_record_audio">允许录音权限后才能正常使用相关功能</string>
+    <string name="permission_r_for_take_video">允许相应权限后才能正常使用摄像功能</string>
+    <string name="label_save">保存</string>
+    <string name="msg_empty_nick">请填写你的昵称</string>
+    <string name="msg_nick_overlong">请将昵称保持在%s各字以内</string>
+    <string name="msg_success_to_complete_profile">修改资料成功</string>
+    <string name="msg_fail_to_complete_profile">修改资料失败</string>
+    <string name="msg_error">出错了，请稍后再试</string>
+    <string name="label_price">￥ %s</string>
+</resources>

@@ -1,0 +1,371 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.hunliji.tracker'
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('MarryMemo.keystore')
+            keyAlias 'marrymemo'
+            keyPassword 'suncloud'
+            storePassword 'suncloud'
+            v2SigningEnabled false
+        }
+        release {
+            storeFile file('MarryMemo.keystore')
+            keyAlias 'marrymemo'
+            keyPassword 'suncloud'
+            storePassword 'suncloud'
+            v2SigningEnabled false
+        }
+    }
+    compileSdkVersion COMPILE_SDK_VERSION
+    buildToolsVersion BUILD_TOOLS_VERSION
+    defaultConfig {
+        multiDexEnabled = true
+        applicationId 'me.suncloud.marrymemo'
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        flavorDimensions "versionCode"
+        versionCode 755
+        versionName "7.5.6.1"
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+        manifestPlaceholders = [
+                app_name        : "@string/app_name2",
+                app_launch_name : "@string/app_name",
+                GETUI_APP_ID    : "pzX8TlwHbFAsnpTLE3Cgp7",
+                GETUI_APP_KEY   : "GQEXrhLdeQ8f6s4dvSAcf3",
+                GETUI_APP_SECRET: "uQE9CYxbQ59g3lhlxbp9L5"
+        ]
+
+        // ARouter支持
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        buildConfigField "boolean", "APP_DEBUG", "true"
+        buildConfigField "boolean", "KEPLER_DEBUG", "false"
+        buildConfigField "int", "FEATURE_PORT", "80"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+            debuggable false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+//            manifestPlaceholders = [
+//                    GETUI_APP_ID    : "59NUuR6J5p6s6p7JWTyrI8",
+//                    GETUI_APP_KEY   : "7uS1EUZtSR7v4LADRXlCX9",
+//                    GETUI_APP_SECRET: "ATJgmR9fKd8gz29gWEepo6"
+//            ]
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/service/com.fasterxml.jackson.core'
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['jniLibs']
+        }
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    productFlavors {
+        ci {} // ci_build自动构建特别定义的flavor，没有其他用途
+        gettuitest {
+            manifestPlaceholders =
+                    [
+                            GETUI_APP_ID    : "59NUuR6J5p6s6p7JWTyrI8",
+                            GETUI_APP_KEY   : "7uS1EUZtSR7v4LADRXlCX9",
+                            GETUI_APP_SECRET: "ATJgmR9fKd8gz29gWEepo6"
+                    ]
+        }
+        m360 {
+            buildConfigField "boolean", "APP_DEBUG", "false"
+            manifestPlaceholders = [app_name: "@string/app_name"]
+        }
+        portal {
+            buildConfigField "boolean", "APP_DEBUG", "false"
+        }
+        update {
+            buildConfigField "boolean", "APP_DEBUG", "false"
+        }
+        kepler {
+            buildConfigField "boolean", "APP_DEBUG", "false"
+            buildConfigField "boolean", "KEPLER_DEBUG", "true"
+        }
+        featureA {
+            applicationId 'me.suncloud.marrymemoA'
+            buildConfigField "int", "FEATURE_PORT", "8083"
+            resValue "string", "app_feature_name", "婚礼纪A"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+        featureB {
+            applicationId 'me.suncloud.marrymemoB'
+            buildConfigField "int", "FEATURE_PORT", "8094"
+            resValue "string", "app_feature_name", "婚礼纪B"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+        featureC {
+            applicationId 'me.suncloud.marrymemoC'
+            resValue "string", "app_feature_name", "婚礼纪C"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+        featureD {
+            applicationId 'me.suncloud.marrymemoD'
+            resValue "string", "app_feature_name", "婚礼纪D"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+        featureE {
+            applicationId 'me.suncloud.marrymemoE'
+            resValue "string", "app_feature_name", "婚礼纪E"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+        featureF {
+            applicationId 'me.suncloud.marrymemoF'
+            resValue "string", "app_feature_name", "婚礼纪F"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+        featureG {
+            applicationId 'me.suncloud.marrymemoG'
+            buildConfigField "int", "FEATURE_PORT", "8092"
+            resValue "string", "app_feature_name", "婚礼纪G"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+        featureH {
+            applicationId 'me.suncloud.marrymemoH'
+            resValue "string", "app_feature_name", "婚礼纪H"
+            manifestPlaceholders =
+                    [
+                            app_name       : "@string/app_feature_name",
+                            app_launch_name: "@string/app_feature_name"
+                    ]
+        }
+    }
+
+    productFlavors.all {
+        flavor ->
+            flavor.addManifestPlaceholders([UMENG_CHANNEL_VALUE: name, HLJ_CHANNEL_VALUE: name])
+    }
+
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                outputFileName = "hlj-${variant.productFlavors[0].name}-${defaultConfig.versionName}-${variant.buildType.name}.apk".toLowerCase()
+            }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+    maven {
+        url "https://jitpack.io"
+    }
+    jcenter()
+    maven {
+        // 个推地址
+        url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"
+    }
+}
+
+dependencies {
+    /*****************************本地module引入*******************************/
+    implementation project(':hljcalendarlibrary')
+    implementation project(':hljcardcustomerlibrary')
+    implementation project(':hljcarlibrary')
+    implementation project(':hljcardlibrary')
+    implementation project(':hljchatlibrary')
+    implementation project(':hljcommonlibrary')
+    implementation project(':hljcommonviewlibrary')
+    implementation project(':hljdebuglibrary')
+    implementation project(':hljemojilibrary')
+    implementation project(':hljhttplibrary')
+    implementation project(':hljimagelibrary')
+    implementation project(':hljinsurancelibrary')
+    implementation project(':hljkefulibrary')
+    implementation project(':hljlivelibrary')
+    implementation project(':hljmaplibrary')
+    implementation project(':hljnotelibrary')
+    implementation project(':hljpaymentlibrary')
+    implementation project(':hljpushlibrary')
+    implementation project(':hljquestionanswer')
+    implementation project(':hljsharelibrary')
+    implementation project(':hljtrackerlibrary')
+    implementation project(':hljupdatelibrary')
+    implementation project(':hljvideolibrary')
+    implementation project(':hljweblibrary')
+
+    implementation project(':DragListlibrary')
+    implementation project(':PhotoViewlibrary')
+    implementation project(':PullToRefreshlibrary')
+    implementation project(':RoundedImageViewlibrary')
+    implementation project(':SliderLibrary')
+    implementation project(':StickyListViewlibrary')
+    implementation project(':stickyheaderrecyclerviewlibrary')
+    implementation project(':SwipeBackLibrary')
+    implementation project(':wheel-lib')
+    implementation project(':wheelpickerlibrary')
+    /*****************************本地module引入*******************************/
+
+    /*****************************本地jar包引入*******************************/
+    implementation files('libs/commons-codec.jar')
+    implementation files('libs/disklrucache-1.3.1.jar')
+    implementation files('libs/EventBus-2.4.0.jar')
+    implementation files('libs/TalkingData_Analytics_Android_SDK_V2.2.48.jar')
+    implementation(name: 'kepler-4.0.0', ext: 'aar')
+    /*****************************本地jar包引入*******************************/
+
+    /*****************************远程第三方库引入*******************************/
+    implementation "com.android.support:appcompat-v7:$APP_COMPAT_V7_VERSION"
+    implementation "com.android.support:recyclerview-v7:$RECYCLERVIEW_V7_VERSION"
+    implementation "com.android.support:support-v4:$SUPPORT_V4_VERSION"
+    implementation "com.android.support:cardview-v7:$CARDVIEW_V7_VERSION"
+    implementation "com.android.support:gridlayout-v7:$GRID_LAYOUT_V7_VERSION"
+    implementation "com.android.support:design:$DESIGHT_VERSION"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.android.support:multidex:1.0.2'
+
+    implementation 'com.alibaba:arouter-api:1.2.1'
+    implementation 'com.amap.api:3dmap:latest.integration'
+    implementation 'com.amap.api:search:latest.integration'
+    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.dinuscxj:pullzoomrecyclerview:1.0.2'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.8.5'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+    implementation 'com.getui:sdk:2.10.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.1.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.1.1@aar'
+    implementation 'com.github.hotchemi:permissionsdispatcher:2.1.3'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+    implementation 'com.google.android.gms:play-services-basement:11.8.0'
+    implementation 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.21'
+    implementation('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar') {
+        transitive = true
+    }
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.koushikdutta.async:androidasync:2.1.9'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.4.0'
+    implementation 'com.umeng.analytics:umeng-analytics:5.4.1'
+    implementation 'com.sunfusheng:marqueeview:1.3.3'
+
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.2.3'
+    implementation 'joda-time:joda-time:2.9.6'
+    implementation 'net.robinx:lib.blur:1.0.1'
+    /*****************************远程第三方库引入*******************************/
+
+    /*****************************annotationProcessor*******************************/
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    annotationProcessor 'com.github.hotchemi:permissionsdispatcher-processor:2.1.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    /*****************************annotationProcessor*******************************/
+}
+
+//点击事件收集
+import org.objectweb.asm.Opcodes
+
+trackerConfig {
+
+    showLog = true
+    watchTime = true
+    modifyClasses = ['suncloud', 'hunliji', 'butterknife.internal']
+    modifyInterfaceMethods = [
+            'android/view/View$OnClickListener': [
+                    ['method'            : 'onClick',
+                     'paramsDesc'        : '(Landroid/view/View;)V',
+                     'modifyClass'       : 'com/hunliji/hljcommonlibrary/view_tracker/HljViewTracker',
+                     'modifyMethod'      : 'fireViewClickEvent',
+                     'modifyParamsDesc'  : '(Landroid/view/View;)V',
+                     'modifyParamOpcodes': [
+                             ['opcode'     : Opcodes.ALOAD,
+                              'opcodeIndex': 1
+                             ]
+                     ]]
+            ]
+    ]
+}
+
+apply plugin: 'com.google.gms.google-services'

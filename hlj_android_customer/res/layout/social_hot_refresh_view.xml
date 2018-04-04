@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/social_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorBackground"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableRight="@drawable/icon_refresh_blue"
+            android:drawablePadding="4dp"
+            android:textSize="@dimen/ex_medium_text_size2"
+            android:textColor="@color/blue"
+            android:text="@string/label_social_hot_refresh_tip"/>
+    </RelativeLayout>
+
+</RelativeLayout>

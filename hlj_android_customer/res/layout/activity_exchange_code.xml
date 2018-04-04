@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <EditText
+            android:id="@+id/code"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/sp_r2_stroke_line_solid_white"
+            android:gravity="center_vertical"
+            android:hint="@string/label_input_coupon_code"
+            android:paddingLeft="15dp"
+            android:textColor="@color/colorBlack2"
+            android:textColorHint="@color/colorGray"
+            android:textSize="@dimen/medium_text_size1"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/sl_r18_primary_2_dark"
+        android:gravity="center"
+        android:onClick="onExchange"
+        android:layout_below="@id/code_layout"
+        android:text="@string/label_exchange"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size"
+        />
+
+    <include layout="@layout/progressbar_layout"/>
+</RelativeLayout>

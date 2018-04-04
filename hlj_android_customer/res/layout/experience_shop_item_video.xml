@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:paddingBottom="24dp">
+    <!--视屏16:9-->
+    <!--206dp-->
+
+    <com.slider.library.SliderLayout
+        android:id="@+id/view_pager_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:is_pager_animation="false"
+        app:touch_pause="false"
+        app:pager_animation_span="5000" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="65dp"
+            android:layout_marginTop="22dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="我们为你提供"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+        <!--用来撑开距离-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="63dp"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:text="一站式统筹，省心省力省钱"
+            android:textSize="@dimen/medium_text_size1"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="49dp"
+            android:layout_height="37dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="19dp"
+            android:background="@color/colorWhite"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:id="@+id/layout_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:gravity="bottom|right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_current_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/ex_medium_text_size2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:includeFontPadding="false"
+                    android:text="/"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/small_text_size" />
+
+                <TextView
+                    android:id="@+id/tv_page_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

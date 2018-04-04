@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <com.hunliji.marrybiz.widget.CheckableLinearGroup
+        android:id="@+id/shop_data_tab"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_below="@id/action_layout"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+            android:id="@+id/store_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:isChecked="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/label_store_data_yesterday"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/store_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:text="0"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/ex_large_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/sl_color_trans_2_primary"
+                android:duplicateParentState="true" />
+
+        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="14dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorLine"
+            android:visibility="gone" />
+
+        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+            android:id="@+id/work_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/label_work_data_yesterday"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/work_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="top"
+                    android:text="0"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/ex_large_text_size" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/sl_color_trans_2_primary"
+                android:duplicateParentState="true" />
+
+        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+            android:id="@+id/case_menu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            app:isChecked="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="bottom"
+                    android:paddingBottom="6dp"
+                    android:text="@string/label_case_data_yesterday"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/case_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:gravity="top"
+                    android:text="0"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/ex_large_text_size" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/sl_color_trans_2_primary"
+                android:duplicateParentState="true" />
+        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+    </com.hunliji.marrybiz.widget.CheckableLinearGroup>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/shop_data_tab"
+        android:background="@color/colorLine" />
+
+    <com.hunliji.marrybiz.widget.CustomViewPager
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:layerType="software" />
+
+    <include layout="@layout/list_empty_view" />
+
+    <include layout="@layout/progressbar_layout" />
+</RelativeLayout>

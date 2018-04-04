@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_pic"
+        tools:layout_width="120dp"
+        tools:layout_height="180dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_theme"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_use"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="24dp">
+
+            <ImageView
+                android:src="@mipmap/icon_shop_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/medium_text_size3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在使用"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title_theme"
+        android:paddingTop="8dp"
+        android:textSize="@dimen/medium_text_size2"
+        android:textColor="@color/colorBlack2"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

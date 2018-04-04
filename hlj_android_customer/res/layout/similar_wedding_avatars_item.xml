@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="6dp">
+
+    <com.makeramen.rounded.RoundedImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_avatar_primary"
+        app:border_color="@color/colorWhite"
+        app:border_width="1dp"
+        app:corner_radius="14dp" />
+
+</RelativeLayout>

@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_back_white" />
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/large_text_size2"
+                tools:text="@string/app_name" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_arrow_down_gray_26_14"
+                android:tint="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_filter"
+            style="@style/ActionButtonItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:includeFontPadding="false"
+            android:text="筛选吉日"
+            android:textColor="@color/colorWhite" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_layout">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.hunliji.hunlijicalendar.HLJCalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    app:auspicious_badge_color="@color/colorPrimary"
+                    app:auspicious_badge_size="14dp"
+                    app:background_color="@color/colorWhite"
+                    app:board_margin="4dp"
+                    app:calendar_padding_bottom="8dp"
+                    app:calendar_padding_left="8dp"
+                    app:calendar_padding_right="8dp"
+                    app:calendar_padding_top="8dp"
+                    app:date_lunar_text_color="@color/colorGray"
+                    app:date_lunar_text_margin_top="2dp"
+                    app:date_lunar_text_size="@dimen/small_text_size"
+                    app:date_text_color="@color/colorBlack2"
+                    app:date_text_size="@dimen/medium_text_size2"
+                    app:dot_color="@color/colorGray3"
+                    app:dot_margin_top="2dp"
+                    app:dot_size="4dp"
+                    app:selected_background_color="@color/colorPrimary"
+                    app:selected_background_line_size="1dp"
+                    app:selected_style="true"
+                    app:shadow_flag_color="#FD8F81" />
+
+                <ImageView
+                    android:id="@+id/img_brand_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/calendar_view"
+                    android:scaleType="centerCrop" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_recycler_holder"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/calendar_view"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="20dp"
+                        android:clipToPadding="false"
+                        android:overScrollMode="never"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:scrollbars="none" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/hlj_progressbar___cm" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

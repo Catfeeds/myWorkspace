@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.hunliji.hljimagelibrary.views.widgets.HackyViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/action_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#00000000"
+            android:clickable="true">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:minWidth="45dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_cross_close_white_26_26" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/large_text_size2" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/ib_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/ib_more"
+                    android:layout_toStartOf="@+id/ib_more"
+                    android:background="@null"
+                    android:minWidth="45dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_share_white_44_44" />
+
+                <ImageButton
+                    android:id="@+id/ib_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@null"
+                    android:minWidth="45dp"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_more_menu_white_10_40" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:minHeight="44dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#7F000000"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="6dp"
+                android:padding="16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size2"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_no_merchant"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/line_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentTop="true"
+                    android:background="#66ffffff" />
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_no_merchant_stay" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toLeftOf="@+id/tv_none_live"
+                    android:layout_toRightOf="@+id/iv_logo"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size1"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_none_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="16dp"
+                    android:text="@string/label_no_stay_in_hlj"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#181818"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/button_layout"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/sp_r16_black2"
+                    android:gravity="center_vertical"
+                    android:hint="@string/label_comment_wedding_dress"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="12dp"
+                    android:textColorHint="@color/colorGray2" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_praise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center_horizontal|bottom"
+                    android:minWidth="55dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="3dp">
+
+                    <ImageView
+                        android:id="@+id/iv_praise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_praise_white_40_40_3" />
+
+                    <TextView
+                        android:id="@+id/tv_praise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_praise2"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/small_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_collect"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="3dp">
+
+                    <ImageView
+                        android:id="@+id/iv_collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_collect_white_44_44" />
+
+                    <TextView
+                        android:id="@+id/tv_collect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_collect"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/small_text_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_merchant"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="vertical"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="3dp">
+
+                    <ImageView
+                        android:id="@+id/iv_merchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@mipmap/icon_merchant_shop" />
+
+                    <TextView
+                        android:id="@+id/tv_merchant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_merchant_tag"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/small_text_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

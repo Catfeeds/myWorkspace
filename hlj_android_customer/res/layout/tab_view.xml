@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingBottom="4dp"
+    android:clickable="true"
+    android:layout_gravity="center_horizontal|bottom"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside" />
+
+    <View
+        android:id="@+id/news"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_alignTop="@id/icon"
+        android:layout_toRightOf="@id/icon"
+        android:background="@drawable/sp_oval_accent"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/news_count"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_alignTop="@id/icon"
+        android:layout_toRightOf="@id/icon"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/small_text_size"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:background="@drawable/sp_r8_accent"
+        android:minWidth="16dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:includeFontPadding="false"
+        android:textColor="@color/main_menu_text_color"
+        android:textSize="@dimen/small_text_size" />
+</RelativeLayout>

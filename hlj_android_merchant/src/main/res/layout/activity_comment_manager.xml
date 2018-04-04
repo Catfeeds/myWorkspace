@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.hunliji.marrybiz.widget.CheckableRelativeGroup
+        android:id="@+id/check_group_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_main_menu"
+        android:orientation="horizontal">
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_commentary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            app:isChecked2="true">
+
+            <ImageView
+                android:id="@+id/img_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:src="@drawable/sl_ic_shop_data" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:duplicateParentState="true"
+                android:includeFontPadding="false"
+                android:text="@string/label_commentary"
+                android:textColor="@color/gray1_primary"
+                android:textSize="@dimen/small_text_size" />
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_comment_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:src="@drawable/sl_ic_business_rank" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_msg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:duplicateParentState="true"
+                android:includeFontPadding="false"
+                android:text="@string/label_comment_list"
+                android:textColor="@color/gray1_primary"
+                android:textSize="@dimen/small_text_size" />
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+        <com.hunliji.marrybiz.widget.CheckableRelativeLayout
+            android:id="@+id/cb_comment_question"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                android:duplicateParentState="true"
+                android:src="@drawable/sl_ic_comment_ask" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_question"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:duplicateParentState="true"
+                android:includeFontPadding="false"
+                android:text="@string/label_comment_question"
+                android:textColor="@color/gray1_primary"
+                android:textSize="@dimen/small_text_size" />
+
+        </com.hunliji.marrybiz.widget.CheckableRelativeLayout>
+
+    </com.hunliji.marrybiz.widget.CheckableRelativeGroup>
+
+
+</LinearLayout>

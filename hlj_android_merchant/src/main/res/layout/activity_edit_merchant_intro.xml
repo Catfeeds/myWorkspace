@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hunliji.marrybiz.view.shop.EditShopIntroActivity">
+
+    <EditText
+        android:id="@+id/et_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_layout"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:gravity="left|top"
+        android:hint="@string/hint_merchant_intro"
+        android:minLines="10"
+        android:padding="12dp"
+        android:textColor="@color/colorBlack2"
+        android:textColorHint="@color/colorGray"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/et_intro"
+        android:background="@color/colorLine" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/et_intro"
+        android:background="@color/colorLine" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_intro"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:text="填写店铺简介，介绍要有亮点（无网址、微信、手机号、支付方式等），100字以内"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/medium_text_size2" />
+
+</RelativeLayout>

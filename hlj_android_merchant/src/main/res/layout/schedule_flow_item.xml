@@ -1,0 +1,12 @@
+<CheckBox android:id="@+id/item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="30dp"
+    android:background="@drawable/sl_r15_stroke_gray_2_primary"
+    android:button="@null"
+    android:ellipsize="end"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:maxLines="1"
+    android:textColor="@color/gray1_white"
+    android:textSize="@dimen/medium_text_size1" />

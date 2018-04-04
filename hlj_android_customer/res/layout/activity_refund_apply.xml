@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.suncloud.marrymemo.view.RefundApplyActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/transparent_white">
+
+        <ImageButton
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="onBackPressed"
+            android:src="@mipmap/icon_back_primary"/>
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/title_activity_refund_apply"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_layout"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_refund_reason"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="*"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/medium_text_size2"/>
+            </LinearLayout>
+
+            <include layout="@layout/line_layout"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:clickable="true"
+                android:onClick="onSelectReason"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tv_refund_reason"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_select_refund_reason"
+                    android:textColorHint="@color/colorGray"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_arrow_right_gray_14_26"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/line_layout"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_refund_memo"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_optional"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2"/>
+            </LinearLayout>
+
+            <include layout="@layout/line_layout"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <EditText
+                    android:id="@+id/et_refund_explain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/hint_enter_refund_explain"
+                    android:textColorHint="@color/colorGray"
+                    android:maxLines="10"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/line_layout"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="24dp"
+                android:onClick="onSubmit"
+                android:background="@drawable/sl_r18_primary_2_dark"
+                android:gravity="center"
+                android:text="@string/label_submit"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/large_text_size"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/progressbar_layout"/>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.hunliji.hljnotelibrary.views.widgets.NoteInspirationView
+        android:id="@+id/note_inspiration_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/scroll_hint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/note_inspiration_view"
+        android:layout_alignTop="@+id/note_inspiration_view"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/scroll_hint_circle_view"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-36dp"
+            android:layout_toRightOf="@+id/img_scroll_hint"
+            android:background="@drawable/sp_oval_primary90_stroke_primary30" />
+
+        <ImageView
+            android:id="@+id/img_scroll_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scroll_hint_circle_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/image_hint_note_scroll" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/icon_check_round_primary_36_36" android:state_checked="true" />
+    <item android:drawable="@mipmap/icon_cicle_primary_36_36"/>
+</selector>

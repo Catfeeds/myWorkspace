@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <array name="salaries">
+        <item>3000以下</item>
+        <item>3000-5000</item>
+        <item>5001-10000</item>
+        <item>10001-15000</item>
+        <item>15000以上</item>
+    </array>
+
+    <array name="industries">
+        <item>农业／林业／牧业／渔业</item>
+        <item>采矿业</item>
+        <item>制造业</item>
+        <item>电力／热力／燃气／水电生产／供应业</item>
+        <item>建筑业</item>
+        <item>批发／零售业</item>
+        <item>交通运输／仓储／邮政业</item>
+        <item>住宿／餐饮业</item>
+        <item>信息传输／软件／信息技术服务业</item>
+        <item>金融业</item>
+        <item>房地产业</item>
+        <item>租赁／商务服务业</item>
+        <item>科学研究／技术服务业</item>
+        <item>水利／环境／公共设施管理业</item>
+        <item>居民服务／修理／其他服务业</item>
+        <item>教育</item>
+        <item>卫生／社会工作</item>
+        <item>文化／体育／娱乐业</item>
+        <item>公共管理／社会保障／社会组织</item>
+        <item>国际组织</item>
+        <item>其他</item>
+    </array>
+
+    <array name="natureOfWorks">
+        <item>普通工人</item>
+        <item>公司白领</item>
+        <item>私营业主</item>
+        <item>公务员</item>
+        <item>自由职业者</item>
+    </array>
+
+    <array name="bulkProperties">
+        <item>自然人</item>
+        <item>法人</item>
+        <item>机构</item>
+    </array>
+
+    <array name="paymentSrcs">
+        <item>工资收入</item>
+        <item>个体经营收入</item>
+        <item>其他非工资性收入</item>
+    </array>
+
+    <array name="otherLoans">
+        <item>无</item>
+        <item>其他网贷在还借款&lt;20万</item>
+        <item>其他网贷在还借款20万-50万</item>
+        <item>其他网贷在还借款50万-80万</item>
+        <item>其他网贷在还借款&gt;80万</item>
+    </array>
+
+    <array name="debts">
+        <item>无</item>
+        <item>近一年债务总额&lt;20万</item>
+        <item>近一年债务总额20万-50万</item>
+        <item>近一年债务总额50万-80万</item>
+        <item>近一年债务总额&gt;80万</item>
+    </array>
+
+    <array name="creditInfos">
+        <item>信用良好，无逾期</item>
+        <item>逾期少于3次</item>
+        <item>逾期超过3次</item>
+    </array>
+
+    <array name="useOfFunds">
+        <item>个人消费</item>
+        <item>经营周转</item>
+        <item>其他</item>
+    </array>
+
+    <array name="repaymentAbilities">
+        <item>正常</item>
+        <item>个人收入减少</item>
+        <item>近期有重大支出</item>
+    </array>
+
+    <array name="litigations">
+        <item>无</item>
+        <item>警告</item>
+        <item>罚款</item>
+        <item>其他法律、行政法规规定的其他行政处罚</item>
+    </array>
+
+    <array name="situationStatuss">
+        <item>正常</item>
+        <item>亏损</item>
+        <item>盈余</item>
+    </array>
+
+    <array name="contactTypes">
+        <item>父母</item>
+        <item>亲友</item>
+        <item>同事</item>
+    </array>
+
+</resources>

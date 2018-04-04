@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:id="@+id/auth_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/riv_answer_auth_avatar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                app:corner_radius="18dp" />
+
+            <ImageView
+                android:id="@+id/iv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/riv_answer_auth_avatar"
+                android:layout_alignRight="@+id/riv_answer_auth_avatar"
+                android:scaleType="centerCrop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_answer_auth_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_answer_auth_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_answer_auth_name"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_answer_wedding_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_answer_auth_name"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/tv_answer_auth_description"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/praise_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:gravity="center_vertical">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+            android:id="@+id/cl_praise_view"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp">
+
+            <ImageView
+                android:id="@+id/btn_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:duplicateParentState="true"
+                android:src="@drawable/sl_praise_qa" />
+
+            <TextView
+                android:id="@+id/up_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:duplicateParentState="true"
+                android:textColor="@color/gray13_primary"
+                android:textSize="@dimen/medium_text_size3" />
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout
+            android:id="@+id/cl_oppose_view"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="4dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btn_oppose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:duplicateParentState="true"
+                android:src="@drawable/sl_oppose_qa" />
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_hot_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_hot_tag_113_97"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/auth_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorLine" />
+</RelativeLayout>

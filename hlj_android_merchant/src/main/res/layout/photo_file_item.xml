@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.marrybiz.widget.CheckableLinearLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sl_color_white_2_background2"
+    android:gravity="center_vertical"
+    android:padding="12dp">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/file_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/colorLine2"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_default_pic" />
+
+        <ImageView
+            android:id="@+id/icon_selected"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_dot_orange_28_28"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/file_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/file_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/file_title"
+            android:layout_marginLeft="-25dp"
+            android:layout_toRightOf="@+id/file_title"
+            android:paddingBottom="1dp"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="17dp"
+        android:layout_height="13dp"
+        android:layout_marginLeft="12dp"
+        android:contentDescription="@string/app_name"
+        android:duplicateParentState="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/sl_ic_trans_2_tick_red" />
+
+</com.hunliji.marrybiz.widget.CheckableLinearLayout2>

@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/header_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorWhite" />
+
+    <!--banner-->
+    <RelativeLayout
+        android:id="@+id/top_posters_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:visibility="gone">
+
+        <com.slider.library.ClipSliderLayout
+            android:id="@+id/posters_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:overScrollMode="never"
+            app:pager_animation="Clip"
+            app:pager_animation_span="500" />
+
+        <com.slider.library.Indicators.CirclePageExIndicator
+            android:id="@+id/flow_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            app:circleOffset="4dp"
+            app:circleWidth="10dp"
+            app:circleradius="1dp"
+            app:fillColor="@color/colorWhite"
+            app:pageColor="#66ffffff"
+            app:strokeWidth="0dp" />
+
+    </RelativeLayout>
+
+    <!--button-->
+    <LinearLayout
+        android:id="@+id/layout_poster_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljHorizontalScrollView
+            android:id="@+id/buttons_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/grid_poster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:overScrollMode="always"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:columnCount="6" />
+        </com.hunliji.hljcommonlibrary.views.widgets.HljHorizontalScrollView>
+
+        <FrameLayout
+            android:id="@+id/buttons_scroll2"
+            android:layout_width="40dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_scroll_bar_track">
+
+            <View
+                android:id="@+id/scroll_content"
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:background="@drawable/bg_scroll_bar" />
+
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="14dp" />
+
+        <View
+            android:id="@+id/line_poster_buttons"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+    </LinearLayout>
+
+    <!--首页大促-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/single_promotion_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorImageBackground"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--旅拍-->
+    <LinearLayout
+        android:id="@+id/travel_poster_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!--旅拍title-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="@string/label_global_theme"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_more_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:drawablePadding="6dp"
+                android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                android:gravity="center"
+                android:text="更多目的地"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+
+        </RelativeLayout>
+
+        <!--旅拍图片, 三张图-->
+        <LinearLayout
+            android:id="@+id/img_travel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone">
+            <!--1:1-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--旅拍图片, 四张图-->
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/img_travel_four_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone"
+            app:columnCount="2"
+            app:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="visible" />
+
+        </android.support.v7.widget.GridLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="6dp" />
+
+        <!--热门目的地-->
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/lvpai_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorWhite"
+            android:overScrollMode="always"
+            android:paddingLeft="16dp"
+            android:paddingRight="11dp"
+            app:columnCount="4" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <View
+            android:id="@+id/line_travel_poster"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+    </LinearLayout>
+
+    <!--新人备婚流程-->
+    <LinearLayout
+        android:id="@+id/ll_wedding_flow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!--新人备婚流程title-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="新人备婚流程"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+                android:id="@+id/wedding_flow_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp" />
+
+        </RelativeLayout>
+
+        <me.suncloud.marrymemo.widget.CustomViewPager
+            android:id="@+id/wedding_flow_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!--体验店-->
+        <!--686:220-->
+        <ImageView
+            android:id="@+id/img_experience_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <View
+            android:id="@+id/line_wedding_flow"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+    </LinearLayout>
+
+    <!--婚品采购 婚品坑位-->
+    <LinearLayout
+        android:id="@+id/layout_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--婚品title-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="婚品采购"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_more_product"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:drawablePadding="6dp"
+                android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                android:gravity="center"
+                android:paddingLeft="65dp"
+                android:text="更多"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </RelativeLayout>
+
+        <!--婚品图片-->
+        <LinearLayout
+            android:id="@+id/layout_product_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <View
+            android:id="@+id/line_product"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+    </LinearLayout>
+
+    <!--婚宴酒店-->
+    <LinearLayout
+        android:id="@+id/layout_hotel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--婚宴酒店title-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="婚宴省心订"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_more_hotel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:drawablePadding="6dp"
+                android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                android:gravity="center"
+                android:paddingLeft="65dp"
+                android:text="查看全部酒店"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </RelativeLayout>
+
+        <!--婚宴酒店图片-->
+        <LinearLayout
+            android:id="@+id/layout_hotel_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <View
+            android:id="@+id/line_hotel"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+    </LinearLayout>
+
+    <!--备婚必逛 -->
+    <LinearLayout
+        android:id="@+id/marriage_stroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!--备婚title-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:text="备婚必逛"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/img_stroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <View
+            android:id="@+id/line_marriage_stroll"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+    </LinearLayout>
+
+    <!--单图banner-->
+    <ImageView
+        android:id="@+id/single_poster_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorImageBackground"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+</LinearLayout>

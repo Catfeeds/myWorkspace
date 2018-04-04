@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/rl_merchant"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/sl_color_white_2_background2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/tv_merchant_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1"
+                tools:text="商家名字" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:src="@mipmap/icon_arrow_right_dark_gray_14_26" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:background="@color/colorLine" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/ib_complain"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp">
+
+            <ImageView
+                android:id="@+id/iv_ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_question___qa" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="5dp"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2"
+                android:textStyle="bold"
+                tools:text="闻啼啼啼啼啼啼啼啼啼闻闻啼啼啼啼啼啼啼啼啼闻啼啼啼i团体体啼啼啼i团体体" />
+
+            <TextView
+                android:id="@+id/tv_complain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:text="@string/label_complaining___qa"
+                android:textColor="@color/colorGray"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/ib_complain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/sl_clickable_background"
+            android:paddingBottom="18dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="18dp"
+            android:src="@mipmap/icon_comment_detail_more___qa"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tv_question_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3"
+            tools:text="2017-09-10" />
+
+        <TextView
+            android:id="@+id/tv_question_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_question_time"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3"
+            android:visibility="gone"
+            tools:text="股股股股的问题" />
+
+        <TextView
+            android:id="@+id/tv_same_question"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/sp_r13_half_stroke_line2_solid_trans"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:minWidth="65dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2"
+            tools:text="同问" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:drawableLeft="@mipmap/icon_answer_green___qa"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size1"
+        tools:text="共%s条回答" />
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="100dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/colorLine" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/icon_empty_message" />
+
+        <TextView
+            android:id="@+id/tv_empty_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:text="体验过服务的人正在赶来回答的路上"
+            android:textColor="@color/colorGray" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

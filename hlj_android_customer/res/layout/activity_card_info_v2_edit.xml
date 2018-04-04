@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="hideKeyboard"
+    android:scrollbars="none"
+    tools:context=".view.CardV2InfoEditActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/label_card_title"
+                android:layout_marginLeft="16dp"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_card_title"
+                android:inputType="text"
+                android:maxLength="20"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:singleLine="true"
+                android:textColor="@color/colorBlack3"
+                android:textColorHint="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size3">
+
+                <requestFocus />
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:paddingLeft="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_groom_name"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <EditText
+                    android:id="@+id/groom_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_groom_name2"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack3"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size3">
+                </EditText>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_bride_name"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <EditText
+                    android:id="@+id/bride_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_bride_name2"
+                    android:inputType="text"
+                    android:maxLength="16"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack3"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size3" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/hint_wedding_time"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size2" />
+
+            <EditText
+                android:id="@+id/wedding_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_wedding_time2"
+                android:inputType="datetime"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textColor="@color/colorBlack3"
+                android:textColorHint="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/hint_wedding_address"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <EditText
+                    android:id="@+id/wedding_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_wedding_address2"
+                    android:inputType="text"
+                    android:maxLength="60"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorBlack3"
+                    android:textColorHint="@color/colorGray2"
+                    android:textSize="@dimen/medium_text_size3" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/colorLine" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:clickable="true"
+                android:drawableLeft="@mipmap/icon_location_primary_28_34"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                android:gravity="center_vertical"
+                android:onClick="showMap"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/hint_wedding_location"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size1" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/colorGray"
+            android:text="@string/hint_wedding_location2"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+</ScrollView>

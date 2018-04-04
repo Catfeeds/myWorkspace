@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/tv_price"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size1"
+        tools:text="百年好合宴" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/iv_arrow"
+        android:text="¥4688/桌"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_arrow_right_dark_gray_14_26"
+        android:tint="@color/colorGray" />
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_horizontal"
+        android:layout_marginLeft="16dp" />
+
+</RelativeLayout>

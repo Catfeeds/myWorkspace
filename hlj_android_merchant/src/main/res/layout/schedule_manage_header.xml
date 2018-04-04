@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.hunliji.hunlijicalendar.HLJScheduleCalendarView
+            android:id="@+id/calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            app:background_color="@color/colorWhite"
+            app:board_margin="7.4dp"
+            app:calendar_padding_bottom="8dp"
+            app:calendar_padding_left="8dp"
+            app:calendar_padding_right="8dp"
+            app:calendar_padding_top="8dp"
+            app:date_lunar_text_color="@color/colorGray"
+            app:date_lunar_text_margin_top="4dp"
+            app:date_lunar_text_size="@dimen/small_text_size"
+            app:date_text_color="@color/colorBlack2"
+            app:date_text_size="@dimen/medium_text_size1"
+            app:dot_color="@color/colorPrimary"
+            app:dot_margin_top="2.92dp"
+            app:dot_size="5dp"
+            app:is_expandable_height="true"
+            app:selected_background_color="@color/colorPrimary"
+            app:selected_background_line_size="1dp"
+            app:shadow_flag_color="@color/colorGray3"
+            app:title_background_color="@color/colorBackground2" />
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/do_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/sp_r4_primary"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_should"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <TextView
+                    android:id="@+id/tv_can_do"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/sp_r4_black2"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/label_bogey"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <TextView
+                    android:id="@+id/tv_can_not_do"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <include layout="@layout/schedule_switch_header" />
+
+    </LinearLayout>
+
+</RelativeLayout>

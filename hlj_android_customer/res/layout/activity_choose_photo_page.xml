@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/photo_view_bg"
+    tools:context=".view.ChoosePhotoPageActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/transparent_black2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@null"
+            android:onClick="onBackPressed"
+            android:text="@string/label_back"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_large_text_size"/>
+
+
+        <me.suncloud.marrymemo.widget.CheckableLinearLayout2
+            android:id="@+id/selected_view"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:duplicateParentState="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sl_ic_photo_selected" />
+
+        </me.suncloud.marrymemo.widget.CheckableLinearLayout2>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/transparent_black2"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/choose_ok"
+            android:layout_width="98dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/sl_r15_primary_2_dark"
+            android:gravity="center"
+            android:enabled="false"
+            android:onClick="onChooseOk"
+            android:text="@string/label_choose_ok"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/medium_text_size1" />
+    </RelativeLayout>
+
+</RelativeLayout>

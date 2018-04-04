@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/root_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground2"
+        android:minHeight="50dp">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="7dp"
+            android:layout_toLeftOf="@+id/btn_add_emoji"
+            android:background="@drawable/sp_round15_white_stroke_gray3"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_post_comment___note"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:maxLength="140"
+            android:maxLines="5"
+            android:minHeight="30dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:textColor="@color/colorBlack2"
+            android:textColorHint="@color/colorGray2"
+            android:textSize="@dimen/ex_medium_text_size2" />
+
+        <ImageView
+            android:id="@+id/btn_add_emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_send"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:paddingBottom="10dp"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_face_black_50_50" />
+
+        <TextView
+            android:id="@+id/tv_send"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="16dp"
+            android:text="@string/btn_send_comment___note"
+            android:textColor="@color/colorBlack3"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/emoji_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/face_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.slider.library.Indicators.CirclePageIndicator
+            android:id="@+id/flow_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            app:circleradius="3dp"
+            app:fillColor="@color/colorWhite"
+            app:strokeColor="@color/colorGray3"
+            app:strokeWidth="0.5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

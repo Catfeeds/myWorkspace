@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/record_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/sp_r4_alpha_30_black">
+
+    <ImageView
+        android:id="@+id/iv_mic"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_record_animate_01___cm" />
+
+    <TextView
+        android:id="@+id/tv_record_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_move_up_to_cancel___cm"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size1" />
+</FrameLayout>

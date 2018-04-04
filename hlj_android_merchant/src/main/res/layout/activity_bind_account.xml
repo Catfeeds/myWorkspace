@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <include layout="@layout/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:text="@string/label_account"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <com.hunliji.marrybiz.widget.CheckableLinearGroup
+                        android:id="@+id/menu"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+                            android:id="@+id/bank"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:gravity="center_horizontal"
+                            app:isChecked="true">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@string/app_name"
+                                android:duplicateParentState="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sl_ic_sp_check" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/label_bank_account"
+                                android:textColor="@color/colorGray2"
+                                android:textSize="@dimen/medium_text_size1" />
+                        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+                        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+                            android:id="@+id/ali"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:contentDescription="@string/app_name"
+                                android:duplicateParentState="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/sl_ic_sp_check" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/label_ali_account"
+                                android:textColor="@color/colorGray2"
+                                android:textSize="@dimen/medium_text_size1" />
+                        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+                    </com.hunliji.marrybiz.widget.CheckableLinearGroup>
+                </LinearLayout>
+
+                <include
+                    layout="@layout/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp" />
+
+                <LinearLayout
+                    android:id="@+id/bank_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_bank_user_name"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_bank_user_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_bank_user_name"
+                            android:maxLength="19"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_bank_name"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_bank_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_bank_name"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_bank_account"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_bank_account"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_bank_account"
+                            android:inputType="number"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_bank_account_again"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_bank_account_again"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_bank_account_again"
+                            android:inputType="number"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_bank_address"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:id="@+id/bank_address"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawablePadding="8dp"
+                            android:drawableRight="@mipmap/icon_arrow_right_gray_14_26"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_bank_address"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_sub_bank"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_sub_bank"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_sub_bank"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ali_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_ali_account"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_ali_account"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_ali_account"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                    <include
+                        layout="@layout/line"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="@string/label_ali_user_name"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <EditText
+                            android:id="@+id/et_ali_user_name"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical|right"
+                            android:hint="@string/hint_ali_user_name"
+                            android:paddingRight="16dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/line" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/account_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/hint_account_bank"
+                android:textColor="@color/colorGray3"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/sl_r4_primary_2_dark"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/btn_open"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <include layout="@layout/progressbar_layout" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

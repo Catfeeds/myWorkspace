@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line"
+        style="@style/line_horizontal"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:duplicateParentState="true"
+        android:gravity="center_vertical"
+        android:paddingRight="16dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_quick_pay___pay" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/label_quick_pay___pay"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="13dp"
+            android:contentDescription="@string/app_name"
+            android:duplicateParentState="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/sl_ic_trans_2_tick_red" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <View
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:id="@+id/tv_current_card"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="49dp"
+            android:layout_marginRight="24dp"
+            android:layout_toLeftOf="@+id/icon_more"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <ImageView
+            android:id="@+id/icon_more"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:src="@mipmap/icon_arrow_down_gray_36_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorBackground" />
+
+    </RelativeLayout>
+
+</com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>

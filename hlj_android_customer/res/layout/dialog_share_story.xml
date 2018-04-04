@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_r6_white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/sp_r6_t_primary"
+        android:gravity="center"
+        android:text="@string/title_dialog_create_successful"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/label_share_to"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/medium_text_size2" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="52dp"
+        android:layout_marginRight="52dp"
+        android:layout_marginTop="9dp">
+
+        <LinearLayout
+            android:id="@+id/share_pengyou"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sl_round10_green4_2_gray3"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_share_pengyou_white_54_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/label_pengyou"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_weixing"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@+id/share_pengyou"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sl_round10_green2_2_gray3"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_wechat_white_54_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/label_weixin2"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_qq"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/share_pengyou"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sl_round10_blue6_2_gray3"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_qq_white_54_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/label_qq"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/share_weibo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/share_pengyou"
+            android:layout_toRightOf="@+id/share_pengyou"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/sl_round10_red_2_gray3"
+                android:padding="8dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/icon_weibo_white_54_48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/label_weibo2"
+                android:textColor="@color/colorBlack3"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

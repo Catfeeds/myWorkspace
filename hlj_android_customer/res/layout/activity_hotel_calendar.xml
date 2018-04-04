@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.HotelCalendarActivity">
+
+
+    <com.hunliji.hunlijicalendar.HLJHotelCalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:auspicious_badge_color="@color/colorPrimary"
+        app:auspicious_badge_size="14dp"
+        app:background_color="@color/colorWhite"
+        app:board_margin="4dp"
+        app:calendar_padding_bottom="8dp"
+        app:calendar_padding_left="8dp"
+        app:calendar_padding_right="8dp"
+        app:calendar_padding_top="8dp"
+        app:date_lunar_text_color="@color/colorGray"
+        app:date_lunar_text_margin_top="5dp"
+        app:date_lunar_text_size="@dimen/small_text_size"
+        app:date_text_color="@color/colorBlack2"
+        app:date_text_size="@dimen/medium_text_size2"
+        app:dot_color="@color/colorSuccess"
+        app:dot_margin_top="2dp"
+        app:dot_size="4dp"
+        app:selected_background_color="@color/colorPrimary"
+        app:selected_background_line_size="1dp"
+        app:selected_style="true"
+        app:shadow_flag_color="#FD8F81"
+        app:title_background_color = "@color/colorWhite">
+
+    </com.hunliji.hunlijicalendar.HLJHotelCalendarView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:background="@color/colorWhite"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:layout_above="@+id/btn_submit_calendar"/>
+    
+    <Button
+        android:id="@+id/btn_submit_calendar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/label_submit_calendar"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size"
+        android:background="@color/colorPrimary"/>
+
+    <View
+        android:id="@+id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground" />
+
+
+    <include
+        layout="@layout/progressbar_layout"
+        android:visibility="visible" />
+</RelativeLayout>

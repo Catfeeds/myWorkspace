@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorWhite" />
+
+    <include layout="@layout/line_layout___cm" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+
+    <Button
+        android:id="@+id/btn_create_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/sl_color_primary_2_dark"
+        android:text="@string/title_activity_create_coupon"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+</LinearLayout>

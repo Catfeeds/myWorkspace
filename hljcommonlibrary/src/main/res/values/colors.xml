@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?><!--婚礼纪APP用到的最基本的颜色值,通用的common的才会出现在这里-->
+<resources>
+
+    <color name="colorPrimary">#f83244</color>  <!-- 主色调，用于强调突出的文字、按钮等 -->
+    <color name="colorPrimaryDark">#e22d3e</color> <!-- 主色调点击色 -->
+    <color name="colorPrimaryLight">#feeaec</color> <!-- 主色调点击色 -->
+    <color name="colorAccent">#f83244</color>  <!-- 强调色，辅助主色 -->
+    <!--<color name="colorAccent2">#ffaf24</color> &lt;!&ndash; 强调色2，辅助主色&ndash;&gt;-->
+
+    <color name="colorSuccess">#46d787</color> <!-- 完成色，用于完成、可使用等-->
+    <color name="colorLink">#508cee</color> <!-- 链接色，用于链接，页面内主色过多时，用于按钮 -->
+
+    <color name="colorBlack">#000000</color> <!-- 黑1，用于详情页主标题等 -->
+    <color name="colorBlack2">#333333</color> <!-- 黑2，主要用于标题，部分用户内容文字 -->
+    <color name="colorBlack3">#666666</color> <!-- 黑3，主要文字内容 -->
+
+    <color name="colorGray">#999999</color> <!-- 灰1，用于辅助，次要文字 -->
+    <color name="colorGray2">#aaaaaa</color> <!-- 灰2，用于默认输入文字，最次要文字 -->
+    <color name="colorGray3">#cccccc</color> <!-- 灰3，只用于灰色实心icon，文字上不要用 -->
+
+    <color name="colorLine">#e2e2e2</color> <!-- 线1，只是分割线，线标注是1px -->
+    <color name="colorLine2">#d2d2d2</color> <!-- 线2，标签、按钮、输入框的描边 -->
+    <color name="colorBackground">#f2f3f6</color> <!-- 背景底色 -->
+    <color name="colorBackground2">#f6f6f7</color> <!-- 次一级块底色 -->
+    <color name="colorImageBackground">#eeeeee</color> <!-- 图片默认背景色 -->
+
+    <color name="colorBarTitle">#333333</color>  <!-- 标题色 -->
+
+    <color name="colorWhite">#ffffff</color> <!-- 纯白色 -->
+
+    <!--*****************************************************************************************-->
+
+    <color name="transparent">#00000000</color>
+    <color name="white10">#fafafb</color>
+    <color name="red4">#ff7051</color>
+    <color name="red7">#fff0ef</color>
+    <color name="red8">#ffe2df</color>
+    <color name="green">#80d089</color>
+    <color name="green4">#B7D643</color>
+    <color name="blue">#7eaef7</color>
+    <color name="blue6">#56cfed</color>
+    <color name="blue8">#34c6eb</color>
+    <color name="purple">#ff8cd0</color>
+    <color name="transparent_black">#88000000</color>
+    <color name="transparent_black5">#99000000</color>
+    <color name="transparent_white">#f4ffffff</color>
+    <color name="transparent_white2">#99ffffff</color>
+    <color name="transparent_white3">#55ffffff</color>
+    <color name="transparent_white5">#7fffffff</color>
+    <color name="trans_color_p9">#E6ffa73c</color>
+    <color name="gray4">#e8e8e8</color>
+    <color name="gray12">#bfbfbf</color>
+    <color name="gray13">#7b7a87</color>
+    <color name="black8">#b0000000</color>
+    <color name="trans_black">#88000000</color>
+    <color name="tearose2">#E397FF</color>
+    <color name="mark_gray">#f4f5f6</color>>
+    <color name="transparent_pink">#e5fe5ca7</color>
+    <color name="transparent_black80">#cc000000</color>
+
+    <color name="transparent_black2">#33000000</color>
+    <color name="transparent_black3">#22000000</color>
+    <color name="transparent_black4">#e5000000</color>
+    <color name="transparent_black6">#40000000</color>
+    <color name="transparent_black7">#7f000000</color>
+    <color name="transparent_black8">#6b000000</color>
+    <color name="transparent_black9">#66000000</color>
+    <color name="transparent_black10">#B3000000</color>
+    <color name="transparent_primary5">#0Df83244</color>
+
+    <color name="black7">#4c000000</color>
+    <color name="transparent_black11">#1A000000</color>
+
+    <color name="color_orange2">#FF8C47</color><!--分享邮件图标底色-->
+    <color name="color_fund_gold">#cd9a47</color><!--理财金色-->
+    <color name="colorCarGold">#d79528</color>
+    <color name="colorUltimateGold">#e8b45e</color>
+
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+</resources>

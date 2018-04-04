@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        app:layout_behavior="com.hunliji.hljcommonlibrary.behavior.AppBarLayoutOverScrollViewBehavior"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/rl_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--750:242-->
+                <ImageView
+                    android:id="@+id/img_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_community_channel_event" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                app:contentInsetStart="0dp"
+                app:elevation="0dp"
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/action_holder_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_back"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:contentDescription="@string/app_name"
+                                android:src="@mipmap/icon_back_white" />
+
+                            <TextView
+                                android:id="@+id/tv_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:includeFontPadding="false"
+                                android:text="新娘说活动"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/large_text_size2" />
+
+                            <ImageButton
+                                android:id="@+id/btn_share"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/icon_share_white_44_44" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/action_holder_layout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0"
+                        android:background="@color/colorWhite"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp">
+
+                            <ImageButton
+                                android:id="@+id/btn_back2"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/app_name"
+                                android:src="@mipmap/icon_back_primary" />
+
+                            <TextView
+                                android:id="@+id/tv_title2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:includeFontPadding="false"
+                                android:text="新娘说活动"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/large_text_size2" />
+
+                            <ImageButton
+                                android:id="@+id/btn_share2"
+                                style="@style/ActionImageItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/icon_share_primary_44_44" />
+
+                            <View
+                                style="@style/line_horizontal"
+                                android:layout_alignParentBottom="true" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/ll_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingBottom="12dp"
+                android:paddingRight="16dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_avatar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="1dp"
+                        android:src="@mipmap/icon_avatar_primary"
+                        app:corner_radius="14dp" />
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="6dp"
+                        android:src="@mipmap/icon_avatar_primary"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="1dp"
+                        app:corner_radius="14dp" />
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="6dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_avatar_primary"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="1dp"
+                        app:corner_radius="14dp" />
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="6dp"
+                        android:src="@mipmap/icon_avatar_primary"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="1dp"
+                        app:corner_radius="14dp" />
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="6dp"
+                        android:src="@mipmap/icon_avatar_primary"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="1dp"
+                        app:corner_radius="14dp" />
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="6dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_avatar_primary"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="1dp"
+                        app:corner_radius="14dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_watch_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/sp_r14_80000000"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/ex_small_text_size"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/colorWhite"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed" />
+
+        <View style="@style/line_horizontal" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_join"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/sl_r20_primary_2_dark"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/btn_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我要参加"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_medium_text_size2"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+</android.support.design.widget.CoordinatorLayout>

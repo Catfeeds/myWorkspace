@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/photo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2">
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/label_photo___note"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/tv_menu"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_new_tag_60_28" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_horizontal" />
+
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/label_video___note"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <View
+        android:id="@+id/view_layout_line"
+        style="@style/line_horizontal" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/label_cancel___cm"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+</LinearLayout>

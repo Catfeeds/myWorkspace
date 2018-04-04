@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/edit_bar_layout"
+        android:scrollbars="none" />
+
+    <FrameLayout
+        android:id="@+id/edit_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@color/colorBackground2">
+
+        <include layout="@layout/widget_speak_edit_layout___cm" />
+
+    </FrameLayout>
+
+    <com.hunliji.hljcommonlibrary.views.widgets.SpeakRecordView
+        android:id="@+id/record_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

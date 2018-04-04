@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/sl_color_trans_2_background2"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/label_cancel___cm"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sl_color_trans_2_background2"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="@string/btn_next___cm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="@string/hint_question_title___qa"
+        android:minHeight="50dp"
+        android:maxLines="4"
+        android:padding="12dp"
+        android:textColor="@color/colorBlack2"
+        android:textColorHint="@color/colorGray3"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <View style="@style/line_horizontal" />
+
+    <TextView
+        android:id="@+id/tv_title_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/medium_text_size3" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_question_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none" />
+</LinearLayout>

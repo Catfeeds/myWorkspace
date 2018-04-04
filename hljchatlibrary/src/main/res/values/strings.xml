@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Hlj Chat Library</string>
+
+    <string name="label_copy___chat">复制</string>
+    <string name="label_voice_length___cm">%d \"</string>
+    <string name="label_writting___chat">对方正在输入&#8230;</string>
+    <string name="label_read___chat">已读</string>
+    <string name="label_unread___chat">未读</string>
+
+    <string name="msg_copy_success___chat">已成功复制回帖内容到粘贴板</string>
+
+    <string name="btn_send___chat">发送</string>
+    <string name="btn_speak_start___chat">按住说话</string>
+    <string name="btn_speak_done___chat">松开结束</string>
+
+    <string name="label_chat_page_track___chat">发起咨询页面</string>
+    <string name="label_track_merchant___chat">店铺主页</string>
+    <string name="label_merchant_tips___chat">温馨提示</string>
+    <string name="label_make_appointment___chat">预约回电</string>
+</resources>

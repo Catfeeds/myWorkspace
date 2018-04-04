@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:text="@string/label_work_privilege"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <RelativeLayout
+        android:id="@+id/earnest_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:visibility="gone">
+
+        <include layout="@layout/line_layout" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_earnest2" />
+
+        <TextView
+            android:id="@+id/earnest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:paddingLeft="28dp"
+            android:singleLine="true"
+            android:text="@string/label_earnest"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/gift_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:visibility="gone">
+
+        <include layout="@layout/line_layout" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_gift2" />
+
+        <TextView
+            android:id="@+id/gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:paddingLeft="28dp"
+            android:singleLine="true"
+            android:text="@string/label_gift"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/pay_all_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="44dp">
+
+        <include layout="@layout/line_layout" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_pay_all_primary" />
+
+        <TextView
+            android:id="@+id/pay_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:paddingLeft="28dp"
+            android:lines="1"
+            android:text="@string/label_pay_all_gift"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_layout" />
+
+    <Button
+        android:id="@+id/action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/label_close"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+</LinearLayout>

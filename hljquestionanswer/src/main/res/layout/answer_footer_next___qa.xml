@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/no_more_hint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableBottom="@mipmap/icon_arrow_down_gray_36_18"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:text="阅读下一个话题"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/medium_text_size3"
+        android:visibility="visible" />
+
+</RelativeLayout>

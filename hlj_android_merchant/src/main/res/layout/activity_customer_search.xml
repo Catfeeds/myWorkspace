@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.PullToRefreshScrollableLayout
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <LinearLayout
+                android:id="@+id/layout_search"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/sp_r3_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/icon_search_gray_31_31" />
+
+                <com.hunliji.hljcommonlibrary.views.widgets.ClearableEditText
+                    android:id="@+id/edit_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="请输入搜索内容"
+                    android:maxLines="1"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textColorHint="@color/colorBlack3"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup
+            android:id="@+id/check_group"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal">
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/check_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:checked="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sl_trans_2_tab_checked"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="电话"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/medium_text_size1" />
+
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/check_account_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sl_trans_2_tab_checked"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="用户名"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/medium_text_size1" />
+
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/check_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:duplicateParentState="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/sl_trans_2_tab_checked"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="姓名"
+                    android:textColor="@color/black3_primary"
+                    android:textSize="@dimen/medium_text_size1" />
+
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>
+
+        <View style="@style/line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/hlj_common_fragment_ptr_recycler_view___cm" />
+        </RelativeLayout>
+
+    </com.hunliji.hljcommonlibrary.views.widgets.PullToRefreshScrollableLayout>
+
+</RelativeLayout>

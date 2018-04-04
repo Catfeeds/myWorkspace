@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-6dp"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal">
+
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/sp_r6_stroke_gray3_solid_white"
+        android:maxEms="12"
+        android:paddingBottom="10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorBlack2"
+        android:textSize="@dimen/medium_text_size2" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="12dp"
+        android:layout_below="@id/tv_address"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_arrow_down_white_61_30" />
+
+</FrameLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/heard_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/items_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="12dp"
+            android:shadowColor="@color/colorBlack2"
+            android:shadowRadius="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:id="@+id/limit_count_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/sp_r16_r_trans_pink"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_only_leave"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/limit_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/payment_method_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heard_view"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/property"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:background="@drawable/sp_r2_stroke_primary"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/small_text_size" />
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:maxLines="2"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/discount_type"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/icon_discount"
+                android:gravity="center"
+                android:paddingLeft="3dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/rmb"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/medium_text_size1" />
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/ex_huge_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size2" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_count_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/colorGray2"
+            android:textSize="@dimen/medium_text_size3"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/prepare_layout"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/sp_r4_dash_stroke_primary"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/prepare_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <TextView
+                    android:id="@+id/prepare_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/label_price5"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/medium_text_size3" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/prepare_count_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/medium_text_size3" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/remind_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorLine" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+
+            <CheckBox
+                android:id="@+id/discount1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/sl_ic_allow_check"
+                android:drawablePadding="5dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="@string/label_pay_discount1"
+                android:textColor="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size3" />
+
+            <CheckBox
+                android:id="@+id/discount2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/discount1"
+                android:background="@null"
+                android:button="@null"
+                android:drawableLeft="@drawable/sl_ic_allow_check"
+                android:drawablePadding="5dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="@string/label_pay_discount2"
+                android:textColor="@color/colorGray2"
+                android:textSize="@dimen/medium_text_size3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/work_info_item2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/payment_method_layout" />
+</RelativeLayout>

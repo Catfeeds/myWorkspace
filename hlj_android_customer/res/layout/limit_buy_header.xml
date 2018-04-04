@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1850b7"
+        android:orientation="vertical">
+
+        <include layout="@layout/hlj_banner_view___cm" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离结束时间:"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_limit_day"
+                android:layout_width="25dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@mipmap/icon_limit_time"
+                android:gravity="center"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_limit_hour"
+                android:layout_width="25dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@mipmap/icon_limit_time"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_limit_minute"
+                android:layout_width="25dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@mipmap/icon_limit_time"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_limit_second"
+                android:layout_width="25dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@mipmap/icon_limit_time"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="秒"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_small_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

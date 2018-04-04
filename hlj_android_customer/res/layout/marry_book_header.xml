@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_header"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="8dp"
+        android:weightSum="2">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView
+            android:id="@+id/card_view_book"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            app:cardShadowEndColor="#00ff3b31"
+            app:cardShadowStartColor="#4Dff3b31">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_red_rectangle_r3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="已消费(元)"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/medium_text_size3"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_consume_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="0.00"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_record_book"
+                        android:layout_width="48dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/sp_r10_white"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="记笔帐"
+                        android:textColor="#ff6a3d"
+                        android:textSize="@dimen/ex_small_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_marry_book_consume_bevel" />
+
+            </RelativeLayout>
+
+        </com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView
+            android:id="@+id/card_view_gift"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/transparent"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="3dp"
+            app:cardShadowEndColor="#00ffb300"
+            app:cardShadowStartColor="#4Dffb300">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_yellow_rectangle_r3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="礼金收入(元)"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/medium_text_size3"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_gift_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="0.00"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_setting"
+                        android:layout_width="48dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/sp_r10_white"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="记礼金"
+                        android:textColor="#ffa812"
+                        android:textSize="@dimen/ex_small_text_size"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_marry_book_budget_bevel" />
+
+            </RelativeLayout>
+
+        </com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorBackground" />
+
+        <LinearLayout
+            android:id="@+id/ll_marry_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn_record"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="56dp"
+                android:text="Hi，通过结婚账本，你可以"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_large_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:drawableLeft="@mipmap/icon_check_round_primary_32_32"
+                android:drawablePadding="8dp"
+                android:includeFontPadding="false"
+                android:text="随时随地记录结婚开销"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:drawableLeft="@mipmap/icon_check_round_primary_32_32"
+                android:drawablePadding="8dp"
+                android:includeFontPadding="false"
+                android:text="绑定另一半，同步管理账本"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:drawableLeft="@mipmap/icon_check_round_primary_32_32"
+                android:drawablePadding="8dp"
+                android:includeFontPadding="false"
+                android:text="掌握开销动态，合理控制预算"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_record"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ll_marry_book"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/sl_r3_primary_2_dark"
+            android:gravity="center"
+            android:text="记录我的第一笔账，打破0记录"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/ex_medium_text_size2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btn_record" />
+
+    </RelativeLayout>
+
+</LinearLayout>

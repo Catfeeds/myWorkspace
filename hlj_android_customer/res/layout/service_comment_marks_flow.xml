@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/hljColorSegmentBackground">
+
+    <LinearLayout
+        android:id="@+id/marks_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="14dp"
+        android:paddingTop="16dp">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.MarkFlowLayout
+            android:id="@+id/marks_flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            app:horizontalSpacing="10dp"
+            app:verticalSpacing="10dp" />
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:padding="14dp"
+            android:src="@mipmap/icon_arrow_down_gray_26_14"
+            android:tint="?hljColorContentExt3"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_layout"
+        style="@style/line_horizontal"
+        android:layout_below="@+id/marks_layout"
+        android:layout_marginLeft="16dp"
+        android:background="?attr/hljColorLine"
+        android:visibility="gone" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

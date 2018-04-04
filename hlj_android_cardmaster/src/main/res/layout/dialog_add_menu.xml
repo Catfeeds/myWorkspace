@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent_white"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/action_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/action_album"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <include layout="@layout/line_layout___cm"/>
+
+    <Button
+        android:id="@+id/action_camera_photo"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/action_camera_photo"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/ex_medium_text_size" />
+    <Button
+        android:id="@+id/action_camera_video"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/action_camera_video"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+    <include layout="@layout/line_layout___cm"/>
+
+    <Button
+        android:id="@+id/action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/sl_color_white_2_background2"
+        android:text="@string/action_cancel"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size" />
+
+</LinearLayout>

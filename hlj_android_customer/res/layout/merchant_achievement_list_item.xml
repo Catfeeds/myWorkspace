@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_toLeftOf="@+id/arrow"
+        android:drawableLeft="@drawable/icon_merchant_achievement"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:textColor="?attr/hljColorContent2"
+        android:textSize="@dimen/ex_medium_text_size2" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/icon_arrow_right_dark_gray_14_26"
+        android:tint="?attr/hljColorContent2" />
+
+    <View
+        android:id="@+id/line_layout"
+        style="@style/line_horizontal"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="16dp"
+        android:background="?attr/hljColorLine" />
+
+</RelativeLayout>

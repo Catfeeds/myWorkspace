@@ -1,0 +1,18 @@
+<manifest package="com.hunliji.hljupdatelibrary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".activities.UpdateDialogActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:theme="@style/DialogActivityTheme" />
+
+        <service android:name=".service.DownloadService"
+            android:exported="true" />
+    </application>
+
+</manifest>

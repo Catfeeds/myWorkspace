@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/adv_merchant_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:descendantFocusability="blocksDescendants">
+
+    <include layout="@layout/line_layout" />
+
+    <LinearLayout
+        android:id="@+id/helper_layout"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_adv_helper" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/helper_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:paddingRight="130dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/helper_name"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size3" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/helper_layout"
+        android:paddingBottom="12dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:lines="1"
+            android:text="@string/label_adv_phone"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <TextView
+            android:id="@+id/remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/phone_number"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.3"
+            android:maxLines="2"
+            android:text="@string/label_adv_remark"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <include layout="@layout/line" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/actions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/info_layout"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="gone">
+
+        <include layout="@layout/line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical">
+
+            <Button
+                android:id="@+id/action4"
+                android:layout_width="74dp"
+                android:layout_height="24dp"
+                android:background="@drawable/sl_r12_stroke_gray_2_solid_light"
+                android:text="@string/btn_adv_action4"
+                android:textColor="@color/stroke_gray_text_color"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/action3"
+                android:layout_width="74dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/sl_r12_stroke_gray_2_solid_light"
+                android:text="@string/btn_adv_action3"
+                android:textColor="@color/stroke_gray_text_color"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/action2"
+                android:layout_width="74dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/sl_r12_stroke_primary_2_solid_light"
+                android:text="@string/btn_adv_action2"
+                android:textColor="@color/stroke_primary_text_color"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/action1"
+                android:layout_width="74dp"
+                android:layout_height="24dp"
+                android:background="@drawable/sl_r12_primary_2_dark"
+                android:text="@string/btn_adv_action1"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size3"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/actions_layout"
+        android:background="@color/colorBackground">
+
+        <include layout="@layout/line_layout" />
+    </FrameLayout>
+
+</RelativeLayout>

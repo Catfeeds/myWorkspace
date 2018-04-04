@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:layout_height="44dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_select_bank_card___pay"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/medium_text_size1"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="44dp"
+            android:src="@mipmap/icon_cross_close_primary_36_36"
+            android:scaleType="centerInside"
+            android:padding="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="44dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorLine"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/card_list"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:background="@color/colorWhite"
+        android:dividerHeight="0.5dp"
+        android:divider="@color/colorLine"
+        android:listSelector="@android:color/transparent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

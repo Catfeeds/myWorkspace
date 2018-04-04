@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/colorGray2"
+        android:textSize="@dimen/small_text_size"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/tips_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_marginLeft="@dimen/chat_middle_item_margin"
+        android:layout_marginRight="@dimen/chat_middle_item_margin"
+        android:background="@drawable/image_bg_chat_bubble_middle_white"
+        android:clickable="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="18dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+            android:paddingTop="18dp">
+
+            <ImageView
+                android:id="@+id/img_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/icon_check_success_chat" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/img_icon">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/label_merchant_tips___chat"
+                    android:textColor="@color/colorSuccess"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_sub_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_title"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/tv_title"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="请保持电话畅通"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="垃圾碰到过加分就"
+                    android:textColor="@color/colorBlack3"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</RelativeLayout>

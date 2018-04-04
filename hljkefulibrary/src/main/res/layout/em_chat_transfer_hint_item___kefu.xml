@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/chat_avatar_margin">
+
+    <include layout="@layout/chat_message_time_text___chat" />
+
+
+    <include layout="@layout/chat_user_avatar_left___chat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:layout_marginLeft="@dimen/chat_avatar_message_margin"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/avatar"
+        android:background="@drawable/sl_bg_bubble_left_white"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/transfer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <View style="@style/line_horizontal" />
+
+            <TextView
+                android:id="@+id/tv_transfer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ex_medium_text_size" />
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/tv_transfer_text"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_kefu_primary" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

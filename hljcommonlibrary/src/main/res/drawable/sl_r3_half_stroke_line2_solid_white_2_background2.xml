@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--灰2描边，白底到底2-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/sp_r3_half_stroke_line2_solid_background2" android:state_pressed="true" />
+    <item android:drawable="@drawable/sp_r3_half_stroke_line2_solid_background2" android:state_checked="true" />
+    <item android:drawable="@drawable/sp_r3_half_stroke_line2_solid_white" />
+</selector>

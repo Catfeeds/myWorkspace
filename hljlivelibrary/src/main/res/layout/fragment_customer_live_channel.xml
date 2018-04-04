@@ -1,0 +1,300 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:gravity="top"
+        sothree:umanoDragView="@+id/dragView"
+        sothree:umanoFadeColor="@color/transparent"
+        sothree:umanoInitialState="expanded"
+        sothree:umanoOverlay="true"
+        sothree:umanoPanelHeight="30dp"
+        sothree:umanoShadowHeight="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/top_intro_layout_holder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView
+                    android:id="@+id/top_intro_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="6dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardShadowEndColor="#00000000"
+                    app:cardShadowStartColor="#08000000"
+                    app:contentPadding="0dp"
+                    tools:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tv_introducing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:drawableLeft="@mipmap/icon_microphone___live"
+                            android:drawablePadding="4dp"
+                            android:gravity="center"
+                            android:text="介绍中"
+                            android:textColor="@color/colorBlack2"
+                            android:textSize="12sp" />
+
+                        <com.makeramen.rounded.RoundedImageView
+                            android:id="@+id/img_top_intro_cover"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_below="@+id/tv_introducing"
+                            android:layout_marginTop="6dp"
+                            android:scaleType="centerCrop"
+                            app:border_color="@color/colorLine"
+                            app:border_width="0.5dp"
+                            app:corner_radius="3dp" />
+
+                        <TextView
+                            android:id="@+id/tv_top_intro_price"
+                            android:layout_width="60dp"
+                            android:layout_height="16dp"
+                            android:layout_alignBottom="@+id/img_top_intro_cover"
+                            android:layout_marginLeft="0.5dp"
+                            android:layout_marginRight="0.5dp"
+                            android:background="@drawable/sp_r2_bottom_alpha_50_black"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="1dp"
+                            android:paddingLeft="5dp"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/live_stick_images_layout" />
+            </LinearLayout>
+
+            <include layout="@layout/live_prepare_layout" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/icon_drag_arrow"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorBackground2"
+        android:orientation="vertical">
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/bottom_layout_customer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_gift"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_shop_gif"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/merchant_chat_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_envelope"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sl_ic_envelope___live"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_unread_count"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/sp_oval_accent"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/small_text_size"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/btn_share"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sl_ic_share___live" />
+
+            <TextView
+                android:id="@+id/tv_editor"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/sp_r20_f5f5f9"
+                android:gravity="center"
+                android:text="马上提问，在线解答"
+                android:textColor="@color/colorGray2"
+                android:textSize="14sp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/btn_message"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sl_ic_message___live" />
+
+                <View
+                    android:id="@+id/new_msg_dot"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/sp_oval_accent"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/danmaku_layout_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_intro_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_layout"
+        android:background="@drawable/image_bg_intro_shop___live"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.makeramen.rounded.RoundedImageView
+            android:id="@+id/img_bottom_intro_cover"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerCrop"
+            app:border_color="@color/colorLine"
+            app:border_width="0.5dp"
+            app:corner_radius="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_bottom_intro_cover"
+            android:layout_alignTop="@+id/img_bottom_intro_cover"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_bottom_intro_cover"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_bottom_intro_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxWidth="100dp"
+                android:textColor="@color/colorBlack2"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_bottom_intro_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+

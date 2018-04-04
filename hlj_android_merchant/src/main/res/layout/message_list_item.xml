@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/divider"
+        style="@style/line_horizontal"
+        android:layout_marginLeft="68dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <com.makeramen.rounded.RoundedImageView
+                android:id="@+id/logo_img"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_avatar_primary"
+                app:border_color="@color/colorLine"
+                app:border_width="1dp"
+                app:corner_radius="22dp"
+                app:round_background="true" />
+
+            <ImageView
+                android:id="@+id/vip_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/logo_img"
+                android:layout_alignRight="@+id/logo_img"
+                android:src="@mipmap/icon_member_28_28"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/unread_count"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/logo_img"
+                android:layout_alignTop="@+id/logo_img"
+                android:layout_marginRight="-6dp"
+                android:layout_marginTop="-6dp"
+                android:background="@drawable/sp_r10_accent"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:minWidth="20dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/small_text_size"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/unread_track_view"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignRight="@+id/logo_img"
+                android:layout_alignTop="@+id/logo_img"
+                android:layout_marginRight="-4dp"
+                android:layout_marginTop="-4dp"
+                android:background="@drawable/sp_oval_accent"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/time">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:id="@+id/tv_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size3"
+                            android:visibility="gone"
+                            tools:text="杭州"
+                            tools:visibility="visible" />
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/small_text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_draft_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[草稿]"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/medium_text_size2"
+                    android:visibility="gone" />
+
+                <com.hunliji.marrybiz.widget.CustomTextView
+                    android:id="@+id/last_msg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_divider"
+        style="@style/line_horizontal" />
+
+</LinearLayout>

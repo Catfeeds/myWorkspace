@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.suncloud.marrymemo.view.UserProfileActivity">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout
+        android:id="@+id/scrollable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/avatars_layout_under"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:id="@+id/img_partner_avatar_under"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/sp_oval_line"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cross_add_gray"
+                        android:visibility="gone"
+                        app:corner_radius="18dp" />
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:id="@+id/img_avatar_under"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_avatar_primary"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="2dp"
+                        app:corner_radius="30dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/avatars_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:id="@+id/img_partner_avatar"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/sp_oval_line"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_cross_add_gray"
+                        android:visibility="gone"
+                        app:corner_radius="18dp" />
+
+                    <com.makeramen.rounded.RoundedImageView
+                        android:id="@+id/img_avatar"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/icon_avatar_primary"
+                        app:border_color="@color/colorWhite"
+                        app:border_width="2dp"
+                        app:corner_radius="30dp" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_praised_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/label_praised"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/follow_count_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_followed_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/label_follow2"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fans_count_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_fans_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/colorBlack3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/label_fans"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/medium_text_size1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/nick_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_nick"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_vip_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@drawable/sp_r2_stroke_f1ab00_solid_vip"
+                        android:drawableLeft="@mipmap/icon_vip_white_22_22___cm"
+                        android:drawablePadding="2dp"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/label_vip_tag"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/small_text_size"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_member_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="4dp"
+                        android:background="@drawable/sp_r2_stroke_be9144_solid_member"
+                        android:drawableLeft="@mipmap/icon_member_white_22_22___cm"
+                        android:drawablePadding="2dp"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:text="@string/label_member_tag"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/small_text_size"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <TextView
+                        android:id="@+id/tv_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                    <TextView
+                        android:id="@+id/tv_wedding_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingMultiplier="1.3"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup
+            android:id="@+id/cb_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp">
+
+            <!--笔记-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_item1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_note_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="0"
+                        android:textColor="@color/black2_primary"
+                        android:textSize="@dimen/large_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/label_note"
+                        android:textColor="@color/gray1_primary"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/sl_color_trans_2_primary"
+                    android:duplicateParentState="true" />
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+            <!--话题-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_item2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_thread_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="0"
+                        android:textColor="@color/black2_primary"
+                        android:textSize="@dimen/large_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/label_thread2"
+                        android:textColor="@color/gray1_primary"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/sl_color_trans_2_primary"
+                    android:duplicateParentState="true" />
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+            <!--回答-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_item3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_answer_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="0"
+                        android:textColor="@color/black2_primary"
+                        android:textSize="@dimen/large_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/label_answer"
+                        android:textColor="@color/gray1_primary"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/sl_color_trans_2_primary"
+                    android:duplicateParentState="true" />
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+            <!--评价-->
+            <com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton
+                android:id="@+id/cb_item4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_comment_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:text="0"
+                        android:textColor="@color/black2_primary"
+                        android:textSize="@dimen/large_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:duplicateParentState="true"
+                        android:text="@string/label_comment"
+                        android:textColor="@color/gray1_primary"
+                        android:textSize="@dimen/medium_text_size3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/sl_color_trans_2_primary"
+                    android:duplicateParentState="true" />
+
+            </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearButton>
+
+        </com.hunliji.hljcommonlibrary.views.widgets.CheckableLinearGroup>
+
+        <include layout="@layout/line_layout___cm" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/btn_back"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_back_primary" />
+
+        <Button
+            android:id="@+id/btn_follow"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:alpha="0"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/btn_back2"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/icon_back_primary" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:singleLine="true"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/large_text_size"
+            tools:ignore="RelativeOverlap" />
+
+        <Button
+            android:id="@+id/btn_follow2"
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.TabPageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/colorWhite"
+        android:overScrollMode="never" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/indicator" />
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_below="@+id/indicator" />
+
+    <include layout="@layout/hlj_progressbar___cm" />
+
+</RelativeLayout>

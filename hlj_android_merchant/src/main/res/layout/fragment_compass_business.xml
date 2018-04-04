@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@id/action_layout"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+            android:id="@+id/work_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            app:isChecked="true">
+
+            <TextView
+                android:id="@+id/tab_work"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/sl_trans_2_tab_checked"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/label_work"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+            android:id="@+id/case_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tab_case"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/sl_trans_2_tab_checked"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/label_case"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+            android:id="@+id/twitter_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tab_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/sl_trans_2_tab_checked"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/label_twitter"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+        <com.hunliji.marrybiz.widget.CheckableLinearLayout2
+            android:id="@+id/fans_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tab_fans"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/sl_trans_2_tab_checked"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="@string/label_follower"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size1" />
+
+        </com.hunliji.marrybiz.widget.CheckableLinearLayout2>
+
+    </LinearLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_layout"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <include layout="@layout/progressbar_layout" />
+
+    <include layout="@layout/list_empty_view_with_button" />
+</RelativeLayout>

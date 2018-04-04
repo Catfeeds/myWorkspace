@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#80000000"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:minWidth="45dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_cross_close_white_44_44" />
+
+        <ImageButton
+            android:id="@+id/btn_switch_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:minWidth="45dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_camera_switch_white_44_44" />
+
+        <ImageButton
+            android:id="@+id/btn_flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/btn_switch_camera"
+            android:background="@android:color/transparent"
+            android:duplicateParentState="true"
+            android:minWidth="45dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_flash_off_white_44_44" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_video_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_above="@+id/bottom_action_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/sp_r14_alpha_50_black"
+        android:gravity="center"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/label_video_hint"
+        android:textColor="@color/colorWhite"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="142dp"
+        android:layout_alignParentBottom="true"
+        android:background="#cc000000">
+
+        <RelativeLayout
+            android:id="@+id/progress_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@color/colorBlack3">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/video_taking_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/frame_divider_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="60">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="1.5dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/colorWhite" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/progress_bar_layout">
+
+            <ImageButton
+                android:id="@+id/btn_take_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:src="@mipmap/icon_video_take_start" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_take_action"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_import_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:background="@null"
+                android:drawablePadding="10dp"
+                android:drawableTop="@mipmap/icon_video_import"
+                android:text="@string/label_import_video"
+                android:textColor="@color/colorGray3"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/btn_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/icon_video_check_confirm"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_retake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36dp"
+                android:background="@android:color/transparent"
+                android:text="重拍"
+                android:textColor="@color/colorGray3"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

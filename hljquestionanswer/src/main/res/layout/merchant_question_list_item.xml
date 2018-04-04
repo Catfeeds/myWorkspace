@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rec_question_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_question_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/large_text_size2"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="11dp">
+
+            <TextView
+                android:id="@+id/tv_answer_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2"/>
+
+            <ImageView
+                android:id="@+id/iv_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_mark_g___qa"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_answer_count"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_mark_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_tag"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2"/>
+
+            <TextView
+                android:id="@+id/tv_mark_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_mark_1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2"/>
+
+            <TextView
+                android:id="@+id/tv_create_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:drawableLeft="@mipmap/icon_create_answer_r___qa"
+                android:drawablePadding="4dp"
+                android:text="@string/label_answer___qa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/medium_text_size2"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine"/>
+</LinearLayout>

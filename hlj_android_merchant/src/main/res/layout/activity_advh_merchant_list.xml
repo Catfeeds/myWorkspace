@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ADVHMerchantListActivity">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/menu_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="150dp"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:divider="@color/colorLine"
+            android:dividerHeight="0.5dp"
+            android:paddingTop="36dp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/count_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/colorBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/helperCount2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <TextView
+            android:id="@+id/helperViewCount2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <Button
+            android:id="@+id/filtrate"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sl_r4_half_stroke_primary_2_solid_light"
+            android:gravity="center"
+            android:text="@string/btn_filtrate"
+            android:textColor="@color/stroke_primary_text_color"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

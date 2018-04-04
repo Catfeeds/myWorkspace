@@ -1,0 +1,301 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.suncloud.marrymemo.view.OfflineOrderPaymentActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/transparent_white">
+
+        <ImageButton
+            style="@style/ActionImageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:onClick="onBackPressed"
+            android:src="@mipmap/icon_back_primary"/>
+
+        <TextView
+            android:id="@+id/activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/title_activity_offline_order_payment"
+            android:textColor="@color/colorBarTitle"
+            android:textSize="@dimen/bar_title_size"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorLine"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/line_layout"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_real_pay"
+                        android:textColor="@color/colorBlack2"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="@string/rmb"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_actual_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/xx_huge_text_size"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_paid_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_paid_money2"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/sl_r15_primary_2_dark"
+                android:gravity="center"
+                android:onClick="onPay"
+                android:minWidth="96dp"
+                android:text="@string/btn_pay2"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size2"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout"
+        android:layout_below="@id/action_layout"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <me.suncloud.marrymemo.widget.CheckableLinearLayoutGroup
+                android:id="@+id/pay_agent_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0.5dp"-->
+                    <!--android:background="@color/colorLine"/>-->
+
+                <!--<me.suncloud.marrymemo.widget.CheckableLinearLayoutButton-->
+                    <!--android:id="@+id/credit_card_pay"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="44dp"-->
+                    <!--android:clickable="true"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:paddingLeft="12dp"-->
+                    <!--android:paddingRight="12dp"-->
+                    <!--app:isChecked="true">-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="39dp"-->
+                        <!--android:contentDescription="@string/app_name"-->
+                        <!--android:scaleType="centerInside"-->
+                        <!--android:src="@drawable/icon_credit_card"/>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginLeft="10dp"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:text="@string/label_credit_card"-->
+                        <!--android:textColor="@color/colorGray"-->
+                        <!--android:textSize="@dimen/medium_text_size2"/>-->
+
+                    <!--<ImageView-->
+                        <!--android:layout_width="16dp"-->
+                        <!--android:layout_height="16dp"-->
+                        <!--android:contentDescription="@string/app_name"-->
+                        <!--android:duplicateParentState="true"-->
+                        <!--android:scaleType="centerCrop"-->
+                        <!--android:src="@drawable/sl_ic_sp_check"/>-->
+
+                <!--</me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>-->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLine"/>
+
+                <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                    android:id="@+id/union_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    app:isChecked="true"
+                    android:paddingRight="12dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="39dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_saving_card"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/unionpay"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <Button
+                        android:id="@+id/limit_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/icon_question_mark_primary"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/label_limit"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/medium_text_size3"
+                        android:visibility="gone"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sl_ic_sp_check"/>
+
+                </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/colorLine"/>
+
+                <me.suncloud.marrymemo.widget.CheckableLinearLayoutButton
+                    android:id="@+id/alipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="39dp"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_alipay"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/label_alipay"
+                        android:textColor="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size2"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:contentDescription="@string/app_name"
+                        android:duplicateParentState="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sl_ic_sp_check"/>
+
+                </me.suncloud.marrymemo.widget.CheckableLinearLayoutButton>
+            </me.suncloud.marrymemo.widget.CheckableLinearLayoutGroup>
+
+            <include layout="@layout/line_layout"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/progressbar_layout"/>
+</RelativeLayout>

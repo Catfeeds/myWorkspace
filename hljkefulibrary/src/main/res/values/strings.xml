@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Hlj Kefu Library</string>
+
+    <string name="hint_err_em_un_login___kefu">环信用户异常，不能使用顾问</string>
+    <string name="hint_err_em_un_login2___kefu">环信用户异常，不能联系客服</string>
+    <string name="label_enquiry_done___kefu">您已评价成功</string>
+    <string name="hint_enquiry___kefu">您对当前客服人员的服务满意吗？</string>
+    <string name="label_enquiry_rating1___kefu">非常不满意</string>
+    <string name="label_enquiry_rating2___kefu">不满意</string>
+    <string name="label_enquiry_rating3___kefu">一般</string>
+    <string name="label_enquiry_rating4___kefu">满意</string>
+    <string name="label_enquiry_rating5___kefu">非常满意</string>
+
+    <string name="msg_get_supports_error___kefu">暂时没有能给你提供咨询的客服，请稍后再试。</string>
+</resources>

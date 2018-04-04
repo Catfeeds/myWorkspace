@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/image_bg_dialog_arrow_up_bubble"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/setting_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_setting_black_62_62"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="设置"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2" />
+
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/follow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_watch_black_62_62"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="我的关注"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2" />
+
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/praise_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_prize_black_62_62"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="五星好评"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2" />
+
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/feedback_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_edit_black_62_62"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="意见反馈"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2" />
+
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/contact_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_contact_black_62_62"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="联系客服"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2" />
+
+        </LinearLayout>
+
+        <View style="@style/line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/share_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_share_black_62_62"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="推荐婚礼纪"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

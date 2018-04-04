@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/transparent_white"
+    android:paddingTop="18dp"
+    app:columnCount="4">
+
+
+    <LinearLayout
+        android:id="@+id/share_pengyou"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_columnWeight="1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_round10_green4_2_gray3"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_share_pengyou_white_54_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_pengyou"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_weixing"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_columnWeight="1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_round10_green2_2_gray3"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_wechat_white_54_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_weixin2"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_weibo"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_columnWeight="1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_round10_red_2_gray3"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_weibo_white_54_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_weibo2"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_columnWeight="1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_round10_blue6_2_gray3"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_qq_white_54_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_qq"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_email"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_columnWeight="1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_round10_orange2_2_gray3"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_message_email_white_54_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_email"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/share_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_columnWeight="1">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/sl_round10_yellow4_2_gray3"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_share_msg_white_54_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/label_sms"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/medium_text_size3" />
+    </LinearLayout>
+
+    <View
+        style="@style/line_horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_columnSpan="4" />
+
+    <Button
+        android:id="@+id/action_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:padding="10dp"
+        android:text="@string/action_cancel"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/ex_medium_text_size"
+        app:layout_columnSpan="4" />
+</android.support.v7.widget.GridLayout>

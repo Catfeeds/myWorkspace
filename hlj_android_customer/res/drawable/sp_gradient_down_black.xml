@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--故事标题背景-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+
+    <gradient
+        android:angle="270"
+        android:endColor="#00000000"
+        android:startColor="#5B000000"
+        android:centerX="50%"
+        android:centerY="50%"
+        android:type="linear"/>
+</shape>

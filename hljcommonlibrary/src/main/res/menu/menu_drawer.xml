@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_network"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="网络日志" />
+        <item
+            android:id="@+id/nav_change_host"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="切换服务器" />
+        <item
+            android:id="@+id/nav_tracker"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="统计日志" />
+        <item
+            android:id="@+id/nav_crash"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="Crash" />
+        <item
+            android:id="@+id/nav_page_name"
+            android:icon="@android:drawable/ic_menu_view"
+            android:title="label 检测" />
+    </group>
+
+</menu>

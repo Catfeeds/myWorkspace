@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".view.SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:onClick="onSkip"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="20dp"
+                android:background="@drawable/sp_r10_alpha_50_black"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/action_skip"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/medium_text_size1" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/image_bg_splash" />
+</FrameLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+
+    <array name="card_add_new_page_title___card">
+        <item>单图</item>
+        <item>二图</item>
+        <item>多图</item>
+        <item>纯文字</item>
+        <item>视频</item>
+    </array>
+
+
+    <array name="card_add_new_page_key___card">
+        <item>single_img</item>
+        <item>two_img</item>
+        <item>multi_img</item>
+        <item>text</item>
+        <item>video</item>
+    </array>
+
+    <array name="card_tutorial_title___card">
+        <item>常见问题</item>
+        <item>意见反馈</item>
+    </array>
+
+</resources>

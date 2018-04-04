@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorAccentSub">#ffaf24</color> <!-- 强调色2，辅助主色-->
+    <color name="colorAccentSubDark">#eca01c</color> <!-- 强调色2，辅助主色-->
+
+
+
+    <color name="color_white2">#F9F9F9</color>
+    <color name="color_white5">#dddddd</color>
+    <color name="color_white8">#eeeeee</color>
+
+    <color name="black7">#4c000000</color>
+    <color name="black8">#b0000000</color>
+
+    <color name="gray8">#b5b5bb</color>
+
+    <color name="color_yellow">#ffcd3b</color>
+    <color name="color_yellow3">#FFF4E6</color>
+
+
+    <color name="color_orange2">#FF8C47</color>
+    <color name="orange_line">#ffdeae</color>
+
+    <!--品牌馆特殊颜色-->
+    <!--======================-->
+    <color name="color_golden">#dbb76c</color>
+    <color name="color_golden2">#dd9b53</color>
+    <color name="black9">#3b3a38</color>
+    <color name="gray12">#b1b0af</color>
+    <!--==============================-->
+
+
+    <color name="transparent_black">#88000000</color>
+    <color name="transparent_black2">#33000000</color>
+    <color name="transparent_black3">#22000000</color>
+    <color name="transparent_black4">#e5000000</color>
+    <color name="transparent_black5">#99000000</color>
+    <color name="transparent_black6">#40000000</color>
+    <color name="transparent_black7">#7f000000</color>
+    <color name="transparent_black8">#6b000000</color>
+    <color name="transparent_black9">#66000000</color>
+    <color name="transparent_black10">#B3000000</color>
+
+    <color name="transparent_white95">#F2ffffff</color>
+
+    <color name="transparent_white2">#99ffffff</color>
+    <color name="transparent_white3">#55ffffff</color>
+    <color name="transparent_white">#f4ffffff</color>
+    <color name="transparent_pink">#e5fe5ca7</color>
+    <color name="trans_color_p9">#E6ffa73c</color>
+    <color name="photo_view_bg">#22211e</color>
+
+    <!-- Zxing -->
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+
+    <array name="font_colors">
+        <item>#ffb132</item>
+        <item>#d0475e</item>
+        <item>#ff8783</item>
+        <item>#e94d37</item>
+        <item>#b12526</item>
+        <item>#900136</item>
+        <item>#fef6ce</item>
+        <item>#fbd574</item>
+        <item>#ffa73c</item>
+        <item>#b5683c</item>
+        <item>#ab3e32</item>
+        <item>#6a2f2f</item>
+        <item>#4a2933</item>
+        <item>#9ce5dc</item>
+        <item>#a3c547</item>
+        <item>#307779</item>
+        <item>#7eaef7</item>
+        <item>#7f4a99</item>
+        <item>#ffffff</item>
+        <item>#999999</item>
+        <item>#333333</item>
+    </array>
+
+</resources>

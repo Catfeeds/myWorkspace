@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.bingoogolapple.qrcode.zxing.ZXingView
+        android:id="@+id/qrcode_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1000"
+        app:qrcv_barCodeTipText="将条码放入框内，即可自动扫描"
+        app:qrcv_barcodeRectHeight="174dp"
+        app:qrcv_borderColor="#6f7071"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/colorPrimary"
+        app:qrcv_cornerLength="16dp"
+        app:qrcv_cornerSize="4dp"
+        app:qrcv_customScanLineDrawable="@mipmap/icon_scan_line"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isCenterVertical="false"
+        app:qrcv_isOnlyDecodeScanBoxArea="true"
+        app:qrcv_isScanLineReverse="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="false"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isShowTipBackground="false"
+        app:qrcv_isShowTipTextAsSingleLine="true"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="#80000000"
+        app:qrcv_qrCodeTipText="将POS机专用二维码放入框内，即可自动扫描"
+        app:qrcv_rectWidth="194dp"
+        app:qrcv_tipTextColor="@android:color/white"
+        app:qrcv_tipTextMargin="12dp"
+        app:qrcv_tipTextSize="@dimen/medium_text_size2"
+        app:qrcv_toolbarHeight="0dp"
+        app:qrcv_topOffset="154dp" />
+
+    <RelativeLayout
+        android:id="@+id/action_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#393b3f">
+
+        <RelativeLayout
+            android:id="@+id/action_layout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:includeFontPadding="false"
+                android:text="POS机专用二维码"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/bar_title_size" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

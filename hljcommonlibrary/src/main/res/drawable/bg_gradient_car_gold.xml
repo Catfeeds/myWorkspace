@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--专题列表浏览数背景-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:angle="0"
+        android:startColor="#00d59435"
+        android:centerX="0.2"
+        android:centerColor="#d59435"
+        android:endColor="#d59435"
+        android:type="linear" />
+
+</shape>

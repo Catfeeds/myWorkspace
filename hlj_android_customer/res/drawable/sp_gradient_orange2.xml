@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!--渐变背景暂时命名红色-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <gradient
+        android:angle="225"
+        android:endColor="#fdae38"
+        android:startColor="#f38815"
+        android:type="linear" />
+
+</shape>

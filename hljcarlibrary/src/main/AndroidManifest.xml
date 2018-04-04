@@ -1,0 +1,34 @@
+<manifest package="com.hunliji.hljcarlibrary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name=".views.activities.WeddingCarSubPageActivity"
+            android:label="@string/title_activity_wedding_car_sub_page"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme" />
+        <activity
+            android:name=".views.activities.WeddingCarProductDetailActivity"
+            android:label="婚车详情"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+        <activity android:name=".views.activities.WeddingCarCalendarActivity"
+            android:label="婚车档期"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"/>
+        <activity android:name=".views.activities.WeddingCarLessonListActivity"
+            android:label="婚车必修课"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTitleTheme"/>
+        <activity android:name=".views.activities.WeddingCarSecKillActivity"
+            android:label="特价秒杀"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme"/>
+        <activity
+            android:name=".views.activities.WeddingCarCommentListActivity"
+            android:label="评价列表"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBarTheme" />
+    </application>
+</manifest>

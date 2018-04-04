@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_trans_stroke_dialog_bg"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <ImageView
+        android:id="@+id/img_notice"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_delete_primary_158_154___cm" />
+
+    <TextView
+        android:id="@+id/tv_notice_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/colorBlack3"
+        android:textSize="@dimen/medium_text_size2" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/sl_r15_half_stroke_primary_2_solid_light"
+        android:gravity="center"
+        android:text="@string/label_confirm___cm"
+        android:textColor="@color/stroke_primary_text_color"
+        android:textSize="@dimen/medium_text_size1" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="110dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/sl_r15_primary_2_dark"
+        android:gravity="center"
+        android:text="@string/label_cancel___cm"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size1" />
+
+</LinearLayout>

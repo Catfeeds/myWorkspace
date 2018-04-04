@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout
+            android:id="@+id/scrollable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/img_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBlack2"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="invisible" />
+
+            <me.suncloud.marrymemo.widget.TabPageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/black9" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.hunliji.hljcommonlibrary.views.widgets.ScrollableLayout>
+
+        <com.hunliji.hljcommonlibrary.views.widgets.HljEmptyView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include layout="@layout/hlj_progressbar___cm" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_holder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:background="@color/black9">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:alpha="0"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:text="@string/label_wedding_brand"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/bar_title_size" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/action_holder_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:minWidth="45dp"
+            android:onClick="onBackPressed"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_back_white" />
+    </RelativeLayout>
+
+</RelativeLayout>

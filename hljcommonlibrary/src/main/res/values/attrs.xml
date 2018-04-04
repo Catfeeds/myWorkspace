@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CheckableLayout">
+        <attr name="checked" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout">
+        <attr name="horizontalSpacing" format="dimension" />
+        <attr name="verticalSpacing" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="FlowLayout_LayoutParams">
+        <attr name="layout_breakLine" format="boolean" />
+        <attr name="layout_horizontalSpacing" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="HljAppColor">
+        <attr name="hljColorBackground" format="color" />
+
+        <attr name="hljColorPrimary" format="color" />
+        <attr name="hljColorPrimaryDark" format="color" />
+        <attr name="hljColorAccent" format="color" />
+
+        <attr name="hljColorBarTitle" format="color" />
+        <attr name="hljColorBarBackground" format="color" />
+        <attr name="hljTransparentBarIconColor" format="color" />
+
+        <attr name="hljColorSegmentTitle" format="color" />
+        <attr name="hljColorSegmentBackground" format="color" />
+        <attr name="hljColorSegmentInnerBackground" format="color" />
+
+        <attr name="hljColorLine" format="color" />
+        <attr name="hljColorLine2" format="color" />
+        <attr name="hljColorGrayLine" format="color" />
+
+        <attr name="hljColorTitle1" format="color" />
+        <attr name="hljColorContent1" format="color" />
+        <attr name="hljColorContent2" format="color" />
+        <attr name="hljColorContent3" format="color" />
+        <attr name="hljColorContentExt1" format="color" />
+        <attr name="hljColorContentExt2" format="color" />
+        <attr name="hljColorContentExt3" format="color" />
+        <attr name="hljColorLink" format="color" />
+
+        <attr name="hljColorBottomButton" format="color" />
+
+        <attr name="hljCouponColor" format="color" />
+        <attr name="hljTabTextColor" format="color" />
+        <attr name="hljTimeDownBackgroundColor" format="color" />
+        <attr name="hljMerchantCallColor" format="color" />
+        <attr name="hljMerchantCollectColor" format="color" />
+        <attr name="hljCommentEmptyColor" format="color" />
+        <attr name="hljMerchantFeedDayColor" format="color" />
+        <attr name="hljMerchantFeedMonthColor" format="color" />
+        <attr name="hljFeedPraiseColorList" format="color" />
+        <attr name="hljCommentPraiseColorList" format="color" />
+        <attr name="hljSortCheckColorList" format="color" />
+        <attr name="hljCheckIconColorList" format="color" />
+        <attr name="hljCommentHeaderSortCheckedColorList" format="color" />
+        <attr name="hljCommentNameColor" format="color" />
+
+        <attr name="hljRatingBackgroundColor" format="color" />
+        <attr name="hljMerchantRatingProgressColor" format="color" />
+        <attr name="hljCommentRatingProgressColor" format="color" />
+        <attr name="hljCommentHeaderRatingColor" format="color" />
+
+        <attr name="hljIconMerchantCouponLeft" format="reference" />
+        <attr name="hljIconMerchantCouponRight" format="reference" />
+        <attr name="hljIconMerchantCoupon" format="reference" />
+        <attr name="hljIconMerchantCouponTag" format="reference" />
+        <attr name="hljIconMerchantCollected" format="reference" />
+        <attr name="hljIconMerchantNotCollected" format="reference" />
+
+        <attr name="hljBgMerchantCommentEmpty" format="reference" />
+        <attr name="hljBgEventDisable" format="reference" />
+        <attr name="hljBgEventTimeDown" format="reference" />
+        <attr name="hljBgCommentHeaderSortChecked" format="reference" />
+
+        <attr name="hljDrawableR13HalfStrokeLine2" format="reference" />
+        <attr name="hljDrawableTrans2Primary" format="reference" />
+        <attr name="hljDrawablePrimary2Dark" format="reference" />
+        <attr name="hljDrawableR2StrokePrimary" format="reference" />
+        <attr name="hljDrawableR2StrokeAccent" format="reference" />
+        <attr name="hljDrawableCoupon2Dark" format="reference" />
+
+        <attr name="hljBgChatBubble" format="reference" />
+        <attr name="hljIconChatBubbleArrowRight" format="reference" />
+        <attr name="hljIconChatBubbleArrowDown" format="reference" />
+
+
+        <attr name="hljMarkBackground" format="reference" />
+        <attr name="hljBadMarkBackground" format="reference" />
+        <attr name="hljMarkTextColor" format="reference" />
+        <attr name="hljDadMarkTextColor" format="reference" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="TintColorListImageView">
+        <attr name="tintColorList" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RecordAmplitudeView">
+        <attr name="bar_color" format="color" />
+        <attr name="bar_width" format="dimension" />
+        <attr name="bar_space" format="dimension" />
+        <attr name="bar_num" format="integer" />
+        <attr name="left" format="boolean" />
+        <attr name="start" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="NoteCirclePageIndicator">
+        <attr name="normal_color" format="color" />
+        <attr name="select_color" format="color" />
+        <attr name="lager_radius" format="dimension" />
+        <attr name="middle_radius" format="dimension" />
+        <attr name="small_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="HljUploadProgressBar">
+        <attr name="bg_color" format="color" />
+        <attr name="progress_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ClearableEditText">
+        <attr name="deleteIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FoldingMenu">
+        <attr name="foldNumber" format="integer" />
+    </declare-styleable>
+
+</resources>

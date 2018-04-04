@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBackground"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingRight="12dp"
+        android:paddingLeft="12dp"
+        android:paddingBottom="16dp">
+
+
+        <TextView
+            android:id="@+id/earnest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_earnest"
+            android:textColor="@color/colorBlack3"
+            android:visibility="gone"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <TextView
+            android:id="@+id/gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_gift"
+            android:textColor="@color/colorBlack3"
+            android:visibility="gone"
+            android:textSize="@dimen/medium_text_size3" />
+
+        <TextView
+            android:id="@+id/pay_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_pay_all_gift"
+            android:textColor="@color/colorBlack3"
+            android:visibility="gone"
+            android:textSize="@dimen/medium_text_size3" />
+        <TextView
+            android:id="@+id/merchant_privilege"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            android:text="@string/hunt_merchant_privilege"
+            android:textColor="@color/colorBlack3"
+            android:visibility="gone"
+            android:textSize="@dimen/medium_text_size3" />
+
+    </LinearLayout>
+</FrameLayout>

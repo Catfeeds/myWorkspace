@@ -1,0 +1,228 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".view.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
+
+        <LinearLayout
+            android:id="@+id/safe_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/sl_color_white_2_background2"
+            android:gravity="center_vertical"
+            android:onClick="safe">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:text="@string/settings_safe"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/information_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/sl_color_white_2_background2"
+            android:gravity="center_vertical"
+            android:onClick="onInformation">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:text="@string/label_personal_information"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/account_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/sl_color_white_2_background2"
+            android:gravity="center_vertical"
+            android:onClick="onAccount">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:text="@string/label_third_account_binding"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/partner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/sl_color_white_2_background2"
+            android:gravity="center_vertical"
+            android:onClick="onPartner">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:text="伴侣主页"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/medium_text_size1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp">
+
+            <LinearLayout
+                android:id="@+id/about_layout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:gravity="center_vertical"
+                android:onClick="about">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_weight="1"
+                    android:text="@string/settings_about"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <View
+                    android:id="@+id/new_versions_view"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/sp_oval_accent"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignBottom="@+id/about_layout"
+                android:layout_marginLeft="18dp"
+                android:background="@color/colorLine" />
+
+            <LinearLayout
+                android:id="@+id/cache_clear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/about_layout"
+                android:background="@drawable/sl_color_white_2_background2"
+                android:gravity="center_vertical"
+                android:onClick="clearCache">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:text="@string/settings_clear"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/cache_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="20dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@mipmap/icon_arrow_right_gray_14_26" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorLine" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/sl_color_white_2_background2"
+            android:gravity="center"
+            android:onClick="logout"
+            android:stateListAnimator="@null"
+            android:text="@string/action_logout"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <include layout="@layout/line_layout" />
+
+    </LinearLayout>
+
+</ScrollView>

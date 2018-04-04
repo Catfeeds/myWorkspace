@@ -1,0 +1,31 @@
+<resources>
+
+    <declare-styleable name="RangeBar">
+        <attr name="tickCount" format="integer" />
+        <attr name="tickHeight" format="dimension" />
+        <attr name="barWeight" format="dimension" />
+        <attr name="rbBarColor" format="reference|color" />
+        <attr name="connectingLineWeight" format="dimension" />
+        <attr name="connectingLineColor" format="reference|color" />
+        <attr name="thumbRadius" format="dimension" />
+        <attr name="thumbImageNormal" format="reference" />
+        <attr name="thumbImagePressed" format="reference" />
+        <attr name="thumbColorNormal" format="reference|color" />
+        <attr name="thumbColorPressed" format="reference|color" />
+        <attr name="thumbTextColor" format="reference|color" />
+        <attr name="thumbTextSize" format="dimension" />
+        <attr name="thumbTextMarginBottom" format="dimension" />
+        <attr name="initDistance" format="float" />
+        <attr name="rangEnable" format="boolean" />
+        <attr name="disEnabledColor" format="reference|color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="HotelRangeBar">
+        <attr name="barStrokeWidth" format="dimension"/>
+        <attr name="thumbStrokeWidth" format="dimension"/>
+        <attr name="thumbStrokeColor" format="reference|color"/>
+        <attr name="thumbTextColor2" format="reference|color" />
+    </declare-styleable>
+
+</resources>

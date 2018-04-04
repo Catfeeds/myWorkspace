@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="3dp"
+        app:cardShadowEndColor="@color/cardview_shadow_end_color"
+        app:cardShadowStartColor="@color/cardview_shadow_start_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:id="@+id/tv_table_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/large_text_size"
+                android:textStyle="bold"
+                tools:text="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tv_total_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:includeFontPadding="false"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size3"
+                tools:text="@string/app_name" />
+
+            <com.hunliji.hljcommonlibrary.views.widgets.FlowLayout
+                android:id="@+id/guests_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:visibility="gone"
+                app:horizontalSpacing="24dp"
+                app:verticalSpacing="12dp"
+                tools:visibility="visible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/sp_r18_stroke_primary"
+                android:drawableLeft="@mipmap/icon_edit_primary_36_32"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="23dp"
+                android:paddingRight="23dp"
+                android:text="安排宾客"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ex_medium_text_size2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <me.suncloud.marrymemo.widget.tools.WeddingTableDragHintView
+            android:id="@+id/drag_hint_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </com.hunliji.hljcommonlibrary.views.widgets.cardview.CardView>
+
+</RelativeLayout>

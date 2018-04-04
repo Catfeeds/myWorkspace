@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="?attr/hljColorSegmentBackground"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/empty_hint"
+        android:layout_width="wrap_content"
+        android:text="服务好不好，问问体验过的人"
+        android:layout_centerHorizontal="true"
+        android:textColor="?attr/hljColorContentExt1"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/ask_question_layout"
+        android:layout_width="120dp"
+        android:layout_height="34dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/empty_hint"
+        android:background="?attr/hljBgMerchantCommentEmpty"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_comment_merchant"
+            android:tint="?attr/hljCommentEmptyColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:includeFontPadding="false"
+            android:text="去提问"
+            android:textColor="?attr/hljCommentEmptyColor"
+            android:textSize="@dimen/medium_text_size2" />
+
+    </LinearLayout>
+</RelativeLayout>

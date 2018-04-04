@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.hunliji.marrybiz.view.FindPswActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/content_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="30dp"
+                android:paddingTop="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/colorLine" />
+
+                    <com.hunliji.marrybiz.widget.ClearableEditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/colorWhite"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_enter_phone_number2"
+                        android:inputType="numberSigned"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray3"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="@color/colorLine" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal">
+
+                        <com.hunliji.marrybiz.widget.ClearableEditText
+                            android:id="@+id/et_valid_code"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorWhite"
+                            android:hint="@string/hint_enter_valid_code"
+                            android:inputType="number"
+                            android:paddingRight="10dp"
+                            android:textColor="@color/colorBlack2"
+                            android:textColorHint="@color/colorGray3"
+                            android:textSize="@dimen/medium_text_size1" />
+
+                        <Button
+                            android:id="@+id/btn_send_valid_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginTop="6dp"
+                            android:background="@drawable/sl_r4_primary_2_dark"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:text="@string/label_get_valid_code"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/medium_text_size3" />
+
+                    </LinearLayout>
+
+
+                    <include layout="@layout/line" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/txt_find_psw1"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/txt_find_psw2"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size2" />
+
+                <Button
+                    android:id="@+id/btn_valid"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/sl_r4_primary_2_dark"
+                    android:gravity="center"
+                    android:enabled="false"
+                    android:text="@string/label_next_step"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/content_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="30dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <include layout="@layout/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <com.hunliji.marrybiz.widget.ClearableEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:hint="@string/hint_enter_password2"
+                        android:inputType="textPassword"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size1" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:background="@color/colorLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <com.hunliji.marrybiz.widget.ClearableEditText
+                        android:id="@+id/et_re_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginLeft="16dp"
+                        android:background="@color/colorWhite"
+                        android:hint="@string/hint_enter_re_password"
+                        android:inputType="textPassword"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorBlack2"
+                        android:textColorHint="@color/colorGray"
+                        android:textSize="@dimen/medium_text_size1" />
+                </LinearLayout>
+
+                <include layout="@layout/line" />
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/sl_r4_primary_2_dark"
+                    android:gravity="center"
+                    android:enabled="false"
+                    android:onClick="onRegister"
+                    android:text="@string/label_finish"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size1" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/progressbar_layout" />
+
+</RelativeLayout>

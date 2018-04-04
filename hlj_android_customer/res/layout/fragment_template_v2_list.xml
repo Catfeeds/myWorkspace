@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".view.ThemeV2ListActivity">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:stretchMode="columnWidth"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="3"
+        android:paddingBottom="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:horizontalSpacing="14dp"
+        android:paddingTop="10dp"
+        android:scrollbars="none"
+        android:verticalSpacing="16dp"/>
+
+    <include layout="@layout/list_empty_view_with_button"/>
+
+    <include layout="@layout/progressbar_layout"/>
+
+</RelativeLayout>

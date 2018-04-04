@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">hljinsurancelibrary</string>
+
+    <!--婚礼保-->
+    <string name="title_activity_create_insurance">填写保单</string>
+    <string name="title_activity_after_insurance">投保结果</string>
+    <string name="label_insurance_info_plan">“婚礼保”黄金计划</string>
+    <string name="label_insurance_age">承保年龄</string>
+    <string name="label_insurance_age_tip">法定结婚年龄-75周岁</string>
+    <string name="label_insurance_num">投保份数</string>
+    <string name="label_insurance_num2">%d份</string>
+    <string name="label_insurance_num_tip">限购1份/人</string>
+    <string name="label_insurance_security_date">保障期限</string>
+    <string name="label_insurance_security_date_tip">婚礼当天</string>
+    <string name="label_insurance_start_date">起保日期</string>
+    <string name="label_insurance_start_date_tip">*需在婚礼举办日15天前提交保单</string>
+    <string name="label_insurance_choose">请选择</string>
+    <string name="label_insurance_user_info_title">被保险人信息</string>
+    <string name="label_id_card_name">身份证号</string>
+    <string name="hint_id_card_number">请输入身份证号</string>
+    <string name="label_submit_insurance">提交保单</string>
+    <string name="label_submit_insurance_tip">我已查看并同意《保险条款》及《投保须知》</string>
+    <string name="label_insurance_clause">保险条款</string>
+    <string name="label_insurance_notice">投保须知</string>
+    <string name="label_insurance_failure_tip">您的投保金额¥%s，将按原支付方式返回，\n预计需要1~5个工作日到账。</string>
+    <string name="label_MYB_insurance_failure_tip">您的投保金额¥%s，将返回至您余额，\n预计需要1~5个工作日到账。</string>
+    <string name="label_insurance_type">投保类型：%s</string>
+    <string name="title_activity_policy_detail">保单详情</string>
+    <string name="title_activity_insurance_detail">保险详情</string>
+    <string name="title_activity_my_policy">我的保单</string>
+    <string name="label_look_history_policy">查看历史保单</string>
+    <string name="label_no_relevant_records_to_buy">暂无相关记录</string>
+    <string name="title_activity_history_policy">历史保单</string>
+    <string name="label_unfilled">未填写</string>
+    <string name="label_refunded">已退款</string>
+    <string name="label_term_insurance">保障期限：</string>
+    <string name="label_insured">被保险人：</string>
+    <string name="label_fill_in_policy">填写保单</string>
+    <string name="label_insured_failing">投保失败</string>
+    <string name="label_look_insurance_tip">查看《保险条款》</string>
+    <string name="label_basic_info">基本信息</string>
+    <string name="label_insured_info">被保险人信息</string>
+    <string name="label_protect_project">保障项目</string>
+    <string name="label_claims_service_process">理赔服务流程</string>
+    <string name="label_download_success">下载成功</string>
+    <string name="label_order_price6">订单金额：</string>
+    <string name="title_activity_service_pay_rest_activity">继续付款</string>
+    <string name="label_electronic_policy">电子保单</string>
+    <string name="label_city_no_more">已无更多内容</string>
+    <string name="label_change_city">切换城市</string>
+    <string name="label_city_other">已无更多内容，以下内容来自%s</string>
+    <string name="html_comment_hint" formatted="false"><Data><![CDATA[ <font color="#f83244">*</font> ]]></Data>非平台成交的订单评价需要您上传相关图片凭证，以便我们核实并处理，感谢您的理解与支持</string>
+    <string name="label_down_success">下载完成</string>
+    <string name="label_policy_generate">保单生成中，请稍后下载</string>
+    <string name="msg_invalid_pay_money2">支付金额不能大于还需支付金额</string>
+    <string name="label_search_result_around">周边热门城市结果</string>
+    <string name="html_label_hlj_terms">登录即表示你同意《<u>婚礼纪用户协议</u>》</string>
+    <string name="label_second">%02d秒</string>
+    <string name="label_third_login_bind_privilege">绑定手机号，获得4大专项特权</string>
+    <string name="label_third_login_bind_privilege_1">解锁全部电子请帖</string>
+    <string name="label_third_login_bind_privilege_2">解锁全部备婚攻略</string>
+    <string name="label_third_login_bind_privilege_3">优先参加砍价大会</string>
+    <string name="label_third_login_bind_privilege_4">全面保障账户安全</string>
+    <string name="title_activity_hot_this_week">本周热卖</string>
+    <string name="label_brigade_to_buy">去抢购</string>
+    <string name="hint_week_hot_update_monday">爆款限定优惠，每周定时更新</string>
+    <string name="label_create_miyuebao_clause">我已查看并同意《保险条款-海外蜜月》及《保险条款-境内蜜月》及《投保规则》</string>
+    <string name="label_download___ins">下载</string>
+    <string name="label_pay_succeed2">支付成功!</string>
+    <string name="title_activity_after_pay___ins">付款成功</string>
+
+</resources>

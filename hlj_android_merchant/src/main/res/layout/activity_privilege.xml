@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shSwitch="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.PrivilegeActivity">
+
+    <TextView
+        android:id="@+id/tv_status_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:gravity="center_vertical"
+        android:minHeight="32dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp"
+        android:text="@string/hint_merchant_reviewing"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:textSize="@dimen/medium_text_size2" />
+    <LinearLayout
+        android:id="@+id/switch_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_status_alert"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size" />
+
+        <com.hunliji.marrybiz.widget.ShSwitchView
+            android:id="@+id/switch_default"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            shSwitch:shadowSpace="0dp"
+            shSwitch:clickCheckable="false"
+            android:clickable="true"
+            android:onClick="onSwitch"
+            shSwitch:tintColor="@color/color_green" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/privilege_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch_layout"
+        android:layout_marginTop="-10dp"
+        android:background="@color/colorWhite"
+        android:minHeight="44dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:visibility="gone">
+
+        <include layout="@layout/line_layout" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/edit"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size1" />
+
+        <TextView
+            android:id="@+id/edit"
+            android:layout_width="62dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onEdit"
+            android:text="@string/btn_edit"
+            android:textColor="@color/colorLink"
+            android:textSize="@dimen/medium_text_size1" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/privilege_item_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/switch_layout"
+        android:layout_marginTop="-10dp"
+        android:divider="@android:color/transparent"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_open"
+        android:visibility="gone"
+        android:layout_below="@id/switch_layout" />
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/sl_color_primary_2_dark"
+        android:onClick="onEdit"
+        android:text="@string/action_open"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/medium_text_size1"
+        android:visibility="gone" />
+
+    <include layout="@layout/progressbar_layout" />
+
+    <include layout="@layout/list_empty_view_with_button" />
+
+
+</RelativeLayout>

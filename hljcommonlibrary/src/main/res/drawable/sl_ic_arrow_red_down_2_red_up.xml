@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@mipmap/icon_arrow_down_primary_18_9" android:state_checked="false" android:state_pressed="false" />
+    <item android:drawable="@mipmap/icon_arrow_up_primary_18_9" android:state_checked="true" />
+
+</selector>

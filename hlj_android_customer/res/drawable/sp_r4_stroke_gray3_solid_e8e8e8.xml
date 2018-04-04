@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--顶尖支付方式不可用背景-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="#e8e8e8" />
+
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/colorGray3" />
+            <corners android:radius="4dp" />
+        </shape>
+    </item>
+
+</layer-list>

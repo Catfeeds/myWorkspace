@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/rating1"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="32dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_rating_off_88_58"
+        android:background="@null" />
+
+    <ImageButton
+        android:id="@+id/rating2"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="32dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/icon_rating_off_88_58"
+        android:background="@null" />
+
+    <ImageButton
+        android:id="@+id/rating3"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="32dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_rating_off_88_58"
+        android:background="@null" />
+
+    <ImageButton
+        android:id="@+id/rating4"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/app_name"
+        android:layout_height="32dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_rating_off_88_58"
+        android:background="@null" />
+
+    <ImageButton
+        android:id="@+id/rating5"
+        android:layout_width="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_weight="1"
+        android:layout_height="32dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_rating_off_88_58"
+        android:background="@null" />
+</merge>

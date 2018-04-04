@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/icon_refresh_s_0" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_1" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_2" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_3" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_4" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_5" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_6" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_7" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_8" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_9" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_10" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_11" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_12" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_13" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_14" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_15" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_16" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_17" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_18" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_19" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_20" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_21" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_22" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_23" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_24" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_25" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_26" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_27" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_28" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_29" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_30" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_31" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_32" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_33" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_34" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_35" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_36" android:duration="40" />
+    <item android:drawable="@drawable/icon_refresh_s_37" android:duration="40" />
+</animation-list>

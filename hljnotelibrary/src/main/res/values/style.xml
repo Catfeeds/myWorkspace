@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dialog_anim_fade_short_in_style">
+        <item name="@android:windowEnterAnimation">@anim/fade_short_in</item>
+        <item name="@android:windowExitAnimation">@anim/fade_short_out</item>
+    </style>
+
+</resources>

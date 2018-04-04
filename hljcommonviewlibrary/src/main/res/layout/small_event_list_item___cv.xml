@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/hljColorSegmentBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/top_line_layout"
+            style="@style/line_horizontal"
+            android:layout_marginLeft="16dp"
+            android:background="?attr/hljColorLine"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/event_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sl_clickable_background"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="118dp"
+                android:layout_height="88.5dp">
+
+                <com.makeramen.rounded.RoundedImageView
+                    android:id="@+id/img_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/sp_r4_image_background"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    app:corner_radius="4dp" />
+
+                <LinearLayout
+                    android:id="@+id/watch_count_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_watch_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="27sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/label_be_interested_in___cv"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/medium_text_size3" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1.0"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:textColor="?attr/hljColorTitle1"
+                    android:textSize="@dimen/ex_medium_text_size" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_time_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="?attr/hljBgEventDisable"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="?attr/hljColorSegmentBackground"
+                        android:textSize="@dimen/ex_small_text_size"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/limit_time_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:background="?attr/hljBgEventTimeDown"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="18dp"
+                            android:textColor="?attr/hljColorSegmentBackground"
+                            android:textSize="@dimen/ex_small_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:includeFontPadding="false"
+                            android:text="@string/label_day___cv"
+                            android:textColor="?attr/hljColorContentExt1"
+                            android:textSize="@dimen/medium_text_size3" />
+
+                        <TextView
+                            android:id="@+id/tv_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:background="?attr/hljBgEventTimeDown"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="18dp"
+                            android:textColor="?attr/hljColorSegmentBackground"
+                            android:textSize="@dimen/ex_small_text_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@mipmap/icon_colon_5_15"
+                            android:tint="?attr/hljColorContentExt1" />
+
+                        <TextView
+                            android:id="@+id/tv_minute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:background="?attr/hljBgEventTimeDown"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="18dp"
+                            android:textColor="?attr/hljColorSegmentBackground"
+                            android:textSize="@dimen/ex_small_text_size"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@mipmap/icon_colon_5_15"
+                            android:tint="?attr/hljColorContentExt1" />
+
+                        <TextView
+                            android:id="@+id/tv_second"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:background="?attr/hljBgEventTimeDown"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="18dp"
+                            android:textColor="?attr/hljColorSegmentBackground"
+                            android:textSize="@dimen/ex_small_text_size"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_hint_time_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:includeFontPadding="false"
+                            android:textColor="?attr/hljColorContentExt1"
+                            android:textSize="@dimen/medium_text_size3" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/poster_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <com.slider.library.SliderLayout
+            android:id="@+id/poster_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:pager_animation="DepthPage"
+            app:pager_animation_span="1500" />
+
+        <com.slider.library.Indicators.CirclePageExIndicator
+            android:id="@+id/flow_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            app:circleOffset="4dp"
+            app:circleWidth="10dp"
+            app:circleradius="1dp"
+            app:fillColor="@color/colorWhite"
+            app:pageColor="#66ffffff"
+            app:strokeWidth="0dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/car_promises_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingBottom="14dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="14dp"
+        android:visibility="gone">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_price_lower___car"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_car_promises1"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_shopping_cart___car"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_car_promises2"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/icon_paid_late___car"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/label_car_promises3"
+            android:textColor="@color/colorBlack3"
+            android:textSize="@dimen/medium_text_size2" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <!--特价秒杀-->
+    <LinearLayout
+        android:id="@+id/sec_kill_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="12dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="特价秒杀"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_limit_hour"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/sp_r2_primary"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_micro_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/label_limit_time_space"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ex_micro_text_size" />
+
+            <TextView
+                android:id="@+id/tv_limit_minute"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/sp_r2_primary"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_micro_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="@string/label_limit_time_space"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ex_micro_text_size" />
+
+            <TextView
+                android:id="@+id/tv_limit_second"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/sp_r2_primary"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/ex_micro_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@string/label_limit_time_end"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ex_small_text_size" />
+
+            <TextView
+                android:id="@+id/tv_see_all_car"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="100dp"
+                android:text="@string/label_see_all___car"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sec_kill_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="138dp"
+                android:layout_height="90dp">
+
+                <com.makeramen.rounded.RoundedImageView
+                    android:id="@+id/img_car_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:corner_radius="3dp" />
+
+                <TextView
+                    android:id="@+id/tv_lowest_price"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/sp_r3_top_left_color_2d2c2a"
+                    android:gravity="center"
+                    android:text="历史最低"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:paddingTop="6dp">
+
+                <TextView
+                    android:id="@+id/tv_wedding_car_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:maxLines="2"
+                    android:textColor="@color/colorBlack2"
+                    android:textSize="@dimen/medium_text_size1" />
+
+                <TextView
+                    android:id="@+id/tv_original_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="6dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/medium_text_size3" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_original_price"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/action_buy_now">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_sale_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/ex_large_text_size" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="起"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/ex_medium_text_size2" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/action_buy_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@mipmap/icon_wedding_car_buy_now_primary___car"
+                    android:gravity="center"
+                    android:paddingBottom="4.5dp"
+                    android:text="立即抢购"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/medium_text_size2" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--婚车必修课-->
+    <LinearLayout
+        android:id="@+id/car_lesson_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="婚车必修课"
+                android:textColor="@color/colorBlack2"
+                android:textSize="@dimen/ex_medium_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_see_all_lesson"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/label_see_all___car"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/medium_text_size2" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/car_lesson_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            android:paddingBottom="16dp"
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+    <!--热门品牌-->
+    <LinearLayout
+        android:id="@+id/popular_brand_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="热门品牌"
+            android:textColor="@color/colorBlack2"
+            android:textSize="@dimen/ex_medium_text_size"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/brand_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+</LinearLayout>
